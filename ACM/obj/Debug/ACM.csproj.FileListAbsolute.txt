@@ -1,0 +1,9 @@
+c:\users\marian\documents\visual studio 2015\Projects\ACM\ACM\bin\Debug\ACM.exe.config
+c:\users\marian\documents\visual studio 2015\Projects\ACM\ACM\bin\Debug\ACM.exe
+c:\users\marian\documents\visual studio 2015\Projects\ACM\ACM\bin\Debug\ACM.pdb
+c:\users\marian\documents\visual studio 2015\Projects\ACM\ACM\obj\Debug\ACM.csprojResolveAssemblyReference.cache
+c:\users\marian\documents\visual studio 2015\Projects\ACM\ACM\obj\Debug\ACM.Properties.Resources.resources
+c:\users\marian\documents\visual studio 2015\Projects\ACM\ACM\obj\Debug\ACM.csproj.GenerateResource.Cache
+c:\users\marian\documents\visual studio 2015\Projects\ACM\ACM\obj\Debug\ACM.exe
+c:\users\marian\documents\visual studio 2015\Projects\ACM\ACM\obj\Debug\ACM.pdb
+c:\users\marian\documents\visual studio 2015\Projects\ACM\ACM\obj\Debug\ACM.Form1.resources
