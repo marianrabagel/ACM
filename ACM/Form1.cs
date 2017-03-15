@@ -20,28 +20,43 @@ namespace ACM
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string inputFile = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\ArithmeticStatic.txt";
-            string outputFile = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\ArithmeticStatic_output.txt";
+            DialogResult dialogResult = openFileDialog1.ShowDialog();
 
-            if (File.Exists(outputFile))
-                File.Delete(outputFile);
+            if (dialogResult == DialogResult.OK)
+            {
+                string inputFile = openFileDialog1.FileName;
+                //string inputFile = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\ArithmeticStatic.txt";
+                string outputFile = Path.GetDirectoryName(inputFile) + "/" + Path.GetFileName(inputFile) + ".coded";
+                   
 
-            ArithmeticCoder arithmeticCoder = new ArithmeticCoder();
-            arithmeticCoder.Encode(inputFile, outputFile);
-            MessageBox.Show("done");
+                if (File.Exists(outputFile))
+                    File.Delete(outputFile);
+
+                ArithmeticCoder arithmeticCoder = new ArithmeticCoder();
+                arithmeticCoder.Encode(inputFile, outputFile);
+                MessageBox.Show("done");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string outputFile = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\ArithmeticStatic_afterDEcode.txt";
-            string inputFile = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\ArithmeticStatic_output.txt";
+            DialogResult dialogResult = openFileDialog1.ShowDialog();
 
-            if (File.Exists(outputFile))
-                File.Delete(outputFile);
+            if (dialogResult == DialogResult.OK)
+            {
+                string inputFile = openFileDialog1.FileName;
 
-            ArithmeticDecoder arithmeticDecoder = new ArithmeticDecoder();
-            arithmeticDecoder.Decode(inputFile, outputFile);
-            MessageBox.Show("done");
+                string outputFile = Path.GetDirectoryName(inputFile) + "/" + Path.GetFileNameWithoutExtension(inputFile) +
+                                    ".decoded.txt";
+                //string inputFile =@"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\ArithmeticStatic_output.txt";
+
+                if (File.Exists(outputFile))
+                    File.Delete(outputFile);
+
+                ArithmeticDecoder arithmeticDecoder = new ArithmeticDecoder();
+                arithmeticDecoder.Decode(inputFile, outputFile);
+                MessageBox.Show("done");
+            }
         }
     }
 }
