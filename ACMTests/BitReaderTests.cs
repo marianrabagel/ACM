@@ -93,5 +93,90 @@ namespace ACMTests
 
             Assert.AreEqual(0xA0000000, solution);
         }
+
+        [TestMethod]
+        public void Read32BitsAlternative()
+        {
+            string fileName = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0xAAAAAAAA.txt";
+
+            if (File.Exists(fileName))
+                File.Delete(fileName);
+
+            using (FileStream writer = new FileStream(fileName, FileMode.OpenOrCreate))
+            {
+                writer.WriteByte(0xAA);
+                writer.WriteByte(0xAA);
+                writer.WriteByte(0xAA);
+                writer.WriteByte(0xAA);
+            }
+
+            BitReader reader = new BitReader(fileName);
+            uint solution = reader.ReadNBit(32);
+
+            Assert.AreEqual(0xAAAAAAAA, solution);
+        }
+
+        [TestMethod]
+        public void Read9BitsAlternative()
+        {
+            string fileName = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0xAAF.txt";
+
+            if (File.Exists(fileName))
+                File.Delete(fileName);
+
+            using (FileStream writer = new FileStream(fileName, FileMode.OpenOrCreate))
+            {
+                writer.WriteByte(0xAA);
+                writer.WriteByte(0xF0);
+            }
+
+            BitReader reader = new BitReader(fileName);
+            uint solution = reader.ReadNBit(9);
+
+            Assert.AreEqual(0xAA800000, solution);
+        }
+
+        [TestMethod]
+        public void Read17BitsAlternative()
+        {
+            string fileName = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0xABCDE.txt";
+
+            if (File.Exists(fileName))
+                File.Delete(fileName);
+
+            using (FileStream writer = new FileStream(fileName, FileMode.OpenOrCreate))
+            {
+                writer.WriteByte(0xAB);
+                writer.WriteByte(0xCD);
+                writer.WriteByte(0xE0);
+            }
+
+            BitReader reader = new BitReader(fileName);
+            uint solution = reader.ReadNBit(17);
+
+            Assert.AreEqual(0xABCD8000, solution);
+        }
+
+        [TestMethod]
+        public void Read25BitsAlternative()
+        {
+            string fileName = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0xABCDEF0.txt";
+
+            if (File.Exists(fileName))
+                File.Delete(fileName);
+
+            using (FileStream writer = new FileStream(fileName, FileMode.OpenOrCreate))
+            {
+                writer.WriteByte(0xAB);
+                writer.WriteByte(0xCD);
+                writer.WriteByte(0xEF);
+                writer.WriteByte(0x00);
+            }
+
+            BitReader reader = new BitReader(fileName);
+            uint solution = reader.ReadNBit(25);
+
+            Assert.AreEqual(0xABCDEF00, solution);
+        }
     }
 }

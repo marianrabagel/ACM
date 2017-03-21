@@ -84,6 +84,7 @@ namespace ACM
                     else
                         OutputBitPlusFollow(1, writer);
 
+                    writer.WriteNBiti(0, 30);
                     writer.WriteNBiti(0, 7);
                 }
             }

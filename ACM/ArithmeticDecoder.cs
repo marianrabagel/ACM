@@ -74,6 +74,7 @@ namespace ACM
                 using (BitWriter writer = new BitWriter(outputFileName))
                 {
                     valueFromFile = reader.ReadNBit(32);
+
                     _low = 0;
                     
                     while (reader.readCounter < reader.length)

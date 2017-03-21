@@ -35,7 +35,7 @@ namespace ACM
             if(readCounter % 8 == 0)
                 buffer = (byte) reader.ReadByte();
 
-            byte value = (byte) (buffer >> (7 - (readCounter%8)));
+            byte value = (byte) ((buffer >> (7 - (readCounter%8))) & 0x01);
             readCounter++;
 
             return value;
@@ -48,7 +48,7 @@ namespace ACM
             for (int i = 0; i < numberOfBits; i++)
             {
                 byte bit = ReadBit();
-                value = (uint) (bit << (31 - i));
+                value = (uint) (value | (bit << (31 - i)));
             }
 
             return value;

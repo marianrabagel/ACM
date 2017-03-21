@@ -116,34 +116,91 @@ namespace ACMTests
         }
 
         [TestMethod]
-        public void ReadAndWriteAfile()
+        public void ReadAndWriteATxtfile()
         {
-            string inputFile = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\cover.jpg";
-            string outputFile = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\cover_copy.jpg";
+            string inputFile = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\test.txt";
+            string outputFile = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\test_copy.txt";
 
             if(File.Exists(outputFile))
                 File.Delete(outputFile);
-
-            long nrb;
 
             using (BitReader reader = new BitReader(inputFile))
             {
                 using (BitWriter writer = new BitWriter(outputFile))
                 {
+                    long nrb = 8*reader.length;
+
                     do
                     {
-                        
-                    nrb = 8*reader.length;
+                        Random random = new Random();
+                        int randomNb = random.Next(1, 33);
 
-                    Random random = new Random((int) DateTime.Today.Ticks);
-                    int randomNb = random.Next(1, 33);
+                        uint readNBit = reader.ReadNBit(randomNb);
+                        writer.WriteNBiti(readNBit, randomNb);
 
-                    uint readNBit = reader.ReadNBit(randomNb);
-                    writer.WriteNBiti(readNBit, randomNb);
+                        nrb -= randomNb;
 
-                    nrb -= randomNb;
+                    } while (nrb > 0);
+                }
+            }
+        }
 
-                    } while (nrb >0);
+        [TestMethod]
+        public void ReadAndWriteAJpegfile()
+        {
+            string inputFile = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\cover.jpg";
+            string outputFile = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\cover_copy.jpg";
+
+            if (File.Exists(outputFile))
+                File.Delete(outputFile);
+
+            using (BitReader reader = new BitReader(inputFile))
+            {
+                using (BitWriter writer = new BitWriter(outputFile))
+                {
+                    long nrb = 8 * reader.length;
+
+                    do
+                    {
+                        Random random = new Random();
+                        int randomNb = random.Next(1, 33);
+
+                        uint readNBit = reader.ReadNBit(randomNb);
+                        writer.WriteNBiti(readNBit, randomNb);
+
+                        nrb -= randomNb;
+
+                    } while (nrb > 0);
+                }
+            }
+        }
+
+        [TestMethod]
+        public void ReadAndWriteAPdffile()
+        {
+            string inputFile = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\brin-page-98.pdf";
+            string outputFile = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\brin-page-98_copy.pdf";
+
+            if (File.Exists(outputFile))
+                File.Delete(outputFile);
+
+            using (BitReader reader = new BitReader(inputFile))
+            {
+                using (BitWriter writer = new BitWriter(outputFile))
+                {
+                    long nrb = 8 * reader.length;
+
+                    do
+                    {
+                        Random random = new Random();
+                        int randomNb = random.Next(1, 33);
+
+                        uint readNBit = reader.ReadNBit(randomNb);
+                        writer.WriteNBiti(readNBit, randomNb);
+
+                        nrb -= randomNb;
+
+                    } while (nrb > 0);
                 }
             }
         }
