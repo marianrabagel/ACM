@@ -2,7 +2,7 @@ namespace ACM
 {
     public class ArithmeticBase
     {
-        protected int[] _symbolCounts; //{3, 3, 1, 1, 2};
+        protected int[] _symbolCounts;
         protected int[] _symbolSums;
         protected uint _numberOfSymbols = 257;
         protected uint _low;

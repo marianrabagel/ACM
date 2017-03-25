@@ -7,10 +7,7 @@ namespace ACM
         private uint _valueFromFile;
         
         public void Decode(string inputFileName, string outputFileName)
-        {/*
-            string fileName =
-                @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\Low-High_decoder.txt";
-            using (StreamWriter stream = new StreamWriter(fileName))*/
+        {
             using (BitReader reader = new BitReader(inputFileName))
             {
                 using (BitWriter writer = new BitWriter(outputFileName))
@@ -26,7 +23,6 @@ namespace ACM
                         if (symbol == EOF)
                             break;
 
-                        //stream.WriteLine(_low + " --- " + _high);
                         writer.WriteNBiti(symbol, 8);
                         UpdateModel();
                     }

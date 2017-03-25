@@ -6,9 +6,6 @@ namespace ACM
     {
         public void Encode(string inputFileName, string outputFileName)
         {
-            /*string fileName =
-                @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\Low-High_coder.txt";
-            using (StreamWriter stream = new StreamWriter(fileName))*/
             using (BitReader reader = new BitReader(inputFileName))
             {
                 using (BitWriter writer = new BitWriter(outputFileName))
@@ -18,7 +15,6 @@ namespace ACM
                     {
                         uint symbol = reader.ReadNBit(8);
                         EncodeSymbol(symbol, writer);
-                        //stream.WriteLine(_low + " --- " + _high);
                         UpdateModel();
                     }
 
