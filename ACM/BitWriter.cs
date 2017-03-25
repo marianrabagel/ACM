@@ -35,11 +35,11 @@ namespace ACM
 
         public void WriteNBiti(uint biti, int n)
         {
-            if(n > 32)
+            if(n > 32 || n == 0)
                 return;
 
-            for (int i = 0; i < n; i++)
-                WriteBit((int) (biti >> (31 - i)));
+            for (int i = n; i > 0; i--)
+                WriteBit((int) (biti >> i-1));
         }
 
         public void Dispose()

@@ -20,20 +20,39 @@ namespace ACMTests
             if (File.Exists(fileName))
                 File.Delete(fileName);
 
-            BitWriter bitWriter = new BitWriter(fileName);
-            
-            for (int i = 0; i < 8; i++)
-                bitWriter.WriteBit(0x01);
-
-            bitWriter.Dispose();
-
+            using (BitWriter bitWriter = new BitWriter(fileName))
+            {
+                for (int i = 0; i < 8; i++)
+                    bitWriter.WriteBit(0x01);
+            }
             using (FileStream reader = new FileStream(fileName, FileMode.OpenOrCreate))
             {
                 Assert.AreEqual(1, reader.Length);
 
                 byte solution = (byte) reader.ReadByte();
                 Assert.AreEqual(0xFF, solution);
+            }
+        }
 
+        [TestMethod]
+        public void WriteA()
+        {
+            string fileName = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\ValueA_bitWriter.txt";
+
+            if (File.Exists(fileName))
+                File.Delete(fileName);
+
+            using (BitWriter bitWriter = new BitWriter(fileName))
+            {
+                bitWriter.WriteNBiti(0x41, 8);
+            }
+
+            using (FileStream reader = new FileStream(fileName, FileMode.OpenOrCreate))
+            {
+                Assert.AreEqual(1, reader.Length);
+
+                byte solution = (byte)reader.ReadByte();
+                Assert.AreEqual(0x41, solution);
             }
         }
 
@@ -45,12 +64,11 @@ namespace ACMTests
             if (File.Exists(fileName))
                 File.Delete(fileName);
 
-            BitWriter bitWriter = new BitWriter(fileName);
-
-            for (int i = 0; i < 8; i++)
-                bitWriter.WriteBit(0x00);
-
-            bitWriter.Dispose();
+            using (BitWriter bitWriter = new BitWriter(fileName))
+            {
+                for (int i = 0; i < 8; i++)
+                    bitWriter.WriteBit(0x00);
+            }
 
             using (FileStream reader = new FileStream(fileName, FileMode.OpenOrCreate))
             {
@@ -69,18 +87,17 @@ namespace ACMTests
             if (File.Exists(fileName))
                 File.Delete(fileName);
 
-            BitWriter bitWriter = new BitWriter(fileName);
-
-            bitWriter.WriteBit(0x00);
-            bitWriter.WriteBit(0x01);
-            bitWriter.WriteBit(0x00);
-            bitWriter.WriteBit(0x01);
-            bitWriter.WriteBit(0x01);
-            bitWriter.WriteBit(0x00);
-            bitWriter.WriteBit(0x01);
-            bitWriter.WriteBit(0x00);
-
-            bitWriter.Dispose();
+            using (BitWriter bitWriter = new BitWriter(fileName))
+            {
+                bitWriter.WriteBit(0x00);
+                bitWriter.WriteBit(0x01);
+                bitWriter.WriteBit(0x00);
+                bitWriter.WriteBit(0x01);
+                bitWriter.WriteBit(0x01);
+                bitWriter.WriteBit(0x00);
+                bitWriter.WriteBit(0x01);
+                bitWriter.WriteBit(0x00);
+            }
 
             using (FileStream reader = new FileStream(fileName, FileMode.OpenOrCreate))
             {
@@ -99,11 +116,10 @@ namespace ACMTests
             if (File.Exists(fileName))
                 File.Delete(fileName);
 
-            BitWriter bitWriter = new BitWriter(fileName);
-
-            bitWriter.WriteNBiti(0xFF000000, 8);
-
-            bitWriter.Dispose();
+            using (BitWriter bitWriter = new BitWriter(fileName))
+            {
+                bitWriter.WriteNBiti(0xFF, 8);
+            }
 
             using (FileStream reader = new FileStream(fileName, FileMode.OpenOrCreate))
             {

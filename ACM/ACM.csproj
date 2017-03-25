@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArithmeticBase.cs" />
     <Compile Include="ArithmeticCoder.cs" />
     <Compile Include="ArithmeticDecoder.cs" />
     <Compile Include="BitReader.cs" />

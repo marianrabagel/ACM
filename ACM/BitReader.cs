@@ -45,10 +45,10 @@ namespace ACM
         {
             uint value = 0;
 
-            for (int i = 0; i < numberOfBits; i++)
+            for(int i = numberOfBits; i > 0; i--)
             {
                 byte bit = ReadBit();
-                value = (uint) (value | (bit << (31 - i)));
+                value = (uint) (value | (bit << (i - 1)));
             }
 
             return value;

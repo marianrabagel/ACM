@@ -1,7 +1,0 @@
-c:\Users\Marian\documents\visual studio 2015\Projects\ACM\ACMTests\bin\Debug\ACMTests.dll
-c:\Users\Marian\documents\visual studio 2015\Projects\ACM\ACMTests\bin\Debug\ACM.exe
-C:\Users\Marian\documents\visual studio 2015\Projects\ACM\ACMTests\bin\Debug\ACM.pdb
-C:\Users\Marian\documents\visual studio 2015\Projects\ACM\ACMTests\obj\Debug\ACMTests.csprojResolveAssemblyReference.cache
-C:\Users\Marian\documents\visual studio 2015\Projects\ACM\ACMTests\obj\Debug\ACMTests.dll
-C:\Users\Marian\documents\visual studio 2015\Projects\ACM\ACMTests\obj\Debug\ACMTests.pdb
-C:\Users\Marian\documents\visual studio 2015\Projects\ACM\ACMTests\bin\Debug\ACMTests.pdb

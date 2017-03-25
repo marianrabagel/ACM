@@ -74,7 +74,7 @@ namespace ACMTests
             BitReader reader = new BitReader(fileName);
             uint solution = reader.ReadNBit(3);
 
-            Assert.AreEqual(0xE0000000, solution);
+            Assert.AreEqual((uint)0x07, solution);
         }
 
         [TestMethod]
@@ -91,7 +91,7 @@ namespace ACMTests
             BitReader reader = new BitReader(fileName);
             uint solution = reader.ReadNBit(4);
 
-            Assert.AreEqual(0xA0000000, solution);
+            Assert.AreEqual((uint)0xA, solution);
         }
 
         [TestMethod]
@@ -133,7 +133,7 @@ namespace ACMTests
             BitReader reader = new BitReader(fileName);
             uint solution = reader.ReadNBit(9);
 
-            Assert.AreEqual(0xAA800000, solution);
+            Assert.AreEqual((uint)0x155, solution);
         }
 
         [TestMethod]
@@ -154,7 +154,7 @@ namespace ACMTests
             BitReader reader = new BitReader(fileName);
             uint solution = reader.ReadNBit(17);
 
-            Assert.AreEqual(0xABCD8000, solution);
+            Assert.AreEqual((uint)0x1579B, solution);
         }
 
         [TestMethod]
@@ -176,7 +176,7 @@ namespace ACMTests
             BitReader reader = new BitReader(fileName);
             uint solution = reader.ReadNBit(25);
 
-            Assert.AreEqual(0xABCDEF00, solution);
+            Assert.AreEqual((uint) 0x1579BDE, solution);
         }
     }
 }
