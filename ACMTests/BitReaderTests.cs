@@ -178,5 +178,24 @@ namespace ACMTests
 
             Assert.AreEqual((uint) 0x1579BDE, solution);
         }
+
+        [TestMethod]
+        public void Read1Byte()
+        {
+            string fileName = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\Value157.txt";
+
+            if (File.Exists(fileName))
+                File.Delete(fileName);
+
+            using (FileStream writer = new FileStream(fileName, FileMode.OpenOrCreate))
+            {
+                writer.WriteByte(0x9D);
+            }
+
+            BitReader reader = new BitReader(fileName);
+            byte solution = (byte) reader.ReadNBit(8);
+
+            Assert.AreEqual(0x9D, solution);
+        }
     }
 }

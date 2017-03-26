@@ -43,21 +43,21 @@
             this.LoadOriginalBtn = new System.Windows.Forms.Button();
             this.OriginalImage = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.ComputeErrorBtn = new System.Windows.Forms.Button();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.RefreshBtn = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.ErrorImage = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.SaveDecodedBtn = new System.Windows.Forms.Button();
             this.DecodedImage = new System.Windows.Forms.Panel();
+            this.SaveDecodedBtn = new System.Windows.Forms.Button();
             this.DecodeBtn = new System.Windows.Forms.Button();
             this.LoadDecodedBtn = new System.Windows.Forms.Button();
             this.ScaleNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.ComputeErrorBtn = new System.Windows.Forms.Button();
+            this.errorPictureBox = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KNumericUpDown)).BeginInit();
@@ -65,6 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ScaleNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -193,6 +194,7 @@
             this.EncodeBtn.TabIndex = 2;
             this.EncodeBtn.Text = "Encode";
             this.EncodeBtn.UseVisualStyleBackColor = true;
+            this.EncodeBtn.Click += new System.EventHandler(this.EncodeBtn_Click);
             // 
             // LoadOriginalBtn
             // 
@@ -202,6 +204,7 @@
             this.LoadOriginalBtn.TabIndex = 1;
             this.LoadOriginalBtn.Text = "Load";
             this.LoadOriginalBtn.UseVisualStyleBackColor = true;
+            this.LoadOriginalBtn.Click += new System.EventHandler(this.LoadOriginalBtn_Click);
             // 
             // OriginalImage
             // 
@@ -212,26 +215,50 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.errorPictureBox);
             this.panel3.Controls.Add(this.ComputeErrorBtn);
             this.panel3.Controls.Add(this.listBox2);
             this.panel3.Controls.Add(this.listBox1);
             this.panel3.Controls.Add(this.RefreshBtn);
             this.panel3.Controls.Add(this.numericUpDown1);
             this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.ErrorImage);
             this.panel3.Location = new System.Drawing.Point(507, 13);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(345, 447);
             this.panel3.TabIndex = 4;
             // 
-            // button3
+            // ComputeErrorBtn
             // 
-            this.button3.Location = new System.Drawing.Point(1091, 424);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Refresh";
-            this.button3.UseVisualStyleBackColor = true;
+            this.ComputeErrorBtn.Location = new System.Drawing.Point(3, 394);
+            this.ComputeErrorBtn.Name = "ComputeErrorBtn";
+            this.ComputeErrorBtn.Size = new System.Drawing.Size(117, 23);
+            this.ComputeErrorBtn.TabIndex = 13;
+            this.ComputeErrorBtn.Text = "Compute error";
+            this.ComputeErrorBtn.UseVisualStyleBackColor = true;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Items.AddRange(new object[] {
+            "Prediction Error",
+            "Q prediction Error"});
+            this.listBox2.Location = new System.Drawing.Point(261, 28);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(87, 30);
+            this.listBox2.TabIndex = 12;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Items.AddRange(new object[] {
+            "Original Image",
+            "Prediction Error",
+            "Q prediction Error",
+            "Decoded Image"});
+            this.listBox1.Location = new System.Drawing.Point(3, 319);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(103, 69);
+            this.listBox1.TabIndex = 10;
             // 
             // RefreshBtn
             // 
@@ -256,12 +283,14 @@
             this.panel5.Size = new System.Drawing.Size(451, 147);
             this.panel5.TabIndex = 2;
             // 
-            // ErrorImage
+            // button3
             // 
-            this.ErrorImage.Location = new System.Drawing.Point(3, 3);
-            this.ErrorImage.Name = "ErrorImage";
-            this.ErrorImage.Size = new System.Drawing.Size(256, 256);
-            this.ErrorImage.TabIndex = 1;
+            this.button3.Location = new System.Drawing.Point(1091, 424);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "Refresh";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // panel4
             // 
@@ -274,6 +303,13 @@
             this.panel4.Size = new System.Drawing.Size(345, 294);
             this.panel4.TabIndex = 5;
             // 
+            // DecodedImage
+            // 
+            this.DecodedImage.Location = new System.Drawing.Point(3, 6);
+            this.DecodedImage.Name = "DecodedImage";
+            this.DecodedImage.Size = new System.Drawing.Size(256, 256);
+            this.DecodedImage.TabIndex = 1;
+            // 
             // SaveDecodedBtn
             // 
             this.SaveDecodedBtn.Location = new System.Drawing.Point(165, 268);
@@ -282,13 +318,6 @@
             this.SaveDecodedBtn.TabIndex = 12;
             this.SaveDecodedBtn.Text = "Save";
             this.SaveDecodedBtn.UseVisualStyleBackColor = true;
-            // 
-            // DecodedImage
-            // 
-            this.DecodedImage.Location = new System.Drawing.Point(3, 6);
-            this.DecodedImage.Name = "DecodedImage";
-            this.DecodedImage.Size = new System.Drawing.Size(256, 256);
-            this.DecodedImage.TabIndex = 1;
             // 
             // DecodeBtn
             // 
@@ -329,38 +358,13 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Scale";
             // 
-            // listBox1
+            // errorPictureBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Items.AddRange(new object[] {
-            "Original Image",
-            "Prediction Error",
-            "Q prediction Error",
-            "Decoded Image"});
-            this.listBox1.Location = new System.Drawing.Point(3, 319);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(103, 69);
-            this.listBox1.TabIndex = 10;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Items.AddRange(new object[] {
-            "Prediction Error",
-            "Q prediction Error"});
-            this.listBox2.Location = new System.Drawing.Point(261, 28);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(87, 30);
-            this.listBox2.TabIndex = 12;
-            // 
-            // ComputeErrorBtn
-            // 
-            this.ComputeErrorBtn.Location = new System.Drawing.Point(3, 394);
-            this.ComputeErrorBtn.Name = "ComputeErrorBtn";
-            this.ComputeErrorBtn.Size = new System.Drawing.Size(117, 23);
-            this.ComputeErrorBtn.TabIndex = 13;
-            this.ComputeErrorBtn.Text = "Compute error";
-            this.ComputeErrorBtn.UseVisualStyleBackColor = true;
+            this.errorPictureBox.Location = new System.Drawing.Point(3, 3);
+            this.errorPictureBox.Name = "errorPictureBox";
+            this.errorPictureBox.Size = new System.Drawing.Size(256, 256);
+            this.errorPictureBox.TabIndex = 14;
+            this.errorPictureBox.TabStop = false;
             // 
             // Form1
             // 
@@ -385,6 +389,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ScaleNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,7 +409,6 @@
         private System.Windows.Forms.Button EncodeBtn;
         private System.Windows.Forms.Button LoadOriginalBtn;
         private System.Windows.Forms.Panel OriginalImage;
-        private System.Windows.Forms.Panel ErrorImage;
         private System.Windows.Forms.Panel DecodedImage;
         private System.Windows.Forms.ListBox PredictionRulesListBox;
         private System.Windows.Forms.ListBox StatisticModelListBox;
@@ -422,6 +426,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Button ComputeErrorBtn;
+        private System.Windows.Forms.PictureBox errorPictureBox;
     }
 }
 
