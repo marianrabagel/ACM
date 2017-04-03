@@ -11,21 +11,26 @@ namespace ACM
         public string inputFile;
         string outputFile;
         byte[] bmpHeader;
-        byte[,] original;
-        byte[,] prediction;
-        byte[,] decoded;
-        int[,] errorP;
-        int[,] errorPQ;
-        int[,] errorPDQ;
-        int[,] error;
+        public byte[,] Original { get; }
+        public byte[,] Prediction { get; }
+        public byte[,] Decoded { get; }
+        public int[,] ErrorP { get; }
+        public int[,] ErrorPq { get; }
+        public int[,] ErrorPdq { get; }
+        public int[,] Error { get; }
+        int size = 256;
 
         public PredictiveCoder(string inputFile)
         {
             this.inputFile = inputFile;
             bmpHeader = new byte[1078];
-            original = new byte[256, 256];
-            decoded = new byte[256, 256];
-            errorP = new int[256, 256];
+            Original = new byte[size, size];
+            Prediction = new byte[size, size];
+            Decoded = new byte[size, size];
+            ErrorP = new int[size, size];
+            ErrorPq = new int[size, size];
+            ErrorPdq = new int[size, size];
+            Error = new int[size, size];
         }
 
         public void Encode(string predictionRule, int k, string entropicCoder)
@@ -33,13 +38,16 @@ namespace ACM
             outputFile = inputFile + ".p" + predictionRule + "k" + k + entropicCoder + ".prd";
             SaveBmpToMemory();
 
-            for (int y = 0; y < original.GetLength(0); y++)
+            for (int y = 0; y < Original.GetLength(0); y++)
             {
-                for (int x = 0; x < original.GetLength(1); x++)
+                for (int x = 0; x < Original.GetLength(1); x++)
                 {
                     byte predictionValue = GetPredictionFor(predictionRule, x, y);
-                    prediction[y, x] = predictionValue;
-
+                    Prediction[y, x] = predictionValue;
+                    ErrorP[y, x] = Original[y, x] - predictionValue;
+                    ErrorPq[y, x] = (ErrorP[y, x] + k) / (2 * k + 1);
+                    ErrorPdq[y, x] = ErrorPq[y, x] * (2 * k + 1);
+                    Decoded[y, x] = (byte) (ErrorPdq[y, x] + Prediction[y, x]);
                     //get prediction
                     //calculate errorp
                     //quantize errorP
@@ -90,7 +98,7 @@ namespace ACM
             }
             else if (predictionRule == "JPEG-LS")
             {
-                value = GetJpegLs(x,y);
+                value = GetJpegLs(x, y);
             }
 
             return value;
@@ -137,7 +145,7 @@ namespace ACM
                 if (val < 0)
                     val = 0;
 
-                value = (byte)val;
+                value = (byte) val;
             }
 
             return value;
@@ -159,7 +167,7 @@ namespace ACM
                 if (val < 0)
                     val = 0;
 
-                value = (byte)val;
+                value = (byte) val;
             }
 
             return value;
@@ -175,13 +183,13 @@ namespace ACM
                 value = GetB(x, y);
             else
             {
-                int val = GetA(x, y) + (GetB(x, y) - GetC(x, y))/2;
+                int val = GetA(x, y) + (GetB(x, y) - GetC(x, y)) / 2;
                 if (val > 255)
                     val = 255;
                 if (val < 0)
                     val = 0;
 
-                value = (byte)val;
+                value = (byte) val;
             }
 
             return value;
@@ -203,7 +211,7 @@ namespace ACM
                 if (val < 0)
                     val = 0;
 
-                value = (byte)val;
+                value = (byte) val;
             }
 
             return value;
@@ -219,7 +227,7 @@ namespace ACM
                 value = GetB(x, y);
             else
             {
-                value = decoded[y - 1, x - 1];
+                value = Decoded[y - 1, x - 1];
             }
 
             return value;
@@ -227,12 +235,12 @@ namespace ACM
 
         private byte GetB(int x, int y)
         {
-            return y == 0 ? (byte) 128 : decoded[y - 1, x];
+            return y == 0 ? (byte) 0 : Decoded[y - 1, x];
         }
 
         private byte GetA(int x, int y)
         {
-            return x == 0 ? (byte) 128 : decoded[y, x - 1];
+            return x == 0 ? (byte) 0 : Decoded[y, x - 1];
         }
 
         private void SaveBmpToMemory()
@@ -242,31 +250,101 @@ namespace ACM
                 for (int i = 0; i < 1078; i++)
                     bmpHeader[i] = (byte) reader.ReadNBit(8);
 
-                for (int y = original.GetLength(0) - 1; y > 0; y--)
+                for (int y = Original.GetLength(0) - 1; y > 0; y--)
                 {
-                    for (int x = 0; x < original.GetLength(1); x++)
+                    for (int x = 0; x < Original.GetLength(1); x++)
                     {
-                        original[y, x] = (byte) reader.ReadNBit(8);
+                        Original[y, x] = (byte) reader.ReadNBit(8);
                     }
                 }
             }
         }
 
-        public Bitmap GetOriginalBitmap()
+        public Bitmap GetBitmap(byte[,] matrix)
         {
-            Bitmap bitmap = new Bitmap(original.GetLength(1), original.GetLength(0));
+            Bitmap bitmap = new Bitmap(matrix.GetLength(1), matrix.GetLength(0));
 
-            for (int y = 0; y < original.GetLength(1); y++)
+            for (int y = 0; y < matrix.GetLength(1); y++)
             {
-                for (int x = 0; x < original.GetLength(0); x++)
+                for (int x = 0; x < matrix.GetLength(0); x++)
                 {
-                    byte value = original[y, x];
+                    byte value = matrix[y, x];
                     Color color = Color.FromArgb(255, value, value, value);
                     bitmap.SetPixel(x, y, color);
                 }
             }
 
             return bitmap;
+        }
+
+        public Bitmap GetBitmap(int[,] matrix)
+        {
+            Bitmap bitmap = new Bitmap(matrix.GetLength(1), matrix.GetLength(0));
+
+            for (int y = 0; y < matrix.GetLength(1); y++)
+            {
+                for (int x = 0; x < matrix.GetLength(0); x++)
+                {
+                    int value = matrix[y, x];
+
+                    if (value < 0)
+                        value = 0;
+                    if (value > 255)
+                        value = 255;
+
+                    Color color = Color.FromArgb(255, value, value, value);
+                    bitmap.SetPixel(x, y, color);
+                }
+            }
+
+            return bitmap;
+        }
+
+        public int[,] ApplyScale(int[,] matrix, double scale)
+        {
+            int[,] newMatrix = new int[matrix.GetLength(1), matrix.GetLength(0)];
+
+            for (int y = 0; y < matrix.GetLength(0); y++)
+            {
+                for (int x = 0; x < matrix.GetLength(1); x++)
+                {
+                    newMatrix[y, x] = (int) (matrix[y, x] * scale);
+                }
+            }
+
+            return newMatrix;
+        }
+
+        public int[] GetFrequencies(byte[,] matrix)
+        {
+            int[] frequencies = new int[2 * size];
+
+            for (int y = 0; y < matrix.GetLength(0); y++)
+            {
+                for (int x = 0; x < matrix.GetLength(1); x++)
+                {
+                    int indexValue = matrix[y, x] + 255;
+                    frequencies[indexValue]++;
+                }
+            }
+
+            return frequencies;
+        }
+
+        public int[] GetFrequencies(int[,] matrix)
+        {
+            int[] frequencies = new int[2 * size];
+
+            for (int y = 0; y < matrix.GetLength(0); y++)
+            {
+                for (int x = 0; x < matrix.GetLength(1); x++)
+                {
+                    int indexValue = matrix[y, x] + 255;
+                    frequencies[indexValue]++;
+                }
+            }
+
+            return frequencies;
         }
     }
 }

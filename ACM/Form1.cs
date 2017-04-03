@@ -18,6 +18,8 @@ namespace ACM
             InitializeComponent();
             PredictionRulesListBox.SelectedIndex = 0;
             StatisticModelListBox.SelectedIndex = 0;
+            ErrorMatrixListBox.SelectedIndex = 0;
+            HistogramSourceListBox.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -90,9 +92,67 @@ namespace ACM
             int k = (int) KNumericUpDown.Value;
             string entropicCoder = StatisticModelListBox.SelectedItem.ToString();
             predictiveCoder.Encode(predictionRule, k, entropicCoder);
-            Bitmap bitmap = predictiveCoder.GetOriginalBitmap();
+            Bitmap bitmap = predictiveCoder.GetBitmap(predictiveCoder.ErrorP);
             errorPictureBox.Image = bitmap;
 
+        }
+
+        private void RefreshBtn_Click(object sender, EventArgs e)
+        {
+            double scale = (double) ScaleNumeric.Value;
+            int[,] matrix = ErrorMatrixListBox.SelectedIndex == 0 ? predictiveCoder.ErrorP : predictiveCoder.ErrorPq;
+            int[,] scaledMatrix = predictiveCoder.ApplyScale(matrix, scale);
+            Bitmap bitmap = predictiveCoder.GetBitmap(scaledMatrix);
+            errorPictureBox.Image = bitmap;
+        }
+
+        private void ComputeErrorBtn_Click(object sender, EventArgs e)
+        {
+            int selectedIndex = HistogramSourceListBox.SelectedIndex;
+            int[] frequencies = GetFrequencies(selectedIndex);
+            float scale = (float) HistogramScaleNumeric.Value;
+            DragHistogramWithScale(frequencies, scale);
+        }
+
+        private void DragHistogramWithScale(int[] frequencies, float scale)
+        {
+            using (Graphics g = HistogramaPanel.CreateGraphics())
+            {
+                g.Clear(BackColor);
+
+                for (int i = 0; i < frequencies.Length; i++)
+                {
+                    if (frequencies[i] != 0)
+                        g.DrawLine(Pens.Black, i, 255, i, (255 - frequencies[i]) * scale);
+                }
+
+                Point p1 = new Point(255, 0);
+                Point p2 = new Point(255, 255);
+                g.DrawLine(Pens.DeepSkyBlue, p1, p2);
+            }
+        }
+
+        private int[] GetFrequencies(int selectedIndex)
+        {
+            int[] frequencies;
+
+            if (selectedIndex == 0)
+                frequencies = predictiveCoder.GetFrequencies(predictiveCoder.Original);
+            else if (selectedIndex == 1)
+                frequencies = predictiveCoder.GetFrequencies(predictiveCoder.ErrorP);
+            else if (selectedIndex == 2)
+                frequencies = predictiveCoder.GetFrequencies(predictiveCoder.ErrorPq);
+            else
+                frequencies = predictiveCoder.GetFrequencies(predictiveCoder.Decoded);
+            return frequencies;
+        }
+
+        private void RefreshHistogramBtn_Click(object sender, EventArgs e)
+        {
+            int selectedIndex = HistogramSourceListBox.SelectedIndex;
+            int[] frequencies = GetFrequencies(selectedIndex);
+            float scale = (float)HistogramScaleNumeric.Value;
+            DragHistogramWithScale(frequencies, scale);
         }
     }
 }
