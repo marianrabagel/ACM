@@ -46,7 +46,7 @@ namespace Arithmetic
             {
                 string inputFile = openFileDialog1.FileName;
                 string outputFile = Path.GetDirectoryName(inputFile) + "/" + Path.GetFileNameWithoutExtension(inputFile) +
-                                    ".decoded." + Path.GetExtension(inputFile);
+                                    ".decoded";// + Path.GetExtension(inputFile);
                 //string inputFile =@"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\ArithmeticStatic_output.txt";
 
                 if (File.Exists(outputFile))

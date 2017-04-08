@@ -20,15 +20,14 @@ namespace Arithmetic
                     }
 
                     EncodeSymbol(EOF, writer);
-                    writer.WriteNBiti(_low, 32); //de scris folosind OutputBitPlusFollow --> o functie de inchidere
-                    /*
+                    //writer.WriteNBiti(_low, 32); //de scris folosind OutputBitPlusFollow --> o functie de inchidere
                     _bitsToFollow++;
 
                     if (_low < firstQuarter)
                         OutputBitPlusFollow(0, writer);
                     else
                         OutputBitPlusFollow(1, writer);
-                    */
+                    
                     //writer.WriteNBiti(0, 30);
                     writer.WriteNBiti(0, 7);
                 }
