@@ -1,1 +1,1939 @@
-ANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMEREANAAREMERE
+This book is a work of fiction. Names, characters, places and incidents are products of the author’s
+imagination or are used fictitiously. Any resemblance to actual events or locales or persons living or dead
+is entirely coincidental.
+POCKET BOOKS, a division of Simon & Schuster, Inc.
+1230 Avenue of the Americas, New York, NY 10020
+Copyright © 2000 by Blizzard Entertainment
+All rights reserved, including the right to reproduce this book or portions thereof in any form whatsoever.
+For information address Pocket Books, 1230 Avenue of the Americas, New York, NY 10020
+ISBN: 0-7434-1897-2
+First Pocket Books Ebooks Edition December 2000
+POCKET and colophon are registered trademarks of
+Simon & Schuster, Inc.
+Cover illustration by Bill Petras and Chris Metzen
+Visit us on the World Wide Web:
+http:/ /www.SimonSays.com
+To my folks, Pete and Kathy Metzen,
+for all their love, support, and encouragement over the years.
+To Team Hamro—
+Sam Moore, Michael Carrillo, Mike Pirozzi, and Daniel Moore,
+for always reminding me of what “epic” really means.To Walter Simonson,
+whose portrayal of a certain thundergod defined everything I value as an artist and a storyteller.
+And last, but not least—
+to all of my talented brothers and sisters at Blizzard with whom I’ve had the distinct privilege of
+building the greatest worlds in computer gaming. This one’s for you, y’all.
+OF  BLOOD
+AND  HONOR
+CHRIS METZEN
+POCKET BOOKS
+NEWYORK  LONDON  TORONTO  SYDNEY  SINGAPORE
+One -A Clash of Arms
+Two -Unanswered Questions
+Three -A Warrior’s Tale
+Four -The Chains of Command
+Five -A Trial of Will
+Six -A Sort of HomecomingSeven -The Drums of War
+Eight -A Perfect Circle
+About the Author
+ONE
+A  Clash  of  Arms
+Asoft, cool breeze blew through the upper branches of the mighty oak trees of the Hearthglen Woods.
+A peaceful quiet had fallen over the tranquil forest, leaving Tirion Fordring alone with his thoughts. His
+gray stallion, Mirador, trotted at an easy pace along the winding hunting path. Though game had been
+strangely scarce for the past few weeks, Tirion came to hunt here whenever the opportunity presented
+itself. He preferred the grandeur and crisp air of the open country to the musty, confining halls of his
+keep. He had been hunting in these woods since he was a small boy and knew their numerous, winding
+trails like the back of his hand. This was the one place he could always find refuge from the burdens and
+bureaucratic pressures of his station. He mused that someday he would bring his young son, Taelan, to
+hunt with him so that the boy could experience the rugged majesty of his homeland for himself.
+Lord Paladin Tirion Fordring was a powerful man. He was strong in both mind and body, and was
+counted as one of the greatest warriors of his day. Though he was slightly over fifty years of age, he still
+looked as fit and dynamic as he had when a younger man. His signature bushy mustache and his neatly
+trimmed brown hair were streaked with gray, but his piercing green eyes still shone with an energy that
+belied his years.
+Tirion was the governor of the prosperous Alliance principality of Hearthglen, a large forested region
+nestled at the crossroads between the towering Alterac Mountains and the mist-shrouded shores of
+Darrowmere Lake. He was respected as a just governor and his name and deeds were honored
+throughout the kingdom of Lordaeron. His great keep, Mardenholde, was the center of commerce and
+trade for the bustling region. The citizens of Hearthglen took great pride in the fact that the keep’s mighty
+walls had never fallen to invaders, even during the darkest days of the orcish invasion of Lordaeron. Yet,
+of late, Tirion was disgruntled to find a different kind of army scurrying worriedly through the halls of his
+home.
+In recent weeks the keep had been overrun with traveling dignitaries and representatives from the
+various nations of the Alliance, who passed through Hearthglen on their secret diplomatic errands. He
+had met with many of them in person, offering his hospitality and assistance wherever he could. Though
+the dignitaries were appropriately appreciative of his efforts, Tirion could sense a growing tension within
+all of them. He suspected that they were charged with carrying dire news directly to the Alliance High
+Council. Try as he might, he could not discern the specifics behind their urgent communiqués. Yet Tirion
+Fordring was no fool. After thirty years of serving the Alliance as a Paladin, he recognized that only one
+thing could cause the otherwise stoic emissaries to be so troubled: War was returning to Lordaeron.
+*    *    *It had been nearly twelve years since the war against the orcish Horde had ended. It was a terrible
+conflict that had raged across the northlands, leaving many of the Alliance kingdoms razed and blackened
+in its wake. Too many brave men fell before the rampaging Horde was finally stopped. Tirion had lost a
+number of good friends and soldiers over the course of the war. Though the Alliance had rallied at the
+eleventh hour and pulled victory from the clutches of certain defeat, it had paid a heavy price. Almost an
+entire generation of young men had selflessly given their lives to insure that mankind would never be
+slaves to savage orc overlords.
+Near the war’s end, the battered and leaderless orc clans were rounded up and placed within guarded
+reserves near the outskirts of the Alliance lands. Though, as a precautionary measure, it was necessary to
+police the reserves with full regiments of knights and footmen, the orcs remained docile and passive.
+Indeed, as time passed, the orcs seemed to lose their raging bloodlust completely and lapse into a strange
+communal stupor. Some supposed that the foul brutes’ lethargy was brought on by inactivity, but Tirion
+remained to be convinced. He had seen, firsthand, the orcs’ brutality and savagery in battle. Memories of
+their heinous atrocities had plagued his dreams for years after the war. He, for one, would never believe
+that their warlike ways had left them completely.
+*    *    *
+Tirion prayed every night, as he always had, that conflict would never endanger his people again.
+Perhaps naively, he hoped fervently that his young son would be spared the rigors and horrors of war. As
+a Paladin, he had seen far too many children orphaned or left for dead over the course of the tragic
+conflict. He wondered how any child could not become cold and disassociated when faced with terror
+and violence all around them. He would certainly never allow that to happen to his own boy, that was
+certain. Yet, despite his best wishes, he could not ignore the reality of the present situation. His closest
+aides and advisors had been telling him of the grim rumors for months now—that the orcs were once
+again on the move. Hard as it was to believe, the presence of so many emissaries in his keep confirmed it
+to be true.
+If the orcs were foolish enough to rise up again, he would do whatever it took in order to stop them.
+Duty had always been the one constant in his life. He had spent the majority of his years defending
+Lordaeron in one way or another. Though he had not been born a noble, his enthusiasm and honor had
+won him the rank of knight at the tender age of eighteen. Tirion served his king with undying loyalty and
+won a great deal of respect from his superiors. Years later, when the orcs first invaded Lordaeron, intent
+on crushing civilization, he was one of the first knights to be given the honor of standing with Uther the
+Lightbringer and being anointed as a holy Paladin.
+Uther, Tirion, and a number of devout knights were hand-picked by the Archbishop Alonsus Faol to
+become living vessels of the holy Light. Their special, sacred charge was twofold: aided by the holy Light,
+the Paladins would not only lead the fight against the vile forces of darkness, but heal the wounds inflicted
+upon the innocent citizens of humanity as well. Tirion and his fellows were given the divine power to heal
+wounds and cure diseases of every kind. They were imbued with great strength and wisdom that enabled
+them to rally their brethren and give glory to the Light. Indeed, the Paladins’ leadership and strength
+helped to turn the tide of the war and insure the survival of humanity.
+Though his own Light-given powers had waned somewhat over the years, Tirion could still feel strength
+and grace flow through his aging limbs. Surely he would have strength enough when he needed it the
+most. For his son and for his people, he would have strength enough, he vowed.
+*    *    *Clearing his head of concerns, Tirion stopped to get his bearings. To his surprise, he found that he’d
+wandered much farther up the winding path than he’d intended. The path snaked its way up and over the
+densely forested mountain. There were no outposts this far up, Tirion remembered. As a matter of fact,
+he couldn’t recall the last time he had ventured up this far. He took a moment to drink in the raw beauty
+of the place. He could hear babbling streams nearby and smell the clean, crisp air. The sky was blue and
+clear as he watched two falcons circle high above. He truly loved this land. He told himself that he’d
+return to this spot when a more opportune moment presented itself. Running his hand through his thinning,
+graying hair, he chided himself for becoming so lost in thought. He had come out to hunt, after all. Tirion
+deftly turned his mount around on the thin path and spurred Mirador to a quicker pace back down the
+mountain. He pulled sharply on the reins and steered his faithful mount into the dense woods.
+After a few minutes he slowed his pace and galloped into a wide clearing that surrounded the ruins of an
+abandoned guard tower. He stopped near the old tower’s base and peered up at the lonely structure.
+Like many other ruins that dotted the land, it was a painful reminder of a darker time. The tower’s walls
+were broken and scarred by blackened blastmarks. Obviously the work of orcish catapults, he thought.
+He remembered how the destructive machines had hurled their fiery projectiles from great distances and
+devastated entire villages during the war. He wondered how the ruined structure could still be standing
+after having been left to the unforgiving elements for so long. While examining the tower’s base he caught
+sight of strange tracks upon the ground. He dismounted to inspect them. His blood nearly froze in his
+veins as he realized that the oversized tracks had not been made by any man—and that they were fresh.
+Tirion quickly looked around and found more tracks scattered throughout the clearing. He surmised that
+orcs had been here within the past few days at least. Could the vile brutes be mobilizing so soon, he
+wondered? No. There had to be some other explanation. Hearthglen’s borders were secure. There was
+no way that a group of orcs could go undetected in his land for any length of time. Subtlety, of all things,
+was definitely not a part of their nature. His scouts and guardsmen would have been alerted to any orcish
+incursion into Hearthglen immediately upon their arrival. Yet the fresh tracks were there, just the same.
+*    *    *
+Tirion walked Mirador around to the back of the tower and drew his heavy bastard sword from the
+scabbard attached to his saddle. He wished fervently that he had brought his mighty warhammer instead.
+Though he was well-practiced with a blade, he would have preferred to wield his traditional hammer, as
+all Paladins did in the face of danger.
+As stealthily as he could, Tirion crept around the tower and entered through what was left of its front
+door. A number of large wooden beams had fallen from the rickety ceiling and splintered all over the
+chipped stone floor. He inspected the dilapidated guardroom and found a small, makeshift fire pit near a
+ragged, patchwork bedroll. The fire in the ash-laden pit had only recently burnt out. Apparently the orcs
+had taken up residence within the old tower. Strangely, he saw no weapons or token trophies, which
+orcs were fond of collecting. He wondered what could possess the brutes to so recklessly squat on
+Alliance-held lands.
+Deciding to return to the keep and gather his men, Tirion exited the tower and strode boldly out into the
+clearing. To his surprise, he immediately locked eyes with a gargantuan orc, who had suddenly emerged
+from the tree line. The orc, who seemed as startled as Tirion, dropped the bundle of firewood it had been
+carrying and reached for the broad battle-ax that was slung to its back. Tirion gritted his teeth and
+brandished his own sword threateningly. Slowly, the orc planted his feet firmly on the ground, unslinging
+the mighty ax.*    *    *
+It had been years since Tirion had laid eyes on an orc. He looked upon the brute with unabashed awe
+and revulsion. Yet, through his surging adrenaline, Tirion noticed that there was something quite different
+about this orc. Certainly, the creature was as immense and well-muscled as any other he had beheld. Its
+coarse, green skin and ape-like stance marked it as clearly as any other orc. Even its hideous tusks and
+pointed ears were reminiscent of every savage that Tirion had faced during the war. But something in the
+creature’s stature and demeanor seemed different. There was an aged weight in its stance and far too
+many wrinkles around its eyes. Its ratty beard and ritually top-knotted hair bore heavy streaks of gray.
+Where most orc warriors adorned themselves with mismatched plates of armor and spiked gauntlets, this
+one wore only stitched furs and ruddy leather pants. Its calm lethality and assured, comfortable battle
+stance clearly indicated that this orc was no rampaging youngster, but, indeed, a seasoned veteran.
+Despite its apparent age, it was potentially more dangerous than any orc Tirion had ever faced.
+The hulking creature stood motionless for a long moment, as if daring Tirion to make the first move.
+Tirion quickly surveyed the tree line to make certain there were no other orcs preparing to ambush him.
+Peering back at the orc, he found that it had not moved even an inch. The orc nodded as if to confirm
+that it was alone. The creature’s knowing gaze left Tirion with the impression that it wanted his full
+attention before it engaged him in combat.
+Feeling somewhat unhinged by the orc’s calm demeanor, Tirion lunged forward. The orc easily
+sidestepped Tirion’s initial attack and brought his great ax around in a wide arc. Reflexively, Tirion
+ducked under the savage strike and rolled into a defensive crouch. Seizing the moment, he thrust his
+blade up at the orc’s exposed belly. The creature expertly blocked the thrust with the haft of his ax, and
+leapt backward to give himself more room to maneuver. Tirion feinted to his right and then brought his
+blade around in a sweeping reverse thrust. Momentarily caught off guard by the clever move, the orc
+whirled around in the opposite direction and brought his ax down in a fast overhead swipe, meant to cut
+Tirion in two. Tirion rolled out of the way as the ax crashed down only inches from where he had stood.
+The two opponents straightened and squared off once more. They stared at one another in surprise.
+Tirion had to admit that the orc was as formidable a foe as he had ever faced. The grim smile that passed
+over the orc’s bestial face seemed to impart a similar respect for Tirion’s own abilities.
+*    *    *
+They began to circle one another, each sizing up the other’s strengths and weaknesses. Tirion was again
+surprised by the orc’s demeanor and focus. Every other orc he had encountered had rushed forward
+with reckless abandon, preferring savagery and brute force to finesse and tactical maneuvering. This orc,
+however, demonstrated remarkable skill and self-control.
+For a moment, Tirion wondered whether or not he could actually best the creature. For a split second,
+he worried that his tired limbs and reflexes would fail him at a crucial moment. Sporadic thoughts of his
+beloved wife and son being left to fend for themselves without him flashed through his mind, weakening
+his resolve by a fraction. With a derisive snort, he shook off his doubts and readied his weapon. He had
+faced death a hundred times. He had a job to do. He relaxed slightly and reminded himself that his battle
+instincts were as sharp as ever. And he had the power of the Light on his side. No matter how impressive
+the orc’s fighting prowess might be, it was still a creature of darkness as far as he was concerned—it was
+the sworn enemy of humanity, and for that it had to die.
+*    *    *
+Rushing forward with grim resolve, Tirion slashed at the orc with every ounce of strength he couldmuster. The orc was forced to give ground before the Paladin’s furious attack. Tirion pushed the orc
+backward until it felt as if his sword arm would burst into flames. The orc managed to block and counter
+a number of the Paladin’s thrusts, but was thrown off-balance by an expertly placed strike. Tirion cut a
+gaping gash in the orc’s thigh, sending the brute stumbling into the dust. The old orc grunted loudly as it
+slammed down onto the packed dirt. Gripping its bloodied leg in pain, the orc attempted to rise again,
+clearly expecting Tirion to take advantage of its precarious position. To its obvious surprise, Tirion
+backed off and slowly motioned for it to rise. The orc blinked in astonishment.
+Tirion was a Paladin—a Knight of the Silver Hand—and to him, butchering a fallen foe in the midst of
+single combat was unquestionably dishonorable. The holy code of his Order demanded that he give the
+orc a reprieve. He nodded to the orc in assurance, and once more motioned for him to rise. Gritting his
+sharp, yellowed teeth in pain, the orc slowly recovered his ax and got to his feet. They stood there for a
+moment, facing each other with eyes locked. The orc straightened slightly and raised his clenched fist to
+his heart. A salute, Tirion realized. Now it was Tirion’s turn to blink in disbelief. Certainly no savage orc
+had ever saluted him in battle before. He conceded that perhaps there was more to the fierce creature
+than he would have guessed. Nevertheless, it was his enemy. He nodded to the orc in understanding and
+raised his sword again.
+This time it was the orc who surged forward. Unable to support its great weight upon its wounded leg,
+the orc was forced to lunge at the Paladin with short, violent leaps. Wielding its heavy ax with one hand,
+the mighty orc slashed wildly at Tirion. The Paladin was hard-pressed to evade the brute’s savage blows,
+and was forced back toward the tower’s entrance. Barely dodging a particularly brutal strike, Tirion
+crashed into the guardroom through the open doorway. Momentarily stunned, Tirion roared as the
+razor-sharp ax bit deep into his left arm. Fighting to keep his head clear from pain, he managed to slash
+at the orc’s exposed hand. The surprised orc howled in rage as his ax clattered upon the stone floor.
+Tirion moved in, hoping to end the duel as quickly as possible.
+Instantly, the orc grabbed hold of a fallen beam and swung at the advancing Paladin.
+Tirion backed up a pace as the orc swung the beam in a clumsy arc. The beam smashed into the brittle
+wall. Dust and loose rock rained down from the high ceiling. The remaining beams creaked and groaned
+as the tower’s walls shifted their weight. Tirion continued his attack, cutting the orc’s makeshift weapon
+to splinters with every fevered strike. Realizing the desperate nature of its situation, the orc dropped what
+was left of the beam and lunged straight at Tirion with its sinewy arms outstretched. Howling in fury, the
+massive orc reached out for Tirion’s throat. The Paladin managed to stab the orc once before the full
+weight of the creature’s body slammed into his. The two entangled combatants crashed into the
+weakened wall as the rickety ceiling finally gave way and collapsed down upon them.
+*    *    *
+Tirion woke to the sounds of creaking timber and clattering stone. He blinked as thick clouds of dust
+settled all around him. All else was black in the shattered guardroom. His body was numb, but he could
+feel a great pressure upon his chest. As the dust cleared, he could see that he was pinned under a large,
+split beam. His legs, too, were pinned beneath immense chunks of mortar. Frantically, he looked around
+for any sign of the orc. He would be defenseless if the creature decided to finish him off. Reaching down,
+he grabbed hold of the beam and heaved with all of his remaining strength. The beam toppled to the side
+and clattered against the rubble.
+Pain immediately flooded Tirion’s body. His head swam as the open cut on his arm gushed his precious
+blood upon the floor. He attempted to lift himself up and felt an acute burst of pain as his broken ribs
+ground against one another. His right leg, too, felt like it might be broken beneath the heavy blocks ofmortar. His battered body reeling from agony and exhaustion, Tirion felt as if he would black out. He
+could hear the remaining walls of the structure creaking and groaning. The whole tower was going to
+collapse. With consciousness rapidly slipping away, Tirion sensed a rustling behind him. Fighting to stay
+awake, Tirion barely turned to see the orc’s green, menacing hands reaching out for him. His gasp of
+terror was cut short as blackness overtook him.
+TWO
+Unanswered  Questions
+Sunlight cascaded down from the open skylight in the cathedral’s vaulted ceiling. Dust motes
+spiraled in a lazy dance, blown by the soft wind that wafted through the grandiose hall. Rows of
+large, white candles stood before the base of an immense triptych window of stained glass. The
+image of a proud, regal warrior was depicted in the window. Thousands of tiny, colored shards of
+glass portrayed the man’s broad features and noble bearing. Surrounded by a halo of golden light,
+the man held a mighty warhammer in one hand and a large, leatherbound tome in the other. The
+inscription on the tome read: “Esarus thar no’Darador”—“By Blood and Honor We Serve.”
+Tirion Fordring looked up toward the colorful image and felt his spirit soar. Kneeling upon an
+ornately carved dais, Tirion humbly bowed his head in prayer. To his left, a group of somber men
+dressed in flowing white robes stood in attendance. They were clerics—warrior priests—who
+hailed from the Northshire region. The pious clerics were present in order to offer Tirion their
+support andspiritual guidance, should he require it. To his immediate right, another group stood
+in observance, all dressed in heavy suits of highly polished armor. They were the Knights of the
+Silver Hand—the Paladins. The shining Paladins were the champions of Lordaeron and the
+Alliance. They stood in support of Tirion—the newest initiate to their hallowed ranks. Before him
+was a vast altar that lay directly beneath the enormous stained glass window. The streaming
+sunlight was focused at the center of the altar, where another robed man sat in meditative silence,
+cradling a large book in his lap. Tirion was only vaguely aware of the others gathered in the
+cathedral behind him, chatting anxiously while waiting for the ceremony to begin.
+The robed man on the altar raised his hand, calling for the gathered masses to fall silent. Tirion
+held his breath. This was the moment for which he had waited. The robed man stood and slowly
+walked forward to address the kneeling Tirion. The Archbishop stopped as he reached the ornate
+dais and opened the large book he had been holding. With a voice like thunder, the Archbishop
+read aloud:
+“In the Light, we gather to empower our brother. In its grace, he will be made anew. In its
+power, he shall educate the masses. In its strength, he shall combat the shadow. And, in its
+wisdom, he shall lead his brethren to the eternal rewards of paradise.” Finishing the verse, the
+Archbishop closed the book and turned toward the men on the left. Tirion felt a rush of
+excitement sweep through his body. He breathed in deeply and tried to focus on the solemnity of
+the moment.
+“Clerics of the Northshire, if you deem this man worthy, place your blessings upon him,” the
+Archbishop said in a ritualistic tone. One of the white-robed men walked forward, carrying an
+embroidered dark blue stole in his hands. The Cleric reached the dais and reverently placed the
+blessed stole around Tirion’s neck. He dipped his thumb in a small vial of sacred oil and anointed
+Tirion’s sweating brow with it.“By the grace of the Light, may your brethren be healed,” the Cleric said in a whisper. He bowed
+and backed away to stand once more amongst his fellows.
+The Archbishop turned to the men on the right and spoke again: “Knights of the Silver Hand, if
+you deem this man worthy, place your blessings upon him.”
+Two of the armored men moved forward with obvious pride on their faces and stood solemnly in
+front of the dais. One of the men held a great, two-handed warhammer. The hammer’s silvery
+head was etched with holy runes and its haft was meticulously wrapped in blue leather. Tirion
+could only marvel at the weapon’s exceptional craftsmanship and beauty. The knight laid the
+hammer on the dais before Tirion’s feet. He then bowed his head and backed away. The second
+knight, carrying dual ceremonial shoulder plates, stepped forward and looked Tirion in the eye.
+He was Saidan Dathrohan, one of Tirion’s closest friends. The knight’s face was alight with pride
+and excitement. Tirion smiled knowingly. Visibly composing himself, Saidan placed the silver
+shoulder plates upon Tirion’s shoulders and spoke in a stern voice. “By the strength of the Light,
+may your enemies be undone.”
+After he finished speaking, Saidan adjusted the silver plates so that the blue stole streamed out
+from beneath them. He then backed away and returned to the group of attendant knights. Tirion’s
+heart pounded in his chest. He was so overcome with joy that he felt almost light-headed. The
+Archbishop strode forward once again and placed his hand upon Tirion’s head.
+“Arise and be recognized,” he said. Tirion got to his feet and marveled at the sheer magnitude of
+the honor being bestowed upon him. The Archbishop leveled his gaze at Tirion, then read aloud
+from the book.
+“Do you, Tirion Fordring, vow to uphold the honor and codes of the Order of the Silver Hand?”
+“I do,” Tirion replied earnestly.
+“Do you vow to walk in the grace of the Light and spread its wisdom to your fellow man?”
+“I do.”
+“Do you vow to vanquish evil wherever it be found, and protect the weak and innocent with your
+very life?”
+Tirion swallowed hard and nodded while saying, “By my blood and honor, I do.” He exhaled
+softly, overcome with emotion.
+The Archbishop closed the book and walked back toward the center of the altar.
+Turning to face the entire assembly, the Archbishop said, “Brothers—you who have gathered
+here to bear witness—raise your hands and let the Light illuminate this man.” Each of the Clerics
+and knights raised their right hands and pointed toward Tirion. To Tirion’s amazement, their
+hands began to glow with asoft, golden radiance. He supposed that, in the excitement of the
+moment, his eyes were playing tricks on him. Yet, as he watched in wonder, the sunlight that
+poured in from above began to move slowly across the floor. As if in response to the assembly’s
+command, the light came to rest upon Tirion himself. Partially blinded by the intense radiance,
+Tirion felt his body warmed and energized by its holy power. Every fiber of his being was ignitedby divine fire. He could sense life-giving energies flowing through his limbs, energies enough to
+heal any wound or cure any disease. He mused that these energies were enough to burn even the
+souls of the accursed denizens of the shadow. Despite himself, he shuddered involuntarily.
+Ablaze with hope and joy, Tirion knelt down and took hold of the mighty hammer—the symbol of
+his holy appointment and station. With joyous tears streaming down his face, he raised his head
+and looked toward the Archbishop, who smiled warmly back at him.
+“Arise, Tirion Fordring—Paladin defender of Lordaeron. Welcome to the Order of the Silver
+Hand.”
+The entire assembly erupted in cheers. Trumpets blared from the high balconies and the cheerful
+din echoed through the vastness of the Cathedral of Light.
+*    *    *
+Tirion woke with a start. The sound of children’s frolicking laughter came through the nearby window.
+Outside he could hear the familiar sounds of commerce and trade being conducted within the grounds of
+Mardenholde keep. He was home, in his own bed. Shaking his head to clear his groggy mind, he
+wondered how long he had slept. His sheets were soaked with sweat and he smelled as if he hadn’t
+bathed in a week. His head was pounding so hard he felt as if it would burst. Sighing heavily, he
+remembered that he had been dreaming. He tried to recall the dream’s details, but due to the incessant
+pounding in his skull, he could only grasp the faintest flashes of imagery: a robed man, a shiny hammer,
+and a vicious orc.A vicious orc? He surmised that he had dreamt of his appointment as a Paladin. But
+surely there were no orcs present at that joyous ceremony. Slowly, more images began to flash in his
+mind. There had been a fight between himself and the orc—and he had lost. Nonsense, he thought
+absently. He mused that his dreams were becoming even more imaginative in his old age.
+Lifting his head from the sweat-soaked pillow, he attempted to get up and out of bed. A searing pain
+shot through him and he lay back down, panting for breath. He stripped the blankets from his body and
+saw that his entire midsection had been neatly bandaged. Bruises and small lacerations covered most of
+his aching body. He was surprised to find that his arm had also been dressed and bandaged. Frantically,
+he tried to recall what had happened to him. Had the fight against the orc been real? For some strange
+reason, his memory seemed hazy and sluggish. His face contorted with pain as he struggled out of bed.
+Wrapping himself in his dressing robe, he made his way toward the sitting room of his private chambers.
+He found his young wife, Karandra, sitting quietly with her needlework in a large plush chair near an
+open window. At seeing him enter the room, Karandra threw down her embroidery and rushed to meet
+him. She hugged him warmly, careful not to squeeze him too tightly.
+“Thank the Light, you’re awake,” she said. Her young, delicate features were fixed with both relief and
+concern. Her blue eyes seemed to stare straight through him, as they always did. He smiled back and
+kissed her forehead lightly. He marveled, for perhaps the ten thousandth time, at her beauty. “I was
+beginning to wonder if you were going to sleep clear through midyear,” she said. His eyebrow arched
+questioningly as he stroked her soft, golden hair.
+“What do you mean? How long have I slept?” he asked.
+“Nearly four days,” she replied flatly. Tirion blinked in disbelief.
+“Four days,” he mumbled to himself. That would explain the hazy memory, he mused.“Karandra, what’s happened to me? Why have I slept so long?” he asked. She shrugged, shaking her
+head slightly.
+“We’re not exactly sure what happened to you,” she replied. “You left in the morning to go hunting and
+were gone for hours. Since you’re almost never late in returning, I was worried that you’d been hurt. I
+sent Arden out to find you.” Tirion smiled. Arden was the captain of the keep’s guards, and perhaps his
+most loyal friend. He should have guessed that Arden would go searching for him. Karandra continued,
+“Just as he was leaving the keep, he came across you atop Mirador. He said that you were unconscious
+when he found you, and that you’d been tied to the saddle with your own reins.”
+Tirion cupped his aching head in his hands. “Tied to my saddle? None of this makes any sense,” he said
+wearily.
+She placed her cool hand against his forehead, soothingly. “Your ribs were broken and your arm had
+been sliced open. We feared you had been attacked by a rogue bristlebear. Barthilas healed you as soon
+as Arden brought you inside.”
+Tirion sat down heavily in her chair.Barthilas? Barthilas had healed him? The youth was only recently
+anointed as a Paladin, and Tirion was surprised to hear that his powers had developed so quickly. The
+somewhat arrogant but devout Barthilas had been assigned as Tirion’s Second—his successor as Lord
+Paladin over Hearthglen. He had tutored the young Paladin in the ways of their holy Order and instructed
+him in the protocols of the political arena. Though he was glad the youth had been able to heal him, he
+had other matters to ponder.Had the fight with the orc really taken place ?
+Karandra kneeled down, close to him. “Barthilas’ healing taxed you greatly, and left him exhausted. As
+you slept, you cried out a number of times in delirium,” she said.
+He looked at her questioningly. “And?” he asked.
+“Well,” she began with a look of concern crossing her face, “you were rambling on about orcs, Tirion.
+You said that there were orcs in Hearthglen.”
+He laid back in the chair wearily. The memories of the furious encounter came rushing back at him. The
+fighthad been real. He looked into her crystal blue eyes and nodded grimly.
+“Itwas an orc,” he told her. Karandra sat back on her feet, mouth agape.
+“Light save us,” she muttered. Just then the door slammed open and five-year-old Taelan came
+bounding into the room.
+“Poppa! Poppa!” the boy shouted, running over to his parents. Karandra straightened and stood up as
+Taelan leaped up into Tirion’s lap. Tirion grunted as the small boy threw himself against his sore chest.
+“Taelan, my boy, how are you?” he asked, wrapping his son up in a hearty hug. Taelan beamed a coy
+smile up at him and shrugged his shoulders. “Have you been good for your mother?” Taelan nodded
+excitedly.
+“He’s mindful often enough,” Arden’s strong voice boomed from the doorway. “But he’s just as
+rambunctious as his father ever was.” Karandra smiled warmly at the loyal guardsman as he entered the
+room. “I hope I’m not intruding on anything. I saw Taelan there heading this way like a raging ogre andthought to catch him before he woke you, Tirion. It seems I shouldn’t have worried.” With a grunt, Tirion
+rose with Taelan in his arms and walked forward to greet his old friend. The two shook hands heartily.
+“Karandra tells me that I should thank you for hauling me back to the keep. Honestly, Arden, if I had a
+gold mark for every time you’ve fished me out of trouble . . .”
+“Nonsense. I just led your horse back. If you thank anyone, it should be Barthilas. He just about burnt
+himself out trying to heal you. You’d taken a pretty good beating, old friend. In any case, I’m glad to see
+you back amongst the living. You had us concerned there for a while.”
+“I know,” Tirion said. “There are some things we should discuss, immediately.” Arden nodded, casting a
+sidelong look at Taelan and Karandra. Catching the captain’s subtle hint, Karandra took Taelan from
+Tirion’s arms and said, “I’ll leave you both to it, then. You’ve got plans to make. And this little one needs
+to go down for his nap.” She kissed the boy on the cheek. Taelan, whining with displeasure, struggled to
+break free of her firm grasp. Karandra laughed softly to herself.
+“Just like his father,” she said with a giggle. Both Tirion and Arden smiled as she left.
+“I’ll see you later, son,” Tirion said, watching them leave. Once they were out of earshot, he turned to
+face Arden, his face a mask of concern.
+“It was an orc, Arden. More than likely, it’s still alive. As far as I could tell, it was alone out there. And,
+until we know otherwise, I want to keep this between us and whoever else was on hand when you
+brought me in. I don’t want to panic the entire province in case this was just a solitary incident.”
+Arden’s strong jaw tightened noticeably. “There may be a problem on that front already, milord.
+Barthilas and I were both on hand while you slept. We both heard you mutter about the orc,” he said.
+Tirion grimaced as Arden continued. “You know Barthilas as well as I do. Once he heard you say ‘orc,’
+he flew into a rage and started calling for a full regiment to scour the countryside in search of any more of
+the brutes. I nearly had to sit on him to calm him down.”
+“I appreciate the lad’s enthusiasm, but his fervor could be problematic,” Tirion stated wryly.
+“That would be an understatement,” Arden added, smiling. Both men had recognized early on Barthilas’
+almost zealous obsession to face orcs in battle. Barthilas’ parents had been murdered by orcs during the
+war, which had left the traumatized youth orphaned and inconsolable. Deciding to spend the rest of his
+life combating the orcs’ evil, Barthilas underwent years of rigorous training and study. Yet, tragically, the
+fiery youth was accepted as a Paladin only after the war had ended. Despite all his training and
+preparation, Barthilas was tortured by the fact that he wouldn’t have the chance to avenge his slaughtered
+parents. He also felt that he could only win the respect of his superiors by bloodying his hands gloriously
+in battle, as they had during the war. He dreamed of becoming a mighty hero and taking vengeance upon
+the creatures that had taken his family from him.
+Although he empathized with the younger Paladin, Tirion knew that that kind of thinking could lead to
+disaster. “I doubt he’s been tight-mouthed about my encounter. Especially after he healed my wounds.
+How many know about this, Arden?” Tirion asked anxiously.
+“Rumors have been flying all around the keep for the past few days. Personally, I’ve heard just about
+everything from an orc raiding party to a full-fledged invasion force waiting to descend upon us. You
+know how it is. People are terrified that the Horde will return. And Barthilas, specifically, is terrified that
+he won’t get to defeat it singlehandedly if it ever does,” Arden replied. Tirion patted him reassuringly onthe shoulder.
+“Let’s just hope it doesn’t come to that,” Tirion said in earnest. “Assemble my advisors. We’ll discuss
+this further in council.” Arden saluted crisply and turned to leave. Tirion cleared his throat. “Arden,” he
+said softly. “One last thing . . .” Arden stopped in his tracks and stiffened. “You saw the shape I was in
+when you found me?”
+“Yes,” Arden replied.
+“There’s no way I could have tied myself to Mirador and found my way home in that condition.”
+“No, milord. There’s no way.”
+“And you saw no one else out there? No one who could have helped me and led the horse back here?”
+“No, milord. There was no one about. I even went back later to search for tracks. I found nothing.
+Someone definitely tied you to your horse. And, for the life of me, I can’t figure out who,” Arden
+finished. Tirion nodded and motioned for him to go. Left alone, Tirion pondered on who his anonymous
+savior could have been. As far as he knew, the only two people in the woods that morning were himself
+and the mysterious old orc. Briefly, Tirion wondered if it was the orc that had saved him. His past
+experience with the creatures prompted him to disregard the notion. The bestial creatures had no notion
+of honor. From all he had seen of them, he was certain that they would never go out of their way to show
+compassion toward another creature, least of all a hated enemy. Still, despite his convictions, Tirion’s
+instincts told him that it had been the orc after all.
+*    *    *
+Candles fluttered in the medium-size council room. At the room’s center sat a large oak table, covered
+by an immense map that displayed the lands of Hearthglen down to the most minute detail. Six men were
+seated around the table, conversing amongst themselves. At the head of the table sat Tirion, who stared
+quietly at the section of map that indicated the woodlands surrounding the ruined tower. Lost in thought,
+Tirion was disinterested in his advisors’ idle conversation. He couldn’t tear his mind from the nagging
+question—who had saved him and led his horse home? He remembered clearly that the orc had saluted
+him when he allowed the creature a reprieve during their combat. Perhaps the brute had some semblance
+of honor after all, Tirion mused. No, it had to be a mistake. Orcs were vile and savage. Their kind knew
+nothing of civility or compassion, he reminded himself. But still, his heart told him that it was the orc who
+had saved him.
+His thoughts were interrupted as the door swung open to admit a tall, slender young man. Resplendent in
+his silver plate armor, with a deep green cloak flowing behind him, Barthilas looked every bit the
+crusading Paladin. Though he was nearly thirty years younger than Tirion, Barthilas held his oath as a
+Knight of the Silver Hand as sacred as the elder Paladin did. As always, Barthilas moved with a fluid
+grace, barely even acknowledging the presence of the other men in the room. Brash and somewhat
+pompous, Barthilas rarely went out of his way to acknowledge anyone who was not a Light-blessed
+Paladin.
+Tirion stood and saluted the younger man as he entered.
+“Greetings, Barthilas. I thank you for your healing. If not for you, I’d have gone on my way to join the
+Light,” Tirion said, rubbing his still sore ribs. Although his wounds had healed completely, his body was
+still tender. Barthilas shook his head dismissively and returned Tirion’s salute.“It was nothing, milord. I did just as you would have done for me if the circumstances had been
+reversed,” Barthilas said confidently. “I dearly wish that it had been me facing that orc. If I had, its head
+would now adorn the keep’s battlements.” Tirion noticed a few of the advisors exchanging surprised
+glances. As was usually the case, the young Paladin’s enthusiasm bordered on impertinence. Tirion
+smiled at the young man with practiced patience. “Which, of course,” Barthilas continued, “is not to say
+that you couldn’t have defeated the brute yourself, milord.”
+“Well, I’m sure you would have put the fear of the Alliance into it, at least, Barthilas. Just the same, for
+the time being, I don’t want any of you discussing this matter with anyone else. I’d rather not rile the
+citizenry until we have a better understanding of what we’re dealing with here,” Tirion said.
+Barthilas nearly choked. “Milord, with respect, are you suggesting that we keep silent while the enemy
+creeps unhindered through our lands? We must scour the woods immediately! Every second we waste
+here could provide the orcs with enough time to—” Tirion cut him off.
+“You are assuming that there are more orcs out there, Barthilas. I was there, and I saw none. I will not
+sound the call to arms before we’ve confirmed the facts. This is not the time to start jumping at shadows.
+We must remain calm and be vigilant.”
+“Jumping at shadows? An orcish force somehow slips undetected into our lands, one of its members
+beats you to a pulp, and you want to remain calm? This is madness!” A few of the advisors gasped at the
+young man’s audacity, but Barthilas continued, unabated. “We should mobilize a hunting party right this
+instant!”
+Tirion clenched his fists and tried to keep his voice even. The advisors, who had kept silent during their
+heated exchange, seemed incensed by Barthilas’ disrespectful rantings.
+“You’ll watch your tone with me, boy. I am still governor of this province, and your direct superior as a
+Paladin. For so long as I am, we will do things the wayI see fit. You are to stand down and remain within
+the keep’s grounds until I order you to do otherwise. Is that clear?” Tirion growled.
+Barthilas was beside himself with rage. “I hope and pray to the Light that milord isn’t so shaken by his
+recent beating that he fears to do his clear duty.”
+“That will beenough, Barthilas! You’ve gone too far!” one of the councilor’s shouted. Bristling with
+anger, Tirion stepped up to the young Paladin and looked him dead in the eye.
+“You may leave my council room now,” he said to Barthilas.
+The young Paladin choked back his rage and steadied himself. He calmed visibly. “Of course, milord,”
+he said in a strained voice. “I will await your orders eagerly.” With that he snapped a crisp salute and left
+the room.
+“Yes, I’m sure you will,” Tirion said grimly. Everyone seemed to sigh as the tension drained from the
+room. Tirion rubbed his eyes wearily and sat back down.
+One of the advisors spoke. “Milord, he is brash, but he is a good man at heart. I’m sure he didn’t
+mean—”
+“I know what he is. And I know what he meant. Barthilas has always been ruled by his passions.They’re what make him an exceptional Paladin. However, they also make him a liability in delicate
+situations,” Tirion stated. He felt tired, like an old man. “Once he calms down, he’ll come around. He
+always does.”
+“But milord, what if he’s right? What if there are more orcs out there waiting to strike at us, and we sit
+here and do nothing?” the advisor asked.
+Tirion ran his fingers over the spot on the map that indicated the broken tower. “Under no circumstances
+will I donothing, old friend. I’ll take care of this matter myself.” Before they had a chance to argue the
+point further, he rose and walked toward the exit, leaving the advisors to stare at one another in
+confusion. “But on the off chance that he is right . . . may the Light help us all.”
+Later that evening, Tirion sat alone in the keep’s spacious dining hall. His plate of food had gone cold,
+and he picked at it absently with his fork. He was thinking about the old orc again. Was it truly possible
+that the orc had saved his life? He would have to find out soon. If Barthilas was right, then everything
+he’d worked for could come crashing down at any moment.
+Behind him he heard a quiet scuffling of small feet. Looking around, he saw sleepy-eyed Taelan
+emerging from the adjoining sitting room.
+“Shouldn’t you be asleep, young man?” he asked. The boy crawled into his lap and looked up at him in
+awe. Tirion smiled at his son, thinking how much the boy resembled his mother. Sandy blond hair. Big
+blue eyes. He was certainly a sweet, innocent child, Tirion thought.
+“Did the green men come back again, Poppa?” Taelan asked. Tirion nodded and ruffled the boy’s hair.
+“Yes. But you don’t need to worry, son. You’ll be safe enough here in the keep.”
+“Are you going to fight the green men, Poppa?” the boy asked. Tirion’s brow creased.
+“I don’t know yet, son. I just don’t know.”
+THREE
+A  Warrior’s  Tale
+Tirion woke early the next morning. Slipping out of bed so as not to wake Karandra, he dressed and
+made his way down to his personal ready room. There, displayed upon an ornate stand near the
+darkened room’s center, was his armor. The heavy silver plates with their gold lining shone brightly in the
+early morning light, despite the numerous gouges and dents that covered them.Scars of battle, he thought
+warily. Any one of the deep gouges could have signified a fatal wound, had he been a less cautious man
+over the years. He hoped silently that his luck would hold out with whatever troubles were coming.
+As quietly as he could, he slipped the armor plates on one at a time and buckled them into place. Once
+finished, he stood in front of a full-length mirror and looked himself over. He looked much the same as he
+always had, despite a few more gray hairs framing his tired face. He marveled at how well the heavy suit
+still fit after all these years. He had to admit to feeling a certain indestructibility every time he wore the
+armor. Yet that was a young man’s notion. No one was invincible.No one lived forever, he thought
+grimly.Walking over to the stone fireplace set into the far wall, Tirion reached out for his trusty warhammer,
+which rested on the oak mantel above. The expertly weighted hammer felt good in his hands. The holy
+runes etched in its head shone as brightly as they ever had.
+“With any luck, I won’t need your strength today, old friend,” he muttered. He tucked the hammer under
+his arm and strode down toward the keep’s stables.
+*    *    *
+The sun was just breaking over the distant Alterac peaks as Tirion finished saddling Mirador. He slung
+the hammer into its saddle-hoop and made ready to mount the seasoned warhorse. He put his foot in the
+stirrup and grunted in pain. His ribs still ached, and the heavy armor made it difficult for him to pull his
+own weight up.
+“May I ask what you’re doing?” a suspicious voice asked from the stable’s dark entryway. Tirion took
+his foot from the stirrup and turned to face Arden. The captain of the guard’s face was stern and etched
+with concern.
+“I am going to investigate the tower’s ruins. If the orcs are planning an invasion of my land, then I’ll find
+proof of it myself,” Tirion said flatly.
+Arden nodded. “Great. Then I’ll saddle up and go with you.”
+“I do not wish to have company. This is something I must do alone, Arden,” Tirion said. There was iron
+in his voice, and the captain’s concern grew more apparent.
+“I don’t like this, Tirion. What exactly are you trying to prove? Heading off unescorted so soon after
+your—”
+Tirion cut him off. “My what, Arden? My defeat?” Tirion asked heatedly. Arden lowered his gaze and
+shifted uncomfortably. Tirion mounted the horse, exhaled deeply, and curtly said, “I’ll be back in a few
+hours. Try to keep an eye on Barthilas while I’m gone. I have a feeling he’ll try to stir up trouble.” He dug
+his spurs into Mirador’s sides and sped out toward the distant tree line.
+With growing unease, Arden watched his lord gallop away into the distance. Somehow he knew that
+Tirion wasn’t telling him everything.
+*    *    *
+Finding his way back to the ruined tower wasn’t as easy a task as Tirion had thought it would be. It took
+him hours to wind his way back up the mountain trail. The morning fog still clung to the ground along the
+winding path, but he could still make out the tower’s broken frame through the trees. As he neared it, he
+slowed to an easy canter, attuned to any sounds of danger.This is not a wise move, he
+thought—approaching his enemy’s encampment without so much as a squire to aid him. His horse’s
+heavy barding and his own flashing armor were enough to announce his presence to anyone for miles
+around.Need to be more cautious, he thought. After all, there was still a good chance that the orc had
+not been alone when he encountered it. Yet something in his gut told him that this was not the case.
+Something deep inside told him that he had nothing to fear. Throwing caution to the wind, Tirion rode
+boldly up to the tower’s base and dismounted. Looking up, he could see where the once mighty walls
+had collapsed inward. The structural damage to the tower was extensive, and he wondered fleetinglyhow he could have survived the disaster at all. He looked about the place for any sign of the orc. He saw
+none. The tower looked deserted.
+A low, guttural grunt caught his attention and he turned to see the orc sitting on a large rock near the tree
+line. The creature seemed calm and poised, but its great battle-ax leaned nearby within easy reach.So the
+creature, too, was cautious, Tirion thought to himself. The proud Paladin removed his helmet and set it
+on the pommel of Mirador’s saddle. The great horse snorted loudly, sensing its master’s tension. From
+the corner of his eye, Tirion caught sight of the warhammer strapped to the saddle and reached for its
+handle. Immediately, the orc grabbed for his ax. Tirion quickly pulled his hand away and took a step
+back from the horse. The orc grunted softly and relaxed. It grinned at him knowingly. Tirion took a deep
+breath and then walked slowly toward the orc.
+As he walked forward, he realized that he could have been sorely mistaken about the old orc. Perhaps
+the creature did intend to kill him after all. Maybe someone else had miraculously saved him from the
+tower’s wreckage. Maybe. But he had to know for sure, one way or another. Stopping only a few paces
+from where the orc sat, Tirion raised his fist to his heart in salute.That had been the orc’s salute, right?
+In return, the orc raised a stiff hand to his own grizzled brow.
+“That is how you humans do it, is it not?” the orc asked in fluid speech. Its voice was deep and gritty,
+but its articulation was exceptional. Tirion was dumbfounded, his shock evident on his face. The orc’s
+hideous features contorted in what Tirion surmised was a grin.
+“You . . . you speak our language?” Tirion asked shakily.
+The old orc eyed him sternly. “Do you think my people survived in your world this long using brute
+strength alone?” it asked. “Your kind has always underestimated mine. That is why you lost the first war,
+I think.”
+Tirion could only marvel at the creature. Here sat a thing of darkness—a vile, murdering beast. And yet,
+it spoke with fluidity and wit. This creature did not rush to tear out his heart, as he would have expected.
+It merely sat, reading him with its clever, knowing eyes. Tirion shuddered, feeling fascinated and repulsed
+at the same time. Without thinking, he blurted out the question he had been asking himself ceaselessly: “I
+must know. Did you pull me from the tower and lead my horse back to the road?”
+The old orc held him in his gaze for a long while and then nodded once. “I did,” it said.
+Tirion exhaled sharply. “Why would you do that?” he asked. “We are sworn enemies.”
+The orc seemed to consider the point for a moment. “You have great honor, for a human. That much
+was clear from our fight. No honorable warrior deserves to die like a trapped animal. It would not have
+been right to simply leave you there,” the orc finished. Tirion didn’t know exactly what he had expected
+to hear, but he was clearly unprepared for that answer. “Besides,” the orc continued, “I have seen
+enough death in my time.”
+Tirion bowed his head, struggling to make sense of the orc’s words.This can’t be right, he thought.
+This creature is a merciless savage. How could it speak so? Yet Tirion knew that the orc’s words rang
+true. He could feel the orc’s sincerity—and beneath it, deeply buried pain and sorrow. As a Paladin, he
+had developed a certain empathic ability to sense deep emotions from others. The curious ability had
+never proven to be more useful. He pulled himself together and simply went with the moment.
+“I should thank you, then,” Tirion began, wondering how to properly address the creature.Sensing Tirion’s confusion, the orc spoke. “I am Eitrigg, human. You may call me Eitrigg.” Relieved,
+Tirion replied, “Thank you, Eitrigg. Thank you for saving my life.”
+The orc nodded again and stood up. Tirion noticed that the orc walked with a distinct limp. He surmised
+that the cut he had given the creature during their battle was likely infected. Without giving Tirion a
+second glance, the orc limped over toward the ruined tower.
+“I am Tirion Fordring,” the Paladin began. “I should tell you that I am the lord of this land, Eitrigg, and
+that your presence here upsets many of those whom I entrust with its protection.”
+The orc laughed softly. “I wager they slept well enough before you found me,” the orc said. “I have lived
+here in these woods for many long years, human. I move from place to place, keeping hidden, finding
+shelter where I can. I have made great sport of evading your scouts and yourRangers. ”
+The latter was spoken with distinct scorn. Orcs were not known for their fondness of elven Rangers.
+The cunning, forest-running Rangers had sworn to gain vengeance against the Horde after the orcs had
+destroyed the elves’ enchanted homeland of Quel’Thalas. Tirion wondered if Eitrigg was telling the truth.
+Could this orc have remained undetected for so long?
+Eitrigg snorted and said, “It was bad luck that led you to me.”
+“Perhaps,” Tirion began, “but your being here creates a serious problem for me. My people hate your
+kind, Eitrigg. Your race brought nothing but misery and chaos to these lands. They would kill you in a
+heartbeat if they could. How, then, can I be merciful? How can I let you stay, knowing what your people
+have done?”
+“I have abandoned them, human! I live here in solitude—in exile,” Eitrigg said warily. “I no longer wish
+to pay for their sins.”
+“I don’t understand,” the Paladin replied. “Are you saying that you’ve disavowed your own people?”
+My people are lost!” the orc spat. “Truth be told, they were lost long before they ever came to this
+strange world. When the Horde finally fell before your standards, I decided to take my leave of it
+forever.”
+Eitrigg reached down and rolled a large chunk of mortar onto its side. Tirion was impressed with the
+orc’s strength. It would have taken at least two stout men to move the stone. The orc motioned for Tirion
+to sit and then sat himself down cross-legged on the ground. Tirion took a seat on the leveled mortar.
+“There is much you do not know about my people. Their honor and their pride left them long ago. I
+decided my duty to them was finished when my sons were killed,” Eitrigg said grimly.
+“Were your sons warriors?” Tirion asked. Eitrigg scoffed loudly.
+“All orcs are warriors, human,” he said, as if Tirion were a brainless child. “We know little else. Despite
+my sons’ strength and prowess, they were betrayed by their own leaders. During the last war our clan
+Chieftains fought amongst themselves over petty rivalries. As one particularly bloody battle concluded,
+my sons were ordered to pull back from the front lines. One of our Chieftain’s rivals, hoping to advance
+his clan’s standing within the Horde, countermanded the order and sent my sons and their brethren back
+to be slaughtered. It was a dark day for our clan. . . .” Eitrigg said, lost in thought. “A dark day for me,”he finished.
+Tirion’s mind reeled. He was well aware of the fact that orcs frequently fought amongst themselves. Yet
+Eitrigg’s apparent grief moved him. He never imagined that such treachery could affect an orc so.
+“I realized then that there was no hope. Corruption and enmity had completely overshadowed my
+people’s spirit. I felt that it was only a matter of time before the Horde devoured itself from within,”
+Eitrigg said.
+“Where did the corruption come from, Eitrigg? What drove your people to such depravity?” Tirion
+asked.
+Eitrigg’s brow raised and he appeared to be deep in thought. “In my grandfather’s time, my people were
+simple and proud. There were a few dozen clans then. They lived and hunted within the wilds of our
+world. They were all hunters back then—mighty warriors who lived by an honorable code and
+worshiped the spirits of the elements themselves. Thunder and lightning coursed through the blood of my
+ancestors!” Eitrigg said proudly, lost in the haze of reverie. “Wise Shamans guided them and kept the
+peace between the clans.”
+Tirion leaned in, hanging on the old orc’s words. Surely, no human ears had ever heard this much of the
+orcs’ history before. “And then?” Tirion asked anxiously. He wondered if this was how Taelan felt, as he
+read the boy stories before his bedtime. Eitrigg continued somberly.
+“A new order rose up amongst the clans, promising to unite them and forge them into a powerful nation.
+Many of the Shamans discarded their ancient traditions and began to practice dark magics. They began
+to call themselves Warlocks. For some malign purpose, they used their shadowy powers to corrupt the
+clans and drive them to heinous acts of violence. They did succeed in uniting my people, after a fashion,”
+Eitrigg stated wryly. “Under the Warlocks’ rule, the clanswere united—as a rampaging Horde. Our
+noble warrior traditions were perverted to serve their dark, secretive ends. It was the Warlocks who
+brought my people to your world, human. It was they who drove us to make war against you.”
+Tirion shook his head in bewilderment. “And no one spoke out against them? Out of an entire race of
+warriors, no one was willing to fight them?” Tirion asked heatedly.
+“There were a few who would not submit. One of the dissident clans, led by an orc named Durotan,
+challenged the Warlocks openly and tried to convince the other clans of their folly. I remember the mighty
+Durotan well. He was a great hero. Unfortunately, few orcs heeded Durotan’s warnings. The Warlocks’
+hold over their hearts blinded them to reason. For his courage, Durotan was exiled, along with his clan. I
+heard that the Warlocks’ assassins finally killed him, years later. Such is the way of the Horde,” Eitrigg
+finished. “Madness,” Tirion said. “If your people truly valued honor, as you’ve said, then I can’t believe
+that they’d let themselves be controlled so easily.”
+Eitrigg scowled and sat silently for a moment. He looked up with stern eyes and replied, “It was a
+terrible momentum that gripped us in those days, human. After Durotan was taken away, fear and
+paranoia overtook my people. None would stand against the Warlocks.”
+Tirion scoffed derisively.
+Bristling with anger, Eitrigg erupted. “Have you ever stood against the will of an entire nation, human?
+Have you ever questioned an order, knowing that to disobey meant immediate death?”Tirion looked away.No. He could scarcely imagine what that must have been like.
+Eitrigg nodded, feeling his point had been made. “It was rumored that the Warlocks consorted with
+demons and drew on their infernal powers. Personally, I believe it to be true. The darkness that took
+hold of my people could not have been born in our hearts.”
+Tirion tensed. He remembered hearing that the orcs had set demons loose to sow terror throughout the
+human ranks. The very thought appalled him. “It seems your people have suffered greatly, Eitrigg, even
+before they roused the wrath of mine,” Tirion said with a note of pride in his voice. Eitrigg gave him a
+sidelong glance. “However, your story is a remarkable one. I fear I may have misjudged you and your
+people along many lines.”
+Eitrigg grunted as if amused and stood up to stretch his back. “Actually,” Tirion continued, “we are much
+alike, you and I. We are both old soldiers who have sacrificed much for our—”
+Eitrigg cut him off with a wave of his sinewy hand. “We arenothing alike, human,” he growled. “I am a
+renegade living as an exile in a hostile land! You are a wealthy lord, loved by a free people, able to live
+life as you wish. We are nothing alike!” Embarrassed by his outburst, the old orc scowled and looked
+away into the distance.
+Tirion considered the orc’s harsh words for a moment. “You are right, of course. Our people are at war.
+Thus, I must ask you, Eitrigg, on your honor—are there any other orcs in my land? Does the Horde plan
+to attack this region?”
+Eitrigg sighed heavily and sat back down. He shook his head in dismay and looked Tirion in the eye. “As
+I have told you, human, I live here alone. I have no interest in dealing with others of my kind. I haven’t
+even seen another orc in years. I cannot tell you what the Horde plans now. I can only assure you that
+this broken old warrior has no plans to assault your keep or make any trouble for you whatsoever. I just
+want to be left alone to live out my remaining years in solitude. After a lifetime of fruitless war, peace is
+the only comfort I have left.”
+Tirion nodded. “As a warrior of honor, I accept your words, Eitrigg. And, in return for having saved my
+life, I will allow you your solitude. So long as you remain hidden and leave my people unmolested, you
+may stay here for as long as you wish.”
+Eitrigg smirked slightly in disbelief. “I think perhaps your brethren will hunt me down despite you, human.
+To them, I am the sum of their fears,” the old orc said.
+“Yet I am their lord, Eitrigg. They shall do as I say. I give you my solemn oath as a Light-sworn Paladin
+that your secret will be safe. None shall hunt you while I have power to prevent it,” Tirion vowed. For a
+brief moment, Tirion regretted making such a bold statement. He knew it would be extremely difficult to
+fulfill his charge if matters became complicated. If his comrades ever found out that he had made such a
+pact, they would certainly brand him as a traitor. However, his instincts told him that this was the right
+decision. He stood, resolved.
+Eitrigg grunted in satisfaction. “On your honor, then,” he said, rising to his feet once more. Tirion noticed
+the orc’s limp again. Eitrigg was obviously in great pain.
+“On my honor,” Tirion replied, gazing at the orc’s wounded leg. “You know, Eitrigg, I can heal your
+wound. It is a power I have,” he said.The orc chuckled in amusement. “Thank you, but it’s not necessary,” Eitrigg stated. “Pain is a great
+teacher. Apparently, even after all my battles, I still have much to learn.”
+Tirion laughed out loud. He was truly beginning to like the old orc who, not an hour before, he
+considered to be the most heinous villain. “Perhaps someday I can return and converse with you further. I
+must admit you are not at all what I expected to find,” the Paladin chided.
+Eitrigg’s massive, yellowed tusks seemed to stretch as he smiled. “Nor are you what I expected,
+human.”
+Tirion gave the orc’s salute again and mounted Mirador with a grunt. He dug his spurs into the stallion’s
+flank and rode off beyond the orc’s sight.
+*    *    *
+A thousand different thoughts flooded Tirion’s mind as he rode home along the winding path. He
+wondered if he had made a mistake by offering the orc sanctuary in his lands. Nevertheless, he had given
+his word that he would keep the orc’s secret safe. Whatever else happened, he was honor-bound to
+protect the old orc from persecution, and that was that.
+It was nearly dusk as he rode back into the keep’s stables. Tiredly, Tirion handed his reins to the stable
+boy and headed inside. All he wanted was to sleep and clear the day’s business from his mind. As he
+reached for the door handle that led into the kitchens, a strong hand caught his arm. Tirion looked up to
+find Barthilas blocking his way. There was a light in the youth’s eyes that made Tirion very uneasy.
+“Milord,” Barthilas began icily, “we must talk immediately.”
+Tirion sighed in frustration. “I’m very tired, Barthilas. We can talk in the morning if you wish.”
+Barthilas’ grip only tightened. “I don’t think you understand, milord. You see, I know where you were
+today,” the young Paladin stated. His eyes never blinked, but held Tirion in their frosty depths. Tirion
+wondered if Arden had betrayed him and told of his errand. No. Arden had always been loyal.
+“I know that you know there are orcs in Hearthglen, Tirion. I can see it in your eyes. I pray, for your
+sake, that you’re not covering up any pertinent information.”
+Tirion bristled. He could handle the youth’s arrogance, but he would not be threatened in his own home
+by an overly zealous boy.
+“I told you before, Barthilas. You will address me with the proper respect,” Tirion stated furiously. “As
+for your concerns, I have determined that my encounter was an isolated incident. That’s all you need to
+know for the time being. I suggest that you forget about this business and let the matter drop. Now take
+your hand away and let me pass before I lose my temper.”
+Slowly, Barthilas released his grip and took a step back. His piercing eyes never left Tirion’s. The elder
+Paladin turned brusquely and entered the keep.
+Left standing alone, Barthilas scowled in frustration.
+“This is not over, milord,” the young Paladin hissed to himself, clenching his fists. “This is not over by
+far.”*    *    *
+Tirion made his way to his private chambers. He ceremoniously removed his armor and placed his
+warhammer back upon the mantel. He entered his bedroom and crashed down heavily on the bed. All he
+wanted in the world was just a few hours of sleep. Just as his head hit the plush pillow, Karandra walked
+into the room. She was surprised to find him there.
+“Oh, you’re home,” she said sweetly. “Where did you go running off to this morning, Tirion? I asked
+Arden, but he wouldn’t tell me anything.” Her voice was full of concern.
+Tirion tensed. He didn’t want to discuss the matter about the orc at all. He had given his word to keep
+Eitrigg’s secret safe, and the last thing he wanted was to be forced to lie to his wife about his activities.
+But, looking into her eyes, Tirion could tell she wasn’t going to settle for anything less than the whole
+story.
+“I went out to inspect the site where I fought the orc, Karandra. I needed to find out if there were more
+orcs in my lands,” he said, a tad too irritably. “I wanted to go alone, so I told Arden not to speak about it
+with anyone.”
+Karandra frowned and folded her arms under her breasts. She did that every time she was upset with
+him.
+“You went off alone only days after your attack? How can you be so reckless, Tirion? What were you
+trying to prove? It’s not like you’re a young man anymore!” she said heatedly.
+Tirion flinched. First Barthilas and now his wife. “I’ve been soldiering for more years than you’ve been
+alive, girl! The last thing I need from you is a lecture on how to perform my duties properly!” he growled.
+Tirion rarely spoke to her like that, and Karandra never really knew how to respond when he did. She
+decided that a tactical change of subject was needed in order to salvage the conversation.
+“Did you find what you were looking for?” she asked, trying to make her voice sound as innocent as
+possible.
+Tirion forced himself to calm down, but knew that this new line of questioning wouldn’t fare well for her
+either. “Yes, I did,” he said in an even tone. “I am convinced that my encounter was an isolated event,
+and that we have nothing to fear from the orcs.”
+Karandra brightened and sat down beside him on the bed. She took his hand in hers. “I’m so relieved.
+That’s wonderful, Tirion, but how can you be so sure?” she asked.
+Tirion’s heart sank. He would not lie to her. “I can’t tell you, my love,” he said softly.
+“Why not? If there is nothing to fear, as you say, then there shouldn’t be any problem with telling me,
+should there?” she asked. Something in her voice sounded hurt.
+“It is a matter of honor, Karandra. I cannot tell you,” he repeated.
+With a start, Karandra ripped her hand away and stood up from the bed. Tirion half expected lightning
+bolts to burst forth from her eyes.“Honor. It always comes down to that with you, Tirion! You’re just as exasperating as that vainglorious
+Barthilas! Is your precious honor really more important to you than your own wife?” She cupped her face
+with her hands and seemed to be on the verge of tears. Tirion looked up at her and answered as gently
+as he could.
+“You wouldn’t understand, my love. I am a Paladin. There is a great deal expected of me. . . .” he said,
+his voice trailing off. There was an uncharacteristic note of self-pity in his tone.
+Karandra took her hands from her face and had to restrain herself from hitting him.
+“You’re right, I don’t understand! But I know exactly what’s expected of you,” she yelled as tears
+started flowing down her reddening cheeks. “You’re expected to act like my husband and not try to
+shelter me from your silly little secrets like I’m still a girl in pigtails! You’re expected to act like a
+responsible lord and not go gallivanting off alone and putting yourself in danger!” Tirion looked away as
+she began to sob. “You’re supposed to be careful and stay alive so that our son doesn’t grow up without
+a father,” she finished.
+Tirion stood up and took her in his arms. “I know, dearest. I did take an unnecessary risk. But you’ve
+got to trust me on this, Karandra. Everything will be all right,” he told her soothingly.
+She wiped the tears from her eyes and looked at her husband’s face. She would try to trust his
+judgment. She was about to tell him as much when a quiet shuffling of feet announced that Taelan had
+entered the room. Tirion and Karandra looked toward the door to see their bleary-eyed son standing
+before them. Apparently, their arguing had woken the boy up.
+“Are you two fighting?” the boy asked timidly, his big blue eyes glistening with concern.
+Tirion walked over and scooped the boy up in his arms. “No, son, your mother’s just worried about the
+orcs, is all,” he said soothingly.
+Taelan seemed to think for a moment. “Poppa, are the orcs as mean and cruel as everyone says they
+are?” the boy asked.
+Tirion wasn’t prepared for such a direct question. He thought about his revealing conversation with
+Eitrigg, and marveled that he wasn’t so sure anymore. He certainly didn’t want to lie to his son.There
+had to be some hope for future generations.
+“Well, son, that’s hard to answer,” he said slowly. Focused on Taelan as he was, Tirion didn’t see
+Karandra’s incredulous stare. The boy listened intently as his father continued. “I think there are some
+orcs who can be good. They’re just harder to find, is all,” Tirion said gently.
+Karandra couldn’t believe her ears. Her ebbing anger flooded back into her.
+“Really, Poppa?” Taelan asked.
+“I think so,” Tirion replied. “Sometimes we need to be careful of how quickly we judge people, son.”
+The boy seemed pleased with the answer. Karandra was not. Despite everything else, she would be
+damned if she let Tirion fill the boy’s head with such nonsense.“Don’t tell him that!” she hissed. “Orcs are mindless beasts who should all be hunted down and killed!
+How can you even say that, knowing what they’ve done to our world! What’s gotten into you, Tirion?”
+she yelled, snatching Taelan from his arms. Sensing her anger, the boy began to cry. She stroked his hair
+lovingly as she turned to leave. “Don’t worry, baby,” she said, “your father’s just tired. We’ll let him get
+some rest, all right?” she said as she left the room briskly without even turning to acknowledge Tirion.
+Left alone, Tirion wandered over to an ornate serving stand and poured himself a cup of chilled wine.
+Taking a deep sip, he sat down heavily and marveled at how quickly his entire world had turned upside
+down.
+FOUR
+The  Chains  of  Command
+Two days passed by quietly in Hearthglen. The rumors of the supposed orcish threat had died down
+significantly. Tirion felt relaxed, and mused that he might even be able to put the whole matter behind him
+for good. So long as Eitrigg stayed away from people, Tirion wouldn’t have to worry about taking action
+and betraying his oath to the old orc. He was surprised to find that Barthilas had remained quiet about the
+issue for the past few days. Yet, despite the young Paladin’s silence, Tirion sensed that Barthilas
+wouldn’t rest so long as he suspected there were orcs in Hearthglen.
+After his unexpected hiatus, Tirion slipped back into his role as the lands’ governor with relative ease.
+The somewhat monotonous bureaucratic duties of his office served to keep his mind off of Eitrigg and
+their fateful encounter. He spent what private time he could find with Taelan and Karandra. Surprisingly,
+his wife seemed to have forgotten about their argument from the previous night. She acted as cheerful as
+she always had, and never once broached the subject of orcs again. Tirion was thankful for the peace
+and quiet. After the past week, he had had his fill of excitement and danger.
+*    *    *
+The sun was centered in the crystal blue sky as Tirion sat on a large balcony overlooking the keep’s
+stables and riding corral. Located at the rear of the keep’s grounds, the balcony offered a breathtaking
+view of the mighty snow-capped Alterac peaks in the distance. He watched as, far below him in the
+corral, Karandra led a small, white pony around in circles. Upon the pony’s back sat Taelan, who was
+clearly having the time of his life. The laughing boy flailed his tiny arms gleefully, calling for his mother to
+go faster and faster. Karandra laughed with her son, and kept reminding him to hold onto the pony’s
+mane with both hands.
+Tirion gazed at them both intently. They were the center of his world and the source of all his joy. He
+would not fail them. He had thought long and hard about what Karandra had said to him during their
+heated argument. Perhaps his honor was a selfish thing after all, he mused. But even if it was, it was an
+integral part of him. It defined him as clearly as his own face did. As a Paladin he could not and would
+not discard it out of hand. All depended on it. He simply hoped that it would never come between him
+and his loved ones again.
+*    *    *
+Arden’s heavy boots clanked loudly upon the balcony’s stone floor. The captain of the guard strode up
+behind Tirion and bowed curtly. Tirion noticed that Arden was winded. Apparently, the loyal captain hadrushed to find him. Tirion stood up and saluted the younger man. He saw that Arden’s face was drawn
+and pale.
+“What is it, Arden? Why are you in such a hurry?”
+The captain struggled to catch his breath. “I’ve been looking all over for you, milord,” Arden said in a
+raspy tone. “We have visitors at the gate.” Tirion tensed. For a brief moment, he feared the worst.
+Certainly, visitors to the keep were common enough. The only thing Tirion imagined that would affect
+Arden so was an army of orcs scaling the walls.
+“What visitors? Is there some problem?” the Paladin asked tightly.
+Arden shook his head and gulped air. “An envoy from Stratholme, milord. Lord Commander Dathrohan
+has come in person, escorted by a full regiment. He wishes to speak to you immediately.”
+Tirion’s jaw dropped.Lord Dathrohan, here? he wondered. The Lord Commander was not only his
+direct superior, but one of his oldest friends as well. Dathrohan was a great leader and an honorable
+warrior. He and Tirion had saved each other’s lives more than once during the war. Due to their
+increasing duties, the two friends hadn’t seen each other in years. But why would the great lord venture
+all the way from the province’s capital for an unannounced visit escorted by so large a force? A burst of
+panic surged through Tirion’s body.Dathrohan knew about the orc. It was the only explanation for his
+visit, Tirion concluded. He knew that it must have been Barthilas who had alerted the Lord Commander
+to his recent encounter with Eitrigg. Tirion inhaled deeply and steadied himself. He patted Arden
+reassuringly on the shoulder and, with a sidelong glance at his wife and son below, strode out toward the
+main gate.
+*    *    *
+Lord Commander Saidan Dathrohan was an imposing figure. He stood nearly six and a half feet tall and
+was resplendent in his ornate, shining armor. A gold-rimmed, midnight-blue cloak covered his broad
+shoulders and flowed out regally behind him. His aged features were marked by long years of battle and
+strife. His evenly cropped hair and neatly trimmed beard were gray, but his piercing blue eyes shone with
+a vigor and strength that belied his years.
+Upon seeing Tirion approach, Dathrohan’s stern countenance broke and he smiled widely. He strode
+forward and embraced his friend in a bear hug. Tirion felt the air escape from his lungs. The mighty
+Dathrohan nearly lifted him from the floor. Dathrohan let out a deep, barrel-chested laugh.
+“Tirion, my friend, it’s good to see you. How long has it been, four years?” Dathrohan asked. He
+released Tirion and the Paladin straightened formally.
+“Almost four years exactly, milord,” Tirion replied.
+Dathrohan smirked and slapped his back, nearly sending Tirion stumbling. “Let’s not start with all that
+‘my lord’ rubbish! You’re one of the few men alive who still remembers me as a snot-nosed whelp.
+We’re on even ground here, you and I,” Dathrohan said humorously. Tirion forced himself to relax and
+smiled back.
+“Have it your way then,Saidan. ” He slapped his hand on the taller man’s shoulder plate. “It’s good to
+see you, too,” he said warmly. Though Dathrohan’s demeanor was as familiar and raucous as it had ever
+been, there was a light of concern in his sharp eyes. Tirion looked past his friend and saw row upon rowof armored footmen standing on the plain beyond the keep’s walls. His heart sank. Although he was glad
+to see his friend, Tirion knew that the presence of so many soldiers meant trouble.
+“Tell me, Saidan, why didn’t you inform me of your journey? I could have prepared a great feast, had I
+known you were coming,” Tirion said, trying to keep his voice open and friendly.
+Dathrohan nodded and spread his hands wide. “I apologize for the intrusion, Tirion, but we have urgent
+business to conduct. I felt I had to come and see you as soon as possible. But let’s leave our business
+until later. You need time to gather your advisors for a meeting,” he said in a more somber tone.
+“Is there trouble, Saidan? Are we going to war?” Tirion asked, not knowing what else to say. Dathrohan
+held him in his piercing gaze, studying his features.
+“That’s what I’m here to find out, Tirion,” he said at last.He doesknow about Eitrigg, Tirion
+concluded. “For now, I’m anxious to meet your lovely bride and your son,” Dathrohan said warmly. “I
+regret that I couldn’t visit and see the lad when he was born. You know how it is.”
+Tirion nodded. “He’s a good boy. A future Paladin,” he said assuredly. He felt beads of sweat forming
+on his brow. He tried to calm himself and behave naturally. He felt as if Dathrohan were looking right
+through him. He nearly jumped as Dathrohan belted out a hearty laugh.
+“Of that I have little doubt. I suspect that the Fordring line will always be there to defend Lordaeron and
+its people,” Dathrohan said, smiling.
+Tirion smiled back and nodded while saying, “I certainly hope so.”
+*    *    *
+Hours later, Tirion’s advisors had gathered in the council room. A few of Dathrohan’s senior lieutenants
+were present as well. Barthilas, who looked very excited by the new arrivals, stood near the back of the
+room and remained silent. Lord Commander Dathrohan had taken a seat at the head of the table, next to
+Tirion. There was a tension in the room as all present speculated on the urgent matter that Dathrohan had
+come to discuss.
+“Now, then,” Dathrohan began, looking levelly at Tirion. “I received news that there are orcs in
+Hearthglen. What exactly is the current situation?” he asked.
+Tirion swallowed, his throat suddenly dry. “Milord, a few days ago, I had an encounter with an orc
+warrior,” he said. “Though I wounded it badly, I was knocked out before I could slay the creature. I
+returned to the spot where we battled in order to determine if the creature still lived. And, to discern
+whether or not there are others of its kind within my borders. My findings led me to believe that it was an
+isolated incident and that there were no other orcs accompanying it,” Tirion finished. He was on
+dangerous ground. He had no wish to lie to his superior. Honor forbade it.
+Dathrohan leaned back in his chair, rubbing his bearded chin and pondering Tirion’s response. “And you
+conducted your investigation alone?” Dathrohan asked.
+Tirion nodded. “Yes, milord.”
+“It is unfortunate that you didn’t have others with you to verify your findings, Tirion. Apparently, your
+retainers don’t share your optimistic appraisal of the situation.” Dathrohan said grimly. Tirion scowled.He didn’t even have to look at the back of the room to sense Barthilas’ smug satisfaction.
+“Paladin Barthilas sent me news of the affair. He seems to believe that the threat to these lands is far
+more dire than you do. I have come to find out for myself if this land is in peril,” the Lord Commander
+said sternly.
+Tirion then turned to stare at Barthilas’ bemused face. He fought down his rage at the youth’s audacity.
+He turned back to Dathrohan. “Saidan, we’ve been friends for years. Surely you don’t doubt my
+judgment in this matter? Honestly, young Barthilas’ actions are a clear affront to my authority over this
+land. His zeal is commendable, but to worry you over such a minor matter is perplexing to say the least!”
+Dathrohan put his hand on Tirion’s arm to calm him.
+“Tirion, I have always trusted your judgment. I have never questioned your honor or authority, and I do
+not intend to start doing so now. Under normal circumstances, I would never intervene in a matter like
+this, but certain events have transpired that force me to look critically at any possible orcish incursions.”
+Dathrohan leaned in and searched the eyes of the gathered advisors. “For some time, we have been
+receiving reports that there is a new, upstart Warchief amongst the orcs. Apparently, this young orc is
+intent on rallying the clans and re-forming the Horde. Though they are few, his fanatical warriors have
+somehow overrun many of the guarded reserves and appear to be amassing stronger numbers. The
+Alliance High Command has deemed that we are in a state of emergency. I tell you all of this so that you
+understand my motives. If there is any truth behind Barthilas’ claims, then it is imperative that we prepare
+ourselves for war,” he said grimly.
+The shocked advisors began to converse amongst themselves. Dathrohan turned to face Tirion. “Old
+friend, with all due respect, I cannot rely on your instincts alone. This situation is far too volatile.”
+Tirion shook his head in disbelief. He braced himself for what he knew was coming next.
+“At first light, we will head out and scour the woodlands for more definitive proof of orcish activity.
+Tirion, I want you to personally lead us to where you encountered the orc. If the creature be found, we
+will take it back to Stratholme for interrogation,” Dathrohan finished.
+Tirion’s heart dropped. There was no way out now. He had been given a direct order. He would be
+forced to break his vow to Eitrigg. “As you wish, milord,” Tirion said in a strained voice.
+Dathrohan seemed content to let the matter rest. He dismissed the advisors and suggested that everyone
+prepare their men. Tirion stood to exit and saw Barthilas staring at him from the doorway. The young
+Paladin’s face was alight with victory. Tirion had to fight back the sudden urge to strangle the smirking
+youth. Without giving Barthilas a second glance, he left the room and made ready for the morning’s
+expedition.
+*    *    *
+Dawn had already bathed the land with its first rays as the force of knights and footmen made their way
+into the forested foothills. Tirion, Arden and Dathrohan led the shining column down the dusty hunting
+path that snaked its way through the dense woods. Barthilas hung back behind them, preferring to
+converse with the veteran soldiers under Dathrohan’s command.
+Clearly, the young Paladin was eager to prove himself in battle. Tirion was glad that the youth stayedaway. He was disgusted with Barthilas and didn’t even want to see his face.
+Tirion was in a grim mood. He had slept little during the night, and woke with his guts tied in knots. He
+wished that he could somehow warn Eitrigg so that the old orc could evade capture. But Tirion knew
+that, even if he could warn the orc, his actions would betray his superior’s direct order. He knew that
+there was no way to uphold his vow and do his duty at the same time. His precious honor was in great
+peril.
+They rode for hours up into the mountains as Tirion led the way. He knew exactly where he was going.
+Before long the broken tower’s remaining walls could be seen through the trees. Dathrohan leaned in and
+asked Tirion if it was the tower they sought.
+“That is where I first encountered the orc, milord,” Tirion said in a quiet voice.
+Dathrohan nodded, sensing Tirion’s apprehension. “Are you certain, Tirion? You seem rather pensive
+this morning.”
+“I am certain, milord,” Tirion replied huskily. “I’m fine. I’m just a tad tired, is all.”
+Dathrohan patted his shoulder reassuringly. The Lord Commander motioned for his men to take up
+positions along the road. He then called for a number of guards to come to the front of the column.
+Arden was among those who came forward. The captain smiled up at Tirion, but the Paladin didn’t feel
+like smiling at all. Tirion shuddered as two of the guards pulled a makeshift wagon-cage behind them. The
+rickety cage was designed to hold and transport a small number of prisoners over long distances. He
+fervently hoped that it would stay empty.
+Dathrohan, feeling that stealth would be wise until they confirmed that there were numerous orcs in the
+area, ordered his men to remain behind as he and a small group moved in on the lonely tower.
+Barthilas, with a fiery enthusiasm, rode eagerly behind the Lord Commander. Tirion, Arden and six
+footmen continued up the path after them.
+*    *    *
+The clearing around the tower was quiet, but the footmen moved quietly enough despite their
+cumbersome armor and weapons. Following the instructions he had been given earlier, Arden
+commanded his guards to encircle the tower. Barthilas dismounted and retrieved his warhammer from its
+saddle-loop. Escorted by two footmen, Barthilas cautiously made his way to the tower’s entrance.
+Stopping a short distance from the ravaged entryway, Barthilas called out in his most authoritative voice:
+“We come in the name of the Alliance! Come out from there and surrender yourselves, you foul beasts,
+or we’ll be forced to kill you!” His voice was edgy and quavered slightly. Tirion knew that the
+unseasoned Paladin was quaking in his boots. Beads of sweat ran down Barthilas’ scowling face. A
+shuffling noise came from the tower’s ruined guardroom. The two footmen near Barthilas braced
+themselves for an attack. Barthilas gripped his warhammer tightly, trying to keep his nerves in check.
+Slowly, the silhouette of a large orc emerged from the room’s shadows and stood in the entranceway.
+Eitrigg held his battle-ax with both hands and looked ready to go down fighting. The orc scanned the
+human faces with furious eyes. He caught sight of Tirion, sitting atop his horse, and he scowled deeply.
+Tirion’s eyes locked with the orc’s for a moment, but he was forced to look away. The orc’s disgusted
+gaze told Tirion everything he needed to know—that Eitrigg thought his notion of honor was laughable.The old orc had saved his life, and he had repaid the debt by leading enemies straight to his home. Never
+in his life had Tirion felt such dejection and self-loathing.
+Eitrigg took a couple of steps into the clearing. Tirion noticed that he was limping more than when he last
+saw him. The orc’s wound must be badly infected, he thought. Eitrigg’s eyes blazed with hate and fury.
+Tirion could see that the orc would not allow himself to be taken alive.
+As if in response to his thought, Dathrohan spoke up. “I do not want the creature killed. I need him
+alive!” he said. Barthilas took a quick moment to look back in dismay, but seemed to understand the
+order clearly enough. Arden and his guards converged on the tower, intending to aid in the orc’s capture.
+Barthilas was so nervous his hands shook. He could feel the eyes of Dathrohan and Tirion upon him. This
+was the moment he had waited for. This was his moment of glory.
+With a strangled cry, Barthilas lunged at the orc, swinging his hammer—intent on delivering a killing blow
+to the orc, regardless of what Dathrohan had asked.Surely, no savage beast could match his
+Light-born powers, he thought.
+Tirion winced as Eitrigg adeptly blocked the young Paladin’s clumsy blow and slammed his stout fist into
+Barthilas’ face. Panicking, Barthilas dropped his hammer as Eitrigg kicked him squarely in the midsection.
+The young Paladin, having had the wind knocked out of him, crashed to the ground and doubled over in
+a fetal position. Eitrigg grunted derisively at Barthilas’ weakness and ineptitude.
+The two footmen rushed at the orc, slashing wildly. Eitrigg parried the first footman’s attack and struck
+the second footman squarely in the chest, nearly cutting the warrior in half. The remaining footman, seeing
+the orc’s apparent savagery and skill, backed off a pace in horror. Arden and his guards, enraged by
+their comrade’s swift death, rushed forward madly. Tirion saw that they would kill the orc if they could.
+“Don’t kill him!” Tirion screamed frantically as the warriors descended upon the old orc. Dathrohan,
+sensing Tirion’s obvious concern for the creature, looked at his friend questioningly. “You seem very
+concerned for the orc’s safety, Tirion,” the Lord Commander said evenly. “Thisis just a routine capture.
+Are you all right?”
+Tirion gritted his teeth. He couldn’t just sit there and watch the proud orc be cut down. But neither could
+he beg for the orc’s release. To do so would brand him as a traitor. This was all his doing.
+Eitrigg fought bravely against the footmen, but he was easily outmaneuvered, due to his wounded leg.
+The six footmen succeeded in pulling the mighty orc down to the ground. Arden smashed the orc’s hand,
+and Eitrigg loosed his hold on his ax. The warriors immediately began to beat the orc to within an inch of
+his life.
+Every fiber of Tirion’s body was ablaze with rage as he watched the footmen subdue the orc. He
+dismounted quickly and walked forward, intending to pull the footmen away. As the footmen pulled the
+bleeding orc to his feet, Tirion’s resolve to save the creature slipped and he stopped.What was he
+thinking? He couldn’t let this happen, but neither could he take up arms against his own men. His every
+muscle tensed as he stood undecided.
+With a loud moan, Barthilas raised himself up from the dirt. Arden helped him to stand and brushed him
+off. Barthilas, feeling deeply embarrassed and shamed before his superiors, rushed at the orc in a rage.
+Arden and Tirion both grabbed the young Paladin’s arms and restrained him. They exchanged knowing
+glances and held Barthilas until he calmed.“The bastard creature fought dishonorably!” Barthilas screamed. “He should be killed right here! Let me
+go!” He continued to strain against Tirion and Arden.
+“I have ordered that it remain alive, Barthilas,” Dathrohan said. “Your wounded pride is not nearly as
+important as the information the creature may have. Restrain the beast,” he ordered. Immediately a
+number of footmen appeared, pulling the wagon-cage behind them. They took hold of Eitrigg and threw
+him into the cage.
+Tirion turned to face Dathrohan. “Milord, surely this old orc is no threat to anyone,” Tirion began.
+Dathrohan looked at him in amazement.
+“What is this, Tirion? Are you actually suggesting that we turn the beast loose?” Barthilas and Arden
+stared at him as well, both shocked by Tirion’s statement.
+Tirion turned back to gaze at the beaten orc. His face swollen and dripping blood, Eitrigg stared straight
+back.So much for your honor, the orc’s gaze seemed to say. The footmen continued to beat and whip
+Eitrigg through the cage’s bars. They spit and hurled obscenities at the old orc.
+Tirion’s nerves finally snapped. He dashed forward and grabbed the guard who was whipping the orc.
+He grabbed the whip from the young man and began to lash him with it instead.
+“How does it feel?” Tirion shouted at the terrified guard, who attempted to shield himself from the
+Paladin’s raging strikes.
+Dathrohan looked on in unabashed disbelief. Arden felt the same. He rushed forward and grabbed his
+lord’s arm. “Tirion, please! What are you doing?” Arden yelled.
+Tirion shrugged him off and stood to face Dathrohan with the light of rage in his eyes. “The orc must be
+set free!” he yelled. “It is a matter of honor!” Tirion pushed Arden away and smashed at the cage’s lock
+with the haft of the whip’s long handle.
+“Tirion, have you taken leave of your senses?” Dathrohan yelled in a deep voice. Barthilas merely stood
+by, mouth agape. Tirion continued to smash at the lock. Shaking his head wearily, Dathrohan ordered the
+footmen to seize and restrain the raging Paladin. Arden’s troops grabbed hold of Tirion’s arms and
+wrestled him to the ground. Tirion fought with all of his strength, but the younger men easily overpowered
+him.
+Arden pleaded with him to submit. “My lord, please stop! What the hell is wrong with you?” he asked.
+After a brief struggle, the guards brought Tirion to his feet. The Paladin looked at Eitrigg, and was met
+only with a blank stare in return.
+“Tirion, what in the Light’s name has come over you? Your actions are treasonous! Tell me you have
+some explanation for all of this! Tell me you didn’t just try to free this creature!” Dathrohan yelled.
+Tirion attempted to compose himself. “This orc saved my life, Saidan!” Tirion yelled. “During our battle,
+part of the tower’s ceiling collapsed. I was left trapped and defenseless. The orc pulled me free before
+the entire roof came crashing down. I know it sounds impossible, but it happened.”
+Dathrohan was stunned. Arden could only stare at his lord in shock.Certainly Tirion didn’t really
+believe the orc had saved him, did he? He looked into his lord’s eyes and knew that, indeed, he did.“I vowed to let him live in peace, and by my honor, I will fight to see that he does!” Tirion renewed his
+struggle against the footmen, attempting to free his arms.
+Barthilas seemed to come out of his momentary shock. “Traitor!” the young Paladin screamed. “He is a
+traitor to the Alliance! He’s been consorting with this beast all along!”
+Dathrohan couldn’t believe his ears. He had always known Tirion to be an honorable, levelheaded man.
+But here he was, defying his superior and siding with his mortal enemy all the same. “Tirion, I’m trying
+hard to be patient. Obviously, you’re very confused about this creature. Regardless of what you believe
+happened, if you do not desist, I will be forced to have you arrested and placed on trial for treason! You
+will cease this senselessness at once!”
+Tirion persisted. “Damn it, Saidan! This is a matter of honor! Don’t you understand that?” he growled
+through clenched teeth.
+“I stand witness to his treachery, milord,” Barthilas said proudly to Dathrohan. Obviously the young
+Paladin sought to make up for his defeat by endearing himself to the conflicted Lord Commander.
+“Shut up, Barthilas!” Dathrohan growled. With a heavy heart, he motioned for the footmen to subdue
+Tirion. “You leave me no choice here, Tirion. I hereby charge you with treason against the Alliance!
+Captain Arden, see that the prisoner is bound and placed upon his horse. He will be taken to Stratholme
+along with this orc and put on trial.”
+Arden bowed his head in sorrow. Slowly, he tied Tirion’s hands together and led him to his horse. “I am
+sorry, milord,” Arden said, looking Tirion in the eye.
+Tirion frowned at his loyal servant. “It is I who am sorry, Arden. This is all my own doing. What I’ve
+done, I’ve done for honor’s sake,” Tirion said softly.
+Arden shook his head questioningly. “Tirion, what honor is there in betrayal?” he asked in a whisper.
+“I am a Paladin of the Light, Arden. You wouldn’t understand.” Arden helped him up on his horse.
+Dathrohan rode up to Tirion and stared at him.
+“I never thought I’d live to see the day,” the Lord Commander said. Tirion avoided his old friend’s gaze.
+Dathrohan, overcome by frustration and sorrow, angrily turned away and motioned for his troops to
+move out.
+FIVE
+A  Trial  of  Will
+Tirion sat in a small holding cell that was adjacent to the Hall of Justice, where his trial was to be held.
+Through a small window, cut high into the cell’s wall, he could hear the sounds of commerce and activity
+emanating from the bustling marketplace of Stratholme. Periodically he heard hammering sounds coming
+from the main square. The city’s clamorous sounds were very different from the relaxing rural din of
+Mardenholde keep. Fervently, he wished he were back there now. He had no idea how his trial would
+go, but he had the distinct impression that no matter what happened in the court, his life would be
+irrevocably changed. He thought about his family and the life of affluence and ease he’d shared withthem. Despite himself, he wondered if he hadn’t thrown it all away on a fanciful, selfish whim.
+He had been held in custody for three days. Today he was to be tried for treason against the land he had
+spent his life defending. He could scarcely believe it, but depending on what the court decided, he could
+face either execution or spending the rest of his days in prison. Karandra would never forgive him for
+taking such a risk for the sake of honor alone. He wondered if he’d be able to forgive himself if his wife
+was forced to raise their son alone. He laughed softly to himself. He always believed that the only thing
+that could possibly keep him from his loved ones was the enemy.What have I done? he asked himself
+over and over.
+He was surprised to hear footsteps echo through the adjacent corridor.Surely, the proceedings
+haven’t started yet, he thought miserably. He heard the guards outside the door question someone as
+the latch clicked and the door opened.
+Arden walked somberly into the room. Tirion brightened somewhat and shook his friend’s hand.
+“It’s good to see you, Arden. Have you been home since my arrest? Have you spoken with my wife?”
+he asked hurriedly.
+Arden shook his head and motioned for Tirion to sit down on his cot. “No. They won’t allow me to
+leave until the trial is finished, milord,” the captain stated flatly. “I don’t know if Karandra’s been told or
+not.”
+Tirion scowled. He knew she must be beside herself with worry. “What of the orc?” Tirion asked.
+“What did they do with him?”
+Arden tensed. “Why do you care, Tirion? It is your enemy! I don’t understand why you’re so concerned
+about it! There’s no way the creature would have saved your life! It’s a mindless brute!” Arden spat.
+Tirion looked him square in the eye. “Just answer me, Captain,” Tirion said as calmly as he could. He
+had to watch his tone—Arden might be the only friend he had left.
+“They’ve been interrogating the creature for the past few nights,” Arden said. “Apparently, it didn’t offer
+up anything they didn’t already know. I heard some of the local guards boasting about how they’d beaten
+the hell out of it. They’re going to hang the wretched beast tomorrow morning in the square.”
+Tirion’s heart sank. Eitrigg was going to die, and it was all his fault. Somehow, he had to find a way to
+make amends—to put things right.
+Arden sensed Tirion’s tension. “Milord, they might execute you for this,” Arden began. “If you confess
+and claim that you lost your senses, maybe they’ll relent and let you go. Surely this matter isn’t worth
+dying for! You’re a Lord Paladin, for the Light’s sake! People depend on you! You’ve got to snap out of
+this!” the captain finished heatedly.
+Tirion only shook his head. “I can’t, Arden. It is a matter of honor. I swore to protect the orc, and I
+betrayed that vow. Whatever punishment they charge me with, it is well deserved.”
+Arden ran his hands through his hair in frustration. “This makes no sense, Tirion. Think about your wife
+and child!” Arden yelled.
+Tirion stood up to face him. “I am, old friend. What kind of example would I set for my son if my wordcounted for nothing? What kind of man would I be seen as then?” Tirion asked.
+Arden turned away, bristling. “It’s not that simple, and you know it!” the captain bellowed. “Just admit
+that you made a mistake! Admit that you were wrong to side with the orc, and they might be lenient!
+Why do we even have to discuss this? Have you lost all sense, man?”
+Just then the door opened and two guards stepped in. “You’ll have to leave now, Captain,” one of the
+guards said. “We are to escort the prisoner to the Hall now.” Arden gave Tirion a last, pleading look and
+marched out the door in a huff.
+Tirion straightened and attempted to look as proud and confident as he could. “I am ready, gentlemen,”
+he said to them. They bound his hands and led him outside. The bright, midday sun caused Tirion to
+wince slightly. His limbs were tired and cramped from the past few days of inactivity. The guards
+marched him across the square toward the imposing structure of the Hall of Justice. Out of the corner of
+his eye, Tirion caught sight of the gallows’ scaffolding being erected. He surmised that it was the source
+of the hammering he had been hearing. Briefly, he visualized Eitrigg standing upon the gallows with a rope
+tied around his neck. Tirion had to work hard in order to keep his forced semblance of confidence. If
+Eitrigg died, then all his efforts would have been for nothing.
+*    *    *
+An hour later, Tirion was seated in a large oaken chair in the middle of the polished courtroom floor.
+Before him was an immense stage adorned with four throne-like chairs. At the center of the stage,
+directly in front of him, was a large lectern where the judge would conduct the trial. Above the stage was
+an enormous white flag bearing a stylized blue letterL, which signified the Alliance of Lordaeron. Lining
+the vast walls of the chamber were other huge banners representing the seven nations of the Alliance. A
+large blue banner embroidered with a golden lion signified the kingdom of Stormwind. Another banner,
+black with a red-gauntleted fist, represented the kingdom of Stromgarde. Tirion was too nervous to look
+around at the others.
+Though he could not bear to turn around and see his comrades’ accusing faces, he could hear a hundred
+voices whispering and muttering at once throughout the grandiose chamber. Through the din, he
+discerned that everyone in attendance was shocked to hear that he had betrayed them. Many of the
+onlookers had served under his command during the war, and many others he considered to be good
+friends. He could feel their communal confusion and scorn buffet him in waves. His trial would not be an
+easy one.
+Far to his right, he caught sight of Barthilas sitting in attendance. The young Paladin had a condemning
+look in his eye as he gazed intently at Tirion. Tirion wondered why the youth had turned on him so
+completely and been so eager to see him disgraced. He turned away from Barthilas as another armored
+Paladin made his way to the front of the stage.
+“Defenders of Lordaeron,” the Paladin said in a clear voice, “today we stand in judgment of one of our
+own. The trial of Lord Tirion Fordring will now commence.”
+Tirion realized that his palms were sweating. He had to physically restrain himself from shaking. He knew
+that the four jurors would enter the Hall soon. Every major trial in Lordaeron was presided over by four
+of the highest-ranking lords within the Alliance. Tirion was sure that he’d recognize many of them as his
+peers. The attendant onlookers hushed as the first of the jurors entered.
+“All hail Lord Admiral Daelin Proudmoore of Kul’Tiras,” the Paladin said as the tall, lanky figure walkedacross the stage. Lord Proudmoore took the throne-like seat on the far right with a look of disquiet on
+his proud face. Tirion knew Proudmoore well. Despite being a tactical genius, the Lord Admiral was one
+of the greatest heroes of the war. His officer’s uniform and large, ceremonial hat were deep blue and
+adorned with golden medals and pins signifying his rank as master of the Alliance’s navies.
+The Paladin spoke again. “All hail Arch-Mage Antonidas of the Magocracy of Dalaran,” he said as the
+second juror strode in. A hush descended upon the crowd as the mysterious wizard took his seat. His
+lavender hooded robe was adorned with black and gold trim, and he carried a great, polished staff in his
+hands. Ever distrustful of magic, Tirion hadn’t had many dealings with wizards over the years, and was
+somewhat disconcerted to find that his fate was now in the hands of one. He looked back to the Paladin
+as the last two jurors were announced.
+The venerable Archbishop, Alonsus Faol, who had anointed Tirion as a Paladin long ago, walked in and
+took a seat next to the lectern.
+Following the Archbishop was the young prince of Lordaeron, Arthas, who had only recently been
+made a full Paladin. Tirion had never met the young prince before, but he could see that the handsome
+youth radiated goodness and wisdom despite his relatively young age. Tirion wished fervently that
+Barthilas had had the prince’s composure, days before.
+With the jurors assembled, the Paladin motioned for everyone to rise for the judge’s entrance. All of the
+attendant men and women rose as Uther the Lightbringer entered the Hall and walked forward to the
+ornate lectern. The mighty, holy patron of the Knights of the Silver Hand scanned the assembly with stern
+eyes the color of ocean storms. His ornately etched silver armor seemed to reflect every light source in
+the vast Hall—bathing Uther in a halo of shimmering beauty. Uther was the first Paladin, and was held to
+be the mightiest warrior amongst the armies of the Alliance. He was also held to be the wisest and most
+noble of all the holy Paladins. Everyone in the room was cowed by his commanding presence.
+Tirion’s mind reeled. Up until that point, he was resolved to stand by his decision and accept his fate
+with honor. But, looking up at the stern visage of his powerful superior, his courage wavered.Perhaps
+Arden was right? he thought frantically.Maybe he should beg for the court’s mercy and forget that
+he ever made a vow to an enemy of humanity? His thoughts were disrupted as the Lightbringer’s
+powerful, melodious voice filled his ears.
+“Lord Paladin Fordring,” Uther began. “You are charged with treason against the Alliance and failing to
+obey a direct order given to you by your superior. As you know, this is a dire charge. The noble lords
+gathered here will hear your case and judge you accordingly under the Light. How do you plead to the
+charges against you?” Tirion clenched his fists to keep them from shaking. He barely found the voice to
+answer.
+“I am guilty as charged, milord. I accept full responsibility for my actions,” Tirion said.
+A hundred angry voices flooded the room at once. Apparently, many of the onlookers had believed the
+charges to be greatly exaggerated or false. The assembly was shocked to hear Tirion admit his guilt so
+openly. Tirion looked behind him to watch the crowd’s raucous reaction. He caught sight of Arden sitting
+right behind him. The captain’s tortured expression seemed to plead to Tirion to reconsider his position.
+Tirion had to look away. Arden believed in him and had always served him loyally. But the captain would
+never understand. . . .
+Uther’s voice boomed out as the mighty Paladin commanded the assembly to silence. The gathered host
+went quiet as if it had been struck by lightning. Tirion could almost feel an electrical tension in the air. Hebraced himself.
+“Very well,” Uther said evenly. “Let the record show that Lord Paladin Fordring has entered a plea of
+guilty.”
+Tirion watched as the four jurors conversed amongst themselves for a brief moment. Lord Proudmoore
+ended the discussion and motioned for Uther to continue.
+“Let Lord Commander, Saidan Dathrohan, come forward and give his testimony,” Uther commanded.
+The crowd stirred slightly as Dathrohan walked toward the stage. He stopped and stood solemnly next
+to Tirion’s chair. The two friends exchanged fleeting glances. Dathrohan could only nod sorrowfully at
+Tirion.
+“Lord Commander Dathrohan, you have charged this man with treason. Please explain for the court the
+occurrence and the nature of this man’s alleged infraction,” Uther said.
+Dathrohan cleared his throat and straightened slightly. “My lords, I do wish to state for the record that
+Tirion Fordring has always been a man of honor and nobility. But I cannot deny what I saw with my own
+eyes. Four days ago, I led a detachment into the Hearthglen Woods in search of renegade orcs. Lord
+Fordring assisted me with the exercise and helped me to track down the orc that we currently hold in our
+prison for execution. When I gave the command to arrest the creature, Lord Fordring turned upon my
+men and attempted to set the orc free. I asked him repeatedly to desist, but he would not relent. It is with
+a heavy heart that I give this testimony,” Dathrohan finished. Once again, murmurs and hushed whispers
+floated through the Hall. The jurors discussed Dathrohan’s words as Uther addressed the court again.
+“Is there anyone here who can give credence to Lord Commander Dathrohan’s testimony?” Tirion’s
+whole body clenched as he saw Barthilas spring up from his seat.
+“I can, milord,” the young Paladin stated excitedly. “I was there, under Lord Dathrohan’s command,
+when the incident took place. I bore witness to Tirion’s treachery firsthand.” The scorn in his voice was
+evident when he spoke his superior’s name. Tirion could hear Arden groaning behind him.
+Uther dismissed Dathrohan and motioned for Barthilas to come forward. Dathrohan gripped Barthilas in
+a searing gaze as they passed each other. Apparently, the youth’s efforts to win his way into the Lord
+Commander’s good graces were not working as well as Barthilas had planned. With surprising calm,
+Barthilas took his place near Tirion’s chair. His face was proud and intent.
+“State your claim,junior Paladin Barthilas,” Uther said icily. He was obviously disgruntled by the
+younger Paladin’s lack of respect for his superior. Guilty or not, Tirion was still to be addressed by his
+title.
+Undeterred, Barthilas continued. “Just as Lord Commander Dathrohan said, milord, I sawLord Fordring
+fight to save the orc from capture. He said that he had made a pact with the creature and would be
+damned if we incarcerated it,” Barthilas said matter-of-factly. “You see, I knew he was up to something.
+I had a feeling that thisvile traitor was untrustworthy even before we set out to capture the orc!”
+“Silence!” Uther shouted, his voice reverberating through the chamber like thunder. He ensnared the
+now trembling Barthilas with his overpowering gaze. “You will learn to control your tongue,junior
+Paladin. I have known this man for years. We saved each other’s lives more than once, and stood
+victorious before the enemy more times than I can clearly remember. Whatever he may have done, he
+certainly deserves more than to be harangued by an unseasoned boy like yourself.” Barthilas turned whiteas a sheet and looked as if he might faint. “Your testimony has been heard and will be reviewed by the
+court. You are dismissed,” Uther finished. Reddening in embarrassment, Barthilas hurried back to his
+seat. Tirion watched as the jurors once again began to converse with one another.
+The four lords finished their deliberations and motioned that they were ready to proceed. Uther turned to
+stare down at Tirion. His gaze seemed to look straight into Tirion’s heart, searching for some explanation
+for his friend’s unprecedented behavior.
+“Lord Paladin Fordring, do you have anything to say in your defense?” Uther asked Tirion levelly.
+Tirion stood up and solemnly addressed the court. “My lords, I know that the notion must sound
+preposterous, but the orc saved my life. In return, I gave him my word as a Paladin that I would protect
+his as well. The orc’s name is Eitrigg, and he is as honorable an opponent as I have ever faced.” Jeers
+and shocked gasps erupted from the assembled onlookers. Tirion continued unabated. “You must
+understand me when I tell you—in order to follow my orders, I would have had to betray my honor as a
+Paladin. That I could not do. That said, I will accept whatever punishment you deem fit.”
+Uther strode over to the four jurors and knelt beside them. He argued with them briefly, pointing his
+finger as if to stress a point. After a few moments, it appeared as if the jurors had relented and Uther
+walked back to the lectern, victorious.
+“Lord Paladin Fordring,” he began, “this court is well aware of your long years of service in defense of
+Lordaeron and its allied kingdoms. Every man here is aware of your courage and valor. However,
+consorting with the sworn enemies of humanity, regardless of their supposed honor, is a grievous crime.
+In granting the orc amnesty, you took a terrible risk and gambled the safety of Hearthglen on a personal
+whim. In light of your service, this court is prepared to offer you a full pardon if you will disavow your
+oath to the creature and reaffirm your commitment to the Alliance.”
+Tirion cleared his throat. It would be so easy to simply give in and go home to his wife and son. He
+turned to see Arden wringing his hands in anticipation.
+“Please, milord. Commit to them and be done with it,” Arden whispered anxiously. Tirion saw
+Dathrohan take a step forward, as if urging him to forget about the orc and clear his good name.
+“Let’s put this nonsense behind us, Tirion,” Dathrohan exclaimed under his breath.
+“Lord Paladin Fordring? What is your answer?” Uther asked suspiciously, seeing Tirion’s hesitation.
+Tirion braced himself and faced the court members boldly. “What is to be done with the orc, milord?”
+The great Paladin looked surprised by the question, but saw fit to answer anyway.
+“It will be executed, like any other enemy of humanity. Regardless of your personal experience with the
+creature, it is a savage, murdering beast that cannot be allowed to live.”
+Tirion bowed his head and thought for a moment. He pictured Taelan’s innocent face in his mind’s eye.
+He wanted to go home, so badly . . . .
+He raised his head and saw Dathrohan give him a pleased smile; the Lord Commander seemed
+convinced that Tirion would make the right decision. Tirion saw his course plainly. He would make the
+only decision honor would permit.“I will remain committed to the Alliance until my dying day. Of that, have no doubt,” Tirion said
+confidently. “But I cannot disavow the oath I took. To do so would be to betray everything I am and
+everything we, as honorable men, hold dear.”
+This time the entire gathering erupted in fury and shock. None could believe Tirion’s brazen decision.
+Even the noble jurors gaped openmouthed at Tirion. The tired Paladin thought he heard Arden weeping
+behind him, and his heart sank even lower. Dathrohan sat down heavily in his chair, shaking his head in
+dismay. Barthilas seemed to be on the verge of jumping out of his seat in excitement. Many of the
+gathered warriors began to shout obscenities at Tirion and call him a traitor. Some spat at him as he
+stood motionless before the stage.
+Rubbing his eyes wearily, Uther motioned for the court to fall silent once more. He was beside himself
+with anguish over what he must do, but Tirion had stated his position clearly.
+“So be it,” Uther said ominously. “Tirion Fordring, from this day forth you are no longer welcome among
+the Knights of the Silver Hand. You are no longer fit to bask in the grace of the Light. I hereby
+excommunicate you from our ranks.”
+The audience gasped at Uther’s words. Excommunication was a rare, harsh punishment that stripped a
+Paladin of his Light-given powers. Though it had only been used a few times, every Paladin lived in
+mortal fear of it. Tirion could not fathom what was about to happen. Before he could utter another word,
+Uther made a sweeping motion with his hand. Immediately, Tirion felt a dark shadow pass over him,
+choking out the holy power of the Light. Panic threatened to overwhelm him as the grace and
+strengthening energies of the Light fled his body. The blessed energies, which had been such an integral
+part of him for so long, ebbed away just as if they had never been. Though the light of the Hall never
+wavered, Tirion felt as if he had been wrapped in darkness and cast down into oblivion. Unable to
+withstand the raging despair and hopelessness that washed over him in waves, Tirion lowered his head in
+abject despair.
+Uther continued. “All trappings of our order will be stripped from you,” he said as two Paladins came
+forward and viciously ripped the silver plates from Tirion’s wracked body, “as well as your personal titles
+and holdings.”
+Tirion struggled against despair. Never in his life had he felt so naked and powerless. Images of Taelan
+and Karandra sifted through his tortured mind. He had to get a grip on himself. He had to think of his
+dignity. On wobbly legs, he stood and faced the court once more.
+“You shall be exiled from these kingdoms and live the rest of your days amongst the wild things of the
+world. May the Light have mercy on your soul,” Uther finished.
+Tirion felt dazed, His head spun and anxiety threatened to overtake him. He was barely conscious of
+Uther’s next words to the assembly:
+“Though it goes against my better judgment, it is the will of this court that Paladin Barthilas take over as
+regent governor of Hearthglen, effective immediately. Barthilas is to remain here to oversee the morning’s
+hanging and then return home to his duties. The exile, Tirion Fordring, is to be escorted back to
+Mardenholde keep. There he will collect his family and be escorted to the borders of the Alliance lands.
+These proceedings are over,” Uther said, smashing his armored fist against the lectern. He gazed at Tirion
+in frustration, clearly disgusted with the trial’s outcome.
+“My lord, I have one last question,” Tirion barely managed to say. Uther paused to listen—a finalgesture of respect and friendship for his former comrade. “My wife and son . . . are they to be exiled as
+well? Will my sin damn their lives as it has mine?” Tirion asked shakily.
+Uther bowed his head in sorrow. The man before him was a good man. This was no way for a hero to
+be treated.
+“No, Tirion. They may remain in Lordaeron if they so desire. This was your crime, not theirs. They
+should not be punished for your pride,” Uther said. He then turned his back on Tirion and departed. Lost
+in a haze of despair and grief, Tirion was barely aware of the guards hauling him out of the Great Hall.
+SIX
+A  Sort  of  Homecoming
+It was twilight as the tired envoy made its way back to Mardenholde keep. It had begun to rain during
+the afternoon, and the weary horses trudged their way down the muddy road. Arden, leading the somber
+column of knights and footmen, looked back at Tirion worriedly. Tirion was slumped over in his saddle,
+heedless of what transpired around him. His broad shoulders drooped weakly and his head was bowed
+in grief. The ceaseless rain ran in rivulets down his haggard face. Arden’s heart broke, seeing his former
+lord and master in such a state. He was forced to look away. Looking toward the keep, the captain saw
+that Tirion’s advisors had gathered at the main gate to greet their returning lord.
+Tirion’s stomach was tied in knots. He was blocked from the Light. In the thirty years that he had served
+as a Paladin, he never dreamed that the blessed power would be stripped from him. He felt absolutely
+hollow inside. Wallowing in despair and misery, he was unable to even lift his eyes toward the sight of his
+former home.
+Arden rode slowly up to the gate and dismounted. The advisors, at seeing Tirion’s near-comatose state,
+asked the captain what was wrong.
+Arden grimaced. “There have been some changes,” he said to them curtly. The advisors looked at each
+other in confusion.
+“What do you mean, Captain? Where have you both been these past few days? What is wrong with our
+lord?” one of them asked heatedly.
+Arden bowed his head in shame and sorrow. “Our lord Tirion has been found guilty of treason against
+the Alliance,” he said with a heavy heart. “The High Court has ordered that he be exiled from our lands.”
+The advisors gasped in shock.
+“Surely you must be mistaken. That’s impossible!” one of the advisors said shakily. He looked into
+Arden’s eyes and saw that it clearly was not.
+“It can’t be,” the advisor said blankly. Arden nodded grimly and helped Tirion dismount from his horse.
+“Well, who is our lord now, Arden? Who will rule over Hearthglen?” another advisor asked. Arden
+shook his head and scoffed as he answered, “Barthilas will be your new lord, for the time being.”It did
+sound like a bad joke, he thought to himself. He put his arm around Tirion and started to lead him
+inside. “I want the guards to stay alert tonight. Tirion is to remain here under house arrest. At first light, Iwill take a party of footmen and escort him to the border. Until then, neither of us is to be disturbed. Is
+that clear?” the captain asked in a gravelly voice.
+The shocked advisors merely nodded their assent. Arden dragged Tirion in out of the rain and ushered
+him toward his private chambers, hoping that he wouldn’t have to face Karandra before morning. Not for
+the first time, he wondered if there was anything that he could have done to prevent this all from
+happening.
+*    *    *
+Arden leaned Tirion the against wall outside his private chambers and opened the door.
+“Thanks for your help, Arden. This has been. . . very difficult. I just wanted you to know that you’ve
+been a good friend to me. I’m sorry all this has happened,” the former Paladin said.
+Arden nodded and turned away slowly. “If there’s anything you need, let me know,” the captain said as
+he left.
+Tirion watched him leave and found just enough strength to close the door behind him and collapse in a
+chair. Overcome with emotion, he buried his face in his hands. His limbs would not stop shaking, and the
+gnawing emptiness in his gut threatened to devour what was left of his soul. He couldn’t face his wife and
+tell her what he’d done. Ironically, after all the years he’d refused to lie to her, he found now that he
+couldn’t bear to tell her the truth.
+The adjoining door to Taelan’s room opened and Karandra stepped out quietly, shutting it behind her.
+She looked surprised to see Tirion sitting there in the dark.
+“Tirion, what has happened?” she asked urgently. She lit a decorative lantern, and its soft light bathed
+the room. Shadows danced across the walls as she knelt down beside her husband.
+“Where have you been? I’ve been worried sick.”
+“I accompanied Lord Dathrohan back to Stratholme,” he muttered, his head still bowed.
+“You know, Tirion, you’ve been sneaking off quite a bit lately. If I didn’t know you any better, I’d
+assume that you were seeking comfort from another woman,” she said teasingly. Tirion raised his head
+and looked at her. Seeing the deadened look in his eyes, she knew that he was not amused in the least.
+“Tirion, darling, what’s wrong? Has something happened to you?” she asked worriedly. He looked over
+toward Taelan’s room.
+“Is the boy asleep?” he asked quietly. Karandra frowned and answered that he was.
+“I don’t quite know how to tell you this, my love,” he began somberly, “but I have been branded a
+traitor and stripped of my titles.”
+Her eyes widened in shock. He wasn’t joking, she realized. In fact, as she looked at him more closely,
+she marveled at how defeated and deflated he seemed. In all the years she had known him, he had never
+looked this way. It frightened her immensely. She shook her head, unable to grasp the enormity of the
+situation.“How could this happen, Tirion? What have you done?” she asked in a strangled voice.
+He closed his eyes and held his breath for a moment, attempting to calm the furious pounding of his
+heart. ‘Do you remember the secret that I kept from you?” he asked. She nodded as her brow creased
+in anxiety. “The orc I fought with saved my life, Karandra. If not for him, I would have been crushed
+under a collapsing tower. To repay him for saving me, I vowed, on my honor, to keep his existence
+secret.”
+Karandra covered her face. She shook her head as if she didn’t want to hear any more, but Tirion
+continued anyway.
+“I was forced to hunt the orc down under direct orders. But when it came time to capture him, my
+conscience overtook me. To uphold my honor, I fought to free it. I was arrested on the spot and taken to
+Stratholme for trial,” he finished.
+They sat there in silence for many long moments. Karandra sniffed and wiped tears from her eyes. “I
+can’t even begin to imagine what you were thinking,” she said breathlessly. “The orc is a beast, Tirion! It
+has no concept of honor! You gambled all our lives on a stupid, silly whim!” she spat, careful to keep her
+voice down. She didn’t want to wake Taelan and let him see his father in such a state. Tirion simply sat
+with his head bowed. For some strange reason, seeing him in such a weakened state only made her more
+anxious.
+“So what happens to us now, Tirion? Did you even consider that while you were playing the martyr?”
+she said softly, disappointment rampant in her voice.
+He stood up and walked over to the window. Night had settled heavily over the fields beyond the keep.
+The rain continued to pour, as if nature was attempting to rid itself of some foulness in the world.
+“I have been exiled, Karandra. I am to be escorted to the border at first light,” he said gravely. She
+blinked in shock.
+“Exiled?” she whispered. “Light-damn you, Tirion! I told you your precious honor would be the end of
+us!”
+He turned to face her. “Without honor, woman, everything we have is meaningless!” he said, motioning
+around at their lavish surroundings.
+She waved her arm dismissively.
+“Will your honor keep us fed and keep our son decently clothed? How can you maintain this senseless
+obsession in the face of what’s happened? What happened to the responsible man I married?” she
+asked.
+He gritted his teeth and turned to face her. “I have always been this way, Karandra! Don’t talk to me as
+if it’s any surprise! You knew that marrying a Paladin would demand certain sacrifices.”
+“And I’ve made plenty of them. Willingly! I held my tongue every time you rode off to battle. I sat here,
+alone, for countless hours—waiting to hear if you were alive or dead. Do you have any idea of what that
+was like for me? I never complained once all those times that you left us for your bureaucratic duties. I
+knew you had a job to do. I knew people counted on you. But I counted on you, too, damn it! I kept it
+all inside so that you could ‘do your duty’ with honor. I know all about sacrifices, Tirion. But this time theprice is too high.”
+“What do you mean by that?” he asked, although he already knew the answer. She held him in her fiery
+stare.
+“I love you, Tirion. Please believe that. But I won’t be coming with you . . . and neither will Taelan,” she
+said softly. Karandra turned away, unable to look him in the eye. “I will not have our son grow up as an
+outcast or be the subject of ridicule for the rest of his life. He doesn’t deserve that, Tirion, and neither do
+I,” she said.
+Tirion felt as if his life no longer had any meaning. Losing the Light was devastating enough; he didn’t
+know if he could bear losing her too. His head spun.
+“I understand how you must feel, Karandra. Believe me, I do,” he barely managed to say. “Are you
+certain this is what you want?”
+“You’ve ruined your life. I will not simply hold on while you plummet to the bottom and ruin ours as
+well!” she said, almost frantically. She hugged herself, trying to calm her raw nerves. “I hope your
+precious honor keeps you warm at night,” she said.
+“Karandra, wait,” Tirion said as she left. She walked swiftly toward her room and slammed the door
+shut behind her. Tirion heard the bolt lock, and the faint sounds of her sobbing.
+Unable to comfort her, Tirion leaned his head against the window’s cool pane of glass. Absently, he
+watched as the raindrops splattered against the pane. He knew her well enough to know that she would
+not change her mind. He had lost nearly everything he had ever cared for. The only thing he had left in the
+world was his honor. He wasn’t even sure of that anymore.
+As if in a daze, Tirion walked into his reading room and sat down at his large, polished oak desk. He lit
+a few candles and gathered up a piece of parchment, ink and a new quill. Without really knowing exactly
+what he wanted to say, he started scribbling down his thoughts on the parchment. His hand shook as he
+wrote, smearing the ink in spots. He emptied his heart out onto the parchment, expressing everything he
+felt, explaining everything he had done. He sat at the desk and wrote late into the night.
+*    *    *
+Morning was only an hour off when Tirion entered Taelan’s darkened room. Karandra had cried herself
+to sleep hours before, so Tirion knew he would be undisturbed. He walked over to where his son lay
+sleeping peacefully. Snuggled in his blankets, the boy breathed steadily. Tirion watched him sleep for a
+while, awed by the child’s innocence and purity. He knew his son deserved better than a life of forced
+exile. He deserved all of the good things life had to offer.
+With a shaky hand, Tirion reached into his coat pocket and retrieved the rolled parchment he had
+written. Tears filled his eyes as he carefully placed the note under his son’s pillow.Perhaps someday the
+boy might understand what I’ve done, he hoped.Perhaps somehow he’ll look back on me and be
+proud. Tirion patted the boy’s head and kissed him on the cheek.
+“Good-bye, my son,” he said, fighting back his tears. “Be good.”
+With that, he quietly left and closed the door behind him.*    *    *
+Dawn had broken over the tranquil fields of Hearthglen. The oppressive storm clouds had blown away
+and the sky was bright and crystal clear. In a few hours, the old orc Eitrigg would be hanged in
+Stratholme. Tirion had decided that he would not let that happen. Whatever else transpired, Eitrigg would
+not die. He had little trouble bypassing the keep’s lax guardsmen and reaching the stables. As quietly as
+he could, he saddled Mirador and prepared his meager supplies for the journey to Stratholme.
+He placed his foot in the stirrup and hauled himself up onto his horse.
+“This is the second time I’ve caught you trying to sneak off, Tirion,” Arden said, standing in the
+entranceway. Tirion’s heart froze. He looked around and saw that there were no guards with the captain.
+In fact, there was no escort party to be seen anywhere.
+“I figured you’d try something like this,” the captain said.
+Tirion gripped his reins tightly and cleared his throat. “Are you here to stop me, Arden?” he asked
+tightly.
+The captain walked over and tightened the straps of Mirador’s saddlebags. “Even if I had a mind to, I
+doubt that I could,” Arden replied honestly. “I sat up all night thinking about what you said at the trial. I
+think perhaps I understand how you felt. You were only doing what you thought was right. You always
+have. For that, I cannot condemn you.”
+Tirion nodded and leaned down. He placed his hand on Arden’s shoulder.
+“I need to ask you a favor, old friend. It is the most important thing I’ve ever asked of you,” he said
+breathlessly.
+Arden looked up at him gravely. “Whatever is in my power to do, I will do,” the captain said.
+“Watch over them for me, Arden. Keep my boy safe,” Tirion said.
+Arden reached up and took hold of his friend’s hand. “I will,” was all he could say.
+Satisfied, Tirion nodded to Arden and looked out toward the distant tree line. He dug his spurs into
+Mirador’s sides and thundered out of the stables. Stratholme was only a few hours away. If he rode like
+the wind, he would make it in time to stop the hanging. He charged down the path at breakneck speed,
+pushing the faithful Mirador faster and harder than he ever had before.
+SEVEN
+The  Drums  of  War
+Tirion made good time reaching Stratholme. The sun had just barely crested the distant Alterac peaks by
+the time he reached the city’s outskirts. He had tethered Mirador in the woods and ran the last quarter
+mile to the city. As he ran, he attempted to formulate a plan to save old Eitrigg. Much to his dismay, he
+came up with nothing. He hoped that when the time came, he would think of something brilliant that
+didn’t involve killing or injuring his own people. However, seeing as how he was a convicted traitor, theycertainly would have no qualms about killing him. He knew that the likelihood of saving the orc and
+escaping Stratholme alive was slim.
+Undeterred, Tirion stealthily made his way through Stratholme’s quiet, cobblestone streets. A few
+merchants and vendors were beginning to set up their wares for the day’s transactions in the
+marketplace, but there were few others about at that early hour. He managed to evade the few guards he
+saw walking the streets. Fearing that the local guardsmen would recognize him, Tirion kept to the
+shadows and stayed well out of sight.
+As Tirion neared the public square, he began to hear loud voices shouting and jeering. He hoped he was
+not too late to save the orc. He stepped into the square and saw a large gathering of men at its center.
+Clinging to the shadows, Tirion climbed a short staircase and situated himself in a small, recessed alcove
+that offered a full view of the newly erected gallows. The crowd that had gathered around the scaffolding
+was comprised mostly of guards and footmen. They had all come to see the spectacle of the old orc’s
+hanging. Thankfully, Tirion realized that the prisoner had not yet been brought out. The gathered men
+merely jeered and shouted at one another in anticipation.
+There were a number of knights, dressed in their finest armor, surrounding the square. They stood quiet
+and vigilant, ready to intercede if the volatile crowd turned into a mob. Tirion recognized many of the
+knights who had been present at his trial. Although they were relatively calm, Tirion knew that they
+wanted to see the orc hanged as much as the footmen and the guards did.
+After a few moments, the gathering stirred as a newcomer strode up to the gallows. Tirion saw that it
+was Barthilas. The young Paladin waved and shouted to the crowd enthusiastically, riling them up for
+what he obviously considered to be the morning’s entertainment. Tirion was glad that he couldn’t hear
+Barthilas’ words. He suspected that they were filled with poison and hatred. He felt a momentary pang of
+remorse, knowing that his beloved Hearthglen was now in Barthilas’ unstable hands.
+*    *    *
+Tirion watched as a second figure emerged from the throng and ascended the scaffolding. Lord
+Dathrohan, seemingly oblivious to the crowd’s raucous din, walked up to Barthilas’ side and scanned the
+square with stern eyes. He spoke to the crowd for a moment and the jeering died down to a low roar.
+Tirion held his breath. He knew they would bring Eitrigg out soon. Minutes passed by slowly as Tirion
+waited anxiously beneath the alcove. A tension built amongst the onlookers as well. They seemed more
+eager to watch a neck snap than see true justice met. As the din rose up again, more and more people
+gathered in the square. Even women and children edged closer, hoping to catch sight of the terrible orcish
+monster.
+Finally, the gates to the nearby holding cell opened and a squad of footmen strode out in tight formation.
+The gathered onlookers erupted in cheers and began to hurl garbage and stones at the newcomers.
+Armored as they were, the footmen took little notice of the crowd’s fervor or its harmless projectiles.
+Their shiny armor flashed in the morning light, but Tirion could see that they dragged a huddled shape
+among them.
+It was Eitrigg.
+They stopped at the base of the scaffolding, and two men dragged the old orc up the rest of the way.
+The orc was barely able to stand and his green body was covered with dark bruises and lacerations.
+Tirion wondered how the weakened orc could even walk. Apparently the interrogators had taken theirtime in beating him. Despite his injuries, Eitrigg did his best to keep his head raised. He would not give his
+tormentors the satisfaction of seeing him broken. Tirion knew that Eitrigg’s orcish spirit was too proud for
+that.
+Tirion’s heart pounded in his chest. Against such a spirited group of warriors, he didn’t stand a chance
+of saving the old orc.He didn’t have a plan. He didn’t even have a weapon of any kind. He looked
+down and saw that the hangman was adjusting the tightly wound noose.Eitrigg was only moments
+away from death.
+Frantically, Tirion leaped down from his perch and pushed his way through the boisterous crowd. In
+their excitement, no one noticed the disgraced exile passing by them. Their attention was focused on the
+gallows and the beaten green beast that stood before them.
+Tirion watched as Lord Dathrohan gave Barthilas a stiff salute and walked back down toward the
+holding cell’s gates. Apparently the Lord Commander had no interest in watching the vulgar spectacle so
+soon after Tirion’s trial. Barthilas was none too concerned to see him go. Smiling broadly, Barthilas
+ordered the hangman to put the noose around the orc’s throat. Eitrigg scowled as the rope was tightened
+around his muscular neck. The orc’s dark eyes stared straight forward, as if he were looking into another
+world that no one else could see. Tirion clawed and shoved his way closer to the scaffolding. Barthilas
+waved his hand in the air, motioning for silence. Surprisingly, the raucous crowd quieted down.
+“My fellow defenders of Lordaeron,” he began proudly, “I am glad to see that so many of you turned
+out this morning. This loathsome creature that stands before you is an affront to the Light and an enemy
+of our people. Its cursed race brought war and suffering to our shores and murdered many of our loved
+ones with little or no remorse. Thus,” Barthilas continued, staring Eitrigg in the eye, “we will extinguish this
+wretched creature’s life just as remorselessly.” Eitrigg met Barthilas’ fevered gaze with his own. “Blood
+for blood. Debt for debt,” the young Paladin finished.
+The crowd cheered wildly for Barthilas and screamed for the orc’s blood. Tirion marveled that his own
+people could be so savage and vile. He felt sick and overwhelmed by their smothering, collective hatred.
+Barthilas stepped back as the hangman moved Eitrigg into position over the scaffolding’s trap door. The
+old orc’s stoic mask began to slip as death approached. Eitrigg began to shake and growl and fight
+against his restraints. The onlookers merely laughed at his futile efforts. They seemed to revel in the old
+orc’s panic and confusion.
+Searching for some type of weapon, Tirion saw an old, rusted sledgehammer leaning against the base of
+the scaffolding. He pushed his way through the front row of onlookers and dove for the sledgehammer.
+Time seemed to stand still as Tirion reached out to grasp the unwieldy tool. As if in slow motion, he
+watched as the hangman placed his hand upon the trap door lever while Barthilas raised his arm, ready to
+give the signal that would end the orc’s life. Tirion’s hands closed over the sledgehammer’s wooden haft
+as, in a surge of light and adrenaline, he charged forward.
+*    *    *
+The assembled knights and footmen yelled in anger at seeing Tirion emerge from the roiling crowd. The
+former Paladin struck fast and hard, leaving the surprised footmen scattered in his wake. A few alert
+guards rushed at him, but Tirion swung the old sledgehammer in a wide arc. Careful not to use lethal
+force, Tirion punched a deep dent in one guard’s breastplate and smashed in another’s helmet-visor.
+Seeing that he had bought himself a few, precious seconds, Tirion leaped up onto the scaffolding and
+headed straight for Barthilas.The young Paladin was shocked at seeing Tirion charging at him. He fumbled awkwardly for his
+warhammer, but Tirion was too fast. He rammed his shoulder into Barthilas’ gut and sent the young
+Paladin careening wildly off the platform. Barthilas landed with a loud thud and was nearly trampled by
+the raging crowd.
+The hooded hangman rushed forward to overpower Tirion, but the former Paladin stood his ground.
+Grabbing the hangman by the arm, Tirion flipped him over his shoulder and sent him tumbling down the
+scaffolding’s steps. He could hear the knights and footmen charging up the steps behind him.They would
+hang him for this, he thought frantically. Not even the Lightbringer himself could pardon Tirion for this
+affront.
+As quickly as he could, Tirion ran over to Eitrigg and unfastened the noose around the orc’s neck. Left
+too weak to stand, Eitrigg slumped heavily into Tirion’s arms. The orc barely recognized his savior’s
+face.
+“Human?” Eitrigg mumbled questioningly. Tirion smiled down at him.
+“Yes, Eitrigg,” Tirion said. “It’s me.” Eitrigg shuddered in pain and exhaustion, but fixed Tirion with his
+hazy gaze.
+“You must be crazy,” the old orc said. Tirion laughed to himself and nodded in agreement. He turned
+just in time to see Barthilas climbing up over the edge of the scaffolding. Tirion knew that the knights and
+footmen were only seconds away. Barthilas straightened and glowered at him.
+“Traitor! You have damned yourself this day!” the young Paladin screamed. The shocked crowd yelled
+their assent and began throwing garbage at Tirion and Eitrigg both.
+Out of the corner of his eye, Tirion could see Lord Dathrohan looming in the background. Apparently,
+he hadn’t left after all. The Lord Commander’s face was a mask of grief and revulsion. Tirion wished
+there was some way to make his old friend understand that what he was doing, he was doing for honor’s
+sake.
+Barthilas yelled for the knights to seize Tirion and the orc. As they approached, Tirion stretched out his
+hand and commanded them to halt. He had spent his life leading men into battle and his deep voice still
+carried the weight of command. Many of the knights who had served under him previously found
+themselves cowed by his presence. Tirion faced them boldly.
+“Hear me!” Tirion shouted. His voice boomed out over the crowd and reverberated against the
+surrounding structures. Many of the onlookers fell strangely silent. “This orc has done you no harm! He is
+old and infirm. His death would accomplish nothing!” The honorable knights paused for a moment,
+considering Tirion’s protests.
+“But it’s an orc! Are we not at war with its kind?” one of the knights yelled incredulously. Tirion steadied
+himself and tightened his grip on Eitrigg.
+“We may very well be! But this one’s warlike days are over!” Tirion said. “There is no honor in hanging
+such a defenseless creature.” He saw that a few of the knights nodded reluctantly. The rest of the
+onlookers remained to be convinced. They continued to jeer and call Tirion an orc-loving traitor.
+“You’re not fit to even speak of honor, Tirion,” Barthilas spat angrily. “You’re a traitorous mongrel whodeserves to die right beside that inhuman beast!”
+Tirion tensed. Barthilas’ words hit him like a slap in the face. “I took a vow, long ago, to protect the
+weak and defenseless,” Tirion said through gritted teeth, “and I intend to do just that. You see, boy,
+that’s what it truly means to be a Paladin—knowing the difference between right and wrong and being
+able to separate justice from vengeance. You’ve never been able to make those distinctions, have you,
+Barthilas?” Tirion asked. Barthilas nearly choked with rage.
+Above the din of the shouting crowd, a single beating drum boomed out loud and clear. Eitrigg’s weary
+head jerked up suddenly. He scanned the square’s periphery as if he expected to see a familiar sight,
+then bowed his head again. Tirion looked at the orc questioningly, certain that the orc recognized the
+strange beat. A few of the onlookers turned to see where the drumming was coming from, but Barthilas
+paid it no mind. The young Paladin stepped toward Tirion with his fists clenched.
+“Have you forgotten so soon, Tirion? You’re no longer a Paladin! You’re a disgrace—an exile! It
+doesn’t make any difference what you think or believe!” Barthilas yelled.
+“Damn it, Barthilas, you’ve got to open your eyes!” Tirion said urgently. “After all the years I ruled over
+Hearthglen, the one thing I’m absolutely certain of is that war begets only war! If we can’t master our
+own hatreds, then this senseless conflict will never cease! There will never be a future for our people!”
+Barthilas laughed contemptuously in Tirion’s face.
+The strange drumming sound grew louder and was joined by newer, stronger drums. At that point most
+of the onlookers became aware of the ominous beating of the drums as well. They were startled to note
+that the unnerving sounds were getting closer. The few women and children who were present began to
+cover their ears and huddle together in fear and confusion. The attendant guards moved to the edges of
+the square, searching for whatever was causing the incessant drumming.
+“The future of our people is no longer your concern,” Barthilas said coldly. “I rule Hearthglen now,
+Tirion. And as long as I do, I swear that there will never be peace with the orcs! On my parents’
+departed souls, I swear that every last orc in Lordaeron will burn for what they’ve done!”
+Tirion was shocked by Barthilas’ words. There was no reasoning with the young Paladin. He had given
+over completely to his rage and grief.
+The mighty drums thundered all around the panicked square as Barthilas ordered his troops to strike.
+“Kill the orc now! Kill them both!” he yelled in fury. His roar was cut short as a crude, razor-sharp
+spear tore through his chest. Barthilas’ blood splattered across the gallows as a legion of shadowy
+shapes leapt down into the square from the surrounding rooftops. Furious, high-pitched war cries filled
+the air as the savage orcs waded into the unsuspecting defenders of Stratholme. The mighty war-drums
+thundered through the panic-gripped square.
+*    *    *
+Tirion sat stunned as Barthilas slumped to the ground in a heap. Instinctively, he reached out to help the
+young Paladin, but Barthilas spat at him and waved him off.
+“You’ve brought this down upon us,” the young Paladin said shakily as blood poured from his mouth.
+His wild, hate-filled eyes locked on Tirion. “I always knew you’d betray . . .” was all he managed beforehe fell facedown on the blood-soaked scaffolding. The crude orcish spear stuck up from his back like a
+ship’s mast.
+Tirion immediately snapped to attention. He threw down the sledgehammer and hauled Eitrigg up on his
+feet. Leaning the heavy orc on his shoulder, Tirion led Eitrigg away from the gallows. Tirion couldn’t
+imagine how the orcish force had bypassed the city’s outer defenses. Typically, the orcs had always
+assaulted their targets head-on. Yet, as he watched the battle unfold around him, he saw that the stealthy
+orcs were using the rooftops and surrounding catwalks to their advantage.
+Knights and footmen ran forward to meet the orcish onslaught as all hell erupted in the public square.
+Tirion kept his head down and headed for the side street he had used earlier. The sounds of clashing steel
+and the combatants’ furious shouts of rage and pain mixed, creating a maddening din above Stratholme.
+Tirion tried to shut out the noise and concentrate on staying alive. All around him was a killing ground.
+Mighty orc warriors hacked at their enemies with great war axes while others hurled long, wicked spears
+with startling precision. A few orcs, garbed in what looked like wolf furs, charged forward and lifted their
+hands to the heavens. Before Tirion knew what they were doing, lightning arced down from the darkened
+sky and struck the front ranks of the human force. Charred human bodies and large chunks of stone flew
+through the air and rained down upon the chaotic battlefield. Stunned by the savage elemental attack, the
+remaining human ranks were forced to pull back before the orcs’ awesome wrath.
+Tirion was surprised to see that the orcs were working in unison to outmaneuver and flank the frayed
+human defenders. To his memory, orcs had never been so singularly united in battle. Despite their
+apparent cunning and skill, the orcs’ numbers were few. Tirion wondered what the orcs were after,
+recklessly attacking a defended human city with such an insubstantial force. Soon every soldier in
+Stratholme would be bearing down on the square.The outnumbered orcs wouldn’t stand a chance
+against a fully armored garrison, he thought.
+Despite the chaos around him, Tirion managed to reach the edge of the square and escape down a small
+alley. Hefting Eitrigg’s deadweight up once more, Tirion turned to take a last look at the ensuing carnage.
+He caught sight of an enormous orc, dressed in a full suit of black plate armor. The orc carried a mighty
+warhammer that resembled those used by the Paladins—except for the fact that the orc’s hammer
+seemed to be ignited by living lightning. The dark orc waded his way through the ardent human defenders
+as if they were harmless children. It smashed and battered everyone that came near it with a calm
+lethality—all the while shouting sharp commands to its warriors. For a moment, Tirion could only watch
+in amazement and horror. The mighty orc leader was unlike any he had witnessed before. Tirion snapped
+out of his daze and hurriedly made his way out of the beleaguered city with Eitrigg in his arms.
+*    *    *
+With a supreme effort, Tirion succeeded in hauling Eitrigg out of the city and into the surrounding woods.
+Looking back, he could see that a number of fires had been started in various parts of the city. He could
+hear screams and clashing weapons even from this distance. Apparently the cunning orcs were attempting
+to distract and divide the human forces. Tirion noted that whoever the orcs’ leader was, he was far more
+clever than any chieftain he’d ever heard of.
+Wearily, Tirion laid Eitrigg down on the leafy ground and crouched next to him. He tried to calm himself
+and think clearly about the situation. He couldn’t account for the orcs’ unprecedented attack on the city,
+and wondered if the creatures had come to free Eitrigg, just as he had. Whatever the case, he was glad
+that they’d come. He was genuinely sorry to see so many of his brethren fall before the orcs, but at least
+he’d accomplished what he’d set out to do. Eitrigg was alive. And, as frayed and thin as it was, Tirion’s
+precious honor was still intact.Eitrigg lay silently on the matted forest floor. Tirion bent down to check the orc’s pulse. Hopefully the
+orc was just exhausted from his trying ordeal, he mused. Gasping in panic, Tirion realized that Eitrigg’s
+heart had stopped. The beating the humans had given the orc had obviously done serious internal
+damage. If he didn’t do something quickly, he knew that Eitrigg would die. Instinctively, he placed his
+hands on Eitrigg’s chest and prayed for the healing powers of the Light to wash over the battered orc.
+Surely he was still strong enough to heal even these grievous wounds?
+Slowly, a feeling of dread spread through Tirion’s heart. Nothing was happening. He bowed his head in
+defeat, remembering that he had been excommunicated from the Light.This can’t be happening, he
+thought miserably. He could almost sense Eitrigg’s life ebbing away into nothingness.
+“No!” Tirion growled in hopelessness. “You will not die, Eitrigg! Do you hear me? You will not die on
+me!” he yelled at the comatose orc. Once again he slapped his hands on the orc’s chest and
+concentrated with all of his will.“By the grace of the Light, may your brethren be healed.” The
+phrase wafted through his mind repeatedly as he reached deep for the power that lurked somewhere
+within his spirit.“In its grace he will be made anew.”
+The Light could not be taken from him, he insisted. Men could strip him of his armor and titles, they
+could take away his home and his wealth—but the Light would always been within him.It had to be.
+Slowly, Tirion felt a searing heat rising within his body. It filled his center with strength and light that
+snaked out toward his limbs. He almost cried out in joy as the familiar energies raced through his hands
+and engulfed the orc’s ravaged body. Tirion felt as if he were floating on air. The strength and purity of
+the Light flooded his being and cascaded out through his body like a halo of holy fire. Awed and humbled
+by the reawakened power, Tirion opened his eyes and saw that a warm, golden glow had enveloped
+Eitrigg. He watched in amazement as the bruises on the orc’s body healed before his very eyes. Even the
+infected laceration on the orc’s leg sealed up as if it had never been.
+The soothing energies subsided and Tirion dropped to the ground in exhaustion. He lay there for a few
+moments panting, attempting to keep his head from spinning. With a snort, Eitrigg sat up and looked
+around frantically. The old orc was pale and obviously weak, but his eyes were bright and alert. Eitrigg
+quickly sprung up in a defensive crouch and sniffed the air. He scanned the immediate tree line for any
+signs of danger and seemed to find none. Eitrigg looked down and saw Tirion lying near him. He shifted
+back on his haunches doubtfully and stared at the exhausted human with surprise.
+“Human?” Eitrigg asked. “What’s happened? How did we get here?” Tirion got to his knees and patted
+the orc reassuringly on the shoulder.
+“We’re outside the city, Eitrigg,” Tirion said evenly. “You’re safe for the time being. If we’re both very
+lucky, there’ll be no more hangings in our immediate future.” Eitrigg grunted and looked at Tirion
+doubtfully. He glanced down at his big green hands and traced his fingers over where his wounds had
+been.
+“This power you have, human,” the orc began, “did it heal my wounds?”
+Tirion nodded. “Yes. You told me before that pain is a good teacher. Well, you were about to have
+your final lesson. It would have been a rough one, I think,” Tirion said jokingly.
+Eitrigg grinned and slapped Tirion on the back. “Perhaps I’ve studied enough, after all,” the orc replied
+wryly. The old orc coughed a few times and eased himself back down to a sitting position. The strain ofthe past few days proved to be too much for his tired old body, and he passed out in a heap. Although
+he was healed, Tirion knew from experience that the orc would be weak for days.
+He was surprised to hear a sudden rustling in the dense branches and undergrowth all around him.
+Looking around frantically, he braced himself for danger. Slowly—ominously—the shadows of the trees
+began to move and shift in every direction. Huge, dark shapes took form and moved forward, encircling
+the sleeping orc and the nervous human.
+Twelve in all, the creatures wore loose armor plates and tattered leathers that covered only the most vital
+areas of their muscular, green-skinned bodies. Feathers, multiple tribal trinkets and bone necklaces
+adorned the mighty orcish warriors who emerged with catlike grace from the shadowy tree line. Their
+bulging arms and bestial, tusked faces were marked by jagged, primitive tattoos that augmented their
+already feral appearance. They carried broad-bladed axes and heavy warblades with such practiced
+ease that the weapons appeared to be natural extensions of their bodies. Tirion was overwhelmed by the
+orcs’ savage presence. He was most disconcerted to see the change in their beady eyes—no longer
+were the orcs’ eyes ablaze with depravity and hate; they were cool and alert, showing an intelligence and
+wit that he could scarcely credit to them.
+Tirion held his breath and made sure not to make any sudden moves. For all he knew, the orcs might
+think that he had attacked Eitrigg somehow. The orcs simply stood, staring at the two on the ground as if
+waiting for a command. Panic grated across Tirion’s nerves. After all he had tried to do, he’d be damned
+if he just let himself be hacked to bits in the wilds. Yet no matter what he tried, he knew that he’d last less
+than a minute against such fierce warriors.
+Suddenly, a larger form emerged from behind the warriors. A number of the orcs stepped aside silently
+as their leader made his way forward. Tirion gasped. It was the orc chieftain he had seen during the
+battle. Being this close, Tirion could see that the gargantuan orc’s black plate armor was trimmed with
+bronze runic inscriptions. Never before had Tirion ever seen an orc in full armor. The sight was both
+impressive and chilling. The orc’s mighty stone warhammer seemed to be as old as the world itself. The
+creature’s black hair was tied into long braids that hung down over its armored torso. Its green face was
+somewhat less bestial than the other orcs’, and its fierce, intelligent eyes were a striking blue. Tirion knew
+that this was no ordinary orc.
+The mighty creature stepped forward and kneeled down beside Eitrigg. Tirion tensed. He remembered
+that Eitrigg had abandoned his duties as an orcish warrior.Perhaps these orcs had come to punish
+him?
+Fighting back his fear, Tirion inched forward, intending to defend Eitrigg if necessary. The large orc gave
+Tirion a fierce, threatening glare – warning the human to stay put and remain silent. Surrounded as he was
+by the chieftain’s guards, Tirion was forced to comply with the orc’s silent command. Seeing that he
+would be obeyed, the mysterious orc placed his large hand on Eitrigg’s head and closed his eyes,
+concentrating. Eitrigg’s eyes fluttered open and focused on the dark orc looming over him. The
+mysterious orc’s features softened slightly.
+“You are Eitrigg of the Blackrock clan, are you not?” the orc asked in the human tongue. Tirion raised
+his eyebrows in surprise.Did all of the orcs speak so clearly? he wondered.
+Shakily, Eitrigg looked around at the other orcs and nodded his weary head. “I am he,” he said in a low
+tone.
+The larger orc nodded and straightened. “I thought so. It’s taken me a long time to track you down, oldone,” he said evenly.
+Eitrigg sat up and looked upon the larger orc intently. “Your face is familiar to me, warrior. But you are
+far too young to be . . .” Eitrigg studied the orc’s strong features for a moment and said, “Who are you?”
+The orc nodded slightly and stood up to his full height. The gathered orcs seemed to straighten and lift
+their chins high as their leader spoke. “I am known as Thrall, old one. I am Warchief of the Horde,” he
+said proudly. Eitrigg’s jaw dropped wide open. Tirion stared in awe. This, obviously, was the upstart
+Warchief of which Dathrohan had spoken.
+“I have heard of you,” Tirion said, his voice heavy with contempt. He saw the surrounding orc guards
+stiffen and ready their weapons. Apparently they didn’t take well to their leader being insulted. The orc
+turned to stare at the former Paladin in surprise. “And what exactly have you heard, human?”
+Tirion held the orc’s fierce gaze. “I have heard that you plan to rebuild the Horde and renew your war
+against my people,” he said coolly.
+“You are partially correct,” Thrall began, with mild amusement evident in his tone. “Iam rebuilding the
+Horde. You can be sure that my people will not remain in chains for long. However, I have no interest in
+making war for war’s sake. Those dark days are over.”
+“Those days are over?” Tirion asked skeptically. “I just watched as you and your warriors hacked your
+way through Stratholme.”
+Thrall met the human’s accusing stare levelly. “You presume much, human. We only attacked the city to
+reclaim one of our own. Times have changed. Your kingdoms and your people mean nothing to me. I
+seek only to finish my father’s work and find a new homeland for my people,” Thrall replied evenly.
+Eitrigg’s eyes were wide with sudden recognition. “Your father’s work?” he sputtered excitedly. “I knew
+I recognized your face, warrior! You are the son of Durotan!” Thrall merely nodded once, never taking
+his piercing eyes off Tirion. Eitrigg was beside himself with joy.
+“Could it be, after all these years?” he asked, flabbergasted. He looked around at the orcs’ faces,
+searching for further confirmation. Their proud, stone-like faces revealed nothing.
+Thrall turned his back on Tirion and knelt beside Eitrigg. “I have come to bring you home, old one,” he
+said warmly. “I’m sorry it took us so long to find you, but we’ve been somewhat busy these past months.
+I have already freed a number of clans, but I need wise veterans like you to help me teach them of the
+old ways. Your people have need of you again, brave Eitrigg.”
+The old orc shook his head in shocked disbelief. He stared into Thrall’s sharp blue eyes and found hope
+within their shining depths. After years of dispirited isolation, his heart was filled with pride again. Slowly,
+Eitrigg began to believe that there could be a future for his people after all.
+“I will follow you, son of Durotan,” Eitrigg said proudly. “I will help heal our people in any way that I
+can.” Thrall nodded once and placed his hand on the old orc’s shoulder.
+Casting a sidelong glance at the surrounding guards, Tirion cautiously stood up and faced Thrall. “Eitrigg
+told me of your father—and of his fate. He must have been a great hero to elicit such devotion from his
+son.”Thrall’s face was expressionless as he replied, “My people have always held that it is a son’s duty to
+finish his father’s work.” Tirion nodded sadly. He wondered if Taelan would ever share that sentiment.
+Probably not, he concluded.What boy would ever be proud of having a disgraced exile as a father?
+More than likely, Taelan would only revile me for what I’ve done.
+Thrall motioned toward Eitrigg and shouted a number of short guttural commands in the orcish tongue.
+Tirion looked around as the guards moved forward, unsure as to what to expect.Would the orcs kill
+him? Would they let him go? A number of warriors knelt down beside Eitrigg and hooked their arms
+under his shoulders. Tirion looked back at Thrall, questioningly.
+The young Warchief smirked knowingly and said, “You risked your life to save our brother, human. We
+have no quarrel with you. You are free to go, so long as you do not follow us.”
+Tirion exhaled in relief and watched as the orc warriors gently gathered Eitrigg up. Thrall gave Tirion an
+orcish salute and, without a second glance, turned to leave. Many of the orcs had already disappeared
+back into the densely shadowed woods. Tirion shook his head as if in a daze. A strong hand grabbed
+hold of his arm. He looked down and saw that it was Eitrigg. The old orc had a look of peace and
+fulfillment upon his gnarled face.
+“We are both bound by blood and honor,brother. I will not forget you,” Eitrigg said.
+Tirion smiled and raised his hand to his heart as the orcs led Eitrigg away. He stood for a moment,
+watching them go. The sounds of battle still echoed from within Stratholme’s walls. He decided that he
+had better make himself scarce before the human troops arrived.
+With a silent prayer to the Light, Tirion Fordring turned his back on Stratholme and set out to find solace
+within the perilous, uncharted wildlands of Lordaeron.
+EIGHT
+A  Perfect  Circle
+Sunlight cascaded down through the open skylight in the cathedral’s vaulted ceiling. Twenty-year-old
+Taelan Fordring stood upon an ornately carved dais and basked in the warmth and splendor of the holy
+Light. Large silver plates of armor adorned his broad shoulders. Beneath the plates, a carefully
+embroidered dark blue stole hung from his neck and streamed down his chest. He held a mighty,
+two-handed silver warhammer in his hands which, he was told, had once belonged to his father.
+Taelan was a strong, handsome young man. Bathed in the Light as he was, he seemed almost
+transcendent. An aged Archbishop stood before Taelan holding a large, leather-bound tome. The old
+man had the light of joy in his eyes as he addressed Taelan.
+“Do you, Taelan Fordring, vow to uphold the honor and codes of the Order of the Silver Hand?” he
+asked.
+“I do,” Taelan replied sincerely.
+“Do you vow to walk in the grace of the Light and spread its wisdom to your fellow man?”“I do,” Taelan said shakily. He was overcome with a thousand different emotions at once and had to
+fight to get a grip on himself. This was the moment he had waited for as long as he could remember. He
+glanced around quickly and saw his mother standing proudly in attendance.
+Though years of hardship and loneliness had streaked her soft, golden hair with silver strands, Karandra
+was as beautiful and radiant as she had ever been. She marveled at seeing Taelan being anointed as a
+Paladin. She wished that Tirion could have been present to see his son follow in his footsteps.
+“Do you vow to vanquish evil wherever it be found, and protect the weak and innocent with your very
+life?” the Archbishop asked Taelan in a ritualistic tone.
+Taelan swallowed hard and nodded while saying, “By my honor, I do.”
+The Archbishop continued to speak to the assembly but, overcome as he was, Taelan could not hear his
+words. Oblivious to the ceremony proceeding around him, he reached into the pocket of his ceremonial
+cassock and took hold of the rolled, tattered parchment that he always carried with him. It was the note
+his father had left him before he was exiled from the kingdom. Taelan couldn’t count how many times he
+had read the tattered letter over the years, but he had memorized every line, every subtle stroke of the
+quill. He recalled one of the last passages in his mind.
+My dear Taelan,
+By the time you’re old enough to read this, I will have been gone a long time. I can’t adequately
+express how painful it is to have to leave you and your mother behind, but I suppose that
+sometimes life forces you to make difficult decisions. I fear that you’ll no doubt hear many bad
+things about me as you grow older—that people will look upon my actions and condemn them as
+evil. I fear that others will look down upon you for the decisions I have made.
+I won’t try to explain everything that’s happened in this note, but I need you to know that what I
+did, I did for honor’s sake. Honor is an important part of what makes us men, Taelan. Our words
+and our deeds must count for something in this world. I know it’s asking a great deal, but I hope
+that you will understand that someday.
+I want you to know that I love you dearly and that I’ll always carry you close to my heart.
+Your life and your deeds will be my redemption, son. You are my pride and my hope. Be a good
+man. Be a hero.
+Goodbye.
+Taelan came out of his reverie just in time to hear the Archbishop say:
+“Then arise, Taelan Fordring—Paladin defender of Lordaeron. Welcome to the Order of the Silver
+Hand.”
+Just as it had in his boyhood dreams, the entire assembly erupted in cheers. The joyous din echoedthroughout the vast cathedral, drowning out every other noise. His friends and comrades clapped and
+hollered in congratulations. Almost everyone gathered in the cathedral was on their feet joining in the
+revelry.
+Beaming with pride, Taelan turned and smiled warmly at his mother and his old friend, Arden, who
+stood a few paces behind her. The aged guardsman, who had watched over and protected Taelan for
+nearly fifteen years, smiled back proudly. Arden marveled at how much Taelan resembled his father. He
+knew that Tirion would have been proud.
+The crowd surged up to congratulate Taelan and welcome him to the Order.
+Arden had turned to make his way toward the exit, when, out of the corner of his eye, he saw a familiar
+figure moving through the crowd. The tall, nondescript figure wore a green, hooded travel-cloak and
+weather-stained leathers. But Arden would have recognized the gray haired man’s piercing green eyes
+anywhere. For a brief second, he locked eyes with the aged stranger.
+“Tirion,” Arden whispered under his breath.
+The stranger smiled knowingly at Arden and raised a stiff hand to his brow in salute. He then pulled his
+hood low over his face and promptly slipped out the back of the cathedral.
+Looking back at Taelan, Arden said, “Like father, like son.”
+About  the  Author
+Chris Metzen is the Creative Director for Blizzard Entertainment and has worked as both a writer and
+designer for the company over the past seven years. Chris has led the development of Blizzard’s game
+worlds and storylines, including those of theWarcraft, Diablo, andStarCraft series. Chris co-wrote the
+StarCraft short story “Revelations” with fellow author Sam Moore for the Spring 1999 issue ofAmazing
+Stories magazine.Warcraft: Of Blood and Honor is Chris’s first solo foray into the world of
+fantasy-fiction.��p .=z��Dj�C��`MI���z�U55�Ʋ��8���"B&�C�m��l��DKP�x�oo!�|&�J�kq�\^���2}^�kI Vry�lz,����|6��M�+����?K�7-�O��ۀ�)V�r�^ԍV}k�ߊ��-u��S)����͝��DSFS�V�	��q,�J0�ё8��P��� ���s_�Fl�v@�	I���OԂGn��V�a�!�CJ$�M�BNe���CwȔ+^;�3C���k����+cƒ}9��g��<~4\�l��:/�����9T�.ख	�]x��_?�"0���v���1Ԛ*�3�a�xFC�ؑ�����Rl��%2V��$QFۣ��Q��Z���
+#t����Q$w���C%���&�$���2�H 	?s|1�r�����EK��M��:�&�5����&����\����_z���N�i�d��e�Q���,�	�{r}I?#�D��ܼ�

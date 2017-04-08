@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ACM
@@ -21,47 +15,7 @@ namespace ACM
             ErrorMatrixListBox.SelectedIndex = 0;
             HistogramSourceListBox.SelectedIndex = 0;
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = openFileDialog1.ShowDialog();
-
-            if (dialogResult == DialogResult.OK)
-            {
-                string inputFile = openFileDialog1.FileName;
-                //string inputFile = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\ArithmeticStatic.txt";
-                string outputFile = Path.GetDirectoryName(inputFile) + "/" + Path.GetFileName(inputFile) + ".coded";
-                   
-
-                if (File.Exists(outputFile))
-                    File.Delete(outputFile);
-
-                ArithmeticCoder arithmeticCoder = new ArithmeticCoder();
-                arithmeticCoder.Encode(inputFile, outputFile);
-                MessageBox.Show("done");
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = openFileDialog1.ShowDialog();
-
-            if (dialogResult == DialogResult.OK)
-            {
-                string inputFile = openFileDialog1.FileName;
-                string outputFile = Path.GetDirectoryName(inputFile) + "/" + Path.GetFileNameWithoutExtension(inputFile) +
-                                    ".decoded.txt";
-                //string inputFile =@"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\ArithmeticStatic_output.txt";
-
-                if (File.Exists(outputFile))
-                    File.Delete(outputFile);
-
-                ArithmeticDecoder arithmeticDecoder = new ArithmeticDecoder();
-                arithmeticDecoder.Decode(inputFile, outputFile);
-                MessageBox.Show("done");
-            }
-        }
-
+        
         PredictiveCoder predictiveCoder;
         Bitmap originalBitmap = new Bitmap(256, 256);
 
@@ -122,28 +76,27 @@ namespace ACM
 
                 for (int i = 0; i < frequencies.Length; i++)
                 {
-                    if (frequencies[i] != 0)
-                        g.DrawLine(Pens.Black, i, 255, i, (255 - frequencies[i]) * scale);
+                    g.DrawLine(Pens.Black, i, 255, i, 255 - frequencies[i]*scale);
                 }
 
-                Point p1 = new Point(255, 0);
+               /* Point p1 = new Point(255, 0);
                 Point p2 = new Point(255, 255);
-                g.DrawLine(Pens.DeepSkyBlue, p1, p2);
+                g.DrawLine(Pens.DeepSkyBlue, p1, p2);*/
             }
         }
 
         private int[] GetFrequencies(int selectedIndex)
         {
-            int[] frequencies;
+            int[] frequencies = new int[511];
 
             if (selectedIndex == 0)
-                frequencies = predictiveCoder.GetFrequencies(predictiveCoder.Original);
+                frequencies = predictiveCoder.GetFrequencies(predictiveCoder.Original, frequencies);
             else if (selectedIndex == 1)
-                frequencies = predictiveCoder.GetFrequencies(predictiveCoder.ErrorP);
+                frequencies = predictiveCoder.GetFrequencies(predictiveCoder.ErrorP, frequencies);
             else if (selectedIndex == 2)
-                frequencies = predictiveCoder.GetFrequencies(predictiveCoder.ErrorPq);
+                frequencies = predictiveCoder.GetFrequencies(predictiveCoder.ErrorPq, frequencies);
             else
-                frequencies = predictiveCoder.GetFrequencies(predictiveCoder.Decoded);
+                frequencies = predictiveCoder.GetFrequencies(predictiveCoder.Decoded, frequencies);
             return frequencies;
         }
 

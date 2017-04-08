@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACM", "ACM\ACM.csproj", "{9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACMTests", "ACMTests\ACMTests.csproj", "{E4952606-9DD7-4C71-8F77-4A8788C8B945}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arithmetic", "Arithmetic\Arithmetic.csproj", "{985F0F32-C9CB-49B3-8A65-48141F0E4C42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E4952606-9DD7-4C71-8F77-4A8788C8B945}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4952606-9DD7-4C71-8F77-4A8788C8B945}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4952606-9DD7-4C71-8F77-4A8788C8B945}.Release|Any CPU.Build.0 = Release|Any CPU
+		{985F0F32-C9CB-49B3-8A65-48141F0E4C42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{985F0F32-C9CB-49B3-8A65-48141F0E4C42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{985F0F32-C9CB-49B3-8A65-48141F0E4C42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{985F0F32-C9CB-49B3-8A65-48141F0E4C42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

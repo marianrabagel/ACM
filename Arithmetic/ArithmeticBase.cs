@@ -1,4 +1,4 @@
-namespace ACM
+namespace Arithmetic
 {
     public class ArithmeticBase
     {
@@ -37,7 +37,7 @@ namespace ACM
             _symbolCounts = new int[_numberOfSymbols + 1];
 
             for (int i = 0; i < _symbolCounts.Length; i++)
-                _symbolCounts[i] = 1;
+                _symbolCounts[i] = 3;
         }
 
         private void CalculateSymbolSums()

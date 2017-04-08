@@ -45,7 +45,7 @@ namespace ACM
                     byte predictionValue = GetPredictionFor(predictionRule, x, y);
                     Prediction[y, x] = predictionValue;
                     ErrorP[y, x] = Original[y, x] - predictionValue;
-                    ErrorPq[y, x] = (ErrorP[y, x] + k) / (2 * k + 1);
+                    ErrorPq[y, x] = (ErrorP[y, x] + k) / (2 * k + 1); //rotunjire in jos
                     ErrorPdq[y, x] = ErrorPq[y, x] * (2 * k + 1);
                     Decoded[y, x] = (byte) (ErrorPdq[y, x] + Prediction[y, x]);
                     //get prediction
@@ -315,10 +315,8 @@ namespace ACM
             return newMatrix;
         }
 
-        public int[] GetFrequencies(byte[,] matrix)
+        public int[] GetFrequencies(byte[,] matrix, int[] frequencies)
         {
-            int[] frequencies = new int[2 * size];
-
             for (int y = 0; y < matrix.GetLength(0); y++)
             {
                 for (int x = 0; x < matrix.GetLength(1); x++)
@@ -331,10 +329,8 @@ namespace ACM
             return frequencies;
         }
 
-        public int[] GetFrequencies(int[,] matrix)
+        public int[] GetFrequencies(int[,] matrix, int[] frequencies)
         {
-            int[] frequencies = new int[2 * size];
-
             for (int y = 0; y < matrix.GetLength(0); y++)
             {
                 for (int x = 0; x < matrix.GetLength(1); x++)

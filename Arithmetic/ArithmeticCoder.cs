@@ -1,6 +1,7 @@
 ﻿using System;
-    
-namespace ACM
+using ACM;
+
+namespace Arithmetic
 {
     public class ArithmeticCoder : ArithmeticBase
     {
@@ -19,7 +20,7 @@ namespace ACM
                     }
 
                     EncodeSymbol(EOF, writer);
-                    writer.WriteNBiti(_low, 32);
+                    writer.WriteNBiti(_low, 32); //de scris folosind OutputBitPlusFollow --> o functie de inchidere
                     /*
                     _bitsToFollow++;
 

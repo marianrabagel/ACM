@@ -1,6 +1,7 @@
 ﻿using System;
+using ACM;
 
-namespace ACM
+namespace Arithmetic
 {
     public class ArithmeticDecoder : ArithmeticBase
     {
@@ -14,16 +15,17 @@ namespace ACM
                 {
                     _valueFromFile = reader.ReadNBit(32);
                     _low = 0;
+                    _high = topValue;
                     var length = reader.length*8;
 
-                    while (reader.readCounter < length)
+                    while (true)
                     {
                         uint symbol = DecodeSymbol(reader);
 
                         if (symbol == EOF)
                             break;
 
-                        writer.WriteNBiti(symbol, 8);
+                        writer.WriteNBiti(symbol, 8); //
                         UpdateModel();
                     }
                 }
@@ -36,7 +38,8 @@ namespace ACM
             uint cum = (uint) (((_valueFromFile - _low + 1)*_symbolSums[_symbolSums.Length - 1] - 1)/(long) range);
             uint symbol;
 
-            for (symbol = 1; _symbolSums[symbol] < cum; symbol++)
+            for (symbol = 0; cum >= _symbolSums[symbol+1]; symbol++)
+                //limita
                 ;
 
             _high = (uint) (_low + (range*(ulong) _symbolSums[symbol + 1])/(ulong) _symbolSums[_symbolSums.Length - 1] - 1);

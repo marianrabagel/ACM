@@ -28,11 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.KNumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -43,7 +39,11 @@
             this.LoadOriginalBtn = new System.Windows.Forms.Button();
             this.OriginalImage = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.SaveDecodedBtn = new System.Windows.Forms.Button();
+            this.DecodedImage = new System.Windows.Forms.Panel();
+            this.DecodeBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.LoadDecodedBtn = new System.Windows.Forms.Button();
             this.errorPictureBox = new System.Windows.Forms.PictureBox();
             this.HistogramScaleNumeric = new System.Windows.Forms.NumericUpDown();
             this.ComputeErrorBtn = new System.Windows.Forms.Button();
@@ -53,11 +53,6 @@
             this.RefreshBtn = new System.Windows.Forms.Button();
             this.ScaleNumeric = new System.Windows.Forms.NumericUpDown();
             this.HistogramaPanel = new System.Windows.Forms.Panel();
-            this.DecodedImage = new System.Windows.Forms.Panel();
-            this.SaveDecodedBtn = new System.Windows.Forms.Button();
-            this.DecodeBtn = new System.Windows.Forms.Button();
-            this.LoadDecodedBtn = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KNumericUpDown)).BeginInit();
             this.panel3.SuspendLayout();
@@ -66,48 +61,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ScaleNumeric)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(13, 16);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Encode Arithmetic";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(13, 45);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Decode Arithmetic";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(138, 78);
-            this.panel1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Aritmethic coder/decoder";
             // 
             // panel2
             // 
@@ -119,7 +75,7 @@
             this.panel2.Controls.Add(this.EncodeBtn);
             this.panel2.Controls.Add(this.LoadOriginalBtn);
             this.panel2.Controls.Add(this.OriginalImage);
-            this.panel2.Location = new System.Drawing.Point(159, 3);
+            this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(345, 447);
             this.panel2.TabIndex = 3;
@@ -227,10 +183,35 @@
             this.panel3.Controls.Add(this.RefreshBtn);
             this.panel3.Controls.Add(this.ScaleNumeric);
             this.panel3.Controls.Add(this.HistogramaPanel);
-            this.panel3.Location = new System.Drawing.Point(507, 3);
+            this.panel3.Location = new System.Drawing.Point(360, 12);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(732, 572);
             this.panel3.TabIndex = 4;
+            // 
+            // SaveDecodedBtn
+            // 
+            this.SaveDecodedBtn.Location = new System.Drawing.Point(632, 67);
+            this.SaveDecodedBtn.Name = "SaveDecodedBtn";
+            this.SaveDecodedBtn.Size = new System.Drawing.Size(75, 23);
+            this.SaveDecodedBtn.TabIndex = 12;
+            this.SaveDecodedBtn.Text = "Save";
+            this.SaveDecodedBtn.UseVisualStyleBackColor = true;
+            // 
+            // DecodedImage
+            // 
+            this.DecodedImage.Location = new System.Drawing.Point(354, 3);
+            this.DecodedImage.Name = "DecodedImage";
+            this.DecodedImage.Size = new System.Drawing.Size(256, 256);
+            this.DecodedImage.TabIndex = 1;
+            // 
+            // DecodeBtn
+            // 
+            this.DecodeBtn.Location = new System.Drawing.Point(634, 38);
+            this.DecodeBtn.Name = "DecodeBtn";
+            this.DecodeBtn.Size = new System.Drawing.Size(75, 23);
+            this.DecodeBtn.TabIndex = 11;
+            this.DecodeBtn.Text = "Decode";
+            this.DecodeBtn.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -240,6 +221,15 @@
             this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 10;
             this.label3.Text = "Scale";
+            // 
+            // LoadDecodedBtn
+            // 
+            this.LoadDecodedBtn.Location = new System.Drawing.Point(632, 9);
+            this.LoadDecodedBtn.Name = "LoadDecodedBtn";
+            this.LoadDecodedBtn.Size = new System.Drawing.Size(75, 23);
+            this.LoadDecodedBtn.TabIndex = 10;
+            this.LoadDecodedBtn.Text = "Load";
+            this.LoadDecodedBtn.UseVisualStyleBackColor = true;
             // 
             // errorPictureBox
             // 
@@ -336,52 +326,15 @@
             this.HistogramaPanel.Size = new System.Drawing.Size(600, 300);
             this.HistogramaPanel.TabIndex = 2;
             // 
-            // DecodedImage
-            // 
-            this.DecodedImage.Location = new System.Drawing.Point(354, 3);
-            this.DecodedImage.Name = "DecodedImage";
-            this.DecodedImage.Size = new System.Drawing.Size(256, 256);
-            this.DecodedImage.TabIndex = 1;
-            // 
-            // SaveDecodedBtn
-            // 
-            this.SaveDecodedBtn.Location = new System.Drawing.Point(632, 67);
-            this.SaveDecodedBtn.Name = "SaveDecodedBtn";
-            this.SaveDecodedBtn.Size = new System.Drawing.Size(75, 23);
-            this.SaveDecodedBtn.TabIndex = 12;
-            this.SaveDecodedBtn.Text = "Save";
-            this.SaveDecodedBtn.UseVisualStyleBackColor = true;
-            // 
-            // DecodeBtn
-            // 
-            this.DecodeBtn.Location = new System.Drawing.Point(634, 38);
-            this.DecodeBtn.Name = "DecodeBtn";
-            this.DecodeBtn.Size = new System.Drawing.Size(75, 23);
-            this.DecodeBtn.TabIndex = 11;
-            this.DecodeBtn.Text = "Decode";
-            this.DecodeBtn.UseVisualStyleBackColor = true;
-            // 
-            // LoadDecodedBtn
-            // 
-            this.LoadDecodedBtn.Location = new System.Drawing.Point(632, 9);
-            this.LoadDecodedBtn.Name = "LoadDecodedBtn";
-            this.LoadDecodedBtn.Size = new System.Drawing.Size(75, 23);
-            this.LoadDecodedBtn.TabIndex = 10;
-            this.LoadDecodedBtn.Text = "Load";
-            this.LoadDecodedBtn.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1251, 578);
+            this.ClientSize = new System.Drawing.Size(1137, 578);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KNumericUpDown)).EndInit();
@@ -395,12 +348,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button SaveOriginalBtn;
