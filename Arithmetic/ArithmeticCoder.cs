@@ -16,7 +16,7 @@ namespace Arithmetic
                     {
                         uint symbol = reader.ReadNBit(8);
                         EncodeSymbol(symbol, writer);
-                        UpdateModel();
+                        UpdateModel(symbol);
                     }
 
                     EncodeSymbol(EOF, writer);

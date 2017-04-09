@@ -1,3 +1,5 @@
+using System;
+
 namespace Arithmetic
 {
     public class ArithmeticBase
@@ -40,19 +42,23 @@ namespace Arithmetic
                 _symbolCounts[i] = 3;
         }
 
-        private void CalculateSymbolSums()
+        private void CalculateSymbolSums(int startingIndex = 1)
         {
-            int sum = 0;
+            int sum =_symbolSums[startingIndex];
 
-            for (int i = 1; i < _symbolSums.Length; i++)
+            for (; startingIndex < _symbolSums.Length; startingIndex++)
             {
-                sum += _symbolCounts[i - 1];
-                _symbolSums[i] = sum;
+                if (startingIndex != 0)
+                    sum += _symbolCounts[startingIndex - 1];
+
+                _symbolSums[startingIndex] = sum;
             }
         }
 
-        protected void UpdateModel()
+        protected void UpdateModel(uint symbol)
         {
+            _symbolCounts[symbol]++;
+            CalculateSymbolSums(Convert.ToInt32(symbol));
         }
     }
 }

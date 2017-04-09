@@ -26,7 +26,7 @@ namespace Arithmetic
                             break;
 
                         writer.WriteNBiti(symbol, 8); //
-                        UpdateModel();
+                        UpdateModel(symbol);
                     }
                 }
             }
