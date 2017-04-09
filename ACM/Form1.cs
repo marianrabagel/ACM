@@ -49,6 +49,8 @@ namespace ACM
             Bitmap bitmap = predictiveCoder.GetBitmap(predictiveCoder.ErrorP);
             errorPictureBox.Image = bitmap;
 
+            DrawHistogram();
+
         }
 
         private void RefreshBtn_Click(object sender, EventArgs e)
@@ -62,10 +64,7 @@ namespace ACM
 
         private void ComputeErrorBtn_Click(object sender, EventArgs e)
         {
-            int selectedIndex = HistogramSourceListBox.SelectedIndex;
-            int[] frequencies = GetFrequencies(selectedIndex);
-            float scale = (float) HistogramScaleNumeric.Value;
-            DragHistogramWithScale(frequencies, scale);
+          
         }
 
         private void DragHistogramWithScale(int[] frequencies, float scale)
@@ -102,9 +101,14 @@ namespace ACM
 
         private void RefreshHistogramBtn_Click(object sender, EventArgs e)
         {
+            DrawHistogram();
+        }
+
+        private void DrawHistogram()
+        {
             int selectedIndex = HistogramSourceListBox.SelectedIndex;
             int[] frequencies = GetFrequencies(selectedIndex);
-            float scale = (float)HistogramScaleNumeric.Value;
+            float scale = (float) HistogramScaleNumeric.Value;
             DragHistogramWithScale(frequencies, scale);
         }
     }

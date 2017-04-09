@@ -45,15 +45,9 @@ namespace ACM
                     byte predictionValue = GetPredictionFor(predictionRule, x, y);
                     Prediction[y, x] = predictionValue;
                     ErrorP[y, x] = Original[y, x] - predictionValue;
-                    ErrorPq[y, x] = (ErrorP[y, x] + k) / (2 * k + 1); //rotunjire in jos
+                    ErrorPq[y, x] = Convert.ToInt32(Math.Floor((double) ((ErrorP[y, x] + k) / (2 * k + 1)))); 
                     ErrorPdq[y, x] = ErrorPq[y, x] * (2 * k + 1);
                     Decoded[y, x] = (byte) (ErrorPdq[y, x] + Prediction[y, x]);
-                    //get prediction
-                    //calculate errorp
-                    //quantize errorP
-                    //dequantize errorp
-                    //calculate decoded
-                    //calculate error
                 }
             }
 
@@ -61,9 +55,11 @@ namespace ACM
 
         private byte GetPredictionFor(string predictionRule, int x, int y)
         {
-            byte value = 128;
             if (x == 0 && y == 0)
-                return value;
+                return 128;
+
+            byte value = 128;
+
             if (predictionRule == "128")
             {
                 value = 128;

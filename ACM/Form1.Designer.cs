@@ -176,7 +176,6 @@
             this.panel3.Controls.Add(this.LoadDecodedBtn);
             this.panel3.Controls.Add(this.errorPictureBox);
             this.panel3.Controls.Add(this.HistogramScaleNumeric);
-            this.panel3.Controls.Add(this.ComputeErrorBtn);
             this.panel3.Controls.Add(this.RefreshHistogramBtn);
             this.panel3.Controls.Add(this.ErrorMatrixListBox);
             this.panel3.Controls.Add(this.HistogramSourceListBox);
@@ -216,7 +215,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(48, 466);
+            this.label3.Location = new System.Drawing.Point(25, 414);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 10;
@@ -242,7 +241,12 @@
             // HistogramScaleNumeric
             // 
             this.HistogramScaleNumeric.DecimalPlaces = 2;
-            this.HistogramScaleNumeric.Location = new System.Drawing.Point(41, 482);
+            this.HistogramScaleNumeric.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.HistogramScaleNumeric.Location = new System.Drawing.Point(65, 407);
             this.HistogramScaleNumeric.Name = "HistogramScaleNumeric";
             this.HistogramScaleNumeric.Size = new System.Drawing.Size(41, 20);
             this.HistogramScaleNumeric.TabIndex = 13;
@@ -254,7 +258,7 @@
             // 
             // ComputeErrorBtn
             // 
-            this.ComputeErrorBtn.Location = new System.Drawing.Point(3, 394);
+            this.ComputeErrorBtn.Location = new System.Drawing.Point(74, 478);
             this.ComputeErrorBtn.Name = "ComputeErrorBtn";
             this.ComputeErrorBtn.Size = new System.Drawing.Size(117, 23);
             this.ComputeErrorBtn.TabIndex = 13;
@@ -264,7 +268,7 @@
             // 
             // RefreshHistogramBtn
             // 
-            this.RefreshHistogramBtn.Location = new System.Drawing.Point(31, 508);
+            this.RefreshHistogramBtn.Location = new System.Drawing.Point(19, 433);
             this.RefreshHistogramBtn.Name = "RefreshHistogramBtn";
             this.RefreshHistogramBtn.Size = new System.Drawing.Size(75, 23);
             this.RefreshHistogramBtn.TabIndex = 12;
@@ -309,6 +313,11 @@
             // ScaleNumeric
             // 
             this.ScaleNumeric.DecimalPlaces = 1;
+            this.ScaleNumeric.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
             this.ScaleNumeric.Location = new System.Drawing.Point(276, 206);
             this.ScaleNumeric.Name = "ScaleNumeric";
             this.ScaleNumeric.Size = new System.Drawing.Size(41, 20);
@@ -333,6 +342,7 @@
             this.ClientSize = new System.Drawing.Size(1137, 578);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.ComputeErrorBtn);
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel2.ResumeLayout(false);
