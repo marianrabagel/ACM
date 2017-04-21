@@ -25,7 +25,7 @@ namespace Arithmetic
             if (dialogResult == DialogResult.OK)
             {
                 string inputFile = openFileDialog1.FileName;
-                //string inputFile = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\ArithmeticStatic.txt";
+                //string inputFileName = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\ArithmeticStatic.txt";
                 string outputFile = Path.GetDirectoryName(inputFile) + "/" + Path.GetFileName(inputFile) + ".coded";
 
 
@@ -46,8 +46,8 @@ namespace Arithmetic
             {
                 string inputFile = openFileDialog1.FileName;
                 string outputFile = Path.GetDirectoryName(inputFile) + "/" + Path.GetFileNameWithoutExtension(inputFile) +
-                                    ".decoded";// + Path.GetExtension(inputFile);
-                //string inputFile =@"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\ArithmeticStatic_output.txt";
+                                    ".decoded";// + Path.GetExtension(inputFileName);
+                //string inputFileName =@"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\ArithmeticStatic_output.txt";
 
                 if (File.Exists(outputFile))
                     File.Delete(outputFile);

@@ -46,13 +46,13 @@
             this.LoadDecodedBtn = new System.Windows.Forms.Button();
             this.errorPictureBox = new System.Windows.Forms.PictureBox();
             this.HistogramScaleNumeric = new System.Windows.Forms.NumericUpDown();
-            this.ComputeErrorBtn = new System.Windows.Forms.Button();
             this.RefreshHistogramBtn = new System.Windows.Forms.Button();
             this.ErrorMatrixListBox = new System.Windows.Forms.ListBox();
             this.HistogramSourceListBox = new System.Windows.Forms.ListBox();
             this.RefreshBtn = new System.Windows.Forms.Button();
             this.ScaleNumeric = new System.Windows.Forms.NumericUpDown();
             this.HistogramaPanel = new System.Windows.Forms.Panel();
+            this.ComputeErrorBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KNumericUpDown)).BeginInit();
             this.panel3.SuspendLayout();
@@ -139,6 +139,7 @@
             this.SaveOriginalBtn.TabIndex = 3;
             this.SaveOriginalBtn.Text = "Save";
             this.SaveOriginalBtn.UseVisualStyleBackColor = true;
+            this.SaveOriginalBtn.Click += new System.EventHandler(this.SaveOriginalBtn_Click);
             // 
             // EncodeBtn
             // 
@@ -256,16 +257,6 @@
             0,
             65536});
             // 
-            // ComputeErrorBtn
-            // 
-            this.ComputeErrorBtn.Location = new System.Drawing.Point(74, 478);
-            this.ComputeErrorBtn.Name = "ComputeErrorBtn";
-            this.ComputeErrorBtn.Size = new System.Drawing.Size(117, 23);
-            this.ComputeErrorBtn.TabIndex = 13;
-            this.ComputeErrorBtn.Text = "Compute error";
-            this.ComputeErrorBtn.UseVisualStyleBackColor = true;
-            this.ComputeErrorBtn.Click += new System.EventHandler(this.ComputeErrorBtn_Click);
-            // 
             // RefreshHistogramBtn
             // 
             this.RefreshHistogramBtn.Location = new System.Drawing.Point(19, 433);
@@ -334,6 +325,16 @@
             this.HistogramaPanel.Name = "HistogramaPanel";
             this.HistogramaPanel.Size = new System.Drawing.Size(600, 300);
             this.HistogramaPanel.TabIndex = 2;
+            // 
+            // ComputeErrorBtn
+            // 
+            this.ComputeErrorBtn.Location = new System.Drawing.Point(74, 478);
+            this.ComputeErrorBtn.Name = "ComputeErrorBtn";
+            this.ComputeErrorBtn.Size = new System.Drawing.Size(117, 23);
+            this.ComputeErrorBtn.TabIndex = 13;
+            this.ComputeErrorBtn.Text = "Compute error";
+            this.ComputeErrorBtn.UseVisualStyleBackColor = true;
+            this.ComputeErrorBtn.Click += new System.EventHandler(this.ComputeErrorBtn_Click);
             // 
             // Form1
             // 

@@ -111,5 +111,11 @@ namespace ACM
             float scale = (float) HistogramScaleNumeric.Value;
             DragHistogramWithScale(frequencies, scale);
         }
+
+        private void SaveOriginalBtn_Click(object sender, EventArgs e)
+        {
+            int index = StatisticModelListBox.SelectedIndex;    
+            predictiveCoder.SaveEncodedFile(index);
+        }
     }
 }

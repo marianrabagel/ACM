@@ -8,8 +8,8 @@ namespace ACM
 {
     public class PredictiveCoder
     {
-        public string inputFile;
-        string outputFile;
+        public string inputFileName;
+        string outputFileName;
         byte[] bmpHeader;
         public byte[,] Original { get; }
         public byte[,] Prediction { get; }
@@ -19,10 +19,11 @@ namespace ACM
         public int[,] ErrorPdq { get; }
         public int[,] Error { get; }
         int size = 256;
+      
 
-        public PredictiveCoder(string inputFile)
+        public PredictiveCoder(string inputFileName)
         {
-            this.inputFile = inputFile;
+            this.inputFileName = inputFileName;
             bmpHeader = new byte[1078];
             Original = new byte[size, size];
             Prediction = new byte[size, size];
@@ -35,7 +36,7 @@ namespace ACM
 
         public void Encode(string predictionRule, int k, string entropicCoder)
         {
-            outputFile = inputFile + ".p" + predictionRule + "k" + k + entropicCoder + ".prd";
+            outputFileName = inputFileName + ".p" + predictionRule + "k" + k + entropicCoder + ".prd";
             SaveBmpToMemory();
 
             for (int y = 0; y < Original.GetLength(0); y++)
@@ -241,7 +242,7 @@ namespace ACM
 
         private void SaveBmpToMemory()
         {
-            using (BitReader reader = new BitReader(inputFile))
+            using (BitReader reader = new BitReader(inputFileName))
             {
                 for (int i = 0; i < 1078; i++)
                     bmpHeader[i] = (byte) reader.ReadNBit(8);
@@ -337,6 +338,27 @@ namespace ACM
             }
 
             return frequencies;
+        }
+
+        public void SaveEncodedFile(int statisticModelIndex)
+        {
+            if (statisticModelIndex == 0)
+            {
+                using (StreamWriter sw = new StreamWriter(outputFileName))
+                    sw.Write(bmpHeader);
+
+                using (BitWriter writer = new BitWriter(outputFileName))
+                {
+                    for (int y = 0; y < ErrorP.GetLength(0); y++)
+                    {
+                        for (int x = 0; x < ErrorP.GetLength(1); x++)
+                        {
+                            writer.WriteNBiti(ErrorP[y,x], 9);
+                        }
+                    }
+                    
+                }
+            }
         }
     }
 }
