@@ -105,7 +105,7 @@
             // 
             this.StatisticModelListBox.FormattingEnabled = true;
             this.StatisticModelListBox.Items.AddRange(new object[] {
-            "Fixed 9/16/32",
+            "Fixed 9",
             "Tabel",
             "Arithmetic"});
             this.StatisticModelListBox.Location = new System.Drawing.Point(168, 362);
@@ -230,6 +230,7 @@
             this.LoadDecodedBtn.TabIndex = 10;
             this.LoadDecodedBtn.Text = "Load";
             this.LoadDecodedBtn.UseVisualStyleBackColor = true;
+            this.LoadDecodedBtn.Click += new System.EventHandler(this.LoadDecodedBtn_Click);
             // 
             // errorPictureBox
             // 

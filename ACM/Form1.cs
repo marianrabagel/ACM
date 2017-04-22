@@ -17,7 +17,7 @@ namespace ACM
         }
         
         PredictiveCoder predictiveCoder;
-        Bitmap originalBitmap = new Bitmap(256, 256);
+        PredictiveDecoder predictiveDecoder;
 
         private void LoadOriginalBtn_Click(object sender, EventArgs e)
         {
@@ -36,7 +36,6 @@ namespace ACM
                 predictiveCoder = new PredictiveCoder(inputFile);
                 Bitmap bitmap = new Bitmap(inputFile);
                 OriginalImage.BackgroundImage = bitmap;
-
             }
         }
 
@@ -116,6 +115,26 @@ namespace ACM
         {
             int index = StatisticModelListBox.SelectedIndex;    
             predictiveCoder.SaveEncodedFile(index);
+        }
+
+        private void LoadDecodedBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = openFileDialog1.ShowDialog();
+
+            if (dialogResult == DialogResult.OK)
+            {
+                string inputFile = openFileDialog1.FileName;
+
+                if (Path.GetExtension(inputFile) != ".prd")
+                {
+                    MessageBox.Show("Selectati un fisier .prd");
+                    return;
+                }
+
+                predictiveDecoder = new PredictiveDecoder(inputFile);
+                predictiveDecoder.Decode();
+
+            }
         }
     }
 }
