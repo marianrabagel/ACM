@@ -8,15 +8,30 @@ namespace ACM
 {
     public class PredictiveCoder : PredictiveBase
     {
+        private int minError;
+        private int maxError;
+
         public PredictiveCoder(string inputFile) : base(inputFile)
         {
-            
+            minError = Int32.MaxValue;
+            maxError = Int32.MinValue;
         }
 
-        public void Encode(string predictionRule, int k, string entropicCoder)
+        public void Encode(int predictionRule, int k, string entropicCoder)
         {
-            outputFileName = inputFileName + ".p" + predictionRule + "k" + k + entropicCoder + ".prd";
-            SaveBmpToMemory();
+            minError = Int32.MaxValue;
+            maxError = Int32.MinValue;
+
+            if (entropicCoder.Contains("Fixed"))
+                entropicCoder = "F";
+            else if (entropicCoder.Contains("Table"))
+                entropicCoder = "T";
+            else
+                entropicCoder = "A";
+
+            outputFileName = inputFileName + ".p" + predictionRule + "k" + k.ToString().PadLeft(2, '0') + entropicCoder +
+                             ".prd";
+            ReadBmpHeaderAndLoadImageToMemory();
 
             for (int y = 0; y < size; y++)
             {
@@ -25,14 +40,22 @@ namespace ACM
                     byte predictionValue = GetPredictionFor(predictionRule, x, y);
                     Prediction[y, x] = predictionValue;
                     ErrorP[y, x] = Original[y, x] - predictionValue;
-                    ErrorPq[y, x] = Convert.ToInt32(Math.Floor((ErrorP[y, x] + k) / (double)(2 * k + 1))); 
+                    ErrorPq[y, x] = Convert.ToInt32(Math.Floor((ErrorP[y, x] + k) / (double) (2 * k + 1)));
                     ErrorPdq[y, x] = ErrorPq[y, x] * (2 * k + 1);
-                    Decoded[y, x] = (byte) (ErrorPdq[y, x] + Prediction[y, x]);
+                    int decodedValue = ErrorPdq[y, x] + Prediction[y, x];
+
+                    if (decodedValue < 0)
+                        decodedValue = 0;
+                    if (decodedValue > 255)
+                        decodedValue = 255;
+
+                    Decoded[y, x] = (byte) decodedValue;
+                    SetMinOrMaxError(y, x);
                 }
             }
         }
 
-        private void SaveBmpToMemory()
+        private void ReadBmpHeaderAndLoadImageToMemory()
         {
             using (BitReader reader = new BitReader(inputFileName))
             {
@@ -41,52 +64,10 @@ namespace ACM
 
                 for (int y = Original.GetLength(0) - 1; y > 0; y--)
                 {
-                    for (int x = 0; x < Original.GetLength(1); x++)
-                    {
+                    for (int x = 0; x < size; x++)
                         Original[y, x] = (byte) reader.ReadNBit(8);
-                    }
                 }
             }
-        }
-
-        public Bitmap GetBitmap(byte[,] matrix)
-        {
-            Bitmap bitmap = new Bitmap(matrix.GetLength(1), matrix.GetLength(0));
-
-            for (int y = 0; y < matrix.GetLength(1); y++)
-            {
-                for (int x = 0; x < matrix.GetLength(0); x++)
-                {
-                    byte value = matrix[y, x];
-                    Color color = Color.FromArgb(255, value, value, value);
-                    bitmap.SetPixel(x, y, color);
-                }
-            }
-
-            return bitmap;
-        }
-
-        public Bitmap GetBitmap(int[,] matrix)
-        {
-            Bitmap bitmap = new Bitmap(matrix.GetLength(1), matrix.GetLength(0));
-
-            for (int y = 0; y < matrix.GetLength(1); y++)
-            {
-                for (int x = 0; x < matrix.GetLength(0); x++)
-                {
-                    int value = matrix[y, x];
-
-                    if (value < 0)
-                        value = 0;
-                    if (value > 255)
-                        value = 255;
-
-                    Color color = Color.FromArgb(255, value, value, value);
-                    bitmap.SetPixel(x, y, color);
-                }
-            }
-
-            return bitmap;
         }
 
         public int[,] ApplyScale(int[,] matrix, double scale)
@@ -135,22 +116,65 @@ namespace ACM
         public void SaveEncodedFile(int statisticModelIndex)
         {
             if (statisticModelIndex == 0)
-            {
-                using (FileStream fileStream = new FileStream(outputFileName, FileMode.Create))
-                    fileStream.Write(bmpHeader,0, bmpHeader.Length);
+                SaveErrorPQUsingFixed9bits();
+            if (statisticModelIndex == 1)
+                SaveErrorPQUsingTable();
+            if (statisticModelIndex == 2)
+                SaveErrorPQUsingArithmetic();
+        }
 
-                using (BitWriter writer = new BitWriter(outputFileName))
+        private void SaveErrorPQUsingArithmetic()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void SaveErrorPQUsingTable()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void SaveErrorPQUsingFixed9bits()
+        {
+            using (BitWriter writer = new BitWriter(outputFileName))
+            {
+                foreach (byte b in bmpHeader)
+                    writer.WriteNBiti(b, 8);
+
+                for (int y = 0; y < size; y++)
                 {
-                    for (int y = 0; y < ErrorP.GetLength(0); y++)
+                    for (int x = 0; x < size; x++)
                     {
-                        for (int x = 0; x < ErrorP.GetLength(1); x++)
-                        {
-                            uint value = Convert.ToUInt32(ErrorP[y,x] + 255);
-                            writer.WriteNBiti(value, 9);
-                        }
+                        uint value = Convert.ToUInt32(ErrorPq[y, x] + 255);
+                        writer.WriteNBiti(value, 9);
                     }
                 }
             }
+        }
+
+        public int GetMinError()
+        {
+            if (minError == Int32.MaxValue)
+                return 0;
+
+            return minError;
+        }
+
+        private void SetMinOrMaxError(int y, int x)
+        {
+            int error = Original[y, x] - Decoded[y, x];
+
+            if (error < minError)
+                minError = error;
+            if (error > maxError)
+                maxError = error;
+        }
+
+        public int GetMaxError()
+        {
+            if (maxError == Int32.MinValue)
+                return 0;
+
+            return maxError;
         }
     }
 }

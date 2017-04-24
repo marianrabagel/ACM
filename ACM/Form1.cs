@@ -41,15 +41,13 @@ namespace ACM
 
         private void EncodeBtn_Click(object sender, EventArgs e)
         {
-            string predictionRule = PredictionRulesListBox.SelectedItem.ToString();
+            int predictionRule = PredictionRulesListBox.SelectedIndex;
             int k = (int) KNumericUpDown.Value;
             string entropicCoder = StatisticModelListBox.SelectedItem.ToString();
             predictiveCoder.Encode(predictionRule, k, entropicCoder);
             Bitmap bitmap = predictiveCoder.GetBitmap(predictiveCoder.ErrorP);
             errorPictureBox.Image = bitmap;
-
             DrawHistogram();
-
         }
 
         private void RefreshBtn_Click(object sender, EventArgs e)
@@ -63,7 +61,9 @@ namespace ACM
 
         private void ComputeErrorBtn_Click(object sender, EventArgs e)
         {
-          
+            MinLabel.Text = predictiveCoder.GetMinError().ToString();
+            MaxLabel.Text = predictiveCoder.GetMaxError().ToString();
+
         }
 
         private void DragHistogramWithScale(int[] frequencies, float scale)
@@ -76,10 +76,6 @@ namespace ACM
                 {
                     g.DrawLine(Pens.Black, i, 255, i, 255 - frequencies[i]*scale);
                 }
-
-               /* Point p1 = new Point(255, 0);
-                Point p2 = new Point(255, 255);
-                g.DrawLine(Pens.DeepSkyBlue, p1, p2);*/
             }
         }
 
@@ -115,6 +111,7 @@ namespace ACM
         {
             int index = StatisticModelListBox.SelectedIndex;    
             predictiveCoder.SaveEncodedFile(index);
+            MessageBox.Show("File was saved");
         }
 
         private void LoadDecodedBtn_Click(object sender, EventArgs e)
@@ -132,9 +129,23 @@ namespace ACM
                 }
 
                 predictiveDecoder = new PredictiveDecoder(inputFile);
-                predictiveDecoder.Decode();
-
+                predictiveDecoder.LoadPrdFile();
+                MessageBox.Show("Done loading");
             }
+        }
+
+        private void DecodeBtn_Click(object sender, EventArgs e)
+        {
+            predictiveDecoder.Decode();
+            Bitmap bitmap = predictiveDecoder.GetBitmap(predictiveDecoder.Decoded);
+            DecodedImage.BackgroundImage = bitmap;
+            MessageBox.Show("Done decoding");
+        }
+
+        private void SaveDecodedBtn_Click(object sender, EventArgs e)
+        {
+            predictiveDecoder.SaveDecodedFile();
+            MessageBox.Show("Done saving");
         }
     }
 }

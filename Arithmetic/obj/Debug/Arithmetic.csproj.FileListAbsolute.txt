@@ -1,0 +1,11 @@
+D:\Extra\New folder\Arithmetic\bin\Debug\Arithmetic.exe.config
+D:\Extra\New folder\Arithmetic\bin\Debug\Arithmetic.exe
+D:\Extra\New folder\Arithmetic\bin\Debug\Arithmetic.pdb
+D:\Extra\New folder\Arithmetic\bin\Debug\ACM.exe
+D:\Extra\New folder\Arithmetic\bin\Debug\ACM.pdb
+D:\Extra\New folder\Arithmetic\obj\Debug\Arithmetic.csprojResolveAssemblyReference.cache
+D:\Extra\New folder\Arithmetic\obj\Debug\Arithmetic.Form1.resources
+D:\Extra\New folder\Arithmetic\obj\Debug\Arithmetic.Properties.Resources.resources
+D:\Extra\New folder\Arithmetic\obj\Debug\Arithmetic.csproj.GenerateResource.Cache
+D:\Extra\New folder\Arithmetic\obj\Debug\Arithmetic.exe
+D:\Extra\New folder\Arithmetic\obj\Debug\Arithmetic.pdb

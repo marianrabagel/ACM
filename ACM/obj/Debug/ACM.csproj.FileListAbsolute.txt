@@ -7,3 +7,12 @@ D:\Extra\New folder\ACM\obj\Debug\ACM.Properties.Resources.resources
 D:\Extra\New folder\ACM\obj\Debug\ACM.csproj.GenerateResource.Cache
 D:\Extra\New folder\ACM\obj\Debug\ACM.exe
 D:\Extra\New folder\ACM\obj\Debug\ACM.pdb
+D:\Extra\ACM\ACM\bin\Debug\ACM.exe.config
+D:\Extra\ACM\ACM\obj\Debug\ACM.exe
+D:\Extra\ACM\ACM\obj\Debug\ACM.pdb
+D:\Extra\ACM\ACM\bin\Debug\ACM.exe
+D:\Extra\ACM\ACM\bin\Debug\ACM.pdb
+D:\Extra\ACM\ACM\obj\Debug\ACM.csprojResolveAssemblyReference.cache
+D:\Extra\ACM\ACM\obj\Debug\ACM.Form1.resources
+D:\Extra\ACM\ACM\obj\Debug\ACM.Properties.Resources.resources
+D:\Extra\ACM\ACM\obj\Debug\ACM.csproj.GenerateResource.Cache

@@ -8,6 +8,8 @@ namespace ACMTests
     [TestClass]
     public class BitReaderTests
     {
+        string basePath = @"D:\Extra";
+
         [TestMethod]
         [ExpectedException(typeof(NullReferenceException))]
         public void InexistentFile()
@@ -20,7 +22,7 @@ namespace ACMTests
         [ExpectedException( typeof(Exception), "Empty file")]
         public void EmptyFile()
         {
-            string fileName = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\empty.txt";
+            string fileName = $@"{basePath}\ACM\UnitTestProject1\bin\Debug\TestFiles\empty.txt";
 
             BitReader reader = new BitReader(fileName);
             int solution = reader.ReadBit();
@@ -29,7 +31,7 @@ namespace ACMTests
         [TestMethod]
         public void ReadBitValue1()
         {
-            string fileName = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\Value128.txt";
+            string fileName = $@"{basePath}\ACM\UnitTestProject1\bin\Debug\TestFiles\Value128.txt";
 
             if (File.Exists(fileName))
                 File.Delete(fileName);
@@ -46,7 +48,7 @@ namespace ACMTests
         [TestMethod]
         public void ReadBitValue0()
         {
-            string fileName = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0.txt";
+            string fileName = $@"{basePath}\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0.txt";
 
             if (File.Exists(fileName))
                 File.Delete(fileName);
@@ -63,7 +65,7 @@ namespace ACMTests
         [TestMethod]
         public void Read3BitsOf1()
         {
-            string fileName = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0xE0.txt";
+            string fileName = $@"{basePath}\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0xE0.txt";
 
             if (File.Exists(fileName))
                 File.Delete(fileName);
@@ -80,7 +82,7 @@ namespace ACMTests
         [TestMethod]
         public void Read4BitsAlternative()
         {
-            string fileName = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0xAA.txt";
+            string fileName = $@"{basePath}\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0xAA.txt";
 
             if (File.Exists(fileName))
                 File.Delete(fileName);
@@ -97,7 +99,7 @@ namespace ACMTests
         [TestMethod]
         public void Read32BitsAlternative()
         {
-            string fileName = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0xAAAAAAAA.txt";
+            string fileName = $@"{basePath}\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0xAAAAAAAA.txt";
 
             if (File.Exists(fileName))
                 File.Delete(fileName);
@@ -119,7 +121,7 @@ namespace ACMTests
         [TestMethod]
         public void Read9BitsAlternative()
         {
-            string fileName = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0xAAF.txt";
+            string fileName = $@"{basePath}\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0xAAF.txt";
 
             if (File.Exists(fileName))
                 File.Delete(fileName);
@@ -139,7 +141,7 @@ namespace ACMTests
         [TestMethod]
         public void Read17BitsAlternative()
         {
-            string fileName = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0xABCDE.txt";
+            string fileName = $@"{basePath}\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0xABCDE.txt";
 
             if (File.Exists(fileName))
                 File.Delete(fileName);
@@ -160,7 +162,7 @@ namespace ACMTests
         [TestMethod]
         public void Read25BitsAlternative()
         {
-            string fileName = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0xABCDEF0.txt";
+            string fileName = $@"{basePath}\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0xABCDEF0.txt";
 
             if (File.Exists(fileName))
                 File.Delete(fileName);
@@ -182,7 +184,7 @@ namespace ACMTests
         [TestMethod]
         public void Read1Byte()
         {
-            string fileName = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\Value157.txt";
+            string fileName = $@"{basePath}\ACM\UnitTestProject1\bin\Debug\TestFiles\Value157.txt";
 
             if (File.Exists(fileName))
                 File.Delete(fileName);

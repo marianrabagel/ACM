@@ -53,6 +53,10 @@
             this.ScaleNumeric = new System.Windows.Forms.NumericUpDown();
             this.HistogramaPanel = new System.Windows.Forms.Panel();
             this.ComputeErrorBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.MinLabel = new System.Windows.Forms.Label();
+            this.MaxLabel = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KNumericUpDown)).BeginInit();
             this.panel3.SuspendLayout();
@@ -106,7 +110,7 @@
             this.StatisticModelListBox.FormattingEnabled = true;
             this.StatisticModelListBox.Items.AddRange(new object[] {
             "Fixed 9",
-            "Tabel",
+            "Table",
             "Arithmetic"});
             this.StatisticModelListBox.Location = new System.Drawing.Point(168, 362);
             this.StatisticModelListBox.Name = "StatisticModelListBox";
@@ -196,6 +200,7 @@
             this.SaveDecodedBtn.TabIndex = 12;
             this.SaveDecodedBtn.Text = "Save";
             this.SaveDecodedBtn.UseVisualStyleBackColor = true;
+            this.SaveDecodedBtn.Click += new System.EventHandler(this.SaveDecodedBtn_Click);
             // 
             // DecodedImage
             // 
@@ -212,6 +217,7 @@
             this.DecodeBtn.TabIndex = 11;
             this.DecodeBtn.Text = "Decode";
             this.DecodeBtn.UseVisualStyleBackColor = true;
+            this.DecodeBtn.Click += new System.EventHandler(this.DecodeBtn_Click);
             // 
             // label3
             // 
@@ -329,7 +335,7 @@
             // 
             // ComputeErrorBtn
             // 
-            this.ComputeErrorBtn.Location = new System.Drawing.Point(74, 478);
+            this.ComputeErrorBtn.Location = new System.Drawing.Point(12, 465);
             this.ComputeErrorBtn.Name = "ComputeErrorBtn";
             this.ComputeErrorBtn.Size = new System.Drawing.Size(117, 23);
             this.ComputeErrorBtn.TabIndex = 13;
@@ -337,11 +343,49 @@
             this.ComputeErrorBtn.UseVisualStyleBackColor = true;
             this.ComputeErrorBtn.Click += new System.EventHandler(this.ComputeErrorBtn_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 495);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(24, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Min";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(15, 529);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(27, 13);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Max";
+            // 
+            // MinLabel
+            // 
+            this.MinLabel.AutoSize = true;
+            this.MinLabel.Location = new System.Drawing.Point(74, 495);
+            this.MinLabel.Name = "MinLabel";
+            this.MinLabel.Size = new System.Drawing.Size(0, 13);
+            this.MinLabel.TabIndex = 16;
+            // 
+            // MaxLabel
+            // 
+            this.MaxLabel.AutoSize = true;
+            this.MaxLabel.Location = new System.Drawing.Point(74, 529);
+            this.MaxLabel.Name = "MaxLabel";
+            this.MaxLabel.Size = new System.Drawing.Size(0, 13);
+            this.MaxLabel.TabIndex = 17;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1137, 578);
+            this.Controls.Add(this.MaxLabel);
+            this.Controls.Add(this.MinLabel);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.ComputeErrorBtn);
@@ -356,6 +400,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.HistogramScaleNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ScaleNumeric)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -385,6 +430,10 @@
         private System.Windows.Forms.ListBox ErrorMatrixListBox;
         private System.Windows.Forms.Button ComputeErrorBtn;
         private System.Windows.Forms.PictureBox errorPictureBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label MinLabel;
+        private System.Windows.Forms.Label MaxLabel;
     }
 }
 

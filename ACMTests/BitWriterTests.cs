@@ -13,10 +13,12 @@ namespace ACMTests
     [TestClass]
     public class BitWriterTests
     {
+        string basePath = @"D:\Extra";
+
         [TestMethod]
         public void Write1ByteOf1_WriteBit()
         {
-            string fileName =@"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0xFF_bitWriter.txt";
+            string fileName = $@"{basePath}\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0xFF_bitWriter.txt";
             if (File.Exists(fileName))
                 File.Delete(fileName);
 
@@ -37,7 +39,7 @@ namespace ACMTests
         [TestMethod]
         public void WriteA()
         {
-            string fileName = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\ValueA_bitWriter.txt";
+            string fileName = $@"{basePath}\ACM\UnitTestProject1\bin\Debug\TestFiles\ValueA_bitWriter.txt";
 
             if (File.Exists(fileName))
                 File.Delete(fileName);
@@ -59,7 +61,7 @@ namespace ACMTests
         [TestMethod]
         public void Write1ByteOf0_WriteBit()
         {
-            string fileName = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0x00_bitWriter.txt";
+            string fileName = $@"{basePath}\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0x00_bitWriter.txt";
 
             if (File.Exists(fileName))
                 File.Delete(fileName);
@@ -82,7 +84,7 @@ namespace ACMTests
         [TestMethod]
         public void Write0x5A_WriteBit()
         {
-            string fileName = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0x5A_bitWriter.txt";
+            string fileName = $@"{basePath}\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0x5A_bitWriter.txt";
 
             if (File.Exists(fileName))
                 File.Delete(fileName);
@@ -112,7 +114,7 @@ namespace ACMTests
         [TestMethod]
         public void Write1ByteOf1_WriteNBiti()
         {
-            string fileName = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0xFF_WriteNBiti.txt";
+            string fileName = $@"{basePath}\ACM\UnitTestProject1\bin\Debug\TestFiles\Value0xFF_WriteNBiti.txt";
             if (File.Exists(fileName))
                 File.Delete(fileName);
 
@@ -134,8 +136,8 @@ namespace ACMTests
         [TestMethod]
         public void ReadAndWriteATxtfile()
         {
-            string inputFile = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\test.txt";
-            string outputFile = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\test_copy.txt";
+            string inputFile = $@"{basePath}\ACM\UnitTestProject1\bin\Debug\TestFiles\test.txt";
+            string outputFile = $@"{basePath}\ACM\UnitTestProject1\bin\Debug\TestFiles\test_copy.txt";
 
             if(File.Exists(outputFile))
                 File.Delete(outputFile);
@@ -164,8 +166,8 @@ namespace ACMTests
         [TestMethod]
         public void ReadAndWriteAJpegfile()
         {
-            string inputFile = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\cover.jpg";
-            string outputFile = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\cover_copy.jpg";
+            string inputFile = $@"{basePath}\ACM\UnitTestProject1\bin\Debug\TestFiles\cover.jpg";
+            string outputFile = $@"{basePath}\ACM\UnitTestProject1\bin\Debug\TestFiles\cover_copy.jpg";
 
             if (File.Exists(outputFile))
                 File.Delete(outputFile);
@@ -194,8 +196,8 @@ namespace ACMTests
         [TestMethod]
         public void ReadAndWriteAPdffile()
         {
-            string inputFile = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\brin-page-98.pdf";
-            string outputFile = @"C:\Users\Marian\Documents\visual studio 2015\Projects\ACM\UnitTestProject1\bin\Debug\TestFiles\brin-page-98_copy.pdf";
+            string inputFile = $@"{basePath}\ACM\UnitTestProject1\bin\Debug\TestFiles\brin-page-98.pdf";
+            string outputFile = $@"{basePath}\ACM\UnitTestProject1\bin\Debug\TestFiles\brin-page-98_copy.pdf";
 
             if (File.Exists(outputFile))
                 File.Delete(outputFile);
