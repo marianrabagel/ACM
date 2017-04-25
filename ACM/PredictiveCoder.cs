@@ -1,31 +1,30 @@
 ﻿using System;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
-using System.Windows.Forms;
 
 namespace ACM
 {
     public class PredictiveCoder : PredictiveBase
     {
-        private int minError;
-        private int maxError;
+        private int _minError;
+        private int _maxError;
 
         public PredictiveCoder(string inputFile) : base(inputFile)
         {
-            minError = Int32.MaxValue;
-            maxError = Int32.MinValue;
+            _minError = Int32.MaxValue;
+            _maxError = Int32.MinValue;
         }
 
         public void Encode(int predictionRule, int k, string entropicCoder)
         {
-            minError = Int32.MaxValue;
-            maxError = Int32.MinValue;
-
+            _minError = Int32.MaxValue;
+            _maxError = Int32.MinValue;
+            
             if (entropicCoder.Contains("Fixed"))
                 entropicCoder = "F";
             else if (entropicCoder.Contains("Table"))
+            {
                 entropicCoder = "T";
+                CreateJpegTable();
+            }
             else
                 entropicCoder = "A";
 
@@ -153,28 +152,28 @@ namespace ACM
 
         public int GetMinError()
         {
-            if (minError == Int32.MaxValue)
+            if (_minError == Int32.MaxValue)
                 return 0;
 
-            return minError;
+            return _minError;
         }
 
         private void SetMinOrMaxError(int y, int x)
         {
             int error = Original[y, x] - Decoded[y, x];
 
-            if (error < minError)
-                minError = error;
-            if (error > maxError)
-                maxError = error;
+            if (error < _minError)
+                _minError = error;
+            if (error > _maxError)
+                _maxError = error;
         }
 
         public int GetMaxError()
         {
-            if (maxError == Int32.MinValue)
+            if (_maxError == Int32.MinValue)
                 return 0;
 
-            return maxError;
+            return _maxError;
         }
     }
 }

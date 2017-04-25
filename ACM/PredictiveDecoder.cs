@@ -22,10 +22,10 @@ namespace ACM
             predictionRule = Convert.ToInt32(filename.Substring(0, filename.IndexOf("k")));
             k = Convert.ToInt32(filename.Substring(filename.IndexOf("k") + 1, 2));
             entropicCoder = filename.Substring(filename.IndexOf("k" + k) + 5, 1);
-            ReadBmpHeaderAndLoadPredictionToMemory(entropicCoder);
+            ReadBmpHeaderAndLoadPredictionToMemory();
         }
 
-        private void ReadBmpHeaderAndLoadPredictionToMemory(string entropicCoder)
+        private void ReadBmpHeaderAndLoadPredictionToMemory()
         {
             using (BitReader reader = new BitReader(inputFileName))
             {
@@ -43,11 +43,15 @@ namespace ACM
             if (coder == "F")
                 return Convert.ToInt32(reader.ReadNBit(9));
             if (coder == "T")
+            {
+                CreateJpegTable();
+
                 return 0;
+            }
             if (coder == "A")
                 return 0;
 
-            return 255;
+            throw new Exception("Codorul nu a fost setat");
         }
 
         public void Decode()

@@ -19,6 +19,7 @@ namespace ACM
         public int[,] ErrorPq { get; }
         public int[,] ErrorPdq { get; }
         protected int size = 256;
+        private int[][] jpegTable;
 
         public PredictiveBase(string inputFileName)
         {
@@ -45,6 +46,56 @@ namespace ACM
                     ErrorP[y, x] = 0;
                     ErrorPq[y, x] = 0;
                     ErrorPq[y, x] = 0;
+                }
+            }
+        }
+
+        protected uint GetCodingFor(int number)
+        {
+            uint coding = 0;
+            int y = 0;
+
+            while (Math.Abs(number) > Math.Pow(y, 2))
+                y++;
+
+            uint x = 0;
+
+            for (; x < jpegTable[y].Length; x++)
+            {
+                if (jpegTable[y][x] == number)
+                    break;
+            }
+
+            for (int i = 0; i < y; i++)
+            {
+                coding |= 0x1;
+                coding = coding << 1;
+            }
+
+            coding = coding << 8;
+            coding = coding | (x & 0x000000FF);
+
+            return coding;
+        }
+
+        protected void CreateJpegTable()
+        {
+            jpegTable = new int[9][];
+
+            jpegTable[0] = new int[1];
+            jpegTable[0][0] = 0;
+
+            for (int i = 1; i < 9; i++)
+            {
+                int size = Convert.ToInt32(Math.Pow(2, i));
+                jpegTable[i] = new int[size];
+                int t = 0;
+
+                for (int j = size - 1; j >= Math.Pow(2, i - 1); j--)
+                {
+                    jpegTable[i][t] = -j;
+                    jpegTable[i][size - 1 - t] = j;
+                    t++;
                 }
             }
         }

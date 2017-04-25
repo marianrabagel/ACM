@@ -196,7 +196,7 @@
             // 
             this.SaveDecodedBtn.Location = new System.Drawing.Point(632, 67);
             this.SaveDecodedBtn.Name = "SaveDecodedBtn";
-            this.SaveDecodedBtn.Size = new System.Drawing.Size(75, 23);
+            this.SaveDecodedBtn.Size = new System.Drawing.Size(76, 23);
             this.SaveDecodedBtn.TabIndex = 12;
             this.SaveDecodedBtn.Text = "Save";
             this.SaveDecodedBtn.UseVisualStyleBackColor = true;
@@ -211,7 +211,7 @@
             // 
             // DecodeBtn
             // 
-            this.DecodeBtn.Location = new System.Drawing.Point(634, 38);
+            this.DecodeBtn.Location = new System.Drawing.Point(632, 38);
             this.DecodeBtn.Name = "DecodeBtn";
             this.DecodeBtn.Size = new System.Drawing.Size(75, 23);
             this.DecodeBtn.TabIndex = 11;
@@ -232,7 +232,7 @@
             // 
             this.LoadDecodedBtn.Location = new System.Drawing.Point(632, 9);
             this.LoadDecodedBtn.Name = "LoadDecodedBtn";
-            this.LoadDecodedBtn.Size = new System.Drawing.Size(75, 23);
+            this.LoadDecodedBtn.Size = new System.Drawing.Size(76, 23);
             this.LoadDecodedBtn.TabIndex = 10;
             this.LoadDecodedBtn.Text = "Load";
             this.LoadDecodedBtn.UseVisualStyleBackColor = true;
