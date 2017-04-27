@@ -23,7 +23,6 @@ namespace ACM
             else if (entropicCoder.Contains("Table"))
             {
                 entropicCoder = "T";
-                CreateJpegTable();
             }
             else
                 entropicCoder = "A";
@@ -117,7 +116,7 @@ namespace ACM
             if (statisticModelIndex == 0)
                 SaveErrorPQUsingFixed9bits();
             if (statisticModelIndex == 1)
-                SaveErrorPQUsingTable();
+                SaveErrorPQUsingJpegTable();
             if (statisticModelIndex == 2)
                 SaveErrorPQUsingArithmetic();
         }
@@ -127,9 +126,23 @@ namespace ACM
             throw new NotImplementedException();
         }
 
-        private void SaveErrorPQUsingTable()
+        private void SaveErrorPQUsingJpegTable()
         {
-            throw new NotImplementedException();
+            using (BitWriter writer = new BitWriter(outputFileName))
+            {
+                foreach (byte b in bmpHeader)
+                    writer.WriteNBiti(b, 8);
+
+                for (int y = 0; y < size; y++)
+                {
+                    for (int x = 0; x < size; x++)
+                    {
+                        uint value = Convert.ToUInt32(ErrorPq[y, x] + 255);
+                        writer.WriteNBiti(value, 9);
+                    }
+
+                }
+            }
         }
 
         private void SaveErrorPQUsingFixed9bits()

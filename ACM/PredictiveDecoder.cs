@@ -44,8 +44,6 @@ namespace ACM
                 return Convert.ToInt32(reader.ReadNBit(9));
             if (coder == "T")
             {
-                CreateJpegTable();
-
                 return 0;
             }
             if (coder == "A")

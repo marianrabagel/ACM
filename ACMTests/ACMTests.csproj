@@ -52,7 +52,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="ArithmetiCoderTest.cs" />
+    <Compile Include="JpegTableTest.cs" />
     <Compile Include="BitReaderTests.cs" />
     <Compile Include="BitWriterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

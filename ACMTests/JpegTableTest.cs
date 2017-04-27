@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace ACMTests
 {
     [TestClass]
-    public class ArithmetiCoderTest
+    public class JpegTableTest
     {
         [TestMethod]
         public void JpegTable()
@@ -20,7 +20,7 @@ namespace ACMTests
         public void CodingFor5()
         {
             uint solution = GetCodingFor(5);
-            uint val = 3589;
+            uint val = 229;
             Assert.AreEqual(solution, val);
         }
 
@@ -66,21 +66,11 @@ namespace ACMTests
 
         private uint GetCodingFor(int number)
         {
+            if (number == 0)
+                return 0;
+
+            int y = Convert.ToInt32(Math.Floor(Math.Log(Math.Abs(number), 2) + 1));
             uint coding = 0;
-
-            var jpegTable = SetJpegTable();
-            int y = 0;
-
-            while (Math.Abs(number) > Math.Pow(y, 2))
-                y++;
-
-            uint x = 0;
-
-            for (; x < jpegTable[y].Length; x++)
-            {
-                if (jpegTable[y][x] == number)
-                    break;
-            }
 
             for (int i = 0; i < y; i++)
             {
@@ -88,8 +78,9 @@ namespace ACMTests
                 coding = coding << 1;
             }
 
-            coding = coding << 8;
-            coding = coding | (x & 0x000000FF);
+            uint x = number > 0 ? Convert.ToUInt32(number) : Convert.ToUInt32(number + Math.Pow(2, y) - 1);
+            coding = coding << Convert.ToInt32(Math.Pow(2, y));
+            coding = coding | Convert.ToUInt32(x & Convert.ToInt32(Math.Pow(2, y) - 1)); //dimensiune variabila
 
             return coding;
         }
