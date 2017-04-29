@@ -13,7 +13,7 @@ namespace ACMTests
     [TestClass]
     public class BitWriterTests
     {
-        string basePath = @"D:\Extra";
+        string basePath = @"E:\Workspaces\Visual studio 2015";
 
         [TestMethod]
         public void Write1ByteOf1_WriteBit()

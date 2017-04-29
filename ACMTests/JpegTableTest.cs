@@ -25,6 +25,7 @@ namespace ACMTests
             JpegCoding solution = predictiveCoder.GetCodingFor(5);
             uint val = 117;
             Assert.AreEqual(solution.Coding, val);
+            Assert.AreEqual(solution.Length, 7);
         }
 
         [TestMethod]
@@ -33,6 +34,7 @@ namespace ACMTests
             JpegCoding solution = predictiveCoder.GetCodingFor(0);
             uint val = 0;
             Assert.AreEqual(solution.Coding, val);
+            Assert.AreEqual(solution.Length, 1);
         }
 
         [TestMethod]
@@ -41,6 +43,7 @@ namespace ACMTests
             JpegCoding solution = predictiveCoder.GetCodingFor(1);
             uint val = 5;
             Assert.AreEqual(solution.Coding, val);
+            Assert.AreEqual(solution.Length, 3);
         }
 
         [TestMethod]
@@ -49,6 +52,7 @@ namespace ACMTests
             JpegCoding solution = predictiveCoder.GetCodingFor(-5);
             uint val = 114;
             Assert.AreEqual(solution.Coding, val);
+            Assert.AreEqual(solution.Length, 7);
         }
 
         [TestMethod]
@@ -57,14 +61,16 @@ namespace ACMTests
             JpegCoding solution = predictiveCoder.GetCodingFor(-13);
             uint val = 482;
             Assert.AreEqual(solution.Coding, val);
+            Assert.AreEqual(solution.Length, 9);
         }
 
         [TestMethod]
-        public void CodingForNumbers()
+        public void CodingForNot26()
         {
-            JpegCoding solution = predictiveCoder.GetCodingFor(5);
-            uint val = 117;
+            JpegCoding solution = predictiveCoder.GetCodingFor(-26);
+            uint val = 1989;
             Assert.AreEqual(solution.Coding, val);
+            Assert.AreEqual(solution.Length, 11);
         }
 
         private int[][] SetJpegTable()

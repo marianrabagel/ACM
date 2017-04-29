@@ -29,9 +29,10 @@ namespace ACM
         {
             using (BitReader reader = new BitReader(inputFileName))
             {
+                /*
                 for (int i = 0; i < 1078; i++)
                     bmpHeader[i] = (byte)reader.ReadNBit(8);
-
+                */
                 for (int y = 0; y < size; y++)
                     for (int x = 0; x < size; x++)
                         ErrorPq[y, x] = GetValueFromFile(reader, entropicCoder);
@@ -65,7 +66,7 @@ namespace ACM
                 int index = Convert.ToInt32(reader.ReadNBit(ct));
 
                 if (index < Math.Pow(2, ct - 1))
-                    return index - Convert.ToInt32(Math.Pow(2, ct));
+                    return Convert.ToInt32(index - (Math.Pow(2, ct) - 1));
                 else
                     return index;
             }

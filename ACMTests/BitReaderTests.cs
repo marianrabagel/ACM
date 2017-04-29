@@ -8,7 +8,7 @@ namespace ACMTests
     [TestClass]
     public class BitReaderTests
     {
-        string basePath = @"D:\Extra";
+        string basePath = @"E:\Workspaces\Visual studio 2015";
 
         [TestMethod]
         [ExpectedException(typeof(NullReferenceException))]

@@ -68,7 +68,7 @@ namespace ACM
             coding = coding << y;
             coding = coding | x;
 
-            int length = Convert.ToInt32(y + 1 + Math.Pow(2, y));
+            int length = Convert.ToInt32(2*y + 1 );
             JpegCoding jpegCoding = new JpegCoding(coding, length);
 
             return jpegCoding;
