@@ -34,19 +34,42 @@ namespace ACM
 
                 for (int y = 0; y < size; y++)
                     for (int x = 0; x < size; x++)
-                        ErrorPq[y, x] = GetValueFromFile(reader, entropicCoder) - 255;
+                        ErrorPq[y, x] = GetValueFromFile(reader, entropicCoder);
             }
         }
 
-        private int GetValueFromFile(BitReader reader, string coder)
+        private int GetValueFromFile(BitReader reader, string entropicCoder)
         {
-            if (coder == "F")
-                return Convert.ToInt32(reader.ReadNBit(9));
-            if (coder == "T")
+            if (entropicCoder == "F")
+                return Convert.ToInt32(reader.ReadNBit(9)) - 255;
+            if (entropicCoder == "T")
             {
-                return 0;
+                uint coding = 0;
+                byte bit = reader.ReadBit();
+
+                if (bit == 0)
+                    return 0;
+
+                int ct = 0;
+
+                while (bit != 0)
+                {
+                    //helper
+                    coding += 1;
+                    coding = coding << 1;
+                    //helper
+                    bit = reader.ReadBit();
+                    ct++;
+                }
+
+                int index = Convert.ToInt32(reader.ReadNBit(ct));
+
+                if (index < Math.Pow(2, ct - 1))
+                    return index - Convert.ToInt32(Math.Pow(2, ct));
+                else
+                    return index;
             }
-            if (coder == "A")
+            if (entropicCoder == "A")
                 return 0;
 
             throw new Exception("Codorul nu a fost setat");

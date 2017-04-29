@@ -1,4 +1,5 @@
 ﻿using System;
+using ACM;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ACMTests
@@ -6,6 +7,8 @@ namespace ACMTests
     [TestClass]
     public class JpegTableTest
     {
+        PredictiveCoder predictiveCoder = new PredictiveCoder("");
+
         [TestMethod]
         public void JpegTable()
         {
@@ -19,70 +22,49 @@ namespace ACMTests
         [TestMethod]
         public void CodingFor5()
         {
-            uint solution = GetCodingFor(5);
-            uint val = 229;
-            Assert.AreEqual(solution, val);
+            JpegCoding solution = predictiveCoder.GetCodingFor(5);
+            uint val = 117;
+            Assert.AreEqual(solution.Coding, val);
         }
 
         [TestMethod]
         public void CodingFor0()
         {
-            uint solution = GetCodingFor(0);
+            JpegCoding solution = predictiveCoder.GetCodingFor(0);
             uint val = 0;
-            Assert.AreEqual(solution, val);
+            Assert.AreEqual(solution.Coding, val);
         }
 
         [TestMethod]
         public void CodingFor1()
         {
-            uint solution = GetCodingFor(1);
-            uint val = 513;
-            Assert.AreEqual(solution, val);
+            JpegCoding solution = predictiveCoder.GetCodingFor(1);
+            uint val = 5;
+            Assert.AreEqual(solution.Coding, val);
         }
 
         [TestMethod]
         public void CodingForNot5()
         {
-            uint solution = GetCodingFor(-5);
-            uint val = 3586;
-            Assert.AreEqual(solution, val);
+            JpegCoding solution = predictiveCoder.GetCodingFor(-5);
+            uint val = 114;
+            Assert.AreEqual(solution.Coding, val);
         }
 
         [TestMethod]
         public void CodingForNot13()
         {
-            uint solution = GetCodingFor(-13);
-            uint val = 7682;
-            Assert.AreEqual(solution, val);
+            JpegCoding solution = predictiveCoder.GetCodingFor(-13);
+            uint val = 482;
+            Assert.AreEqual(solution.Coding, val);
         }
 
         [TestMethod]
         public void CodingForNumbers()
         {
-            uint solution = GetCodingFor(5);
-            uint val = 3589;
-            Assert.AreEqual(solution, val);
-        }
-
-        private uint GetCodingFor(int number)
-        {
-            if (number == 0)
-                return 0;
-
-            int y = Convert.ToInt32(Math.Floor(Math.Log(Math.Abs(number), 2) + 1));
-            uint coding = 0;
-
-            for (int i = 0; i < y; i++)
-            {
-                coding |= 0x1;
-                coding = coding << 1;
-            }
-
-            uint x = number > 0 ? Convert.ToUInt32(number) : Convert.ToUInt32(number + Math.Pow(2, y) - 1);
-            coding = coding << Convert.ToInt32(Math.Pow(2, y));
-            coding = coding | Convert.ToUInt32(x & Convert.ToInt32(Math.Pow(2, y) - 1)); //dimensiune variabila
-
-            return coding;
+            JpegCoding solution = predictiveCoder.GetCodingFor(5);
+            uint val = 117;
+            Assert.AreEqual(solution.Coding, val);
         }
 
         private int[][] SetJpegTable()

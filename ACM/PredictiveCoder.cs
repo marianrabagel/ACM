@@ -137,10 +137,9 @@ namespace ACM
                 {
                     for (int x = 0; x < size; x++)
                     {
-                        uint value = Convert.ToUInt32(ErrorPq[y, x] + 255);
-                        writer.WriteNBiti(value, 9);
+                        JpegCoding jpegCoding = GetCodingFor(ErrorPq[y, x]);
+                        writer.WriteNBiti(jpegCoding.Coding, jpegCoding.Length);
                     }
-
                 }
             }
         }

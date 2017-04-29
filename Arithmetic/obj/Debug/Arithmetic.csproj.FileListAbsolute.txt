@@ -9,3 +9,14 @@ D:\Extra\New folder\Arithmetic\obj\Debug\Arithmetic.Properties.Resources.resourc
 D:\Extra\New folder\Arithmetic\obj\Debug\Arithmetic.csproj.GenerateResource.Cache
 D:\Extra\New folder\Arithmetic\obj\Debug\Arithmetic.exe
 D:\Extra\New folder\Arithmetic\obj\Debug\Arithmetic.pdb
+E:\Workspaces\Visual studio 2015\ACM\Arithmetic\bin\Debug\Arithmetic.exe.config
+E:\Workspaces\Visual studio 2015\ACM\Arithmetic\bin\Debug\Arithmetic.exe
+E:\Workspaces\Visual studio 2015\ACM\Arithmetic\bin\Debug\Arithmetic.pdb
+E:\Workspaces\Visual studio 2015\ACM\Arithmetic\bin\Debug\ACM.exe
+E:\Workspaces\Visual studio 2015\ACM\Arithmetic\bin\Debug\ACM.pdb
+E:\Workspaces\Visual studio 2015\ACM\Arithmetic\obj\Debug\Arithmetic.csprojResolveAssemblyReference.cache
+E:\Workspaces\Visual studio 2015\ACM\Arithmetic\obj\Debug\Arithmetic.Form1.resources
+E:\Workspaces\Visual studio 2015\ACM\Arithmetic\obj\Debug\Arithmetic.Properties.Resources.resources
+E:\Workspaces\Visual studio 2015\ACM\Arithmetic\obj\Debug\Arithmetic.csproj.GenerateResource.Cache
+E:\Workspaces\Visual studio 2015\ACM\Arithmetic\obj\Debug\Arithmetic.exe
+E:\Workspaces\Visual studio 2015\ACM\Arithmetic\obj\Debug\Arithmetic.pdb

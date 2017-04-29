@@ -50,10 +50,10 @@ namespace ACM
             }
         }
 
-        protected uint GetCodingFor(int number)
+        public JpegCoding GetCodingFor(int number)
         {
             if (number == 0)
-                return 0;
+                return new JpegCoding();
 
             int y = Convert.ToInt32(Math.Floor(Math.Log(Math.Abs(number), 2) + 1));
             uint coding = 0;
@@ -65,10 +65,13 @@ namespace ACM
             }
 
             uint x = number > 0 ? Convert.ToUInt32(number) : Convert.ToUInt32(number + Math.Pow(2, y) - 1);
-            coding = coding << 8;
-            coding = coding | (x & 0x000000FF);
+            coding = coding << y;
+            coding = coding | x;
 
-            return coding;
+            int length = Convert.ToInt32(y + 1 + Math.Pow(2, y));
+            JpegCoding jpegCoding = new JpegCoding(coding, length);
+
+            return jpegCoding;
         }
 
         protected byte GetPredictionFor(int predictionRule, int x, int y)
@@ -295,6 +298,24 @@ namespace ACM
             }
 
             return bitmap;
+        }
+    }
+
+    public class JpegCoding
+    {
+        public uint Coding { get; }
+        public int Length { get; }
+
+        public JpegCoding()
+        {
+            Coding = 0;
+            Length = 1;
+        }
+
+        public JpegCoding(uint coding, int length)
+        {
+            this.Coding = coding;
+            this.Length = length;
         }
     }
 }

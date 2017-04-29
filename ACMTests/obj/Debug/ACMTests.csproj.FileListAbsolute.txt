@@ -5,3 +5,10 @@ D:\Extra\New folder\ACMTests\bin\Debug\ACM.pdb
 D:\Extra\New folder\ACMTests\obj\Debug\ACMTests.csprojResolveAssemblyReference.cache
 D:\Extra\New folder\ACMTests\obj\Debug\ACMTests.dll
 D:\Extra\New folder\ACMTests\obj\Debug\ACMTests.pdb
+E:\Workspaces\Visual studio 2015\ACM\ACMTests\bin\Debug\ACMTests.dll
+E:\Workspaces\Visual studio 2015\ACM\ACMTests\bin\Debug\ACMTests.pdb
+E:\Workspaces\Visual studio 2015\ACM\ACMTests\bin\Debug\ACM.exe
+E:\Workspaces\Visual studio 2015\ACM\ACMTests\bin\Debug\ACM.pdb
+E:\Workspaces\Visual studio 2015\ACM\ACMTests\obj\Debug\ACMTests.csprojResolveAssemblyReference.cache
+E:\Workspaces\Visual studio 2015\ACM\ACMTests\obj\Debug\ACMTests.dll
+E:\Workspaces\Visual studio 2015\ACM\ACMTests\obj\Debug\ACMTests.pdb
