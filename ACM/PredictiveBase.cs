@@ -257,7 +257,7 @@ namespace ACM
 
         private byte GetA(int x, int y)
         {
-            return x == 0 ? (byte) 0 : Decoded[y, x - 1];
+            return x == 0 ? (byte) 128 : Decoded[y, x - 1];
         }
 
         public Bitmap GetBitmap(int[,] matrix)
@@ -304,6 +304,12 @@ namespace ACM
         {
             foreach (byte b in bmpHeader)
                 writer.WriteNBiti(b, 8);
+        }
+
+        public void ReadBmpHeader(BitReader reader)
+        {
+            for (int i = 0; i < 1078; i++)
+                bmpHeader[i] = (byte)reader.ReadNBit(8);
         }
     }
 

@@ -30,10 +30,8 @@ namespace ACM
         {
             using (BitReader reader = new BitReader(inputFileName))
             {
-                
-                for (int i = 0; i < 1078; i++)
-                    bmpHeader[i] = (byte)reader.ReadNBit(8);
-                
+                ReadBmpHeader(reader);
+
                 for (int y = 0; y < size; y++)
                     for (int x = 0; x < size; x++)
                         ErrorPq[y, x] = GetValueFromFile(reader, entropicCoder);

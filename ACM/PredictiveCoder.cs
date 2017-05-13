@@ -21,9 +21,7 @@ namespace ACM
             if (entropicCoder.Contains("Fixed"))
                 entropicCoder = "F";
             else if (entropicCoder.Contains("Table"))
-            {
                 entropicCoder = "T";
-            }
             else
                 entropicCoder = "A";
 
@@ -57,8 +55,7 @@ namespace ACM
         {
             using (BitReader reader = new BitReader(inputFileName))
             {
-                for (int i = 0; i < 1078; i++)
-                    bmpHeader[i] = (byte) reader.ReadNBit(8);
+                ReadBmpHeader(reader);
 
                 for (int y = size - 1; y >= 0; y--)
                     for (int x = 0; x < size; x++)
