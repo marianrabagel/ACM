@@ -60,11 +60,9 @@ namespace ACM
                 for (int i = 0; i < 1078; i++)
                     bmpHeader[i] = (byte) reader.ReadNBit(8);
 
-                for (int y = Original.GetLength(0) - 1; y > 0; y--)
-                {
+                for (int y = size - 1; y >= 0; y--)
                     for (int x = 0; x < size; x++)
                         Original[y, x] = (byte) reader.ReadNBit(8);
-                }
             }
         }
 
@@ -114,43 +112,18 @@ namespace ACM
         public void SaveEncodedFile(int statisticModelIndex)
         {
             if (statisticModelIndex == 0)
-                SaveErrorPQUsingFixed9bits();
+                SaveErrorPqUsingFixed9Bits();
             if (statisticModelIndex == 1)
-                SaveErrorPQUsingJpegTable();
+                SaveErrorPqUsingJpegTable();
             if (statisticModelIndex == 2)
                 SaveErrorPQUsingArithmetic();
         }
 
-        private void SaveErrorPQUsingArithmetic()
-        {
-            throw new NotImplementedException();
-        }
-
-        private void SaveErrorPQUsingJpegTable()
+        private void SaveErrorPqUsingFixed9Bits()
         {
             using (BitWriter writer = new BitWriter(outputFileName))
             {
-                /*
-                foreach (byte b in bmpHeader)
-                    writer.WriteNBiti(b, 8);
-                */
-                for (int y = 0; y < size; y++)
-                {
-                    for (int x = 0; x < size; x++)
-                    {
-                        JpegCoding jpegCoding = GetCodingFor(ErrorPq[y, x]);
-                        writer.WriteNBiti(jpegCoding.Coding, jpegCoding.Length);
-                    }
-                }
-            }
-        }
-
-        private void SaveErrorPQUsingFixed9bits()
-        {
-            using (BitWriter writer = new BitWriter(outputFileName))
-            {
-                foreach (byte b in bmpHeader)
-                    writer.WriteNBiti(b, 8);
+                WriteBmpHeader(writer);
 
                 for (int y = 0; y < size; y++)
                 {
@@ -162,6 +135,30 @@ namespace ACM
                 }
             }
         }
+
+        private void SaveErrorPqUsingJpegTable()
+        {
+            using (BitWriter writer = new BitWriter(outputFileName))
+            {
+                WriteBmpHeader(writer);
+
+                for (int y = 0; y < size; y++)
+                {
+                    for (int x = 0; x < size; x++)
+                    {
+                        JpegCoding jpegCoding = GetCodingFor(ErrorPq[y, x]);
+                        writer.WriteNBiti(jpegCoding.Coding, jpegCoding.Length);
+                    }
+                }
+            }
+        }
+
+        private void SaveErrorPQUsingArithmetic()
+        {
+            throw new NotImplementedException();
+        }
+
+        
 
         public int GetMinError()
         {

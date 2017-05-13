@@ -21,7 +21,8 @@ namespace ACM
             filename = filename.Substring(filename.IndexOf(".bmp.p") + 6);
             predictionRule = Convert.ToInt32(filename.Substring(0, filename.IndexOf("k")));
             k = Convert.ToInt32(filename.Substring(filename.IndexOf("k") + 1, 2));
-            entropicCoder = filename.Substring(filename.IndexOf("k" + k) + 5, 1);
+            var startIndex = k < 10 ? filename.IndexOf("k0" + k) + 3 : filename.IndexOf("k" + k);
+            entropicCoder = filename.Substring(startIndex, 1);
             ReadBmpHeaderAndLoadPredictionToMemory();
         }
 
@@ -29,10 +30,10 @@ namespace ACM
         {
             using (BitReader reader = new BitReader(inputFileName))
             {
-                /*
+                
                 for (int i = 0; i < 1078; i++)
                     bmpHeader[i] = (byte)reader.ReadNBit(8);
-                */
+                
                 for (int y = 0; y < size; y++)
                     for (int x = 0; x < size; x++)
                         ErrorPq[y, x] = GetValueFromFile(reader, entropicCoder);
@@ -101,11 +102,9 @@ namespace ACM
         {
             using (BitWriter writer = new BitWriter(outputFileName))
             {
-                foreach (byte b in bmpHeader)
-                    writer.WriteNBiti(b, 8);
+                WriteBmpHeader(writer);
 
-                for (int y = size - 1; y > 0; y--)
-
+                for (int y = size - 1; y >= 0; y--)
                 //for (int y = 0; y < size; y++)
                 {
                     for (int x = 0; x < size; x++)

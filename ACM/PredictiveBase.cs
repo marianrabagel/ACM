@@ -299,6 +299,12 @@ namespace ACM
 
             return bitmap;
         }
+
+        public void WriteBmpHeader(BitWriter writer)
+        {
+            foreach (byte b in bmpHeader)
+                writer.WriteNBiti(b, 8);
+        }
     }
 
     public class JpegCoding
