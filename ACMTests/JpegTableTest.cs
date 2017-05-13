@@ -73,6 +73,33 @@ namespace ACMTests
             Assert.AreEqual(solution.Length, 11);
         }
 
+        [TestMethod]
+        public void CodingFor104()
+        {
+            JpegCoding solution = predictiveCoder.GetCodingFor(104);
+            uint val = 32616;
+            Assert.AreEqual(solution.Coding, val);
+            Assert.AreEqual(solution.Length, 15);
+        }
+
+        [TestMethod]
+        public void CodingFor255()
+        {
+            JpegCoding solution = predictiveCoder.GetCodingFor(255);
+            uint val = 130815;
+            Assert.AreEqual(solution.Coding, val);
+            Assert.AreEqual(solution.Length, 17);
+        }
+
+        [TestMethod]
+        public void CodingForNot135()
+        {
+            JpegCoding solution = predictiveCoder.GetCodingFor(-135);
+            uint val = 130680;
+            Assert.AreEqual(solution.Coding, val);
+            Assert.AreEqual(solution.Length, 17);
+        }
+
         private int[][] SetJpegTable()
         {
             int[][] jpegTable = new int[9][];

@@ -192,7 +192,7 @@ namespace ACMTests
                 }
             }
         }
-
+        [Ignore]
         [TestMethod]
         public void ReadAndWriteAPdffile()
         {

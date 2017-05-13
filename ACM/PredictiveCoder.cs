@@ -130,6 +130,8 @@ namespace ACM
                         writer.WriteNBiti(value, 9);
                     }
                 }
+
+                writer.WriteNBiti(0, 7);
             }
         }
 
@@ -147,6 +149,8 @@ namespace ACM
                         writer.WriteNBiti(jpegCoding.Coding, jpegCoding.Length);
                     }
                 }
+
+                writer.WriteNBiti(0, 7);
             }
         }
 
@@ -154,8 +158,6 @@ namespace ACM
         {
             throw new NotImplementedException();
         }
-
-        
 
         public int GetMinError()
         {
