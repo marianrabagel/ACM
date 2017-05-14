@@ -46,7 +46,7 @@
             this.SyH2Button = new System.Windows.Forms.Button();
             this.AnH2Button = new System.Windows.Forms.Button();
             this.SyV1Button = new System.Windows.Forms.Button();
-            this.c = new System.Windows.Forms.Button();
+            this.AnV1 = new System.Windows.Forms.Button();
             this.SyV2Button = new System.Windows.Forms.Button();
             this.AnV2Button = new System.Windows.Forms.Button();
             this.SyV3Button = new System.Windows.Forms.Button();
@@ -81,6 +81,7 @@
             // 
             // OriginalImagePanel
             // 
+            this.OriginalImagePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.OriginalImagePanel.Location = new System.Drawing.Point(12, 12);
             this.OriginalImagePanel.Name = "OriginalImagePanel";
             this.OriginalImagePanel.Size = new System.Drawing.Size(512, 512);
@@ -88,6 +89,7 @@
             // 
             // waveletImage
             // 
+            this.waveletImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.waveletImage.Location = new System.Drawing.Point(530, 13);
             this.waveletImage.Name = "waveletImage";
             this.waveletImage.Size = new System.Drawing.Size(512, 512);
@@ -129,6 +131,7 @@
             this.LoadButton.TabIndex = 5;
             this.LoadButton.Text = "Load";
             this.LoadButton.UseVisualStyleBackColor = true;
+            this.LoadButton.Click += new System.EventHandler(this.LoadButton_Click);
             // 
             // VisualizeWaveletButton
             // 
@@ -138,6 +141,7 @@
             this.VisualizeWaveletButton.TabIndex = 6;
             this.VisualizeWaveletButton.Text = "Visualize wavelet";
             this.VisualizeWaveletButton.UseVisualStyleBackColor = true;
+            this.VisualizeWaveletButton.Click += new System.EventHandler(this.VisualizeWaveletButton_Click);
             // 
             // AnH1Button
             // 
@@ -157,6 +161,7 @@
             this.SyH1Button.TabIndex = 8;
             this.SyH1Button.Text = "Sy H1";
             this.SyH1Button.UseVisualStyleBackColor = true;
+            this.SyH1Button.Click += new System.EventHandler(this.SyH1Button_Click);
             // 
             // SyH5Button
             // 
@@ -166,6 +171,7 @@
             this.SyH5Button.TabIndex = 10;
             this.SyH5Button.Text = "Sy H5";
             this.SyH5Button.UseVisualStyleBackColor = true;
+            this.SyH5Button.Click += new System.EventHandler(this.SyH5Button_Click);
             // 
             // AnH5Button
             // 
@@ -175,6 +181,7 @@
             this.AnH5Button.TabIndex = 9;
             this.AnH5Button.Text = "An H5";
             this.AnH5Button.UseVisualStyleBackColor = true;
+            this.AnH5Button.Click += new System.EventHandler(this.AnH5Button_Click);
             // 
             // SyH3Button
             // 
@@ -184,6 +191,7 @@
             this.SyH3Button.TabIndex = 12;
             this.SyH3Button.Text = "Sy H3";
             this.SyH3Button.UseVisualStyleBackColor = true;
+            this.SyH3Button.Click += new System.EventHandler(this.SyH3Button_Click);
             // 
             // AnH3Button
             // 
@@ -193,6 +201,7 @@
             this.AnH3Button.TabIndex = 11;
             this.AnH3Button.Text = "An H3";
             this.AnH3Button.UseVisualStyleBackColor = true;
+            this.AnH3Button.Click += new System.EventHandler(this.AnH3Button_Click);
             // 
             // SyH4Button
             // 
@@ -202,6 +211,7 @@
             this.SyH4Button.TabIndex = 14;
             this.SyH4Button.Text = "Sy H4";
             this.SyH4Button.UseVisualStyleBackColor = true;
+            this.SyH4Button.Click += new System.EventHandler(this.SyH4Button_Click);
             // 
             // AnH4Button
             // 
@@ -211,6 +221,7 @@
             this.AnH4Button.TabIndex = 13;
             this.AnH4Button.Text = "An H4";
             this.AnH4Button.UseVisualStyleBackColor = true;
+            this.AnH4Button.Click += new System.EventHandler(this.AnH4Button_Click);
             // 
             // SyH2Button
             // 
@@ -220,6 +231,7 @@
             this.SyH2Button.TabIndex = 16;
             this.SyH2Button.Text = "Sy H2";
             this.SyH2Button.UseVisualStyleBackColor = true;
+            this.SyH2Button.Click += new System.EventHandler(this.SyH2Button_Click);
             // 
             // AnH2Button
             // 
@@ -229,6 +241,7 @@
             this.AnH2Button.TabIndex = 15;
             this.AnH2Button.Text = "An H2";
             this.AnH2Button.UseVisualStyleBackColor = true;
+            this.AnH2Button.Click += new System.EventHandler(this.AnH2Button_Click);
             // 
             // SyV1Button
             // 
@@ -238,16 +251,17 @@
             this.SyV1Button.TabIndex = 18;
             this.SyV1Button.Text = "Sy V1";
             this.SyV1Button.UseVisualStyleBackColor = true;
+            this.SyV1Button.Click += new System.EventHandler(this.SyV1Button_Click);
             // 
-            // c
+            // AnV1
             // 
-            this.c.Location = new System.Drawing.Point(1048, 42);
-            this.c.Name = "c";
-            this.c.Size = new System.Drawing.Size(57, 23);
-            this.c.TabIndex = 17;
-            this.c.Text = "An V1";
-            this.c.UseVisualStyleBackColor = true;
-            this.c.Click += new System.EventHandler(this.c_Click);
+            this.AnV1.Location = new System.Drawing.Point(1048, 42);
+            this.AnV1.Name = "AnV1";
+            this.AnV1.Size = new System.Drawing.Size(57, 23);
+            this.AnV1.TabIndex = 17;
+            this.AnV1.Text = "An V1";
+            this.AnV1.UseVisualStyleBackColor = true;
+            this.AnV1.Click += new System.EventHandler(this.AnV1_Click);
             // 
             // SyV2Button
             // 
@@ -257,6 +271,7 @@
             this.SyV2Button.TabIndex = 20;
             this.SyV2Button.Text = "Sy V2";
             this.SyV2Button.UseVisualStyleBackColor = true;
+            this.SyV2Button.Click += new System.EventHandler(this.SyV2Button_Click);
             // 
             // AnV2Button
             // 
@@ -266,6 +281,7 @@
             this.AnV2Button.TabIndex = 19;
             this.AnV2Button.Text = "An V2";
             this.AnV2Button.UseVisualStyleBackColor = true;
+            this.AnV2Button.Click += new System.EventHandler(this.AnV2Button_Click);
             // 
             // SyV3Button
             // 
@@ -275,6 +291,7 @@
             this.SyV3Button.TabIndex = 22;
             this.SyV3Button.Text = "Sy V3";
             this.SyV3Button.UseVisualStyleBackColor = true;
+            this.SyV3Button.Click += new System.EventHandler(this.SyV3Button_Click);
             // 
             // AnV3Button
             // 
@@ -284,6 +301,7 @@
             this.AnV3Button.TabIndex = 21;
             this.AnV3Button.Text = "An V3";
             this.AnV3Button.UseVisualStyleBackColor = true;
+            this.AnV3Button.Click += new System.EventHandler(this.AnV3Button_Click);
             // 
             // SyV4Button
             // 
@@ -293,6 +311,7 @@
             this.SyV4Button.TabIndex = 24;
             this.SyV4Button.Text = "Sy V4";
             this.SyV4Button.UseVisualStyleBackColor = true;
+            this.SyV4Button.Click += new System.EventHandler(this.SyV4Button_Click);
             // 
             // AnV4Button
             // 
@@ -302,6 +321,7 @@
             this.AnV4Button.TabIndex = 23;
             this.AnV4Button.Text = "An V4";
             this.AnV4Button.UseVisualStyleBackColor = true;
+            this.AnV4Button.Click += new System.EventHandler(this.AnV4Button_Click);
             // 
             // SyV5Button
             // 
@@ -311,6 +331,7 @@
             this.SyV5Button.TabIndex = 26;
             this.SyV5Button.Text = "Sy V5";
             this.SyV5Button.UseVisualStyleBackColor = true;
+            this.SyV5Button.Click += new System.EventHandler(this.SyV5Button_Click);
             // 
             // AnV5Button
             // 
@@ -320,6 +341,7 @@
             this.AnV5Button.TabIndex = 25;
             this.AnV5Button.Text = "An V5";
             this.AnV5Button.UseVisualStyleBackColor = true;
+            this.AnV5Button.Click += new System.EventHandler(this.AnV5Button_Click);
             // 
             // openFileDialog1
             // 
@@ -333,6 +355,7 @@
             this.AnalysisButton.TabIndex = 27;
             this.AnalysisButton.Text = "Analysis";
             this.AnalysisButton.UseVisualStyleBackColor = true;
+            this.AnalysisButton.Click += new System.EventHandler(this.AnalysisButton_Click);
             // 
             // SynthesisButton
             // 
@@ -528,7 +551,7 @@
             this.Controls.Add(this.SyV2Button);
             this.Controls.Add(this.AnV2Button);
             this.Controls.Add(this.SyV1Button);
-            this.Controls.Add(this.c);
+            this.Controls.Add(this.AnV1);
             this.Controls.Add(this.SyH2Button);
             this.Controls.Add(this.AnH2Button);
             this.Controls.Add(this.SyH4Button);
@@ -578,7 +601,7 @@
         private System.Windows.Forms.Button SyH2Button;
         private System.Windows.Forms.Button AnH2Button;
         private System.Windows.Forms.Button SyV1Button;
-        private System.Windows.Forms.Button c;
+        private System.Windows.Forms.Button AnV1;
         private System.Windows.Forms.Button SyV2Button;
         private System.Windows.Forms.Button AnV2Button;
         private System.Windows.Forms.Button SyV3Button;

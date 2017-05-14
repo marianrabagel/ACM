@@ -1,23 +1,26 @@
 ﻿
 using System;
+using System.Security.Policy;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Wavelet;
 
 namespace ACMTests
 {
     [TestClass]
     public class WaveletTests
     {
-        byte[,] testMatrix;
+        byte[,] testMatrixWithFirstLineWithInfo;
+        byte[,] testMatrixWithFirstColumnWithInfo;
         double[] resultAnH;
         double[] resultAnL;
         double[] resultReorder;
-        
+
 
         [TestInitialize]
         public void Setup()
         {
             int[] testValues = new[]
-            { 
+            {
                 1,
                 2,
                 3,
@@ -158,18 +161,20 @@ namespace ACMTests
                 , 71.067941
             };
 
-            testMatrix = new byte[testValues.Length, testValues.Length];
+            testMatrixWithFirstLineWithInfo = new byte[testValues.Length, testValues.Length];
+            testMatrixWithFirstColumnWithInfo = new byte[testValues.Length, testValues.Length];
             for (int i = 0; i < testValues.Length; i++)
             {
-                testMatrix[0, i] = Convert.ToByte(testValues[i]);
+                testMatrixWithFirstLineWithInfo[0, i] = Convert.ToByte(testValues[i]);
+                testMatrixWithFirstColumnWithInfo[i, 0] = Convert.ToByte(testValues[i]);
             }
         }
 
         [TestMethod]
         public void TestAnalysisHigh()
         {
-            Wavelet.WaveletCoder waveletCoder = new Wavelet.WaveletCoder();
-            double[] anH = waveletCoder.AnalysisHighHorizontal(0, testMatrix.GetLength(0), testMatrix);
+            WaveletCoder waveletCoder = new WaveletCoder(testMatrixWithFirstLineWithInfo.GetLength(0));
+            double[] anH = waveletCoder.AnalysisHighHorizontal(0, testMatrixWithFirstLineWithInfo.GetLength(0), testMatrixWithFirstLineWithInfo);
 
             for (int i = 0; i < anH.Length; i++)
             {
@@ -180,8 +185,8 @@ namespace ACMTests
         [TestMethod]
         public void TestAnalysisLow()
         {
-            Wavelet.WaveletCoder waveletCoder = new Wavelet.WaveletCoder();
-            double[] anL = waveletCoder.AnalysisLowHorizontal(0, testMatrix.GetLength(0), testMatrix);
+            WaveletCoder waveletCoder = new WaveletCoder(testMatrixWithFirstLineWithInfo.GetLength(0));
+            double[] anL = waveletCoder.AnalysisLowHorizontal(0, testMatrixWithFirstLineWithInfo.GetLength(0), testMatrixWithFirstLineWithInfo);
 
             for (int i = 0; i < anL.Length; i++)
             {
@@ -192,18 +197,60 @@ namespace ACMTests
         [TestMethod]
         public void TestReorder()
         {
-            Wavelet.WaveletCoder waveletCoder = new Wavelet.WaveletCoder();
-            double[] anL = waveletCoder.AnalysisLowHorizontal(0, testMatrix.GetLength(0), testMatrix);
-            double[] anH = waveletCoder.AnalysisHighHorizontal(0, testMatrix.GetLength(0), testMatrix);
+            WaveletCoder waveletCoder = new WaveletCoder(testMatrixWithFirstLineWithInfo.GetLength(0));
+            double[] anL = waveletCoder.AnalysisLowHorizontal(0, testMatrixWithFirstLineWithInfo.GetLength(0), testMatrixWithFirstLineWithInfo);
+            double[] anH = waveletCoder.AnalysisHighHorizontal(0, testMatrixWithFirstLineWithInfo.GetLength(0), testMatrixWithFirstLineWithInfo);
             double[] reorder = waveletCoder.ReorderH(anL, anH);
 
             for (int i = 0; i < anL.Length; i++)
             {
                 Assert.AreEqual(Math.Round(reorder[i], 6), resultReorder[i]);
-
             }
         }
 
+        [TestMethod]
+        public void TestAnH1SyH1()
+        {
+            WaveletCoder waveletCoder = new WaveletCoder(testMatrixWithFirstLineWithInfo.GetLength(0));
+            waveletCoder.Load(testMatrixWithFirstLineWithInfo);
+            waveletCoder.AnH1();
 
+            WaveletDecoder waveletDecoder = new WaveletDecoder(testMatrixWithFirstLineWithInfo.GetLength(0));
+            waveletDecoder.WaveletMatrix = waveletCoder.WaveletMatrix;
+            waveletDecoder.SyH1();
+
+            for (int i = 0; i < testMatrixWithFirstLineWithInfo.GetLength(0); i++)
+            {
+                Assert.AreEqual(testMatrixWithFirstLineWithInfo[0, i], Math.Round(waveletDecoder.WaveletMatrix[0, i]));
+            }
+        }
+
+        [TestMethod]
+        public void TestAnV1()
+        {
+            WaveletCoder waveletCoder = new WaveletCoder(testMatrixWithFirstColumnWithInfo.GetLength(0));
+            waveletCoder.Load(testMatrixWithFirstColumnWithInfo);
+            waveletCoder.AnV1();
+
+            Assert.AreEqual(false, true);
+        }
+
+
+        [TestMethod]
+        public void TestAnV1SyV1()
+        {
+            WaveletCoder waveletCoder = new WaveletCoder(testMatrixWithFirstColumnWithInfo.GetLength(0));
+            waveletCoder.Load(testMatrixWithFirstColumnWithInfo);
+            waveletCoder.AnV1();
+
+            WaveletDecoder waveletDecoder = new WaveletDecoder(testMatrixWithFirstColumnWithInfo.GetLength(0));
+            waveletDecoder.WaveletMatrix = waveletCoder.WaveletMatrix;
+            waveletDecoder.SyV1();
+
+            for (int i = 0; i < testMatrixWithFirstColumnWithInfo.GetLength(0); i++)
+            {
+                Assert.AreEqual(testMatrixWithFirstColumnWithInfo[i, 0], Math.Round(waveletDecoder.WaveletMatrix[i, 0]));
+            }
+        }
     }
 }
