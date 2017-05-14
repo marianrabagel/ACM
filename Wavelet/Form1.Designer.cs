@@ -247,6 +247,7 @@
             this.c.TabIndex = 17;
             this.c.Text = "An V1";
             this.c.UseVisualStyleBackColor = true;
+            this.c.Click += new System.EventHandler(this.c_Click);
             // 
             // SyV2Button
             // 

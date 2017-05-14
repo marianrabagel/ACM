@@ -166,38 +166,36 @@ namespace ACMTests
         }
 
         [TestMethod]
-        public void TestAnalysisH()
+        public void TestAnalysisHigh()
         {
-            Wavelet.Wavelet wavelet = new Wavelet.Wavelet();
-            double[] anH = wavelet.AnalysisH(0, testMatrix.GetLength(0), testMatrix);
+            Wavelet.WaveletCoder waveletCoder = new Wavelet.WaveletCoder();
+            double[] anH = waveletCoder.AnalysisHighHorizontal(0, testMatrix.GetLength(0), testMatrix);
 
             for (int i = 0; i < anH.Length; i++)
             {
                 Assert.AreEqual(Math.Round(anH[i], 6), resultAnH[i]);
-
             }
         }
 
         [TestMethod]
-        public void TestAnalysisL()
+        public void TestAnalysisLow()
         {
-            Wavelet.Wavelet wavelet = new Wavelet.Wavelet();
-            double[] anL = wavelet.AnalysisL(0, testMatrix.GetLength(0), testMatrix);
+            Wavelet.WaveletCoder waveletCoder = new Wavelet.WaveletCoder();
+            double[] anL = waveletCoder.AnalysisLowHorizontal(0, testMatrix.GetLength(0), testMatrix);
 
             for (int i = 0; i < anL.Length; i++)
             {
                 Assert.AreEqual(Math.Round(anL[i], 6), resultAnL[i]);
-
             }
         }
 
         [TestMethod]
         public void TestReorder()
         {
-            Wavelet.Wavelet wavelet = new Wavelet.Wavelet();
-            double[] anL = wavelet.AnalysisL(0, testMatrix.GetLength(0), testMatrix);
-            double[] anH = wavelet.AnalysisH(0, testMatrix.GetLength(0), testMatrix);
-            double[] reorder = wavelet.Reorder(anL, anH);
+            Wavelet.WaveletCoder waveletCoder = new Wavelet.WaveletCoder();
+            double[] anL = waveletCoder.AnalysisLowHorizontal(0, testMatrix.GetLength(0), testMatrix);
+            double[] anH = waveletCoder.AnalysisHighHorizontal(0, testMatrix.GetLength(0), testMatrix);
+            double[] reorder = waveletCoder.ReorderH(anL, anH);
 
             for (int i = 0; i < anL.Length; i++)
             {

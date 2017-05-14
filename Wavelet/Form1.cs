@@ -18,7 +18,7 @@ namespace Wavelet
             InitializeComponent();
         }
 
-        Wavelet wavelet;
+        WaveletCoder waveletCoder;
 
         private void LoadBmpButton_Click(object sender, EventArgs e)
         {
@@ -34,8 +34,8 @@ namespace Wavelet
                     return;
                 }
 
-                wavelet = new Wavelet();
-                wavelet.Decode(fileName);
+                waveletCoder = new WaveletCoder();
+                waveletCoder.Encode(fileName);
 
                 Bitmap bitmap = new Bitmap(fileName);
                 OriginalImagePanel.BackgroundImage = bitmap;
@@ -45,8 +45,12 @@ namespace Wavelet
 
         private void AnH1Button_Click(object sender, EventArgs e)
         {
-            wavelet.AnH1();
-            //waveletImage.BackgroundImage = 
+            waveletCoder.AnH1();
+        }
+
+        private void c_Click(object sender, EventArgs e)
+        {
+            waveletCoder.AnV1();
         }
     }
 }
