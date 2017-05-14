@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACMTests", "ACMTests\ACMTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arithmetic", "Arithmetic\Arithmetic.csproj", "{985F0F32-C9CB-49B3-8A65-48141F0E4C42}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wavelet", "Wavelet\Wavelet.csproj", "{C8EEFC71-E3C6-48BB-8778-787CDFC6233E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{985F0F32-C9CB-49B3-8A65-48141F0E4C42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{985F0F32-C9CB-49B3-8A65-48141F0E4C42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{985F0F32-C9CB-49B3-8A65-48141F0E4C42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8EEFC71-E3C6-48BB-8778-787CDFC6233E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8EEFC71-E3C6-48BB-8778-787CDFC6233E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8EEFC71-E3C6-48BB-8778-787CDFC6233E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8EEFC71-E3C6-48BB-8778-787CDFC6233E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
