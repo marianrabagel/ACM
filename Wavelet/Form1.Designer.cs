@@ -101,6 +101,7 @@
             this.LoadBmpButton.TabIndex = 2;
             this.LoadBmpButton.Text = "Load";
             this.LoadBmpButton.UseVisualStyleBackColor = true;
+            this.LoadBmpButton.Click += new System.EventHandler(this.LoadBmpButton_Click);
             // 
             // TestErrorButton
             // 
@@ -146,6 +147,7 @@
             this.AnH1Button.TabIndex = 7;
             this.AnH1Button.Text = "An H1";
             this.AnH1Button.UseVisualStyleBackColor = true;
+            this.AnH1Button.Click += new System.EventHandler(this.AnH1Button_Click);
             // 
             // SyH1Button
             // 

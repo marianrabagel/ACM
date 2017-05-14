@@ -56,11 +56,16 @@
     <Compile Include="BitReaderTests.cs" />
     <Compile Include="BitWriterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WaveletTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ACM\ACM.csproj">
       <Project>{96223c53-9ed6-4819-b70a-dee7791d5f10}</Project>
       <Name>ACM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wavelet\Wavelet.csproj">
+      <Project>{c8eefc71-e3c6-48bb-8778-787cdfc6233e}</Project>
+      <Name>Wavelet</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
