@@ -1,4 +1,7 @@
 ﻿
+using System;
+using System.IO;
+
 namespace Wavelet
 {
     public class WaveletDecoder : WaveletBase
@@ -33,8 +36,6 @@ namespace Wavelet
                 , 0.026748757411
             };
         }
-
-        
 
         private double[] SynthesisHighHorizontal(int length, double[] low)
         {
@@ -192,6 +193,20 @@ namespace Wavelet
                     if (x < startingPositionX && y < startingPositionY)
                         value = WaveletMatrix[y, x];
                     scaledMatrix[y, x] = value;
+                }
+            }
+        }
+
+        public void Load(string inputFileName)
+        {
+            using (StreamReader reader = new StreamReader(inputFileName))
+            {
+                for (int y = 0; y < Size; y++)
+                {
+                    for (int x = 0; x < Size; x++)
+                    {
+                        WaveletMatrix[y,x]  = Convert.ToDouble(reader.ReadLine());
+                    }
                 }
             }
         }

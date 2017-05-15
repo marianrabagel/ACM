@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using ACM;
 
 namespace Wavelet
 {
@@ -50,9 +51,21 @@ namespace Wavelet
 
         private void LoadButton_Click(object sender, EventArgs e)
         {
-            waveletDecoder = new WaveletDecoder(256);
-            //to be replaced with data from file
-            waveletDecoder.WaveletMatrix = waveletCoder.WaveletMatrix;
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string inputFileName = openFileDialog1.FileName;
+
+                if (Path.GetExtension(inputFileName) != ".wvm")
+                {
+                    MessageBox.Show("Selectati un fisier cu extensia .wvm");
+                    return;
+                }
+
+                waveletDecoder = new WaveletDecoder(256);
+                waveletDecoder.Load(inputFileName);
+                //to be replaced with data from file
+                //waveletDecoder.WaveletMatrix = waveletCoder.WaveletMatrix;
+            }
         }
 
         private void SyH1Button_Click(object sender, EventArgs e)
@@ -199,6 +212,21 @@ namespace Wavelet
                         min = val;
                     if (val > max)
                         max = val;
+                }
+            }
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            string outputFileName = waveletCoder.inputFileName + ".wvm";
+            using (StreamWriter writer = new StreamWriter(outputFileName))
+            {
+                for (int y = 0; y < waveletCoder.Size; y++)
+                {
+                    for (int x = 0; x < waveletCoder.Size; x++)
+                    {
+                        writer.WriteLine(waveletCoder.WaveletMatrix[y,x]);
+                    }
                 }
             }
         }

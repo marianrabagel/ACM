@@ -36,9 +36,10 @@ namespace Wavelet
             };
         }
 
-        public void LoadFile(string fileName)
+        public void LoadFile(string inputFileName)
         {
-            ReadBmpHeaderAndLoadImageToMemory(fileName);
+            this.inputFileName = inputFileName;
+            ReadBmpHeaderAndLoadImageToMemory(inputFileName);
         }
 
         private void ReadBmpHeaderAndLoadImageToMemory(string fileName)

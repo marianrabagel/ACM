@@ -12,6 +12,7 @@ namespace Wavelet
         public double[,] WaveletMatrix;
         public int Size { get; } = 256;
         protected double[,] scaledMatrix;
+        public string inputFileName;
 
         public WaveletBase(int size)
         {
