@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Wavelet
@@ -20,7 +14,7 @@ namespace Wavelet
 
         WaveletCoder waveletCoder;
         WaveletDecoder waveletDecoder;
-
+        
         private void LoadBmpButton_Click(object sender, EventArgs e)
         {
             var dialogResult = openFileDialog1.ShowDialog();
@@ -47,13 +41,11 @@ namespace Wavelet
         private void AnH1Button_Click(object sender, EventArgs e)
         {
             waveletCoder.AnH1();
-            MessageBox.Show("done");
         }
 
         private void AnV1_Click(object sender, EventArgs e)
         {
             waveletCoder.AnV1();
-            MessageBox.Show("done");
         }
 
         private void LoadButton_Click(object sender, EventArgs e)
@@ -63,8 +55,6 @@ namespace Wavelet
             waveletDecoder.WaveletMatrix = waveletCoder.WaveletMatrix;
         }
 
-        
-
         private void SyH1Button_Click(object sender, EventArgs e)
         {
             waveletDecoder.SyH1();
@@ -72,6 +62,11 @@ namespace Wavelet
 
         private void VisualizeWaveletButton_Click(object sender, EventArgs e)
         {
+            double scale = (double) ScaleNumericUpDown.Value;
+            int offset = (int) OffsetNumericUpDown.Value;
+            int x = (int) XNumericUpDown.Value;
+            int y = (int) YNumericUpDown.Value;
+            waveletDecoder.ApplyScale(scale, offset, x, y);
             waveletImage.BackgroundImage = waveletDecoder.GetBitmap();
         }
 
@@ -126,19 +121,6 @@ namespace Wavelet
                 waveletCoder.AnalysisHorizontal((int) (waveletCoder.Size/Math.Pow(2, i)));
                 waveletCoder.AnalysisVertical((int)(waveletCoder.Size / Math.Pow(2, i)));
             }
-            /*
-            waveletCoder.AnH2();
-            waveletCoder.AnV2();
-
-            waveletCoder.AnH3();
-            waveletCoder.AnV3();
-
-            waveletCoder.AnH4();
-            waveletCoder.AnV4();
-
-            waveletCoder.AnH5();
-            waveletCoder.AnV5();
-            */
         }
 
         private void SyH2Button_Click(object sender, EventArgs e)
@@ -194,22 +176,31 @@ namespace Wavelet
                 waveletDecoder.SynthesysVertical(size);
                 waveletDecoder.SynthesisHorizontal(size);
             }
-            /*
-            waveletDecoder.SyV5();
-            waveletDecoder.SyH5();
+        }
 
-            waveletDecoder.SyV4();
-            waveletDecoder.SyH4();
+        private void TestErrorButton_Click(object sender, EventArgs e)
+        {
+            Calculate();
+            MinValueLabel.Text = min.ToString();
+            MaxValueLabel.Text = max.ToString();
+        }
+        
+        public double min = int.MaxValue;
+        public double max = int.MinValue;
 
-            waveletDecoder.SyV3();
-            waveletDecoder.SyH3();
-
-            waveletDecoder.SyV2();
-            waveletDecoder.SyH2();
-
-            waveletDecoder.SyV1();
-            waveletDecoder.SyH1();
-            */
+        public void Calculate()
+        {
+            for (int y = 0; y < waveletDecoder.Size; y++)
+            {
+                for (int x = 0; x < waveletDecoder.Size; x++)
+                {
+                    var val = waveletCoder.Original[y, x] - Math.Round(waveletDecoder.WaveletMatrix[y, x]);
+                    if (val < min)
+                        min = val;
+                    if (val > max)
+                        max = val;
+                }
+            }
         }
     }
 }

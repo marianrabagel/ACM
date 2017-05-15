@@ -8,9 +8,10 @@ namespace Wavelet
     public class WaveletBase
     {
         protected byte[] BmpHeader;
-        protected byte[,] Original;
+        public byte[,] Original;
         public double[,] WaveletMatrix;
         public int Size { get; } = 256;
+        protected double[,] scaledMatrix;
 
         public WaveletBase(int size)
         {
@@ -130,26 +131,23 @@ namespace Wavelet
 
         public Bitmap GetBitmap()
         {
-            double[,] matrix = WaveletMatrix;
+            double[,] matrix = scaledMatrix;
             Bitmap bitmap = new Bitmap(matrix.GetLength(1), matrix.GetLength(0));
-
             for (int y = 0; y < matrix.GetLength(1); y++)
             {
                 for (int x = 0; x < matrix.GetLength(0); x++)
                 {
                     int value = Convert.ToInt32(Math.Round(matrix[y, x]));
-
                     if (value < 0)
                         value = 0;
                     if (value > 255)
                         value = 255;
-
                     Color color = Color.FromArgb(255, value, value, value);
                     bitmap.SetPixel(x, y, color);
                 }
             }
-
             return bitmap;
         }
+
     }
 }

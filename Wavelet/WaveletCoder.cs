@@ -1,6 +1,4 @@
-﻿
-using System;
-using System.IO;
+﻿using System.IO;
 using ACM;
 
 namespace Wavelet

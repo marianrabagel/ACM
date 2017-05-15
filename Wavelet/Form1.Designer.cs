@@ -113,6 +113,7 @@
             this.TestErrorButton.TabIndex = 3;
             this.TestErrorButton.Text = "Test error";
             this.TestErrorButton.UseVisualStyleBackColor = true;
+            this.TestErrorButton.Click += new System.EventHandler(this.TestErrorButton_Click);
             // 
             // SaveButton
             // 

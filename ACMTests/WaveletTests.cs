@@ -226,17 +226,6 @@ namespace ACMTests
         }
 
         [TestMethod]
-        public void TestAnV1()
-        {
-            WaveletCoder waveletCoder = new WaveletCoder(testMatrixWithFirstColumnWithInfo.GetLength(0));
-            waveletCoder.Load(testMatrixWithFirstColumnWithInfo);
-            waveletCoder.AnV1();
-
-            Assert.AreEqual(false, true);
-        }
-
-
-        [TestMethod]
         public void TestAnV1SyV1()
         {
             WaveletCoder waveletCoder = new WaveletCoder(testMatrixWithFirstColumnWithInfo.GetLength(0));

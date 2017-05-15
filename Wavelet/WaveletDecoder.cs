@@ -179,5 +179,21 @@ namespace Wavelet
                     WaveletMatrix[y, x] = syL[y] + syH[y];
             }
         }
+
+        public void ApplyScale(double scale, int offset, int startingPositionX, int startingPositionY)
+        {
+            scaledMatrix = new double[Size, Size];
+
+            for (int y = 0; y < Size; y++)
+            {
+                for (int x = 0; x < Size; x++)
+                {
+                    double value = WaveletMatrix[y, x] * scale + offset;
+                    if (x < startingPositionX && y < startingPositionY)
+                        value = WaveletMatrix[y, x];
+                    scaledMatrix[y, x] = value;
+                }
+            }
+        }
     }
 }
