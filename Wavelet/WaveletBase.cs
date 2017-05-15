@@ -10,7 +10,7 @@ namespace Wavelet
         protected byte[] BmpHeader;
         protected byte[,] Original;
         public double[,] WaveletMatrix;
-        protected int Size = 256;
+        public int Size { get; } = 256;
 
         public WaveletBase(int size)
         {

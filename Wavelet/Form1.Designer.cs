@@ -365,6 +365,7 @@
             this.SynthesisButton.TabIndex = 28;
             this.SynthesisButton.Text = "Synthesis";
             this.SynthesisButton.UseVisualStyleBackColor = true;
+            this.SynthesisButton.Click += new System.EventHandler(this.SynthesisButton_Click);
             // 
             // label1
             // 

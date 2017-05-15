@@ -125,7 +125,7 @@ namespace Wavelet
             SynthesisHorizontal(Size / 16);
         }
 
-        private void SynthesisHorizontal(int size)
+        public void SynthesisHorizontal(int size)
         {
             for (int y = 0; y < size; y++)
             {
@@ -165,7 +165,7 @@ namespace Wavelet
             SynthesysVertical(Size/16);
         }
 
-        private void SynthesysVertical(int size)
+        public void SynthesysVertical(int size)
         {
             for (int x = 0; x < size; x++)
             {

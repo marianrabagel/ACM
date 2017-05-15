@@ -120,6 +120,13 @@ namespace Wavelet
             waveletCoder.AnH1();
             waveletCoder.AnV1();
 
+            var iterations = Convert.ToInt32(LevelesNumericUpDown.Value);
+            for (int i = 1; i < iterations; i++)
+            {
+                waveletCoder.AnalysisHorizontal((int) (waveletCoder.Size/Math.Pow(2, i)));
+                waveletCoder.AnalysisVertical((int)(waveletCoder.Size / Math.Pow(2, i)));
+            }
+            /*
             waveletCoder.AnH2();
             waveletCoder.AnV2();
 
@@ -131,6 +138,7 @@ namespace Wavelet
 
             waveletCoder.AnH5();
             waveletCoder.AnV5();
+            */
         }
 
         private void SyH2Button_Click(object sender, EventArgs e)
@@ -175,6 +183,33 @@ namespace Wavelet
         private void SyV5Button_Click(object sender, EventArgs e)
         {
             waveletDecoder.SyV5();
+        }
+
+        private void SynthesisButton_Click(object sender, EventArgs e)
+        {
+            var iterations = Convert.ToInt32(LevelesNumericUpDown.Value);
+            for (int i = iterations-1; i >= 0; i--)
+            {
+                var size = (int)(waveletDecoder.Size / Math.Pow(2, i));
+                waveletDecoder.SynthesysVertical(size);
+                waveletDecoder.SynthesisHorizontal(size);
+            }
+            /*
+            waveletDecoder.SyV5();
+            waveletDecoder.SyH5();
+
+            waveletDecoder.SyV4();
+            waveletDecoder.SyH4();
+
+            waveletDecoder.SyV3();
+            waveletDecoder.SyH3();
+
+            waveletDecoder.SyV2();
+            waveletDecoder.SyH2();
+
+            waveletDecoder.SyV1();
+            waveletDecoder.SyH1();
+            */
         }
     }
 }

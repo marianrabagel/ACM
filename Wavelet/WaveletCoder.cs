@@ -118,21 +118,9 @@ namespace Wavelet
             return ApplyCuantizorHorizontal(line, length, analysisL, matrix);
         }
 
-       private double[] AnalysisLowVertical(int column, int length, byte[,] matrix)
-        {
-            double[,] convertedMatrix = ConvertMatrixFromByteToDouble(matrix);
-            return ApplyCuantizorVertical(column, length, analysisL, convertedMatrix);
-        }
-
         private double[] AnalysisLowVertical(int column, int length, double[,] matrix)
         {
             return ApplyCuantizorVertical(column, length, analysisL, matrix);
-        }
-
-        private double[] AnalysisHighVertical(int column, int length, byte[,] matrix)
-        {
-            double[,] convertedMatrix = ConvertMatrixFromByteToDouble(matrix);
-            return ApplyCuantizorVertical(column, length, analysisH, convertedMatrix);
         }
 
         private double[] AnalysisHighVertical(int column, int length, double[,] matrix)
@@ -160,7 +148,7 @@ namespace Wavelet
             AnalysisHorizontal(Size / 16);
         }
 
-        private void AnalysisHorizontal(int size)
+        public void AnalysisHorizontal(int size)
         {
             for (int y = 0; y < size; y++)
             {
@@ -175,7 +163,7 @@ namespace Wavelet
 
         public void AnV1()
         {
-            AnalysisVertical(Size / 2);
+            AnalysisVertical(Size);
 
             /*
             //for testing only. TO see if the vertical works on a vertical line from a test matrix.
@@ -210,7 +198,7 @@ namespace Wavelet
             AnalysisVertical(Size / 16);
         }
 
-        private void AnalysisVertical(int size)
+        public void AnalysisVertical(int size)
         {
             for (int x = 0; x < size; x++)
             {
