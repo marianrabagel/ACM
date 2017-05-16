@@ -250,9 +250,13 @@ namespace Wavelet
             {
                 for (int x = 0; x < Size; x++)
                 {
-                    if (x >= startingPositionX && y >= startingPositionY)
+                    if (x >= startingPositionX)
                     {
                         WaveletMatrix[y, x]  = WaveletMatrix[y, x] * scale + offset;
+                    }
+                    if(y >= startingPositionY)
+                    {
+                        WaveletMatrix[y, x] = WaveletMatrix[y, x]*scale + offset;
                     }
                 }
             }
@@ -558,6 +562,11 @@ namespace Wavelet
                         max = val;
                 }
             }
+        }
+
+        public void Load(double[,] testMatrixWithFirstLineWithInfo)
+        {
+            WaveletMatrix = testMatrixWithFirstLineWithInfo;
         }
     }
 }
