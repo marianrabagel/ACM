@@ -38,7 +38,6 @@ namespace Wavelet
 
         public void LoadFile(string inputFileName)
         {
-            this.inputFileName = inputFileName;
             ReadBmpHeaderAndLoadImageToMemory(inputFileName);
         }
 
@@ -54,19 +53,7 @@ namespace Wavelet
             }
         }
 
-        public void AnH1()
-        {
-            for (int y = 0; y < Size; y++)
-            {
-                double[] anH = AnalysisHighHorizontal(y, Size, Original);
-                double[] anL = AnalysisLowHorizontal(y, Size, Original);
-                double[] reorderedLine = ReorderH(anL, anH);
-
-                for (int x = 0; x < Size; x++)
-                    WaveletMatrix[y, x] = reorderedLine[x];
-            }
-        }
-
+       
         public double[] ReorderH(double[] anL, double[] anH)
         {
             double[] reorderedLine = new double[anH.Length];
@@ -84,18 +71,18 @@ namespace Wavelet
         public double[] AnalysisHighHorizontal(int line, int length, byte[,] matrix)
         {
             double[,] convertedMatrix = ConvertMatrixFromByteToDouble(matrix);
-            return ApplyCuantizorHorizontal(line, length, analysisH, convertedMatrix);
+            return ApplyFilterHorizontal(line, length, analysisH, convertedMatrix);
         }
 
         public double[] AnalysisHighHorizontal(int line, int length, double[,] matrix)
         {
-            return ApplyCuantizorHorizontal(line, length, analysisH, matrix);
+            return ApplyFilterHorizontal(line, length, analysisH, matrix);
         }
 
         public double[] AnalysisLowHorizontal(int line, int length, byte[,] matrix)
         {
             double[,] convertedMatrix = ConvertMatrixFromByteToDouble(matrix);
-            return ApplyCuantizorHorizontal(line, length, analysisL, convertedMatrix);
+            return ApplyFilterHorizontal(line, length, analysisL, convertedMatrix);
         }
 
         private double[,] ConvertMatrixFromByteToDouble(byte[,] matrix)
@@ -114,17 +101,22 @@ namespace Wavelet
 
         public double[] AnalysisLowHorizontal(int line, int length, double[,] matrix)
         {
-            return ApplyCuantizorHorizontal(line, length, analysisL, matrix);
+            return ApplyFilterHorizontal(line, length, analysisL, matrix);
         }
 
         private double[] AnalysisLowVertical(int column, int length, double[,] matrix)
         {
-            return ApplyCuantizorVertical(column, length, analysisL, matrix);
+            return ApplyFIlterVertical(column, length, analysisL, matrix);
         }
 
         private double[] AnalysisHighVertical(int column, int length, double[,] matrix)
         {
-            return ApplyCuantizorVertical(column, length, analysisH, matrix);
+            return ApplyFIlterVertical(column, length, analysisH, matrix);
+        }
+
+        public void AnH1()
+        {
+            AnalysisHorizontal(Size);
         }
 
         public void AnH2()

@@ -457,7 +457,7 @@
             this.XNumericUpDown.Size = new System.Drawing.Size(40, 20);
             this.XNumericUpDown.TabIndex = 37;
             this.XNumericUpDown.Value = new decimal(new int[] {
-            256,
+            512,
             0,
             0,
             0});
@@ -491,7 +491,7 @@
             this.YNumericUpDown.Size = new System.Drawing.Size(40, 20);
             this.YNumericUpDown.TabIndex = 39;
             this.YNumericUpDown.Value = new decimal(new int[] {
-            256,
+            512,
             0,
             0,
             0});

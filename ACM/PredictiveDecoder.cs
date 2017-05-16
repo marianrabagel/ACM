@@ -21,7 +21,7 @@ namespace ACM
             filename = filename.Substring(filename.IndexOf(".bmp.p") + 6);
             predictionRule = Convert.ToInt32(filename.Substring(0, filename.IndexOf("k")));
             k = Convert.ToInt32(filename.Substring(filename.IndexOf("k") + 1, 2));
-            var startIndex = k < 10 ? filename.IndexOf("k0" + k) + 3 : filename.IndexOf("k" + k);
+            var startIndex = filename.IndexOf(".prd") - 1;
             entropicCoder = filename.Substring(startIndex, 1);
             ReadBmpHeaderAndLoadPredictionToMemory();
         }

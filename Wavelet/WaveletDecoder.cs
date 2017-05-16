@@ -117,10 +117,12 @@ namespace Wavelet
         {
             SynthesisHorizontal(Size / 4);
         }
+
         public void SyH4()
         {
             SynthesisHorizontal(Size / 8);
         }
+
         public void SyH5()
         {
             SynthesisHorizontal(Size / 16);
@@ -181,7 +183,7 @@ namespace Wavelet
             }
         }
 
-        public void ApplyScale(double scale, int offset, int startingPositionX, int startingPositionY)
+        /*public void ApplyScale(double scale, int offset, int startingPositionX, int startingPositionY)
         {
             scaledMatrix = new double[Size, Size];
 
@@ -195,7 +197,7 @@ namespace Wavelet
                     scaledMatrix[y, x] = value;
                 }
             }
-        }
+        }*/
 
         public void Load(string inputFileName)
         {
