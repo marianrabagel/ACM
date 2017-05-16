@@ -21,6 +21,9 @@ namespace ACM
         protected int size = 256;
         private int[][] jpegTable;
 
+        public int min;
+        public int max;
+
         public PredictiveBase(string inputFileName)
         {
             this.inputFileName = inputFileName;
@@ -48,6 +51,54 @@ namespace ACM
                     ErrorPq[y, x] = 0;
                 }
             }
+        }
+
+        public void CalculateError(byte[,] originalMatrix, byte[,] decodedMatrix)
+        {
+            max = int.MinValue;
+            min = int.MaxValue;
+            //byte[,] originalMatrix = Original;
+            //byte[,] decodedMatrix = Decoded;
+
+            for (int y = 0; y < size; y++)
+            {
+                for (int x = 0; x < size; x++)
+                {
+                    var val = originalMatrix[y, x] - decodedMatrix[y, x];
+                    if (val < min)
+                        min = val;
+                    if (val > max)
+                        max = val;
+                }
+            }
+        }
+
+        public int[] GetFrequencies(byte[,] matrix, int[] frequencies)
+        {
+            for (int y = 0; y < matrix.GetLength(0); y++)
+            {
+                for (int x = 0; x < matrix.GetLength(1); x++)
+                {
+                    int indexValue = matrix[y, x] + 255;
+                    frequencies[indexValue]++;
+                }
+            }
+
+            return frequencies;
+        }
+
+        public int[] GetFrequencies(int[,] matrix, int[] frequencies)
+        {
+            for (int y = 0; y < matrix.GetLength(0); y++)
+            {
+                for (int x = 0; x < matrix.GetLength(1); x++)
+                {
+                    int indexValue = matrix[y, x] + 255;
+                    frequencies[indexValue]++;
+                }
+            }
+
+            return frequencies;
         }
 
         public JpegCoding GetCodingFor(int number)

@@ -15,7 +15,7 @@ namespace ACM
             ErrorMatrixListBox.SelectedIndex = 0;
             HistogramSourceListBox.SelectedIndex = 0;
         }
-        
+
         PredictiveCoder predictiveCoder;
         PredictiveDecoder predictiveDecoder;
 
@@ -41,29 +41,44 @@ namespace ACM
 
         private void EncodeBtn_Click(object sender, EventArgs e)
         {
-            int predictionRule = PredictionRulesListBox.SelectedIndex;
-            int k = (int) KNumericUpDown.Value;
-            string entropicCoder = StatisticModelListBox.SelectedItem.ToString();
-            predictiveCoder.Encode(predictionRule, k, entropicCoder);
-            Bitmap bitmap = predictiveCoder.GetBitmap(predictiveCoder.ErrorP);
-            errorPictureBox.Image = bitmap;
-            DrawHistogram();
+            if (predictiveCoder != null)
+            {
+                int predictionRule = PredictionRulesListBox.SelectedIndex;
+                int k = (int) KNumericUpDown.Value;
+                string entropicCoder = StatisticModelListBox.SelectedItem.ToString();
+                predictiveCoder.Encode(predictionRule, k, entropicCoder);
+                Bitmap bitmap = predictiveCoder.GetBitmap(predictiveCoder.ErrorP);
+                errorPictureBox.Image = bitmap;
+                DrawHistogram();
+            }
         }
 
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
-            double scale = (double) ScaleNumeric.Value;
-            int[,] matrix = ErrorMatrixListBox.SelectedIndex == 0 ? predictiveCoder.ErrorP : predictiveCoder.ErrorPq;
-            int[,] scaledMatrix = predictiveCoder.ApplyScale(matrix, scale);
-            Bitmap bitmap = predictiveCoder.GetBitmap(scaledMatrix);
-            errorPictureBox.Image = bitmap;
+            if (predictiveCoder != null)
+            {
+                double scale = (double) ScaleNumeric.Value;
+                int[,] matrix = ErrorMatrixListBox.SelectedIndex == 0 ? predictiveCoder.ErrorP : predictiveCoder.ErrorPq;
+                int[,] scaledMatrix = predictiveCoder.ApplyScale(matrix, scale);
+                Bitmap bitmap = predictiveCoder.GetBitmap(scaledMatrix);
+                errorPictureBox.Image = bitmap;
+            }
         }
 
         private void ComputeErrorBtn_Click(object sender, EventArgs e)
         {
-            MinLabel.Text = predictiveCoder.GetMinError().ToString();
-            MaxLabel.Text = predictiveCoder.GetMaxError().ToString();
-
+            if (predictiveCoder != null && predictiveDecoder != null)
+            {
+                predictiveCoder.CalculateError(predictiveCoder.Original, predictiveDecoder.Decoded);
+                MinLabel.Text = predictiveCoder.min.ToString();
+                MaxLabel.Text = predictiveCoder.max.ToString();
+            }
+            else if (predictiveCoder != null)
+            {
+                predictiveCoder.CalculateError(predictiveCoder.Original, predictiveCoder.Decoded);
+                MinLabel.Text = predictiveCoder.min.ToString();
+                MaxLabel.Text = predictiveCoder.max.ToString();
+            }
         }
 
         private void DragHistogramWithScale(int[] frequencies, float scale)
@@ -84,13 +99,34 @@ namespace ACM
             int[] frequencies = new int[511];
 
             if (selectedIndex == 0)
-                frequencies = predictiveCoder.GetFrequencies(predictiveCoder.Original, frequencies);
+            {
+                if (predictiveCoder != null)
+                    frequencies = predictiveCoder.GetFrequencies(predictiveCoder.Original, frequencies);
+                else if (predictiveDecoder != null)
+                    frequencies = predictiveDecoder.GetFrequencies(predictiveDecoder.Original, frequencies);
+            }
             else if (selectedIndex == 1)
-                frequencies = predictiveCoder.GetFrequencies(predictiveCoder.ErrorP, frequencies);
+            {
+                if (predictiveCoder != null)
+                    frequencies = predictiveCoder.GetFrequencies(predictiveCoder.ErrorP, frequencies);
+                else if (predictiveDecoder != null)
+                    frequencies = predictiveDecoder.GetFrequencies(predictiveDecoder.ErrorP, frequencies);
+            }
             else if (selectedIndex == 2)
-                frequencies = predictiveCoder.GetFrequencies(predictiveCoder.ErrorPq, frequencies);
+            {
+                if (predictiveCoder != null)
+                    frequencies = predictiveCoder.GetFrequencies(predictiveCoder.ErrorPq, frequencies);
+                else if (predictiveDecoder != null)
+                    frequencies = predictiveDecoder.GetFrequencies(predictiveDecoder.ErrorPq, frequencies);
+            }
             else
-                frequencies = predictiveCoder.GetFrequencies(predictiveCoder.Decoded, frequencies);
+            {
+                if (predictiveCoder != null)
+                    frequencies = predictiveCoder.GetFrequencies(predictiveCoder.Decoded, frequencies);
+                else if (predictiveDecoder != null)
+                    frequencies = predictiveDecoder.GetFrequencies(predictiveDecoder.Decoded, frequencies);
+            }
+
             return frequencies;
         }
 
@@ -109,9 +145,12 @@ namespace ACM
 
         private void SaveOriginalBtn_Click(object sender, EventArgs e)
         {
-            int index = StatisticModelListBox.SelectedIndex;    
-            predictiveCoder.SaveEncodedFile(index);
-            MessageBox.Show("File was saved");
+            if (predictiveCoder != null)
+            {
+                int index = StatisticModelListBox.SelectedIndex;
+                predictiveCoder.SaveEncodedFile(index);
+                MessageBox.Show("File was saved");
+            }
         }
 
         private void LoadDecodedBtn_Click(object sender, EventArgs e)
@@ -136,16 +175,22 @@ namespace ACM
 
         private void DecodeBtn_Click(object sender, EventArgs e)
         {
-            predictiveDecoder.Decode();
-            Bitmap bitmap = predictiveDecoder.GetBitmap(predictiveDecoder.Decoded);
-            DecodedImage.BackgroundImage = bitmap;
-            MessageBox.Show("Done decoding");
+            if (predictiveDecoder != null)
+            {
+                predictiveDecoder.Decode();
+                Bitmap bitmap = predictiveDecoder.GetBitmap(predictiveDecoder.Decoded);
+                DecodedImage.BackgroundImage = bitmap;
+                MessageBox.Show("Done decoding");
+            }
         }
 
         private void SaveDecodedBtn_Click(object sender, EventArgs e)
         {
-            predictiveDecoder.SaveDecodedFile();
-            MessageBox.Show("Done saving");
+            if (predictiveDecoder != null)
+            {
+                predictiveDecoder.SaveDecodedFile();
+                MessageBox.Show("Done saving");
+            }
         }
     }
 }

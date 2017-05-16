@@ -4,20 +4,12 @@ namespace ACM
 {
     public class PredictiveCoder : PredictiveBase
     {
-        private int _minError;
-        private int _maxError;
-
         public PredictiveCoder(string inputFile) : base(inputFile)
         {
-            _minError = Int32.MaxValue;
-            _maxError = Int32.MinValue;
         }
 
         public void Encode(int predictionRule, int k, string entropicCoder)
         {
-            _minError = Int32.MaxValue;
-            _maxError = Int32.MinValue;
-            
             if (entropicCoder.Contains("Fixed"))
                 entropicCoder = "F";
             else if (entropicCoder.Contains("Table"))
@@ -46,7 +38,6 @@ namespace ACM
                         decodedValue = 255;
 
                     Decoded[y, x] = (byte) decodedValue;
-                    SetMinOrMaxError(y, x);
                 }
             }
         }
@@ -76,34 +67,6 @@ namespace ACM
             }
 
             return newMatrix;
-        }
-
-        public int[] GetFrequencies(byte[,] matrix, int[] frequencies)
-        {
-            for (int y = 0; y < matrix.GetLength(0); y++)
-            {
-                for (int x = 0; x < matrix.GetLength(1); x++)
-                {
-                    int indexValue = matrix[y, x] + 255;
-                    frequencies[indexValue]++;
-                }
-            }
-
-            return frequencies;
-        }
-
-        public int[] GetFrequencies(int[,] matrix, int[] frequencies)
-        {
-            for (int y = 0; y < matrix.GetLength(0); y++)
-            {
-                for (int x = 0; x < matrix.GetLength(1); x++)
-                {
-                    int indexValue = matrix[y, x] + 255;
-                    frequencies[indexValue]++;
-                }
-            }
-
-            return frequencies;
         }
 
         public void SaveEncodedFile(int statisticModelIndex)
@@ -157,32 +120,6 @@ namespace ACM
         private void SaveErrorPQUsingArithmetic()
         {
             throw new NotImplementedException();
-        }
-
-        public int GetMinError()
-        {
-            if (_minError == Int32.MaxValue)
-                return 0;
-
-            return _minError;
-        }
-
-        private void SetMinOrMaxError(int y, int x)
-        {
-            int error = Original[y, x] - Decoded[y, x];
-
-            if (error < _minError)
-                _minError = error;
-            if (error > _maxError)
-                _maxError = error;
-        }
-
-        public int GetMaxError()
-        {
-            if (_maxError == Int32.MinValue)
-                return 0;
-
-            return _maxError;
         }
     }
 }

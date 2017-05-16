@@ -103,7 +103,6 @@ namespace ACM
                 WriteBmpHeader(writer);
 
                 for (int y = size - 1; y >= 0; y--)
-                //for (int y = 0; y < size; y++)
                 {
                     for (int x = 0; x < size; x++)
                     {
