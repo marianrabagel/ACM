@@ -1,6 +1,4 @@
-﻿
-using System;
-using System.IO;
+﻿using System;
 
 namespace ACM
 {
@@ -10,27 +8,21 @@ namespace ACM
 
         public PredictiveDecoder(string inputFileName) : base(inputFileName)
         {
-            outputFileName = inputFileName + ".bmp";
+            OutputFileName = inputFileName + ".bmp";
         }
 
         public void LoadPrdFile()
         {
-            /*string filename = Path.GetFileName(inputFileName);
-            filename = filename.Substring(filename.IndexOf(".bmp.p") + 6);
-            predictionRule = Convert.ToInt32(filename.Substring(0, filename.IndexOf("k")));
-            k = Convert.ToInt32(filename.Substring(filename.IndexOf("k") + 1, 2));
-            var startIndex = filename.IndexOf(".prd") - 1;
-            entropicCoder = filename.Substring(startIndex, 1);*/
             ReadBmpHeaderAndLoadPredictionToMemory();
         }
 
         private void ReadBmpHeaderAndLoadPredictionToMemory()
         {
-            using (BitReader reader = new BitReader(inputFileName))
+            using (BitReader reader = new BitReader(InputFileName))
             {
                 ReadBmpHeader(reader);
-                predictionRule = (int) reader.ReadNBit(4);
-                k = (int) reader.ReadNBit(4);
+                PredictionRule = (int) reader.ReadNBit(4);
+                K = (int) reader.ReadNBit(4);
                 int entropicCoding = (int) reader.ReadNBit(2);
 
                 if (entropicCoding == 0)
@@ -40,8 +32,8 @@ namespace ACM
                 else if (entropicCoding == 2)
                     entropicCoder = "A";
 
-                for (int y = 0; y < size; y++)
-                    for (int x = 0; x < size; x++)
+                for (int y = 0; y < Size; y++)
+                    for (int x = 0; x < Size; x++)
                         ErrorPq[y, x] = GetValueFromFile(reader, entropicCoder);
             }
         }
@@ -71,7 +63,6 @@ namespace ACM
                 }
 
                 int index = Convert.ToInt32(reader.ReadNBit(ct));
-
                 if (index < Math.Pow(2, ct - 1))
                     return Convert.ToInt32(index - (Math.Pow(2, ct) - 1));
                 else
@@ -85,13 +76,13 @@ namespace ACM
 
         public void Decode()
         {
-            for (int y = 0; y < size; y++)
+            for (int y = 0; y < Size; y++)
             {
-                for (int x = 0; x < size; x++)
+                for (int x = 0; x < Size; x++)
                 {
-                    byte predictionValue = GetPredictionFor(predictionRule, x, y);
+                    byte predictionValue = GetPredictionFor(PredictionRule, x, y);
                     Prediction[y, x] = predictionValue;
-                    ErrorPdq[y, x] = ErrorPq[y, x] * (2 * k + 1);
+                    ErrorPdq[y, x] = ErrorPq[y, x] * (2 * K + 1);
                     int decodedValue = (ErrorPdq[y, x] + Prediction[y, x]);
 
                     if (decodedValue < 0)
@@ -106,13 +97,13 @@ namespace ACM
 
         public void SaveDecodedFile()
         {
-            using (BitWriter writer = new BitWriter(outputFileName))
+            using (BitWriter writer = new BitWriter(OutputFileName))
             {
                 WriteBmpHeader(writer);
 
-                for (int y = size - 1; y >= 0; y--)
+                for (int y = Size - 1; y >= 0; y--)
                 {
-                    for (int x = 0; x < size; x++)
+                    for (int x = 0; x < Size; x++)
                     {
                         uint value = Decoded[y, x];
                         writer.WriteNBiti(value, 8);

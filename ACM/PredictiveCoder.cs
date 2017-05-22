@@ -28,16 +28,16 @@ namespace ACM
                 entropicCoding = 2;
             }
 
-            this.predictionRule = predictionRule;
-            this.k = k;
+            this.PredictionRule = predictionRule;
+            this.K = k;
 
-            outputFileName = inputFileName + ".p" + predictionRule + "k" + k.ToString().PadLeft(2, '0') + entropicCoder +
+            OutputFileName = InputFileName + ".p" + predictionRule + "K" + k.ToString().PadLeft(2, '0') + entropicCoder +
                              ".prd";
             ReadBmpHeaderAndLoadImageToMemory();
 
-            for (int y = 0; y < size; y++)
+            for (int y = 0; y < Size; y++)
             {
-                for (int x = 0; x < size; x++)
+                for (int x = 0; x < Size; x++)
                 {
                     byte predictionValue = GetPredictionFor(predictionRule, x, y);
                     Prediction[y, x] = predictionValue;
@@ -58,12 +58,12 @@ namespace ACM
 
         private void ReadBmpHeaderAndLoadImageToMemory()
         {
-            using (BitReader reader = new BitReader(inputFileName))
+            using (BitReader reader = new BitReader(InputFileName))
             {
                 ReadBmpHeader(reader);
 
-                for (int y = size - 1; y >= 0; y--)
-                    for (int x = 0; x < size; x++)
+                for (int y = Size - 1; y >= 0; y--)
+                    for (int x = 0; x < Size; x++)
                         Original[y, x] = (byte) reader.ReadNBit(8);
             }
         }
@@ -95,16 +95,16 @@ namespace ACM
 
         private void SaveErrorPqUsingFixed9Bits()
         {
-            using (BitWriter writer = new BitWriter(outputFileName))
+            using (BitWriter writer = new BitWriter(OutputFileName))
             {
                 WriteBmpHeader(writer);
-                writer.WriteNBiti(Convert.ToUInt32(predictionRule), 4);
-                writer.WriteNBiti(Convert.ToUInt32(k), 4);
+                writer.WriteNBiti(Convert.ToUInt32(PredictionRule), 4);
+                writer.WriteNBiti(Convert.ToUInt32(K), 4);
                 writer.WriteNBiti(Convert.ToUInt32(entropicCoding), 2);
 
-                for (int y = 0; y < size; y++)
+                for (int y = 0; y < Size; y++)
                 {
-                    for (int x = 0; x < size; x++)
+                    for (int x = 0; x < Size; x++)
                     {
                         uint value = Convert.ToUInt32(ErrorPq[y, x] + 255);
                         writer.WriteNBiti(value, 9);
@@ -117,13 +117,13 @@ namespace ACM
 
         private void SaveErrorPqUsingJpegTable()
         {
-            using (BitWriter writer = new BitWriter(outputFileName))
+            using (BitWriter writer = new BitWriter(OutputFileName))
             {
                 WriteBmpHeader(writer);
 
-                for (int y = 0; y < size; y++)
+                for (int y = 0; y < Size; y++)
                 {
-                    for (int x = 0; x < size; x++)
+                    for (int x = 0; x < Size; x++)
                     {
                         JpegCoding jpegCoding = GetCodingFor(ErrorPq[y, x]);
                         writer.WriteNBiti(jpegCoding.Coding, jpegCoding.Length);

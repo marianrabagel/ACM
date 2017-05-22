@@ -1,50 +1,45 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ACM
 {
     public class PredictiveBase
     {
-        public string inputFileName;
-        public string outputFileName;
-        protected byte[] bmpHeader;
+        public string InputFileName;
+        public string OutputFileName;
+        protected byte[] BmpHeader;
         public byte[,] Original { get; }
         public byte[,] Prediction { get; }
         public byte[,] Decoded { get; }
         public int[,] ErrorP { get; }
         public int[,] ErrorPq { get; }
         public int[,] ErrorPdq { get; }
-        protected int size = 256;
-        private int[][] jpegTable;
+        protected int Size = 256;
 
-        public int min;
-        public int max;
+        public int Min;
+        public int Max;
 
-        protected int predictionRule;
-        protected int k;
+        protected int PredictionRule;
+        protected int K;
         
         public PredictiveBase(string inputFileName)
         {
-            this.inputFileName = inputFileName;
-            bmpHeader = new byte[1078];
-            Original = new byte[size, size];
-            Prediction = new byte[size, size];
-            Decoded = new byte[size, size];
-            ErrorP = new int[size, size];
-            ErrorPq = new int[size, size];
-            ErrorPdq = new int[size, size];
+            InputFileName = inputFileName;
+            BmpHeader = new byte[1078];
+            Original = new byte[Size, Size];
+            Prediction = new byte[Size, Size];
+            Decoded = new byte[Size, Size];
+            ErrorP = new int[Size, Size];
+            ErrorPq = new int[Size, Size];
+            ErrorPdq = new int[Size, Size];
             InitializeMatrices();
         }
 
         private void InitializeMatrices()
         {
-            for (int y = 0; y < size; y++)
+            for (int y = 0; y < Size; y++)
             {
-                for (int x = 0; x < size; x++)
+                for (int x = 0; x < Size; x++)
                 {
                     Original[y, x] = 0;
                     Prediction[y, x] = 0;
@@ -58,20 +53,18 @@ namespace ACM
 
         public void CalculateError(byte[,] originalMatrix, byte[,] decodedMatrix)
         {
-            max = int.MinValue;
-            min = int.MaxValue;
-            //byte[,] originalMatrix = Original;
-            //byte[,] decodedMatrix = Decoded;
+            Max = int.MinValue;
+            Min = int.MaxValue;
 
-            for (int y = 0; y < size; y++)
+            for (int y = 0; y < Size; y++)
             {
-                for (int x = 0; x < size; x++)
+                for (int x = 0; x < Size; x++)
                 {
                     var val = originalMatrix[y, x] - decodedMatrix[y, x];
-                    if (val < min)
-                        min = val;
-                    if (val > max)
-                        max = val;
+                    if (val < Min)
+                        Min = val;
+                    if (val > Max)
+                        Max = val;
                 }
             }
         }
@@ -153,19 +146,19 @@ namespace ACM
             }
             else if (predictionRule == 4)
             {
-                value = GetABC(x, y);
+                value = GetAbc(x, y);
             }
             else if (predictionRule == 5)
             {
-                value = GetABC2(x, y);
+                value = GetAbc2(x, y);
             }
             else if (predictionRule == 6)
             {
-                value = GetBAC2(x, y);
+                value = GetBac2(x, y);
             }
             else if (predictionRule == 7)
             {
-                value = GetAB2(x, y);
+                value = GetAb2(x, y);
             }
             else if (predictionRule == 8)
             {
@@ -185,22 +178,22 @@ namespace ACM
                 value = GetB(x, y);
             else
             {
-                byte A = GetA(x, y);
-                byte B = GetB(x, y);
-                byte C = GetC(x, y);
+                byte a = GetA(x, y);
+                byte b = GetB(x, y);
+                byte c = GetC(x, y);
 
-                if (C >= Math.Max(A, B))
-                    value = Math.Min(A, B);
-                else if (C <= Math.Min(A, B))
-                    value = Math.Max(A, B);
+                if (c >= Math.Max(a, b))
+                    value = Math.Min(a, b);
+                else if (c <= Math.Min(a, b))
+                    value = Math.Max(a, b);
                 else
-                    value = GetABC(x, y);
+                    value = GetAbc(x, y);
             }
 
             return value;
         }
 
-        private byte GetAB2(int x, int y)
+        private byte GetAb2(int x, int y)
         {
             byte value;
 
@@ -222,7 +215,7 @@ namespace ACM
             return value;
         }
 
-        private byte GetBAC2(int x, int y)
+        private byte GetBac2(int x, int y)
         {
             byte value;
 
@@ -244,7 +237,7 @@ namespace ACM
             return value;
         }
 
-        private byte GetABC2(int x, int y)
+        private byte GetAbc2(int x, int y)
         {
             byte value;
 
@@ -266,7 +259,7 @@ namespace ACM
             return value;
         }
 
-        private byte GetABC(int x, int y)
+        private byte GetAbc(int x, int y)
         {
             byte value;
 
@@ -356,14 +349,14 @@ namespace ACM
 
         public void WriteBmpHeader(BitWriter writer)
         {
-            foreach (byte b in bmpHeader)
+            foreach (byte b in BmpHeader)
                 writer.WriteNBiti(b, 8);
         }
 
         public void ReadBmpHeader(BitReader reader)
         {
             for (int i = 0; i < 1078; i++)
-                bmpHeader[i] = (byte)reader.ReadNBit(8);
+                BmpHeader[i] = (byte)reader.ReadNBit(8);
         }
     }
 
@@ -380,8 +373,8 @@ namespace ACM
 
         public JpegCoding(uint coding, int length)
         {
-            this.Coding = coding;
-            this.Length = length;
+            Coding = coding;
+            Length = length;
         }
     }
 }

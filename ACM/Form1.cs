@@ -70,14 +70,14 @@ namespace ACM
             if (predictiveCoder != null && predictiveDecoder != null)
             {
                 predictiveCoder.CalculateError(predictiveCoder.Original, predictiveDecoder.Decoded);
-                MinLabel.Text = predictiveCoder.min.ToString();
-                MaxLabel.Text = predictiveCoder.max.ToString();
+                MinLabel.Text = predictiveCoder.Min.ToString();
+                MaxLabel.Text = predictiveCoder.Max.ToString();
             }
             else if (predictiveCoder != null)
             {
                 predictiveCoder.CalculateError(predictiveCoder.Original, predictiveCoder.Decoded);
-                MinLabel.Text = predictiveCoder.min.ToString();
-                MaxLabel.Text = predictiveCoder.max.ToString();
+                MinLabel.Text = predictiveCoder.Min.ToString();
+                MaxLabel.Text = predictiveCoder.Max.ToString();
             }
         }
 
