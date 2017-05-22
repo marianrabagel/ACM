@@ -6,9 +6,7 @@ namespace ACM
 {
     class PredictiveDecoder : PredictiveBase
     {
-        int predictionRule;
-        private int k;
-        private string entropicCoder;
+        protected string entropicCoder;
 
         public PredictiveDecoder(string inputFileName) : base(inputFileName)
         {
@@ -17,12 +15,12 @@ namespace ACM
 
         public void LoadPrdFile()
         {
-            string filename = Path.GetFileName(inputFileName);
+            /*string filename = Path.GetFileName(inputFileName);
             filename = filename.Substring(filename.IndexOf(".bmp.p") + 6);
             predictionRule = Convert.ToInt32(filename.Substring(0, filename.IndexOf("k")));
             k = Convert.ToInt32(filename.Substring(filename.IndexOf("k") + 1, 2));
             var startIndex = filename.IndexOf(".prd") - 1;
-            entropicCoder = filename.Substring(startIndex, 1);
+            entropicCoder = filename.Substring(startIndex, 1);*/
             ReadBmpHeaderAndLoadPredictionToMemory();
         }
 
@@ -31,6 +29,16 @@ namespace ACM
             using (BitReader reader = new BitReader(inputFileName))
             {
                 ReadBmpHeader(reader);
+                predictionRule = (int) reader.ReadNBit(4);
+                k = (int) reader.ReadNBit(4);
+                int entropicCoding = (int) reader.ReadNBit(2);
+
+                if (entropicCoding == 0)
+                    entropicCoder = "F";
+                else if (entropicCoding == 1)
+                    entropicCoder = "T";
+                else if (entropicCoding == 2)
+                    entropicCoder = "A";
 
                 for (int y = 0; y < size; y++)
                     for (int x = 0; x < size; x++)

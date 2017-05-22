@@ -24,6 +24,9 @@ namespace ACM
         public int min;
         public int max;
 
+        protected int predictionRule;
+        protected int k;
+        
         public PredictiveBase(string inputFileName)
         {
             this.inputFileName = inputFileName;

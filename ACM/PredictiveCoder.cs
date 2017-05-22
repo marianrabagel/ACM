@@ -4,6 +4,8 @@ namespace ACM
 {
     public class PredictiveCoder : PredictiveBase
     {
+        protected int entropicCoding;
+
         public PredictiveCoder(string inputFile) : base(inputFile)
         {
         }
@@ -11,11 +13,23 @@ namespace ACM
         public void Encode(int predictionRule, int k, string entropicCoder)
         {
             if (entropicCoder.Contains("Fixed"))
+            {
                 entropicCoder = "F";
+                entropicCoding = 0;
+            }
             else if (entropicCoder.Contains("Table"))
+            {
                 entropicCoder = "T";
+                entropicCoding = 1;
+            }
             else
+            {
                 entropicCoder = "A";
+                entropicCoding = 2;
+            }
+
+            this.predictionRule = predictionRule;
+            this.k = k;
 
             outputFileName = inputFileName + ".p" + predictionRule + "k" + k.ToString().PadLeft(2, '0') + entropicCoder +
                              ".prd";
@@ -84,6 +98,9 @@ namespace ACM
             using (BitWriter writer = new BitWriter(outputFileName))
             {
                 WriteBmpHeader(writer);
+                writer.WriteNBiti(Convert.ToUInt32(predictionRule), 4);
+                writer.WriteNBiti(Convert.ToUInt32(k), 4);
+                writer.WriteNBiti(Convert.ToUInt32(entropicCoding), 2);
 
                 for (int y = 0; y < size; y++)
                 {

@@ -118,8 +118,41 @@ namespace Fractal
 
         private int GetRdSumAfterIzometry(int yr, int xr, int yd, int xd, int izoIndex)
         {
-            //to do add izo types
-            return _rangeSum[yr, xr]*_domainSum[yd, xd];
+            int value = 0;
+
+            if (izoIndex == 0)
+            {
+                value = _rangeSum[yr, xr]*_domainSum[yd, xd]; 
+            }else if (izoIndex == 1)
+            {
+                
+            }
+            else if (izoIndex == 2)
+            {
+
+            }
+            else if (izoIndex == 3)
+            {
+
+            }
+            else if (izoIndex == 4)
+            {
+
+            }
+            else if (izoIndex == 5)
+            {
+
+            }
+            else if (izoIndex == 6)
+            {
+
+            }
+            else if (izoIndex == 7)
+            {
+
+            }
+
+            return value;
         }
 
         private double GetSquerror(int sum1, int domaindSqureSum, int domainSum, int rdSum, 
@@ -164,7 +197,7 @@ namespace Fractal
                 scale = (sum1*rdSum - rdSum*domainSum)/(double) det;
             }
 
-            _scale = (int) (0.5*(scale*MAXSCALE)/(2.0*MAXSCALE)*(1 << SCALEBITS);
+            _scale = (int) (0.5*(scale*MAXSCALE)/(2.0*MAXSCALE)*(1 << SCALEBITS));
 
             if (_scale < 0)
                 _scale = 0;
