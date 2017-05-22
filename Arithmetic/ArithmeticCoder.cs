@@ -19,16 +19,14 @@ namespace Arithmetic
                         UpdateModel(symbol);
                     }
 
-                    EncodeSymbol(EOF, writer);
-                    //writer.WriteNBiti(_low, 32); //de scris folosind OutputBitPlusFollow --> o functie de inchidere
-                    _bitsToFollow++;
+                    EncodeSymbol(Eof, writer);
+                    BitsToFollow++;
 
-                    if (_low < firstQuarter)
+                    if (Low < FirstQuarter)
                         OutputBitPlusFollow(0, writer);
                     else
                         OutputBitPlusFollow(1, writer);
                     
-                    //writer.WriteNBiti(0, 30);
                     writer.WriteNBiti(0, 7);
                 }
             }
@@ -36,33 +34,33 @@ namespace Arithmetic
 
         private void EncodeSymbol(uint symbol, BitWriter writer)
         {
-            UInt64 range = _high - _low + 1;
-            _high = (uint) (_low + (range*(ulong) _symbolSums[symbol + 1])/(ulong) _symbolSums[_symbolSums.Length - 1] - 1);
-            _low = (uint) (_low + (range*(ulong) _symbolSums[symbol])/(ulong) _symbolSums[_symbolSums.Length - 1]);
+            UInt64 range = High - Low + 1;
+            High = (uint) (Low + (range*(ulong) SymbolSums[symbol + 1])/(ulong) SymbolSums[SymbolSums.Length - 1] - 1);
+            Low = (uint) (Low + (range*(ulong) SymbolSums[symbol])/(ulong) SymbolSums[SymbolSums.Length - 1]);
 
             for (;;)
             {
-                if (_high < half)
+                if (High < Half)
                 {
                     OutputBitPlusFollow(0, writer);
                 }
-                else if (_low >= half)
+                else if (Low >= Half)
                 {
                     OutputBitPlusFollow(1, writer);
-                    _low -= half;
-                    _high -= half;
+                    Low -= Half;
+                    High -= Half;
                 }
-                else if (_low >= firstQuarter && _high < thirdQuarter)
+                else if (Low >= FirstQuarter && High < ThirdQuarter)
                 {
-                    _bitsToFollow++;
-                    _low -= firstQuarter;
-                    _high -= firstQuarter;
+                    BitsToFollow++;
+                    Low -= FirstQuarter;
+                    High -= FirstQuarter;
                 }
                 else
                     break;
 
-                _low = _low << 1;
-                _high = (_high  << 1) | 1;
+                Low = Low << 1;
+                High = (High  << 1) | 1;
             }
         }
 
@@ -70,10 +68,10 @@ namespace Arithmetic
         {
             writer.WriteBit(bit);
 
-            while (_bitsToFollow > 0)
+            while (BitsToFollow > 0)
             {
                 writer.WriteBit(~bit & 1);
-                _bitsToFollow--;
+                BitsToFollow--;
             }
         }
     }

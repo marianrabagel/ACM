@@ -4,60 +4,60 @@ namespace Arithmetic
 {
     public class ArithmeticBase
     {
-        protected int[] _symbolCounts;
-        protected int[] _symbolSums;
-        protected uint _numberOfSymbols = 257;
-        protected uint _low;
-        protected uint _high = topValue;
-        protected uint _bitsToFollow;
-        protected uint EOF;
-        protected const uint topValue = 0xFFFFFFFE;
-        protected const uint firstQuarter = topValue/4 + 1;
-        protected const uint half = 2*firstQuarter;
-        protected const uint thirdQuarter = 3*firstQuarter;
+        protected int[] SymbolCounts;
+        protected int[] SymbolSums;
+        protected uint NumberOfSymbols = 257;
+        protected uint Low;
+        protected uint High;
+        protected uint BitsToFollow;
+        protected uint Eof;
+        protected const uint TopValue = 0xFFFFFFFE;
+        protected const uint FirstQuarter = TopValue/4 + 1;
+        protected const uint Half = 2*FirstQuarter;
+        protected const uint ThirdQuarter = 3*FirstQuarter;
 
         public ArithmeticBase()
         {
             InitializeSymbolCounts();
             InitializeSymbolSums();
             CalculateSymbolSums();
-            _low = 0;
-            _high = topValue;
-            EOF = _numberOfSymbols - 1;
+            Low = 0;
+            High = TopValue;
+            Eof = NumberOfSymbols - 1;
         }
 
         private void InitializeSymbolSums()
         {
-            _symbolSums = new int[_numberOfSymbols + 1];
+            SymbolSums = new int[NumberOfSymbols + 1];
 
-            for (int i = 0; i < _symbolSums.Length; i++)
-                _symbolSums[i] = 0;
+            for (int i = 0; i < SymbolSums.Length; i++)
+                SymbolSums[i] = 0;
         }
 
         private void InitializeSymbolCounts()
         {
-            _symbolCounts = new int[_numberOfSymbols + 1];
+            SymbolCounts = new int[NumberOfSymbols + 1];
 
-            for (int i = 0; i < _symbolCounts.Length; i++)
-                _symbolCounts[i] = 3;
+            for (int i = 0; i < SymbolCounts.Length; i++)
+                SymbolCounts[i] = 3;
         }
 
         private void CalculateSymbolSums(int startingIndex = 1)
         {
-            int sum =_symbolSums[startingIndex];
+            int sum =SymbolSums[startingIndex];
 
-            for (; startingIndex < _symbolSums.Length; startingIndex++)
+            for (; startingIndex < SymbolSums.Length; startingIndex++)
             {
                 if (startingIndex != 0)
-                    sum += _symbolCounts[startingIndex - 1];
+                    sum += SymbolCounts[startingIndex - 1];
 
-                _symbolSums[startingIndex] = sum;
+                SymbolSums[startingIndex] = sum;
             }
         }
 
         protected void UpdateModel(uint symbol)
         {
-            _symbolCounts[symbol]++;
+            SymbolCounts[symbol]++;
             CalculateSymbolSums(Convert.ToInt32(symbol));
         }
     }
