@@ -2,7 +2,6 @@
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using ACM;
 
 namespace Wavelet
 {
@@ -14,7 +13,6 @@ namespace Wavelet
         }
 
         WaveletBase waveletBase;
-        //WaveletDecoder waveletDecoder;
         
         private void LoadBmpButton_Click(object sender, EventArgs e)
         {
