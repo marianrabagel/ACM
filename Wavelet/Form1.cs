@@ -214,8 +214,8 @@ namespace Wavelet
             if (waveletBase != null)
             {
                 waveletBase.CalculateMinMax();
-                MinValueLabel.Text = waveletBase.min.ToString();
-                MaxValueLabel.Text = waveletBase.max.ToString();
+                MinValueLabel.Text = waveletBase.Min.ToString();
+                MaxValueLabel.Text = waveletBase.Max.ToString();
             }
         }
 

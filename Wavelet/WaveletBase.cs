@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Drawing;
 using System.IO;
 using ACM;
@@ -13,14 +12,14 @@ namespace Wavelet
         public double[,] WaveletMatrix;
         public int Size { get; }
 
-        protected double[] analysisL;
-        protected double[] analysisH;
+        protected double[] AnalysisL;
+        protected double[] AnalysisH;
 
-        double[] synthesisL;
-        double[] synthesisH;
+        protected double[] SynthesisL;
+        protected double[] SynthesisH;
 
-        public double max;
-        public double min;
+        public double Max;
+        public double Min;
 
         public string OutputFile { get; private set; }
         //protected double[,] scaledMatrix;
@@ -32,7 +31,7 @@ namespace Wavelet
             Original = new byte[Size, Size];
             WaveletMatrix = new double[Size, Size];
 
-            analysisL = new[]
+            AnalysisL = new[]
            {
                 0.026748757411,
                 -0.016864118443,
@@ -44,7 +43,7 @@ namespace Wavelet
                 -0.016864118443,
                 0.026748757411
             };
-            analysisH = new[]
+            AnalysisH = new[]
             {
                 0,
                 0.091271763114,
@@ -57,7 +56,7 @@ namespace Wavelet
                 0
             };
 
-            synthesisL = new double[]
+            SynthesisL = new double[]
             {
                 0.000000000000
                 , -0.091271763114
@@ -69,7 +68,7 @@ namespace Wavelet
                 , -0.091271763114
                 , 0.000000000000
             };
-            synthesisH = new double[]
+            SynthesisH = new double[]
             {
                 0.026748757411
                 , 0.016864118443
@@ -174,12 +173,12 @@ namespace Wavelet
 
         public double[] AnalysisHighHorizontal(int line, int length, double[,] matrix)
         {
-            return ApplyFilterHorizontal(line, length, analysisH, matrix);
+            return ApplyFilterHorizontal(line, length, AnalysisH, matrix);
         }
 
         public double[] AnalysisLowHorizontal(int line, int length, double[,] matrix)
         {
-            return ApplyFilterHorizontal(line, length, analysisL, matrix);
+            return ApplyFilterHorizontal(line, length, AnalysisL, matrix);
         }
 
         public double[] ReorderH(double[] anL, double[] anH)
@@ -236,12 +235,12 @@ namespace Wavelet
 
         private double[] AnalysisHighVertical(int column, int length, double[,] matrix)
         {
-            return ApplyFIlterVertical(column, length, analysisH, matrix);
+            return ApplyFIlterVertical(column, length, AnalysisH, matrix);
         }
 
         private double[] AnalysisLowVertical(int column, int length, double[,] matrix)
         {
-            return ApplyFIlterVertical(column, length, analysisL, matrix);
+            return ApplyFIlterVertical(column, length, AnalysisL, matrix);
         }
 
         public void ApplyScale(double scale, int offset, int startingPositionX, int startingPositionY)
@@ -327,12 +326,12 @@ namespace Wavelet
 
         private double[] SynthesisLowHorizontal(int length, double[] high)
         {
-            return ApplyCuantizor(length, synthesisL, high);
+            return ApplyCuantizor(length, SynthesisL, high);
         }
 
         private double[] SynthesisHighHorizontal(int length, double[] low)
         {
-            return ApplyCuantizor(length, synthesisH, low);
+            return ApplyCuantizor(length, SynthesisH, low);
         }
 
         public void SyV1()
@@ -400,12 +399,12 @@ namespace Wavelet
 
         private double[] SynthesisLowVertical(int length, double[] low)
         {
-            return ApplyCuantizor(length, synthesisL, low);
+            return ApplyCuantizor(length, SynthesisL, low);
         }
 
         private double[] SynthesisHighVertical(int length, double[] high)
         {
-            return ApplyCuantizor(length, synthesisH, high);
+            return ApplyCuantizor(length, SynthesisH, high);
         }
 
         protected double[] ApplyFIlterVertical(int column, int length, double[] filter, double[,] source)
@@ -548,18 +547,18 @@ namespace Wavelet
 
         public void CalculateMinMax()
         {
-            max = double.MinValue;
-            min = double.MaxValue;
+            Max = double.MinValue;
+            Min = double.MaxValue;
 
             for (int y = 0; y < Size; y++)
             {
                 for (int x = 0; x < Size; x++)
                 {
                     var val = Original[y, x] - Math.Round(WaveletMatrix[y, x]);
-                    if (val < min)
-                        min = val;
-                    if (val > max)
-                        max = val;
+                    if (val < Min)
+                        Min = val;
+                    if (val > Max)
+                        Max = val;
                 }
             }
         }
