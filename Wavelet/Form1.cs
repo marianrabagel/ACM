@@ -30,7 +30,7 @@ namespace Wavelet
 
                 waveletBase = new WaveletBase(512);
                 waveletBase.LoadBmpFile(fileName);
-                Bitmap bitmap = waveletBase.GetBitmap();
+                Bitmap bitmap = waveletBase.GetBitmap(waveletBase.WaveletMatrix);
                 OriginalImagePanel.BackgroundImage = bitmap;
             }
         }
@@ -63,8 +63,8 @@ namespace Wavelet
             int offset = (int) OffsetNumericUpDown.Value;
             int x = (int) XNumericUpDown.Value;
             int y = (int) YNumericUpDown.Value;
-            waveletBase.ApplyScale(scale, offset, x, y);
-            waveletImage.BackgroundImage = waveletBase.GetBitmap();
+            double[,] scaledMatrix = waveletBase.ApplyScale(scale, offset, x, y);
+            waveletImage.BackgroundImage = waveletBase.GetBitmap(scaledMatrix);
         }
 
         private void AnH1Button_Click(object sender, EventArgs e)

@@ -15,3 +15,4 @@ E:\Workspaces\Visual studio 2015\ACM\ACM\obj\Debug\ACM.Properties.Resources.reso
 E:\Workspaces\Visual studio 2015\ACM\ACM\obj\Debug\ACM.csproj.GenerateResource.Cache
 E:\Workspaces\Visual studio 2015\ACM\ACM\obj\Debug\ACM.exe
 E:\Workspaces\Visual studio 2015\ACM\ACM\obj\Debug\ACM.pdb
+E:\Workspaces\Visual studio 2015\ACM\ACM\obj\Debug\ACM.csprojResolveAssemblyReference.cache

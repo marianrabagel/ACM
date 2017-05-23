@@ -34,6 +34,7 @@ namespace ACM
                 }
 
                 predictiveCoder = new PredictiveCoder(inputFile);
+                predictiveCoder.LoadBmp();
                 Bitmap bitmap = new Bitmap(inputFile);
                 OriginalImage.BackgroundImage = bitmap;
             }

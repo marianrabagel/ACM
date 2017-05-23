@@ -8,6 +8,12 @@ namespace ACM
 
         public PredictiveCoder(string inputFile) : base(inputFile)
         {
+            
+        }
+
+        public void LoadBmp()
+        {
+            ReadBmpHeaderAndLoadImageToMemory();
         }
 
         public void Encode(int predictionRule, int k, string entropicCoder)
@@ -33,7 +39,7 @@ namespace ACM
 
             OutputFileName = InputFileName + ".p" + predictionRule + "K" + k.ToString().PadLeft(2, '0') + entropicCoder +
                              ".prd";
-            ReadBmpHeaderAndLoadImageToMemory();
+            //ReadBmpHeaderAndLoadImageToMemory();
 
             for (int y = 0; y < Size; y++)
             {

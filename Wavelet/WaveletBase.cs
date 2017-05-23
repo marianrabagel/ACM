@@ -243,22 +243,25 @@ namespace Wavelet
             return ApplyFIlterVertical(column, length, AnalysisL, matrix);
         }
 
-        public void ApplyScale(double scale, int offset, int startingPositionX, int startingPositionY)
+        public double[,] ApplyScale(double scale, int offset, int startingPositionX, int startingPositionY)
         {
+            double[,] temp = new double[Size, Size];
+
             for (int y = 0; y < Size; y++)
             {
                 for (int x = 0; x < Size; x++)
                 {
-                    if (x >= startingPositionX)
+                    if (x >= startingPositionX || y >= startingPositionY)
                     {
-                        WaveletMatrix[y, x]  = WaveletMatrix[y, x] * scale + offset;
+                        temp[y, x]  = WaveletMatrix[y, x] * scale + offset;
                     }
-                    if(y >= startingPositionY)
+                    else
                     {
-                        WaveletMatrix[y, x] = WaveletMatrix[y, x]*scale + offset;
+                        temp[y, x] = WaveletMatrix[y, x];
                     }
                 }
             }
+            return temp;
         }
 
         public void SyH1()
@@ -326,12 +329,12 @@ namespace Wavelet
 
         private double[] SynthesisLowHorizontal(int length, double[] high)
         {
-            return ApplyCuantizor(length, SynthesisL, high);
+            return ApplyFilter(length, SynthesisL, high);
         }
 
         private double[] SynthesisHighHorizontal(int length, double[] low)
         {
-            return ApplyCuantizor(length, SynthesisH, low);
+            return ApplyFilter(length, SynthesisH, low);
         }
 
         public void SyV1()
@@ -399,12 +402,12 @@ namespace Wavelet
 
         private double[] SynthesisLowVertical(int length, double[] low)
         {
-            return ApplyCuantizor(length, SynthesisL, low);
+            return ApplyFilter(length, SynthesisL, low);
         }
 
         private double[] SynthesisHighVertical(int length, double[] high)
         {
-            return ApplyCuantizor(length, SynthesisH, high);
+            return ApplyFilter(length, SynthesisH, high);
         }
 
         protected double[] ApplyFIlterVertical(int column, int length, double[] filter, double[,] source)
@@ -477,7 +480,7 @@ namespace Wavelet
         /// <summary>
         /// For decoder. It applies the syntesis to one line, not on the matrix
         /// </summary>
-        protected double[] ApplyCuantizor(int length, double[] cuantizor, double[] source)
+        protected double[] ApplyFilter(int length, double[] cuantizor, double[] source)
         {
             double[] result = new double[length];
 
@@ -509,9 +512,8 @@ namespace Wavelet
             return result;
         }
 
-        public Bitmap GetBitmap()
+        public Bitmap GetBitmap(double[,] matrix)
         {
-            double[,] matrix = WaveletMatrix;
             Bitmap bitmap = new Bitmap(matrix.GetLength(1), matrix.GetLength(0));
             for (int y = 0; y < matrix.GetLength(1); y++)
             {
