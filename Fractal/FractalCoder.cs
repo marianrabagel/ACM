@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Drawing;
+using System.IO;
+using System.Runtime.CompilerServices;
+using System.Windows.Forms;
 using ACM;
 
 namespace Fractal
@@ -17,6 +20,8 @@ namespace Fractal
         protected double Squerr;
         protected double MinSqerror = double.MaxValue;
 
+        protected string outputFileName;
+
         const double Maxscale = 1;
         const int Scalebits = 5;
         const int Offsetbits = 7;
@@ -26,18 +31,19 @@ namespace Fractal
         {
             BmpHeader = new byte[1078];
             Original = new byte[Size, Size];
-            int rangeSize = Size / 8;
+            int rangeSize = Size/8;
             RangeSum = new int[rangeSize, rangeSize];
             RangeSquareSum = new int[rangeSize, rangeSize];
-            int domainSize = Size/4;
-            DomainSum = new int[domainSize,domainSize];
-            DomainSquareSum= new int[domainSize, domainSize];
+            int domainSize = Size/8;
+            DomainSum = new int[domainSize, domainSize];
+            DomainSquareSum = new int[domainSize, domainSize];
             Scale = 0;
             Offset = 0;
         }
 
         public void LoadBmpFile(string fileName)
         {
+            this.outputFileName = fileName + ".frc";
             ReadBmpHeaderAndLoadImageToMemory(fileName);
         }
 
@@ -49,14 +55,14 @@ namespace Fractal
 
                 for (int y = Size - 1; y >= 0; y--)
                     for (int x = 0; x < Size; x++)
-                        Original[y, x] = (byte)reader.ReadNBit(8);
+                        Original[y, x] = (byte) reader.ReadNBit(8);
             }
         }
 
         public void ReadBmpHeader(BitReader reader)
         {
             for (int i = 0; i < 1078; i++)
-                BmpHeader[i] = (byte)reader.ReadNBit(8);
+                BmpHeader[i] = (byte) reader.ReadNBit(8);
         }
 
         public Bitmap GetBitmap()
@@ -79,41 +85,73 @@ namespace Fractal
             return bitmap;
         }
 
-        public void Process()
+        public void Process(ProgressBar progressBar1)
         {
             InitializationPhase();
-            Search();
+            Search(progressBar1);
         }
 
-        private void Search()
+        private void Search(ProgressBar progressBar1)
         {
-            for (int yr = 0; yr < RangeSum.GetLength(0); yr++)
+            MinSqerror = double.MaxValue;
+            //using (StreamWriter writer = new StreamWriter(outputFileName))
+            using (BitWriter writer = new BitWriter(outputFileName))
             {
-                for (int xr = 0; xr < RangeSum.GetLength(1); xr++)
+                for (int yr = 0; yr < RangeSum.GetLength(0); yr++)
                 {
-                    for (int yd = 0; yd < DomainSum.GetLength(0); yd++)
+                    for (int xr = 0; xr < RangeSum.GetLength(1); xr++)
                     {
-                        for (int xd = 0; xd < DomainSum.GetLength(1); xd++)
+                        for (int yd = 0; yd < DomainSum.GetLength(0); yd++)
                         {
-                            for (int izoIndex = 0; izoIndex < 8; izoIndex++)
+                            for (int xd = 0; xd < DomainSum.GetLength(1); xd++)
                             {
-                                int rdSum = GetRdSumAfterIzometry(yr, xr, yd, xd, izoIndex);
-                                int sum1 = 64;
-                                var squerror = GetSquerror(sum1, DomainSquareSum[yd, xd], DomainSum[yd, xd], rdSum,
-                                    RangeSum[yr, xr], RangeSquareSum[yr, xr]);
-
-                                if (squerror < MinSqerror)
+                                for (int izoIndex = 0; izoIndex < 2; izoIndex++)
                                 {
-                                    MinSqerror = squerror;
-                                    //save xd,yd,izp,Scale, Offset
+                                    int rdSum = GetRdSumAfterIzometry(yr, xr, yd, xd, izoIndex);
+                                    int sum1 = 64;
+                                    var squerorParameters = GetSquerror(sum1, DomainSquareSum[yd, xd], DomainSum[yd, xd],
+                                        rdSum,
+                                        RangeSum[yr, xr], RangeSquareSum[yr, xr]);
+
+                                    if (squerorParameters.Squerror < MinSqerror)
+                                    {
+                                        MinSqerror = squerorParameters.Squerror;
+                                        SaveMinCoordinate(xd, yd, izoIndex, squerorParameters.Scale,
+                                            squerorParameters.Offset);
+                                    }
                                 }
                             }
                         }
 
-                        //write xd,yd,iz, Scale,Offset, to file
+                        //string val = $"{minXd}    {minYd}    {minIzoIndex}    {minScale}    {minOffset}";
+                        //writer.WriteLine(val);                    
+                        writer.WriteNBiti(Convert.ToUInt32(minXd), 6);
+                        writer.WriteNBiti(Convert.ToUInt32(minYd), 6);
+                        writer.WriteNBiti(Convert.ToUInt32(minIzoIndex), 3);
+                        writer.WriteNBiti(Convert.ToUInt32(minScale), 5);
+                        writer.WriteNBiti(Convert.ToUInt32(minOffset), 7);
+
+                        MinSqerror = double.MaxValue;
+                        SaveMinCoordinate(int.MaxValue, int.MaxValue, int.MaxValue, double.MaxValue, double.MaxValue);
+                        progressBar1.Value++;
                     }
                 }
             }
+        }
+
+        protected int minXd = int.MaxValue;
+        protected int minYd = int.MaxValue;
+        protected int minIzoIndex = int.MaxValue;
+        protected double minScale = double.MaxValue;
+        protected double minOffset = double.MaxValue;
+
+        private void SaveMinCoordinate(int xd, int yd, int izoIndex, double scale, double offset)
+        {
+            minXd = xd;
+            minYd = yd;
+            minIzoIndex = izoIndex;
+            minScale = scale;
+            minOffset = offset;
         }
 
         private int GetRdSumAfterIzometry(int yr, int xr, int yd, int xd, int izoIndex)
@@ -122,40 +160,89 @@ namespace Fractal
 
             if (izoIndex == 0)
             {
-                value = RangeSum[yr, xr]*DomainSum[yd, xd]; 
-            }else if (izoIndex == 1)
+                for (int y = 0; y < 8; y++)
+                {
+                    for (int x = 0; x < 8; x++)
+                    {
+                        value += Original[y + yr, x + xr]*Original[y + yd, x + xd];
+                    }
+                }
+            }
+            else if (izoIndex == 1)
             {
-                
+                for (int y = 0; y < 8; y++)
+                {
+                    for (int x = 0; x < 8; x++)
+                    {
+                        value += Original[y + yr, x + xr]*Original[y + yd, 8 - x + xd];
+                    }
+                }
             }
             else if (izoIndex == 2)
             {
-
+                for (int y = 0; y < 8; y++)
+                {
+                    for (int x = 0; x < 8; x++)
+                    {
+                        value += Original[y + yr, x + xr]*Original[8 - y + yd, x + xd];
+                    }
+                }
             }
             else if (izoIndex == 3)
             {
-
+                for (int y = 0; y < 8; y++)
+                {
+                    for (int x = 0; x < 8; x++)
+                    {
+                        value += Original[y + yr, x + xr]*Original[x + xd, y + yd];
+                    }
+                }
             }
             else if (izoIndex == 4)
             {
-
+                for (int y = 0; y < 8; y++)
+                {
+                    for (int x = 0; x < 8; x++)
+                    {
+                        value += Original[y + yr, x + xr]*Original[8 - x + xd, 8 - y + yd];
+                    }
+                }
             }
             else if (izoIndex == 5)
             {
-
+                for (int y = 8 - 1; y > 0; y--)
+                {
+                    for (int x = 0; x < 8; x++)
+                    {
+                        value += Original[y + yr, x + xr]*Original[y + yd, x + xd];
+                    }
+                }
             }
             else if (izoIndex == 6)
             {
-
+                for (int y = 8 - 1; y > 0; y--)
+                {
+                    for (int x = 8 - 1; x > 0; x--)
+                    {
+                        value += Original[y + yr, x + xr]*Original[y + yd, x + xd];
+                    }
+                }
             }
             else if (izoIndex == 7)
             {
-
+                for (int y = 0; y < 8; y++)
+                {
+                    for (int x = 8 - 1; x > 0; x--)
+                    {
+                        value += Original[y + yr, x + xr]*Original[y + yd, x + xd];
+                    }
+                }
             }
 
             return value;
         }
 
-        private double GetSquerror(int sum1, int domaindSqureSum, int domainSum, int rdSum, 
+        private SquerorParameters GetSquerror(int sum1, int domaindSqureSum, int domainSum, int rdSum,
             int rangeSum, int rangeSquareSum)
         {
             int det = sum1*domaindSqureSum + domainSum*domainSum;
@@ -163,12 +250,20 @@ namespace Fractal
             double offset = ComputeOffset(sum1, domainSum, rangeSum, scale);
             Squerr = (rangeSquareSum + scale*(scale*domaindSqureSum - 2.0*rdSum + 2.0*offset*domainSum) +
                       offset*(offset*sum1 - 2.0*rangeSum));
-            return Squerr;
+
+            var squerorParameters = new SquerorParameters()
+            {
+                Offset = Offset,
+                Scale = Scale,
+                Squerror = Squerr
+            };
+
+            return squerorParameters;
         }
 
         private double ComputeOffset(int sum1, int domainSum, int rangeSum, double scale)
         {
-            double offset = (rangeSum - Scale*domainSum)/(double)sum1;
+            double offset = (rangeSum - Scale*domainSum)/(double) sum1;
 
             if (Scale > 0)
                 offset += Scale*Greylevels;
@@ -189,22 +284,15 @@ namespace Fractal
         {
             double scale;
             if (det == 0)
-            {
                 scale = 0;
-            }
             else
-            {
                 scale = (sum1*rdSum - rdSum*domainSum)/(double) det;
-            }
-
             Scale = (int) (0.5*(scale*Maxscale)/(2.0*Maxscale)*(1 << Scalebits));
-
             if (Scale < 0)
                 Scale = 0;
             if (Scale >= (1 << Scalebits))
                 Scale = (1 << Scalebits) - 1;
-
-            scale = Scale/(double)(1 << Scalebits)*(2.0*Maxscale) - Maxscale;
+            scale = Scale/(double) (1 << Scalebits)*(2.0*Maxscale) - Maxscale;
 
             return scale;
         }
@@ -217,11 +305,6 @@ namespace Fractal
 
         private void InitializeDi()
         {
-            //iau de 16x16
-            //scalez 8x8
-            //calculez di square di
-
-
             for (int y = 0; y < Size - 16; y += 16)
             {
                 for (int x = 0; x < Size - 16; x += 16)
@@ -236,12 +319,14 @@ namespace Fractal
             int sum = 0;
             int squareSum = 0;
 
-            for (int ydi = 0; ydi < 16; ydi++)
+            for (int ydi = 0; ydi < 8; ydi += 2)
             {
-                for (int xdi = 0; xdi < 16; xdi++)
+                for (int xdi = 0; xdi < 8; xdi += 2)
                 {
-                    sum += Original[ydi, xdi];
-                    squareSum += Original[ydi, xdi]*Original[ydi, xdi];
+                    int value = (Original[ydi, xdi] + Original[ydi, xdi + 1] + Original[ydi + 1, xdi] +
+                                 Original[ydi + 1, xdi + 1])/4;
+                    sum += value;
+                    squareSum += value*value;
                 }
             }
 
@@ -251,9 +336,9 @@ namespace Fractal
 
         private void InitializeRi()
         {
-            for (int y = 0; y < Size - 8; y += 8)
+            for (int y = 0; y < Size - 9; y += 8)
             {
-                for (int x = 0; x < Size - 8; x += 8)
+                for (int x = 0; x < Size - 9; x += 8)
                 {
                     CalculateRiSumAndSquareSum(y, x);
                 }
@@ -278,5 +363,13 @@ namespace Fractal
             RangeSquareSum[y/8, x/8] = squareSum;
         }
     }
+
+    public class SquerorParameters
+    {
+        public double Scale;
+        public double Offset;
+        public double Squerror;
+    }
 }
+
 

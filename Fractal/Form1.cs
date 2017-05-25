@@ -39,7 +39,7 @@ namespace Fractal
 
         private void ProcessButton_Click(object sender, EventArgs e)
         {
-            fractalCoder.Process();
+            fractalCoder.Process(progressBar1);
         }
     }
 }
