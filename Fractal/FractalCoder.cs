@@ -34,11 +34,20 @@ namespace Fractal
             int rangeSize = Size/8;
             RangeSum = new int[rangeSize, rangeSize];
             RangeSquareSum = new int[rangeSize, rangeSize];
-            int domainSize = Size/8;
-            DomainSum = new int[domainSize, domainSize];
-            DomainSquareSum = new int[domainSize, domainSize];
+            DomainSum = new int[rangeSize, rangeSize];
+            DomainSquareSum = new int[rangeSize, rangeSize];
             Scale = 0;
             Offset = 0;
+
+            fractalParameters = new FractalParameters[rangeSize, rangeSize];
+
+            for (int y = 0; y < fractalParameters.GetLength(0); y++)
+            {
+                for (int x = 0; x < fractalParameters.GetLength(1); x++)
+                {
+                    fractalParameters[y, x] = new FractalParameters();
+                }
+            }
         }
 
         public void LoadBmpFile(string fileName)
@@ -91,6 +100,8 @@ namespace Fractal
             Search(progressBar1);
         }
 
+        FractalParameters[,] fractalParameters;
+
         private void Search(ProgressBar progressBar1)
         {
             MinSqerror = double.MaxValue;
@@ -110,8 +121,7 @@ namespace Fractal
                                     int rdSum = GetRdSumAfterIzometry(yr, xr, yd, xd, izoIndex);
                                     int sum1 = 64;
                                     var squerorParameters = GetSquerror(sum1, DomainSquareSum[yd, xd], DomainSum[yd, xd],
-                                        rdSum,
-                                        RangeSum[yr, xr], RangeSquareSum[yr, xr]);
+                                        rdSum, RangeSum[yr, xr], RangeSquareSum[yr, xr]);
 
                                     if (squerorParameters.Squerror < MinSqerror)
                                     {
@@ -124,12 +134,13 @@ namespace Fractal
                         }
 
                         //string val = $"{minXd}    {minYd}    {minIzoIndex}    {minScale}    {minOffset}";
-                        //writer.WriteLine(val);                    
-                        writer.WriteNBiti(Convert.ToUInt32(minXd), 6);
-                        writer.WriteNBiti(Convert.ToUInt32(minYd), 6);
-                        writer.WriteNBiti(Convert.ToUInt32(minIzoIndex), 3);
-                        writer.WriteNBiti(Convert.ToUInt32(minScale), 5);
-                        writer.WriteNBiti(Convert.ToUInt32(minOffset), 7);
+                        //writer.WriteLine(val);      
+
+                        fractalParameters[yr, xr].Xd = minXd;
+                        fractalParameters[yr, xr].Yd = minYd;
+                        fractalParameters[yr, xr].IzoIndex = minIzoIndex;
+                        fractalParameters[yr, xr].Scale = Convert.ToInt32(minScale);
+                        fractalParameters[yr, xr].Offset = Convert.ToInt32(minOffset);
 
                         MinSqerror = double.MaxValue;
                         SaveMinCoordinate(int.MaxValue, int.MaxValue, int.MaxValue, double.MaxValue, double.MaxValue);
@@ -174,7 +185,7 @@ namespace Fractal
                 {
                     for (int x = 0; x < 8; x++)
                     {
-                        value += Original[y + yr, x + xr]*Original[y + yd, 8 - x + xd];
+                        value += Original[y + yr, x + xr]*Original[y + yd, 7 - x + xd];
                     }
                 }
             }
@@ -184,7 +195,7 @@ namespace Fractal
                 {
                     for (int x = 0; x < 8; x++)
                     {
-                        value += Original[y + yr, x + xr]*Original[8 - y + yd, x + xd];
+                        value += Original[y + yr, x + xr]*Original[7 - y + yd, x + xd];
                     }
                 }
             }
@@ -204,7 +215,7 @@ namespace Fractal
                 {
                     for (int x = 0; x < 8; x++)
                     {
-                        value += Original[y + yr, x + xr]*Original[8 - x + xd, 8 - y + yd];
+                        value += Original[y + yr, x + xr]*Original[7 - x + xd, 7 - y + yd];
                     }
                 }
             }
@@ -361,6 +372,29 @@ namespace Fractal
 
             RangeSum[y/8, x/8] = sum;
             RangeSquareSum[y/8, x/8] = squareSum;
+        }
+
+        public void Save()
+        {
+            using (BitWriter writer = new BitWriter(outputFileName))
+            {
+                /*for (int i = 0; i < BmpHeader.GetLength(0); i++)
+                {
+                    writer.WriteNBiti(BmpHeader[i], 8);
+                }
+                */
+                for (int y = 0; y < fractalParameters.GetLength(0); y++)
+                {
+                    for (int x = 0; x < fractalParameters.GetLength(1); x++)
+                    {
+                        writer.WriteNBiti(Convert.ToUInt32(fractalParameters[y,x].Xd), 6);
+                        writer.WriteNBiti(Convert.ToUInt32(fractalParameters[y,x].Yd), 6);
+                        writer.WriteNBiti(Convert.ToUInt32(fractalParameters[y,x].IzoIndex), 3);
+                        writer.WriteNBiti(Convert.ToUInt32(fractalParameters[y,x].Scale), 5);
+                        writer.WriteNBiti(Convert.ToUInt32(fractalParameters[y,x].Offset), 7);
+                    }
+                }
+            }
         }
     }
 

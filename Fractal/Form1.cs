@@ -41,5 +41,54 @@ namespace Fractal
         {
             fractalCoder.Process(progressBar1);
         }
+
+        FractalDecoder fractalDecoder;
+
+        private void LoadInitialButton_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                if (Path.GetExtension(openFileDialog1.FileName).ToUpper() != ".BMP")
+                {
+                    MessageBox.Show("selectati un fisier bmp");
+                    return;
+                }
+
+                fractalDecoder = new FractalDecoder();
+                fractalDecoder.LoadInitialBmp(openFileDialog1.FileName);
+
+                var bitmap = fractalDecoder.GetBitmap();
+                DecodedImagePanel.BackgroundImage = bitmap;
+            }
+        }
+
+        private void LoadFrcButton_Click(object sender, EventArgs e)
+        {
+            if (fractalDecoder != null)
+            {
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    if (Path.GetExtension(openFileDialog1.FileName).ToUpper() != ".FRC")
+                    {
+                        MessageBox.Show("Selectati un fisier .prc");
+                        return;
+                    }
+
+                    fractalDecoder.LoadFrcFile(openFileDialog1.FileName);
+                }
+            }
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            fractalCoder.Save();
+        }
+
+        private void DecodeNbStepsButton_Click(object sender, EventArgs e)
+        {
+            fractalDecoder.Decode();
+            var bitmap = fractalDecoder.GetBitmap();
+            DecodedImagePanel.BackgroundImage = bitmap;
+        }
     }
 }

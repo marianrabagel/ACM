@@ -96,6 +96,7 @@
             this.SaveButton.TabIndex = 5;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // LoadInitialButton
             // 
@@ -105,6 +106,7 @@
             this.LoadInitialButton.TabIndex = 6;
             this.LoadInitialButton.Text = "Load initial";
             this.LoadInitialButton.UseVisualStyleBackColor = true;
+            this.LoadInitialButton.Click += new System.EventHandler(this.LoadInitialButton_Click);
             // 
             // LoadFrcButton
             // 
@@ -114,6 +116,7 @@
             this.LoadFrcButton.TabIndex = 7;
             this.LoadFrcButton.Text = "Load";
             this.LoadFrcButton.UseVisualStyleBackColor = true;
+            this.LoadFrcButton.Click += new System.EventHandler(this.LoadFrcButton_Click);
             // 
             // SaveDecodedButton
             // 
@@ -132,6 +135,7 @@
             this.DecodeNbStepsButton.TabIndex = 9;
             this.DecodeNbStepsButton.Text = "Decode number of steps";
             this.DecodeNbStepsButton.UseVisualStyleBackColor = true;
+            this.DecodeNbStepsButton.Click += new System.EventHandler(this.DecodeNbStepsButton_Click);
             // 
             // label1
             // 
