@@ -43,15 +43,27 @@
             this.label2 = new System.Windows.Forms.Label();
             this.PSNRValueLabel = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label3 = new System.Windows.Forms.Label();
+            this.xdvalue = new System.Windows.Forms.Label();
+            this.ydValue = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.izoValue = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.scaleValue = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.offsetValue = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.NbOfStepsNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // OriginalImagePanel
             // 
+            this.OriginalImagePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.OriginalImagePanel.Location = new System.Drawing.Point(12, 12);
             this.OriginalImagePanel.Name = "OriginalImagePanel";
             this.OriginalImagePanel.Size = new System.Drawing.Size(512, 512);
             this.OriginalImagePanel.TabIndex = 0;
+            this.OriginalImagePanel.Click += new System.EventHandler(this.OriginalImagePanel_Click);
             // 
             // DecodedImagePanel
             // 
@@ -179,11 +191,111 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(155, 569);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(18, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "xd";
+            // 
+            // xdvalue
+            // 
+            this.xdvalue.AutoSize = true;
+            this.xdvalue.Location = new System.Drawing.Point(196, 570);
+            this.xdvalue.Name = "xdvalue";
+            this.xdvalue.Size = new System.Drawing.Size(45, 13);
+            this.xdvalue.TabIndex = 15;
+            this.xdvalue.Text = "xdValue";
+            // 
+            // ydValue
+            // 
+            this.ydValue.AutoSize = true;
+            this.ydValue.Location = new System.Drawing.Point(196, 589);
+            this.ydValue.Name = "ydValue";
+            this.ydValue.Size = new System.Drawing.Size(35, 13);
+            this.ydValue.TabIndex = 17;
+            this.ydValue.Text = "label5";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(155, 588);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(18, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "yd";
+            // 
+            // izoValue
+            // 
+            this.izoValue.AutoSize = true;
+            this.izoValue.Location = new System.Drawing.Point(196, 611);
+            this.izoValue.Name = "izoValue";
+            this.izoValue.Size = new System.Drawing.Size(35, 13);
+            this.izoValue.TabIndex = 19;
+            this.izoValue.Text = "label7";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(155, 610);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(20, 13);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "izo";
+            // 
+            // scaleValue
+            // 
+            this.scaleValue.AutoSize = true;
+            this.scaleValue.Location = new System.Drawing.Point(345, 570);
+            this.scaleValue.Name = "scaleValue";
+            this.scaleValue.Size = new System.Drawing.Size(35, 13);
+            this.scaleValue.TabIndex = 21;
+            this.scaleValue.Text = "label9";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(304, 569);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(32, 13);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "scale";
+            // 
+            // offsetValue
+            // 
+            this.offsetValue.AutoSize = true;
+            this.offsetValue.Location = new System.Drawing.Point(345, 594);
+            this.offsetValue.Name = "offsetValue";
+            this.offsetValue.Size = new System.Drawing.Size(41, 13);
+            this.offsetValue.TabIndex = 23;
+            this.offsetValue.Text = "label11";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(304, 593);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(33, 13);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "offset";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1134, 632);
+            this.Controls.Add(this.offsetValue);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.scaleValue);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.izoValue);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.ydValue);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.xdvalue);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.PSNRValueLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.NbOfStepsNumericUpDown);
@@ -223,6 +335,16 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label PSNRValueLabel;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label xdvalue;
+        private System.Windows.Forms.Label ydValue;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label izoValue;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label scaleValue;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label offsetValue;
+        private System.Windows.Forms.Label label12;
     }
 }
 

@@ -33,7 +33,7 @@ namespace Fractal
 
                 fractalCoder = new FractalCoder();
                 fractalCoder.LoadBmpFile(fileName);
-                OriginalImagePanel.BackgroundImage = fractalCoder.GetBitmap();
+                OriginalImagePanel.BackgroundImage = fractalCoder.GetBitmap(fractalCoder.Original);
             }
         }
 
@@ -89,6 +89,17 @@ namespace Fractal
             fractalDecoder.Decode();
             var bitmap = fractalDecoder.GetBitmap();
             DecodedImagePanel.BackgroundImage = bitmap;
+        }
+
+        private void OriginalImagePanel_Click(object sender, EventArgs e)
+        {
+            MouseEventArgs mouseEventArgs = ((MouseEventArgs) e);
+            int x = mouseEventArgs.X;
+            int y = mouseEventArgs.Y;
+
+            byte[,] border = fractalCoder.DrawBorder(x, y);
+            var bitmap = fractalCoder.GetBitmap(border);
+            OriginalImagePanel.BackgroundImage = bitmap;
         }
     }
 }

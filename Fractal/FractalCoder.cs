@@ -10,7 +10,7 @@ namespace Fractal
     public class FractalCoder
     {
         int Size = 512;
-        protected byte[,] Original;
+        public byte[,] Original;
         protected byte[] BmpHeader;
         protected int[,] RangeSum;
         protected int[,] RangeSquareSum;
@@ -19,6 +19,7 @@ namespace Fractal
         protected int Scale, Offset;
         protected double Squerr;
         protected double MinSqerror = double.MaxValue;
+        FractalParameters[,] fractalParameters;
 
         protected string outputFileName;
 
@@ -74,9 +75,8 @@ namespace Fractal
                 BmpHeader[i] = (byte) reader.ReadNBit(8);
         }
 
-        public Bitmap GetBitmap()
+        public Bitmap GetBitmap(byte[,] matrix)
         {
-            byte[,] matrix = Original;
             Bitmap bitmap = new Bitmap(matrix.GetLength(1), matrix.GetLength(0));
             for (int y = 0; y < matrix.GetLength(1); y++)
             {
@@ -100,7 +100,7 @@ namespace Fractal
             Search(progressBar1);
         }
 
-        FractalParameters[,] fractalParameters;
+        
 
         private void Search(ProgressBar progressBar1)
         {
@@ -347,9 +347,9 @@ namespace Fractal
 
         private void InitializeRi()
         {
-            for (int y = 0; y < Size - 9; y += 8)
+            for (int y = 0; y < Size - 8-1; y += 8)
             {
-                for (int x = 0; x < Size - 9; x += 8)
+                for (int x = 0; x < Size - 8-1; x += 8)
                 {
                     CalculateRiSumAndSquareSum(y, x);
                 }
@@ -395,6 +395,29 @@ namespace Fractal
                     }
                 }
             }
+        }
+
+        public byte[,] DrawBorder(int x, int y)
+        {
+            byte[,] temp = new byte[Size, Size];
+
+            for (int yr = 0; yr < Size; yr++)
+            {
+                for (int xr = 0; xr < Size; xr++)
+                {
+                    temp[yr, xr] = Original[yr, xr];
+                }
+            }
+            for (int i = 0; i < 8; i++)
+            {
+                byte color = 255;
+                temp[y - 1, x + i] = color;
+                temp[y + i, x - 1] = color;
+                temp[y + 1 + 8, x + i] = color;
+                temp[y + i, x + 1 + 8] = color;
+            }
+
+            return temp;
         }
     }
 
