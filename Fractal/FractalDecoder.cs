@@ -7,6 +7,17 @@ namespace Fractal
 {
     public class FractalDecoder
     {
+        // luat perecched d8in fisier
+        //sursa -> imag initiala
+        //destinatie construita range cu range
+        //pentru fiecare range, iaud xxd,yd * 8 
+        //iaa de16xx16
+        // reduc la 8x8
+        //aplic izo
+        //scale, si offset
+        //pus in r
+        //iterativ
+
         protected byte[,] Original;
         protected byte[] BmpHeader;
         int Size = 512;

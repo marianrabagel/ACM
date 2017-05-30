@@ -100,6 +100,12 @@ namespace Fractal
             byte[,] border = fractalCoder.DrawBorder(x, y);
             var bitmap = fractalCoder.GetBitmap(border);
             OriginalImagePanel.BackgroundImage = bitmap;
+            var fractalParameters = fractalCoder.GetFractalParameters(x, y);
+            xdvalue.Text = (fractalParameters.Xd * 8).ToString();
+            ydValue.Text = (fractalParameters.Yd * 8).ToString();
+            izoValue.Text = fractalParameters.IzoIndex.ToString();
+            offsetValue.Text = fractalParameters.Offset.ToString();
+            scaleValue.Text = fractalParameters.Scale.ToString();
         }
     }
 }

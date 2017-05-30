@@ -16,7 +16,7 @@ namespace Fractal
         protected int[,] RangeSquareSum;
         protected int[,] DomainSum;
         protected int[,] DomainSquareSum;
-        protected int Scale, Offset;
+        protected int iScale, iOffset;
         protected double Squerr;
         protected double MinSqerror = double.MaxValue;
         FractalParameters[,] fractalParameters;
@@ -35,10 +35,10 @@ namespace Fractal
             int rangeSize = Size/8;
             RangeSum = new int[rangeSize, rangeSize];
             RangeSquareSum = new int[rangeSize, rangeSize];
-            DomainSum = new int[rangeSize, rangeSize];
-            DomainSquareSum = new int[rangeSize, rangeSize];
-            Scale = 0;
-            Offset = 0;
+            DomainSum = new int[rangeSize-1, rangeSize-1];
+            DomainSquareSum = new int[rangeSize-1, rangeSize-1];
+            iScale = 0;
+            iOffset = 0;
 
             fractalParameters = new FractalParameters[rangeSize, rangeSize];
 
@@ -100,13 +100,11 @@ namespace Fractal
             Search(progressBar1);
         }
 
-        
-
         private void Search(ProgressBar progressBar1)
         {
             MinSqerror = double.MaxValue;
             //using (StreamWriter writer = new StreamWriter(outputFileName))
-            using (BitWriter writer = new BitWriter(outputFileName))
+            //using (BitWriter writer = new BitWriter(outputFileName))
             {
                 for (int yr = 0; yr < RangeSum.GetLength(0); yr++)
                 {
@@ -116,7 +114,7 @@ namespace Fractal
                         {
                             for (int xd = 0; xd < DomainSum.GetLength(1); xd++)
                             {
-                                for (int izoIndex = 0; izoIndex < 2; izoIndex++)
+                                for (int izoIndex = 0; izoIndex < 8; izoIndex++)
                                 {
                                     int rdSum = GetRdSumAfterIzometry(yr, xr, yd, xd, izoIndex);
                                     int sum1 = 64;
@@ -133,8 +131,8 @@ namespace Fractal
                             }
                         }
 
-                        //string val = $"{minXd}    {minYd}    {minIzoIndex}    {minScale}    {minOffset}";
-                        //writer.WriteLine(val);      
+                       /* string val = $"{minXd}    {minYd}    {minIzoIndex}    {minScale}    {minOffset}";
+                        writer.WriteLine(val);      */
 
                         fractalParameters[yr, xr].Xd = minXd;
                         fractalParameters[yr, xr].Yd = minYd;
@@ -169,7 +167,7 @@ namespace Fractal
         {
             int value = 0;
 
-            if (izoIndex == 0)
+            if (izoIndex == 0) //identity
             {
                 for (int y = 0; y < 8; y++)
                 {
@@ -179,7 +177,7 @@ namespace Fractal
                     }
                 }
             }
-            else if (izoIndex == 1)
+            else if (izoIndex == 1) //vertical mirror
             {
                 for (int y = 0; y < 8; y++)
                 {
@@ -189,7 +187,7 @@ namespace Fractal
                     }
                 }
             }
-            else if (izoIndex == 2)
+            else if (izoIndex == 2) //horizontal mirror
             {
                 for (int y = 0; y < 8; y++)
                 {
@@ -199,7 +197,7 @@ namespace Fractal
                     }
                 }
             }
-            else if (izoIndex == 3)
+            else if (izoIndex == 3) // diagonala principala
             {
                 for (int y = 0; y < 8; y++)
                 {
@@ -209,7 +207,7 @@ namespace Fractal
                     }
                 }
             }
-            else if (izoIndex == 4)
+            else if (izoIndex == 4) // diagonala secundara
             {
                 for (int y = 0; y < 8; y++)
                 {
@@ -219,7 +217,7 @@ namespace Fractal
                     }
                 }
             }
-            else if (izoIndex == 5)
+            else if (izoIndex == 5) //rotate 90 degress  clockwise
             {
                 for (int y = 8 - 1; y > 0; y--)
                 {
@@ -229,7 +227,7 @@ namespace Fractal
                     }
                 }
             }
-            else if (izoIndex == 6)
+            else if (izoIndex == 6) //rotate 180 degress clockwise
             {
                 for (int y = 8 - 1; y > 0; y--)
                 {
@@ -239,7 +237,7 @@ namespace Fractal
                     }
                 }
             }
-            else if (izoIndex == 7)
+            else if (izoIndex == 7) //rotate 90 degrees counter-clockwise
             {
                 for (int y = 0; y < 8; y++)
                 {
@@ -264,8 +262,8 @@ namespace Fractal
 
             var squerorParameters = new SquerorParameters()
             {
-                Offset = Offset,
-                Scale = Scale,
+                Offset = iOffset,
+                Scale = iScale,
                 Squerror = Squerr
             };
 
@@ -274,18 +272,18 @@ namespace Fractal
 
         private double ComputeOffset(int sum1, int domainSum, int rangeSum, double scale)
         {
-            double offset = (rangeSum - Scale*domainSum)/(double) sum1;
+            double offset = (rangeSum - scale*domainSum)/(double) sum1;
 
-            if (Scale > 0)
-                offset += Scale*Greylevels;
-            Offset = (int) (0.5 + offset/((1.0*Math.Abs(Scale))*Greylevels)*((1 << Offsetbits) - 1));
+            if (scale > 0)
+                offset += scale*Greylevels;
+            iOffset = (int) (0.5 + offset/((1.0*Math.Abs(iScale))*Greylevels)*((1 << Offsetbits) - 1));
 
-            if (Offset < 0)
-                Offset = 0;
-            if (Offset >= (1 << Offsetbits))
-                Offset = (1 << Offsetbits) - 1;
+            if (iOffset < 0)
+                iOffset = 0;
+            if (iOffset >= (1 << Offsetbits))
+                iOffset = (1 << Offsetbits) - 1;
 
-            offset = Offset/(double) ((1 << Offsetbits) - 1)*((1.0*Math.Abs(scale))*Greylevels);
+            offset = iOffset/(double) ((1 << Offsetbits) - 1)*((1.0*Math.Abs(scale))*Greylevels);
             if (scale > 0)
                 offset -= scale*Greylevels;
             return offset;
@@ -298,12 +296,12 @@ namespace Fractal
                 scale = 0;
             else
                 scale = (sum1*rdSum - rdSum*domainSum)/(double) det;
-            Scale = (int) (0.5*(scale*Maxscale)/(2.0*Maxscale)*(1 << Scalebits));
-            if (Scale < 0)
-                Scale = 0;
-            if (Scale >= (1 << Scalebits))
-                Scale = (1 << Scalebits) - 1;
-            scale = Scale/(double) (1 << Scalebits)*(2.0*Maxscale) - Maxscale;
+            iScale = (int) (0.5*(scale*Maxscale)/(2.0*Maxscale)*(1 << Scalebits));
+            if (iScale < 0)
+                iScale = 0;
+            if (iScale >= (1 << Scalebits))
+                iScale = (1 << Scalebits) - 1;
+            scale = iScale/(double) (1 << Scalebits)*(2.0*Maxscale) - Maxscale;
 
             return scale;
         }
@@ -316,9 +314,9 @@ namespace Fractal
 
         private void InitializeDi()
         {
-            for (int y = 0; y < Size - 16; y += 16)
+            for (int y = 0; y < Size - 16; y += 8)
             {
-                for (int x = 0; x < Size - 16; x += 16)
+                for (int x = 0; x < Size - 16; x += 8)
                 {
                     CalculateDiSumAndSquareSum(y, x);
                 }
@@ -330,12 +328,14 @@ namespace Fractal
             int sum = 0;
             int squareSum = 0;
 
-            for (int ydi = 0; ydi < 8; ydi += 2)
+            for (int ydi = 0; ydi < 16; ydi += 2)
             {
-                for (int xdi = 0; xdi < 8; xdi += 2)
+                for (int xdi = 0; xdi < 16; xdi += 2)
                 {
-                    int value = (Original[ydi, xdi] + Original[ydi, xdi + 1] + Original[ydi + 1, xdi] +
-                                 Original[ydi + 1, xdi + 1])/4;
+                    int value = (Original[y + ydi    , x + xdi    ] +
+                                 Original[y + ydi    , x + xdi + 1] +
+                                 Original[y + ydi + 1, x + xdi    ] +
+                                 Original[y + ydi + 1, x + xdi + 1])/4;
                     sum += value;
                     squareSum += value*value;
                 }
@@ -408,16 +408,68 @@ namespace Fractal
                     temp[yr, xr] = Original[yr, xr];
                 }
             }
+
+            var xd = fractalParameters[y/8, x/8].Xd;
+            var yd = fractalParameters[y/8, x/8].Yd;
+            xd = xd*8;
+            yd = yd*8;
+
             for (int i = 0; i < 8; i++)
             {
                 byte color = 255;
-                temp[y - 1, x + i] = color;
-                temp[y + i, x - 1] = color;
-                temp[y + 1 + 8, x + i] = color;
-                temp[y + i, x + 1 + 8] = color;
+                var yAbove = y - 1;
+                yAbove = CheckValueBetweem0And511(yAbove);
+                var xNext = x + i;
+                xNext = CheckValueBetweem0And511(xNext);
+                var xLeft = x - 1;
+                xLeft = CheckValueBetweem0And511(xLeft);
+                var yNext = y + i;
+                yNext = CheckValueBetweem0And511(yNext);
+                var yBelow = y + 1 + 8;
+                yBelow = CheckValueBetweem0And511(yBelow);
+                var xRight = x + 1 + 8;
+                xRight = CheckValueBetweem0And511(xRight);
+
+                temp[yAbove, xNext] = color;
+                temp[yNext, xLeft] = color;
+                temp[yBelow, xNext] = color;
+                temp[yNext, xRight] = color;
+
+                //matching d
+                var ydAbove = yd - 1;
+                ydAbove = CheckValueBetweem0And511(ydAbove);
+                var xdNext = xd + i;
+                xdNext = CheckValueBetweem0And511(xdNext);
+                var xdLeft = xd - 1;
+                xdLeft = CheckValueBetweem0And511(xdLeft);
+                var ydNext = yd + i;
+                ydNext = CheckValueBetweem0And511(ydNext);
+                var ydBelow = yd + 1 + 16;
+                ydBelow = CheckValueBetweem0And511(ydBelow);
+                var xdRight = xd + 1 + 16;
+                xdRight = CheckValueBetweem0And511(xdRight);
+
+                temp[ydAbove, xdNext] = color;
+                temp[ydNext, xdLeft] = color;
+                temp[ydBelow, xdNext] = color;
+                temp[ydNext, xdRight] = color;
             }
 
             return temp;
+        }
+
+        public int CheckValueBetweem0And511(int value)
+        {
+            if (value < 0)
+                return 0;
+            if (value > 511)
+                return 511;
+            return value;
+        }
+
+        public FractalParameters GetFractalParameters(int x, int y)
+        {
+            return fractalParameters[y/8, x/8];
         }
     }
 
