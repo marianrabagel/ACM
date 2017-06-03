@@ -18,18 +18,24 @@ namespace Fractal
         //pus in r
         //iterativ
 
-        protected byte[,] Original;
+        protected int[,] Original;
         protected byte[] BmpHeader;
         int Size = 512;
         FractalParameters[,] fractalParameters;
         int[,] temp;
+
+
+        const double Maxscale = 1;
+        const int Scalebits = 5;
+        const int Offsetbits = 7;
+        const int Greylevels = 255;
 
         protected string outputFileName;
 
         public FractalDecoder()
         {
             BmpHeader = new byte[1078];
-            Original = new byte[Size, Size];
+            Original = new int[Size, Size];
             temp = new int[Size, Size];
             fractalParameters = new FractalParameters[Size / 8, Size / 8];
 
@@ -75,13 +81,13 @@ namespace Fractal
 
         public Bitmap GetBitmap()
         {
-            byte[,] matrix = Original;
+            int[,] matrix = Original;
             Bitmap bitmap = new Bitmap(matrix.GetLength(1), matrix.GetLength(0));
             for (int y = 0; y < matrix.GetLength(1); y++)
             {
                 for (int x = 0; x < matrix.GetLength(0); x++)
                 {
-                    byte value = matrix[y, x];
+                    int value = matrix[y, x];
                     if (value < 0)
                         value = 0;
                     if (value > 255)
@@ -139,20 +145,34 @@ namespace Fractal
                     int izo = fractalParameters[y, x].IzoIndex;
                     int[,] izometricDomains = ApplyIzometry(izo, reducedDomain);
 
-                    var scale = fractalParameters[y, x].Scale;
-                    var offset = fractalParameters[y, x].Offset;
+                    var scale = GetScale(fractalParameters[y, x].Scale);
+                    var offset = GetOffset(fractalParameters[y, x].Offset, scale);
 
                     for (int yr = 0; yr < 8; yr++)
                     {
                         for (int xr = 0; xr < 8; xr++)
                         {
-                            temp[y*8 + yr, x*8 + xr] = izometricDomains[yr, xr]*scale + offset;
+                            temp[y*8 + yr, x*8 + xr] = Convert.ToInt32(izometricDomains[yr, xr]*scale + offset);
                         }
                     }
                 }
             }
 
             CopyToOriginal(temp);
+        }
+
+        private double GetOffset(int offset, double scale)
+        {
+            double o = offset / (double)((1 << Offsetbits) - 1) * ((1.0 + Math.Abs(scale)) * Greylevels);
+            if (scale > 0.0)
+                o -= scale * Greylevels;
+
+            return o;
+        }
+
+        private double GetScale(int scale)
+        {
+            return (double)scale / (double)(1 << Scalebits) * (2.0 * Maxscale) - Maxscale;
         }
 
         private void CopyToOriginal(int[,] temp)
@@ -162,12 +182,7 @@ namespace Fractal
                 for (int x = 0; x < Original.GetLength(1); x++)
                 {
                     int value = temp[y, x];
-
-                    if (value < 0)
-                        value = 0;
-                    if (value > 255)
-                        value = 255;
-                    Original[y, x] = Convert.ToByte(value);
+                    Original[y, x] = Convert.ToInt32(value);
                 }
             }
         }
@@ -270,6 +285,33 @@ namespace Fractal
                 }
             }
             return domain;
+        }
+
+        public double CalculatePsnFor(byte[,] matrix)
+        {
+            Int64 sum = 0;
+            Int64 originalSum = 0;
+            var max = Byte.MinValue;
+            for (int y = 0; y < matrix.GetLength(0); y++)
+            {
+                for (int x = 0; x < matrix.GetLength(1); x++)
+                {
+                    sum += (long)Math.Pow(matrix[y,x] - Original[y,x], 2);
+                    if (matrix[y, x] > max)
+                        max = matrix[y, x];
+                }
+            }
+
+            for (int i = 0; i < 512; i++)
+            {
+                for (int j = 0; j < 512; j++)
+                {
+                    originalSum += max*max;
+                }
+            }
+            double psnr = 10 * Math.Log10(originalSum / sum);
+
+            return psnr;
         }
     }
 

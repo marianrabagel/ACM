@@ -53,6 +53,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.offsetValue = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.CalculatePsnrButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.NbOfStepsNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
@@ -281,11 +282,22 @@
             this.label12.TabIndex = 22;
             this.label12.Text = "offset";
             // 
+            // CalculatePsnrButton
+            // 
+            this.CalculatePsnrButton.Location = new System.Drawing.Point(881, 588);
+            this.CalculatePsnrButton.Name = "CalculatePsnrButton";
+            this.CalculatePsnrButton.Size = new System.Drawing.Size(75, 23);
+            this.CalculatePsnrButton.TabIndex = 24;
+            this.CalculatePsnrButton.Text = "Calculate PSNR";
+            this.CalculatePsnrButton.UseVisualStyleBackColor = true;
+            this.CalculatePsnrButton.Click += new System.EventHandler(this.CalculatePsnrButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1134, 632);
+            this.Controls.Add(this.CalculatePsnrButton);
             this.Controls.Add(this.offsetValue);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.scaleValue);
@@ -345,6 +357,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label offsetValue;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button CalculatePsnrButton;
     }
 }
 

@@ -86,7 +86,10 @@ namespace Fractal
 
         private void DecodeNbStepsButton_Click(object sender, EventArgs e)
         {
-            fractalDecoder.Decode();
+            for (int i = 0; i < NbOfStepsNumericUpDown.Value; i++)
+            {
+                fractalDecoder.Decode();
+            }
             var bitmap = fractalDecoder.GetBitmap();
             DecodedImagePanel.BackgroundImage = bitmap;
         }
@@ -106,6 +109,11 @@ namespace Fractal
             izoValue.Text = fractalParameters.IzoIndex.ToString();
             offsetValue.Text = fractalParameters.Offset.ToString();
             scaleValue.Text = fractalParameters.Scale.ToString();
+        }
+
+        private void CalculatePsnrButton_Click(object sender, EventArgs e)
+        {
+            PSNRValueLabel.Text = fractalDecoder.CalculatePsnFor(fractalCoder.Original).ToString();
         }
     }
 }
