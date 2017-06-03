@@ -35,8 +35,8 @@ namespace Fractal
             int rangeSize = Size/8;
             RangeSum = new int[rangeSize, rangeSize];
             RangeSquareSum = new int[rangeSize, rangeSize];
-            DomainSum = new int[rangeSize-1, rangeSize-1];
-            DomainSquareSum = new int[rangeSize-1, rangeSize-1];
+            DomainSum = new int[rangeSize - 1, rangeSize - 1];
+            DomainSquareSum = new int[rangeSize - 1, rangeSize - 1];
             iScale = 0;
             iOffset = 0;
 
@@ -130,8 +130,8 @@ namespace Fractal
                                 }
                             }
                         }
-
-                       /* string val = $"{minXd}    {minYd}    {minIzoIndex}    {minScale}    {minOffset}";
+                        /*
+                        string val = $"{minXd}    {minYd}    {minIzoIndex}    {minScale}    {minOffset}";
                         writer.WriteLine(val);      */
 
                         fractalParameters[yr, xr].Xd = minXd;

@@ -443,7 +443,7 @@ namespace Wavelet
         }
 
         /// <summary>
-        /// For coder. For the first time, when it applys Cuantizor on the original image (which is byte)
+        /// For coder. For the first time, when it apply the filter on the original image (which is byte)
         /// </summary>
         protected double[] ApplyFilterHorizontal(int line, int length, double[] filter, double[,] source)
         {
@@ -480,7 +480,7 @@ namespace Wavelet
         /// <summary>
         /// For decoder. It applies the syntesis to one line, not on the matrix
         /// </summary>
-        protected double[] ApplyFilter(int length, double[] cuantizor, double[] source)
+        protected double[] ApplyFilter(int length, double[] filter, double[] source)
         {
             double[] result = new double[length];
 
@@ -490,7 +490,7 @@ namespace Wavelet
                 for (int i = 0; i < 9; i++)
                 {
                     int index = Math.Abs(x + i - 4);
-                    sum += source[index] * cuantizor[i];
+                    sum += source[index] * filter[i];
                 }
                 result[x] = sum;
             }
@@ -504,7 +504,7 @@ namespace Wavelet
 
                     if (index > length - 1)
                         index = length - 1 - (index % (length - 1));
-                    sum += source[index] * cuantizor[i];
+                    sum += source[index] * filter[i];
                 }
                 result[x] = sum;
             }

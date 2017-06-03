@@ -7,7 +7,7 @@ namespace Fractal
 {
     public class FractalDecoder
     {
-        // luat perecched d8in fisier
+        // luat pereche de 8 in fisier
         //sursa -> imag initiala
         //destinatie construita range cu range
         //pentru fiecare range, iaud xxd,yd * 8 
@@ -22,6 +22,7 @@ namespace Fractal
         protected byte[] BmpHeader;
         int Size = 512;
         FractalParameters[,] fractalParameters;
+        int[,] temp;
 
         protected string outputFileName;
 
@@ -29,6 +30,7 @@ namespace Fractal
         {
             BmpHeader = new byte[1078];
             Original = new byte[Size, Size];
+            temp = new int[Size, Size];
             fractalParameters = new FractalParameters[Size / 8, Size / 8];
 
             for (int y = 0; y < Size; y++)
@@ -114,30 +116,50 @@ namespace Fractal
 
         }
 
-        int[,] temp;
-
         public void Decode()
         {
-            temp = new int[Size, Size];
-            for (int y = 0; y < Size; y++)
-            {
-                for (int x = 0; x < Size; x++)
-                {
-                    temp[y, x] = Original[y, x];
-                }
-            }
-
+            // luat pereche de 8 in fisier
+            //sursa -> imag initiala
+            //destinatie construita range cu range
+            //pentru fiecare range, iau xd,yd * 8 
+            //iaa de 16x16
+            // reduc la 8x8
+            //aplic izo
+            //scale, si offset
+            //pus in r
+            //iterativ
+            
             for (int y = 0; y < fractalParameters.GetLength(0); y++)
             {
                 for (int x = 0; x < fractalParameters.GetLength(1); x++)
                 {
-                    ApplyUsingIzometry(fractalParameters[y, x],y,x);
+                    int xd = fractalParameters[y, x].Xd*8;
+                    int yd = fractalParameters[y, x].Yd*8;
+                    int[,] reducedDomain = GetReducedDomain(xd, yd);
+                    int izo = fractalParameters[y, x].IzoIndex;
+                    int[,] izometricDomains = ApplyIzometry(izo, reducedDomain);
+
+                    var scale = fractalParameters[y, x].Scale;
+                    var offset = fractalParameters[y, x].Offset;
+
+                    for (int yr = 0; yr < 8; yr++)
+                    {
+                        for (int xr = 0; xr < 8; xr++)
+                        {
+                            temp[y*8 + yr, x*8 + xr] = izometricDomains[yr, xr]*scale + offset;
+                        }
+                    }
                 }
             }
 
-            for (int y = 0; y < Size; y++)
+            CopyToOriginal(temp);
+        }
+
+        private void CopyToOriginal(int[,] temp)
+        {
+            for (int y = 0; y < Original.GetLength(0); y++)
             {
-                for (int x = 0; x < Size; x++)
+                for (int x = 0; x < Original.GetLength(1); x++)
                 {
                     int value = temp[y, x];
 
@@ -150,94 +172,104 @@ namespace Fractal
             }
         }
 
-        private void ApplyUsingIzometry(FractalParameters fractalParameter,int y, int x)
+        private int[,] ApplyIzometry(int izoIndex, int[,] reducedDomain)
         {
-            int xd = fractalParameter.Xd;
-            int yd = fractalParameter.Yd;
-            int izoIndex = fractalParameter.IzoIndex;
-            int scale = fractalParameter.Scale;
-            int offset = fractalParameter.Offset;
+            int[,] izometricDomain = new int[reducedDomain.GetLength(0), reducedDomain.GetLength(1)];
 
-            if (fractalParameter.IzoIndex == 0)
+            if (izoIndex == 0) //identity
             {
-                for (int yr = 0; yr < 8; yr++)
+                return reducedDomain;
+            }
+            else if (izoIndex == 1) //vertical mirror
+            {
+                for (int y = 0; y < 8; y++)
                 {
-                    for (int xr = 0; xr < 8; xr++)
+                    for (int x = 0; x < 8; x++)
                     {
-                        temp[yd + yr, xd + xr] = Original[yd + yr, xd + xr]*scale + offset;
+                        izometricDomain[y, x] = reducedDomain[y, 7 - x];
                     }
                 }
             }
-            else if (izoIndex == 1)
+            else if (izoIndex == 2) //horizontal mirror
             {
-                for (int yr = 0; yr < 8; yr++)
+                for (int y = 0; y < 8; y++)
                 {
-                    for (int xr = 0; xr < 8; xr++)
+                    for (int x = 0; x < 8; x++)
                     {
-                        temp[yd + yr, xd + xr] = Original[yr + yd, 7 - xr + xd] * scale + offset;
+                        izometricDomain[y, x] = reducedDomain[7 - y, x];
                     }
                 }
             }
-            else if (izoIndex == 2)
+            else if (izoIndex == 3) // diagonala principala
             {
-                for (int yr = 0; yr < 8; yr++)
+                for (int y = 0; y < 8; y++)
                 {
-                    for (int xr = 0; xr < 8; xr++)
+                    for (int x = 0; x < 8; x++)
                     {
-                        temp[yd + yr, xd + xr] = Original[7 - yr + yd, xr + xd] * scale + offset;
+                        izometricDomain[y, x] = reducedDomain[x, y];
                     }
                 }
             }
-            else if (izoIndex == 3)
+            else if (izoIndex == 4) // diagonala secundara
             {
-                for (int yr = 0; yr < 8; yr++)
+                for (int y = 0; y < 8; y++)
                 {
-                    for (int xr = 0; xr < 8; xr++)
+                    for (int x = 0; x < 8; x++)
                     {
-                        temp[yd + yr, xd + xr] = Original[xr + xd, yr + yd]*scale + offset;
+                        izometricDomain[y, x] = reducedDomain[7 - x, 7 - y];
                     }
                 }
             }
-            else if (izoIndex == 4)
+            else if (izoIndex == 5) //rotate 90 degress  clockwise
             {
-                for (int yr = 0; yr < 8; yr++)
+                for (int y = 8 - 1; y > 0; y--)
                 {
-                    for (int xr = 0; xr < 8; xr++)
+                    for (int x = 0; x < 8; x++)
                     {
-                        temp[yd + yr, xd + xr] = Original[8 - xr + xd, 7 - yr + yd] * scale + offset;
+                        izometricDomain[y, x] = reducedDomain[y, x];
                     }
                 }
             }
-            else if (izoIndex == 5)
+            else if (izoIndex == 6) //rotate 180 degress clockwise
             {
-                for (int yr = 8 - 1; yr > 0; yr--)
+                for (int y = 8 - 1; y > 0; y--)
                 {
-                    for (int xr = 0; xr < 8; xr++)
+                    for (int x = 8 - 1; x > 0; x--)
                     {
-                        temp[7 - yd + yr, xd + xr] = Original[yr + yd, xr + xd]*scale + offset;
+                        izometricDomain[y, x] = reducedDomain[y, x];
                     }
                 }
             }
-            else if (izoIndex == 6)
+            else if (izoIndex == 7) //rotate 90 degrees counter-clockwise
             {
-                for (int yr = 8 - 1; yr > 0; yr--)
+                for (int y = 0; y < 8; y++)
                 {
-                    for (int xr = 8 - 1; xr > 0; xr--)
+                    for (int x = 8 - 1; x > 0; x--)
                     {
-                        temp[7 - yd + yr, 7 - xd + xr] = Original[yr + yd, xr + xd] * scale + offset;
+                        izometricDomain[y, x] = reducedDomain[y, x];
                     }
                 }
             }
-            else if (izoIndex == 7)
+
+            return izometricDomain;
+        }
+
+        private int[,] GetReducedDomain(int xd, int yd)
+        {
+            int[,] domain = new int[8,8];
+
+            for (int y = 0; y < 16; y+=2)
             {
-                for (int yr = 0; yr < 8; yr++)
+                for (int x = 0; x < 16; x+=2)
                 {
-                    for (int xr = 8 - 1; xr > 0; xr--)
-                    {
-                        temp[yd + yr, 7 - xd + xr] = Original[yr + yd, xr + xd] * scale + offset;
-                    }
+                    int value = (Original[y + yd    , x + xd    ] +
+                                 Original[y + yd    , x + xd + 1] +
+                                 Original[y + yd + 1, x + xd    ] +
+                                 Original[y + yd + 1, x + xd + 1]) / 4;
+                    domain[y/2, x/2] = value;
                 }
             }
+            return domain;
         }
     }
 
