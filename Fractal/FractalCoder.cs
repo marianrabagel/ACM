@@ -102,7 +102,7 @@ namespace Fractal
 
         private void Search(ProgressBar progressBar1)
         {
-            MinSqerror = double.MaxValue;
+            
             //using (StreamWriter writer = new StreamWriter(outputFileName))
             //using (BitWriter writer = new BitWriter(outputFileName))
             {
@@ -110,6 +110,9 @@ namespace Fractal
                 {
                     for (int xr = 0; xr < RangeSum.GetLength(1); xr++)
                     {
+                        MinSqerror = double.MaxValue;
+                        SetMinCoordinate(0,0,0,0,0);
+
                         for (int yd = 0; yd < DomainSum.GetLength(0); yd++)
                         {
                             for (int xd = 0; xd < DomainSum.GetLength(1); xd++)
@@ -124,7 +127,7 @@ namespace Fractal
                                     if (squerorParameters.Squerror < MinSqerror)
                                     {
                                         MinSqerror = squerorParameters.Squerror;
-                                        SaveMinCoordinate(xd, yd, izoIndex, squerorParameters.Scale,
+                                        SetMinCoordinate(xd, yd, izoIndex, squerorParameters.Scale,
                                             squerorParameters.Offset);
                                     }
                                 }
@@ -141,7 +144,7 @@ namespace Fractal
                         fractalParameters[yr, xr].Offset = Convert.ToInt32(minOffset);
 
                         MinSqerror = double.MaxValue;
-                        SaveMinCoordinate(int.MaxValue, int.MaxValue, int.MaxValue, double.MaxValue, double.MaxValue);
+                        SetMinCoordinate(int.MaxValue, int.MaxValue, int.MaxValue, double.MaxValue, double.MaxValue);
                         progressBar1.Value++;
                     }
                 }
@@ -154,7 +157,7 @@ namespace Fractal
         protected double minScale = double.MaxValue;
         protected double minOffset = double.MaxValue;
 
-        private void SaveMinCoordinate(int xd, int yd, int izoIndex, double scale, double offset)
+        private void SetMinCoordinate(int xd, int yd, int izoIndex, double scale, double offset)
         {
             minXd = xd;
             minYd = yd;
@@ -255,7 +258,7 @@ namespace Fractal
             int rangeSum, int rangeSquareSum)
         {
             int det = sum1*domaindSqureSum + domainSum*domainSum;
-            double scale = ComputeScale(sum1, domainSum, rdSum, det);
+            double scale = ComputeScale(sum1, domainSum, rdSum, det, rangeSum);
             double offset = ComputeOffset(sum1, domainSum, rangeSum, scale);
             Squerr = (rangeSquareSum + scale*(scale*domaindSqureSum - 2.0*rdSum + 2.0*offset*domainSum) +
                       offset*(offset*sum1 - 2.0*rangeSum));
@@ -276,27 +279,27 @@ namespace Fractal
 
             if (scale > 0)
                 offset += scale*Greylevels;
-            iOffset = (int) (0.5 + offset/((1.0*Math.Abs(iScale))*Greylevels)*((1 << Offsetbits) - 1));
+            iOffset = (int) (0.5 + offset/((1.0+Math.Abs(iScale))*Greylevels)*((1 << Offsetbits) - 1));
 
             if (iOffset < 0)
                 iOffset = 0;
             if (iOffset >= (1 << Offsetbits))
                 iOffset = (1 << Offsetbits) - 1;
 
-            offset = iOffset/(double) ((1 << Offsetbits) - 1)*((1.0*Math.Abs(scale))*Greylevels);
+            offset = iOffset/(double) ((1 << Offsetbits) - 1)*((1.0+Math.Abs(scale))*Greylevels);
             if (scale > 0)
                 offset -= scale*Greylevels;
             return offset;
         }
 
-        private Double ComputeScale(int sum1, int domainSum, int rdSum, int det)
+        private double ComputeScale(int sum1, int domainSum, int rdSum, int det, int rangeSum)
         {
             double scale;
             if (det == 0)
                 scale = 0;
             else
-                scale = (sum1*rdSum - rdSum*domainSum)/(double) det;
-            iScale = (int) (0.5*(scale*Maxscale)/(2.0*Maxscale)*(1 << Scalebits));
+                scale = (sum1*rdSum - rangeSum*domainSum)/(double) det;
+            iScale = (int) (0.5*(scale + Maxscale)/(2.0*Maxscale)*(1 << Scalebits));
             if (iScale < 0)
                 iScale = 0;
             if (iScale >= (1 << Scalebits))
